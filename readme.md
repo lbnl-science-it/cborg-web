@@ -1,3 +1,7 @@
+<h1 align="center">CBORG AI Portal - Web Site</h1>
+
+This is a clone of Hugoplate template; as per below. -aws
+
 <h1 align="center">Hugo + Tailwind CSS Starter and Boilerplate</h1>
 
 <p align="center">Hugoplate is a free starter template built with Hugo, and TailwindCSS, providing everything you need to jumpstart your Hugo project and save valuable time.</p>
