@@ -1,0 +1,52 @@
+############# English navigation ##############
+
+# main menu
+[[main]]
+name = "Home"
+pageRef = "/"
+weight = 1
+
+[[main]]
+name = "About"
+pageRef = "/about"
+weight = 2
+
+[[main]]
+name = "Models"
+pageRef = "/models"
+weight = 3
+
+[[main]]
+name = "Tools"
+pageRef = "/tools"
+weight = 4
+
+[[main]]
+weight = 5
+name = "API"
+
+[[main]]
+parent = "API"
+name = "Examples"
+pageRef = "/api_examples"
+
+[[main]]
+parent = "API"
+name = "Documentation"
+pageRef = "/api_docs"
+
+[[main]]
+parent = "API"
+name = "Request API Key"
+pageRef = "/contact"
+
+# footer menu
+[[footer]]
+name = "About"
+pageRef = "/about"
+weight = 1
+
+[[footer]]
+name = "Privacy Policy"
+pageRef = "/privacy-policy"
+weight = 3
