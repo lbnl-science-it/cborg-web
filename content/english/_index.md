@@ -39,7 +39,7 @@ features:
     button:
       enable: true
       label: "Learn More"
-      link: "/api"
+      link: "/api_docs"
 
   - title: "Science IT Consulting Services"
     image: "/images/consulting.png"
