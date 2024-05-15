@@ -143,30 +143,6 @@ Cohere Command R+ has a neutral voice that is well suited to technical applicati
 
 # Coming Soon
 
-- IBM Granite Code 34B
-- Stability.AI Stable Diffusion
-
-#{{< accordion "DeepSeek Coder 33B Base" >}}
-
-#- **Endpoint Location**: Berkeley Lab - IT Division Data Center
-#- **Use Cases**: Code Completion
-#- **Vision Support**: No
-#- **Tool Support**: No
-#- **Context Window**: 16k Tokens
-#- **Cost**: Free to use 
-#- **Terms of Service**: [DeepSeek Licence Agreement](https://github.com/deepseek-ai/DeepSeek-Coder/blob/main/LICENSE-MODEL)
-
-#{{< /accordion >}}
-
-#{{< accordion "Stable Diffusion 1.0" >}}
-
-#Note: The model is intended for research purposes only. The model does not achieve perfect photorealism. The model cannot render legible text. The model struggles with more difficult tasks which involve compositionality, such as rendering an image corresponding to “A red cube on top of a blue sphere”. Faces and people in general may not be generated properly. The autoencoding part of the model is lossy. While the capabilities of image generation models are impressive, they can also reinforce or exacerbate social biases.
-
-#- **Endpoint Location**: Berkeley Lab - IT Division Data Center
-#- **Use Cases**: Image Generation
-#- **Context Window**: 7k Tokens
-#- **Cost**: Free to use 
-#- **Terms of Service**: [OpenRAIL-M License Agreement](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/blob/main/LICENSE.md)
-
-#{{< /accordion >}}
+- **IBM Granite Code 34B:** Code Completion Assistant with VS Code integration
+- **Stability.AI Stable Diffusion:** Image generation model
 

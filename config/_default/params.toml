@@ -71,18 +71,17 @@ show_categories = true
 # announcement
 # announcement module: https://github.com/gethugothemes/hugo-modules/tree/master/components/announcement
 [announcement]
-enable = false
-expire_days = 7
-# content = "You must replace the **baseURL** in **hugo.toml** file when deploying, you can manage this announcement from the **params.toml** file."
+enable = true
+#expire_days = 7
+content = "**NOTICE:** This website is currently under construction. Contents and links are subject to change."
 
 # seo meta data for OpenGraph / Twitter Card
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
 [metadata]
-keywords = ["Boilerplate", "Hugo"]
-description = "Hugo & Tailwindcss Starter"
-author = "zeon.studio"
-image = "images/og-image.png"
-
+keywords = ["CBORG", "AI Services", "LLM Services"]
+description = "CBORG AI Portal at Berkeley Lab"
+author = "IT Division - Science IT Group - Lawrence Berkeley National Laboratory"
+image = "images/cborg-logo.png"
 
 # site verifications
 # verification module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/site-verifications

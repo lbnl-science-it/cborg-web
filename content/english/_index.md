@@ -20,8 +20,9 @@ features:
       - "**Anthropic Claude** via AWS Bedrock"
       - "**Llama 3.0 70B** Open Source Chat Model (**LBL-hosted**)"
       - "**Command R+ 104B** Chat, Multi-Tool Use & RAG Model (**LBL-hosted**)"
-      - "**IBM Granite Code 34B** AI-Coding Assistant Model"
-      - "**Stable Diffusion** Image Generation Model"
+      - "...and more on the way!"
+      #- "**IBM Granite Code 34B** AI-Coding Assistant Model"
+      #- "**Stable Diffusion** Image Generation Model"
       #- "**Vespa** Scalable Vector Database Engine"
     button:
       enable: true
