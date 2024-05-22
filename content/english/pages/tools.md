@@ -10,8 +10,8 @@ draft: false
 
 # Available Now
 
-- [CBorg Chat](https://chat.cyclogpt.lbl.gov)
-- [CBorg LLM API Server](https://api.cyclogpt.lbl.gov)
+- [CBORG Chat Service - Use ChatGPT, Gemini, Anthropic, Llama3 and more.](https://chat.cborg.lbl.gov)
+- [CBORG LLM API Server - Build your own LLM-powered Apps](https://api.cborg.lbl.gov)
 
 # Coming Soon
 

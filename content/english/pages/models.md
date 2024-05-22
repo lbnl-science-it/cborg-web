@@ -113,11 +113,11 @@ Claude has superior reasoning and code analysis capabilities compared to other l
 
 The IT Division's Science IT group provides access to open models running on Berkeley Lab-owned networks and hardware, located in the Building 50 data center. LBL-Hosted models are free-to-use and are suitable for processing large amounts of data.
 
-{{< accordion "Meta LLaMA 3" >}}
+{{< accordion "LBL/Meta Llama 3" >}}
 
-LLaMA 3 is the latest version of the open source LLaMA model from Meta. LLaMA is friendly and conversational, and can perform reasonably complex text analysis such as data extraction into JSON.
+Llama 3 is the latest version of the open source LLM from Meta. Llama is friendly and conversational, with good reasoning capabilities approximately equivalent to ChatGPT 3.5.
 
-- **Endpoint Location**: Berkeley Lab - IT Division Data Center
+- **Endpoint Location**: LBNL IT Division Data Center
 - **Use Cases**: Chat, Text Summarization, Coding Assistant
 - **Vision Support**: No
 - **Tool Support**: No
@@ -127,11 +127,11 @@ LLaMA 3 is the latest version of the open source LLaMA model from Meta. LLaMA is
 
 {{< /accordion >}}
 
-{{< accordion "Cohere Command R+" >}}
+{{< accordion "LBL/Cohere Command R+" >}}
 
-Cohere Command R+ has a neutral voice that is well suited to technical applications. The extremely long context window (125K tokens) makes it a preferred choice for retreival augmented generation (RAG).
+Cohere Command R+ has a neutral voice that is well suited to technical applications. The long 125K token context window makes R+ a preferred choice for retreival augmented generation (RAG).
 
-- **Endpoint Location**: Berkeley Lab - IT Division Data Center
+- **Endpoint Location**: LBNL IT Division Data Center
 - **Use Cases**: Chat, Text Summarization, Multi-Tool Use, RAG
 - **Vision Support**: No
 - **Tool Support**: Yes
@@ -141,8 +141,5 @@ Cohere Command R+ has a neutral voice that is well suited to technical applicati
 
 {{< /accordion >}}
 
-# Coming Soon
-
-- **IBM Granite Code 34B:** Code Completion Assistant with VS Code integration
-- **Stability.AI Stable Diffusion:** Image generation model
+...and more coming soon!
 

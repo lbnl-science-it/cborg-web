@@ -7,7 +7,7 @@ banner:
   button:
     enable: true
     label: "Start Chat"
-    link: "https://chat.cyclogpt.lbl.gov"
+    link: "https://chat.cborg.lbl.gov"
 
 # Features
 features:

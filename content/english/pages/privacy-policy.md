@@ -36,5 +36,5 @@ CBORG services should not be used to process any personal information, prudent-t
 
 #### Additional Terms and Conditions
 
-Usage of IT infrastructure at Berkeley Lab is subject to the Berkeley Lab's (Terms and Conditions)[https://www.lbl.gov/terms-and-conditions/] and any other terms of employment.
+Usage of IT infrastructure at Berkeley Lab is subject to the Berkeley Lab's (Terms and Conditions)[https://www.lbl.gov/terms-and-conditions/].
 

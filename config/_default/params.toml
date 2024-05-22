@@ -55,7 +55,7 @@ preloader = "" # use jpg, png, svg or gif format.
 [navigation_button]
 enable = true
 label = "Start Chat"
-link = "https://chat.cyclogpt.lbl.gov"
+link = "https://chat.cborg.lbl.gov"
 
 # search
 # search module: https://github.com/gethugothemes/hugo-modules/tree/master/search
