@@ -27,18 +27,21 @@ name = "API"
 
 [[main]]
 parent = "API"
+weight = 1
 name = "Examples"
 pageRef = "/api_examples"
 
 [[main]]
 parent = "API"
-name = "Documentation"
-pageRef = "/api_docs"
+weight = 2
+name = "Request API Key"
+pageRef = "/api_request"
 
 [[main]]
 parent = "API"
-name = "Request API Key"
-pageRef = "/contact"
+weight = 3
+name = "Documentation"
+pageRef = "/api_docs"
 
 # footer menu
 [[footer]]
