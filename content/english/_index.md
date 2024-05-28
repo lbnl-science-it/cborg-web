@@ -1,9 +1,9 @@
 ---
 # Banner
 banner:
-  title: "Chat with Leading AI Models"
+  title: "Multi-Model AI Services for Berkeley Lab"
   image: "/images/ai-banner.png"
-  content: "The **CBORG AI Portal** provides Berkeley Lab staff with access to selected AI models for chat, text summarization, coding assistance, image analysis and more."
+  content: "The **CBORG AI Portal** provides Berkeley Lab staff with access to selected AI models for chat, text summarization, coding assistance, image analysis and more, including OpenAI ChatGPT, LBL-hosted Llama3 70B and more..."
   button:
     enable: true
     label: "Start Chat"
