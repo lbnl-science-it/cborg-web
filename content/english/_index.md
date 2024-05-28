@@ -1,9 +1,9 @@
 ---
 # Banner
 banner:
-  title: "AI Services for Berkeley Lab"
-  content: "The **CBORG AI Portal** provides Berkeley Lab staff with access to selected AI models for chat, text summarization, coding assistance, image analysis and more."
+  title: "Chat with Leading AI Models"
   image: "/images/ai-banner.png"
+  content: "The **CBORG AI Portal** provides Berkeley Lab staff with access to selected AI models for chat, text summarization, coding assistance, image analysis and more."
   button:
     enable: true
     label: "Start Chat"
@@ -39,7 +39,7 @@ features:
     button:
       enable: true
       label: "Learn More"
-      link: "/api_docs"
+      link: "/api_examples"
 
   - title: "Science IT Consulting Services"
     image: "/images/consulting.png"
