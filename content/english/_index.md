@@ -1,7 +1,7 @@
 ---
 # Banner
 banner:
-  title: "Multi-Model AI Services for Berkeley Lab"
+  title: "CBORG - Multi-Model AI Portal for Berkeley Lab"
   image: "/images/ai-banner.png"
   content: "The **CBORG AI Portal** provides Berkeley Lab staff with access to selected AI models for chat, text summarization, coding assistance, image analysis and more, including OpenAI ChatGPT, LBL-hosted Llama3 70B and more..."
   button:
