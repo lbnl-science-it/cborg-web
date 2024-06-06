@@ -22,6 +22,7 @@ require (
 	github.com/gethugothemes/hugo-modules/seo-tools/google-tag-manager v0.0.0-20240504032439-79fc09d96848 // indirect
 	github.com/gethugothemes/hugo-modules/seo-tools/site-verifications v0.0.0-20240504032439-79fc09d96848 // indirect
 	github.com/gethugothemes/hugo-modules/shortcodes/button v0.0.0-20240504032439-79fc09d96848 // indirect
+	github.com/gethugothemes/hugo-modules/shortcodes/codepen v0.0.0-20240525031707-f23b0cd94862 // indirect
 	github.com/gethugothemes/hugo-modules/shortcodes/notice v0.0.0-20240504032439-79fc09d96848 // indirect
 	github.com/gethugothemes/hugo-modules/tab v0.0.0-20240504032439-79fc09d96848 // indirect
 	github.com/gethugothemes/hugo-modules/table-of-contents v0.0.0-20240504032439-79fc09d96848 // indirect

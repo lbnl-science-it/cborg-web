@@ -11,7 +11,7 @@ draft: false
 # Available Now
 
 - [CBORG Chat Service - Use ChatGPT, Gemini, Anthropic, Llama3 and more.](https://chat.cborg.lbl.gov)
-- [CBORG LLM API Server - Build your own LLM-powered Apps](https://api.cborg.lbl.gov)
+- [CBORG LLM API Server - Build your own LLM-powered Apps](/api_examples)
 
 # Coming Soon
 
