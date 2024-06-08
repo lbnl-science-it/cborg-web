@@ -23,17 +23,17 @@ draft: false
 | AWS Cloud                | Anthropic      | Claude Opus        | 200k            | Y       | $$$   |
 
 {{< notice "note" >}}
-* Context window sizes for commercially-hosted models are reduced in CBORG Chat to limit excessive usage. To make use of the full-length of context windows please request an API key or engage with Science IT Consulting to discuss using cloud services with a PID recharge."
+** Cost for using commercial models are paid for by the IT Division. There is no cost to individual users at this time.
 {{< /notice >}}
 
 {{< notice "note" >}}
-** Cost for using commercial models are paid for by the IT Division. There is no cost to individual users at this time.
+* Context window sizes for commercially-hosted models are reduced in CBORG Chat to limit excessive usage. To make use of the full-length of context windows please request an API key or engage with Science IT Consulting to discuss using cloud services with a PID recharge.
 {{< /notice >}}
 
 
 ### LBNL-Hosted Models
 
-The IT Division's Science IT group provides access to open models running on Berkeley Lab-owned networks and hardware, located in the Building 50 data center. LBL-Hosted models are free-to-use.
+The IT Division's Science IT group provides access to open models running on Berkeley Lab-owned networks and hardware, located in the Building 50 data center. LBNL-Hosted models are free-to-use.
 
 {{< accordion "Meta Llama 3 70B" >}}
 
@@ -210,7 +210,10 @@ The context length is a measure of the approximate number of words that a model 
 
 When chatting with a model, your entire chat history of the session is fed into the context window with every message sent. Therefore, as you send more messages the context length will increase. Over time this can cause the cost of each message exchange to increase until the model's maximum token limit is reached.
 
+{{< notice "note" >}}
+
 * Note: In CBORG Chat, we have set the maximum context length of commercial models to significnatly lower limits compared to their design maximum, in order to control costs for the IT Division. If you need to use a model employing the full-length context window, our API key service provides access to commercial models with the full context window.
+{{</ notice >}}
 
 #### 1. **Why use LBNL-Hosted versus Commercial Models?**
 
@@ -220,7 +223,7 @@ When chatting with a model, your entire chat history of the session is fed into 
 
 - Your data is retained within LBNL systems and networks
 - Free to use for building large scale LLM-powered applications
-- "Uncensored" models available without gaurdrail restrictions
+- "Uncensored" models available without guardrail restrictions
 - Supports open research
 
 **Cons:**
