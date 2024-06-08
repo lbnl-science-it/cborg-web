@@ -26,12 +26,10 @@ client = openai.OpenAI(
 )
 
 models = [
-    "lbl/llama-3",          # LBL-hosted model (free to use)
-    "lbl/command-r-plus",   # LBL-hosted model (free to use)
+    "lbl/llama-3",          # LBNL-hosted model (free to use)
+    "lbl/command-r-plus",   # LBNL-hosted model (free to use)
     "openai/gpt-3.5-turbo",
     "openai/gpt-4o",
-    "openai/gpt-4",
-    "google/gemini-1.0-pro",
     "google/gemini-1.5-flash",
     "google/gemini-1.5-pro",
     "aws/claude-haiku",
@@ -101,12 +99,10 @@ The proxy server will enforce reasonable limits for on the number of parallel re
 ### Commercial Cloud-Hosted Models
 
 - `openai/gpt-3.5-turbo`
-- `openai/gpt-4o-turbo`
-- `openai/gpt-4`
+- `openai/gpt-4o`
 - `aws/claude-sonnet`
 - `aws/claude-opus`
 - `aws/claude-haiku`
-- `google/gemini-1.0-pro`
 - `google/gemini-1.5-flash`
 - `google/gemini-1.5-pro`
 

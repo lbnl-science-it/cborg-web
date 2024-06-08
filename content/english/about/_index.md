@@ -12,4 +12,4 @@ The goal of this project is to provide seamless, secure access to the latest AI 
 
 **CBORG** is named after the famous chemist and Berkeley researcher, Glenn Seaborg, with a nod to the future of our eventual assimilation by hyper-intelligent AI 😉🤖
 
-**Questions or comments?** Please email [scienceit@lbl.gov](mailto:scienceit@lbl.gov)!
+**Questions or comments?** Please email [scienceit@lbl.gov](mailto:scienceit@lbl.gov)

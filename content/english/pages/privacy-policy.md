@@ -12,6 +12,12 @@ draft: false
 
 Use of AI models are subject to the terms of conditions of each model provider. Read [Model Details](/models) for more information.
 
+### Guidance Document for LBNL Employees
+
+Cyber Security has published a document providing [Guidance on using Generative AI Tools](https://commons.lbl.gov/display/cpp/Guidance+on+using+Generative+AI+tools)
+
+LBNL Staff should familiarize themselves with the issues described above.
+
 #### Not for Critical Infrastructure
 
 CBORG AI Services are for research purposes only and not intended to support critical infrastructure at Berkeley Lab. If you need build critical infrastructure using AI services similar to CBORG, please [contact Science IT](mailto:scienceit@lbl.gov) to discuss your needs.
@@ -36,5 +42,5 @@ CBORG services should not be used to process any personal information, prudent-t
 
 #### Additional Terms and Conditions
 
-Usage of IT infrastructure at Berkeley Lab is subject to the Berkeley Lab's (Terms and Conditions)[https://www.lbl.gov/terms-and-conditions/].
+Usage of IT infrastructure at Berkeley Lab is subject to the Berkeley Lab's [Terms and Conditions](https://www.lbl.gov/terms-and-conditions/).
 
