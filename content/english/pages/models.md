@@ -257,7 +257,7 @@ When chatting with a model, your entire chat history of the session is fed into 
 
 LBNL-Hosted models are served using the vLLM engine, which is capable of efficiently serving a large number of simultaneous users. We use multi-way GPU systems that improve the speed and amount of memory available to the model (e.g. 320GB or more of GPU RAM) compared to what is possible on consumer-grade laptop and desktop computers. In addition, our models are evaluated in FP16 precision, which increases the accuracy and quality of outputs compared to quantized models that have been compressed to fit into small-memory devices.
 
-#### 3. **Can I host my own model on IT Division infrastructure?**
+#### 4. **Can I host my own model on IT Division infrastructure?**
 
 Please reach out to us at [scienceit@lbl.gov](mailto:scienceit@lbl.gov) to discuss hosting of your own models or other LLM-powered applications.
 
