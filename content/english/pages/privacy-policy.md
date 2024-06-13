@@ -24,7 +24,7 @@ CBORG AI Services are for research purposes only and not intended to support cri
 
 #### Potential Errors and Bias
 
-We will best efforts to provide AI models that are stable and reasonably free of bias. However, AI models are trained on large amounts of data not all of which can be filtered adequately. As a result, AI models may produce biased, inaccurate or toxic outputs.
+The IT Division and Science IT group makes strives to provide AI models that are stable and free of bias. However, AI models are trained on large amounts of data which make include inaccurate and biased content. As a result, AI models may produce biased, inaccurate or toxic outputs. AI models produce statistical approximations of correct answers that may resemble correct answers but are in fact completely erroneous, which are generally referred to as "hallucinations".
 
 #### Logging and Data Inspection
 
@@ -38,7 +38,7 @@ Users are are responsible for understanding any IP-related issues with data sent
 
 #### Protection of Personal-Information
 
-CBORG services should not be used to process any personal information, prudent-to-protect information, CUI or classified information. If you need to process PII or HIPPA information please [contact Science IT](mailto:scienceit@lbl.gov) to discuss your needs.
+CBORG services should not be used to process any personal information, prudent-to-protect information, confidential unclassified information (CUI) or classified information. If you need to process PII or HIPPA information please [contact Science IT](mailto:scienceit@lbl.gov) to discuss your needs for secure computing.
 
 #### Additional Terms and Conditions
 

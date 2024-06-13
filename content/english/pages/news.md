@@ -10,14 +10,19 @@ draft: false
 
 ## Current Status
 
-All services are operational. Expect intermittant system interruptions through June 21st as we adjust hardware configurations.**
+All services are operational in pre-launch phase. Occasional service interruptions may occur as we adjust system configuration.
 
 ## Recent Updates
+
+_June 13th, 2024_
+
+- Added graceful failover to LBNL-hosted models in event of server offline
+- Corrected incorrect configuration of cost-per-token setting in LBNL-hosted Command R+
 
 _June 12th, 2024_
 
 - LBNL-Hosted Llama-3 70B is now running on Nvidia H100 node for increased performance
-- Custom chat icons have been provided for self-hosted models
+- Custom chat icons have been provided for LBNL-hosted models
 
 _June 7th, 2024_
 
