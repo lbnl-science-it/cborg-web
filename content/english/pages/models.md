@@ -37,14 +37,14 @@ The IT Division's Science IT group provides access to open models running on Ber
 
 {{< accordion "Meta Llama 3 70B" >}}
 
-Llama 3 is the latest version of the open source LLM from Meta. Llama is friendly and conversational, with good reasoning capabilities approximately equivalent to ChatGPT 3.5. The model is running on a 4x Nvidia A40 system.
+Llama 3 is the latest version of the open source LLM from Meta. Llama is friendly and conversational, with good reasoning capabilities approximately equivalent to ChatGPT 3.5. The model is running on a 2x Nvidia H100 accelerators.
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Use Cases**: Chat, Text Summarization, Coding Assistant
 - **Vision Support**: No
 - **Tool Support**: No
 - **Context Window**: 8K Tokens
-- **Cost**: Free to use 
+- **Cost**: Free to use
 - **API Model Name**: `lbl/llama-3`
 - **Terms of Service**: [Meta LLaMA Acceptable Use Policy](https://llama.meta.com/llama3/use-policy/)
 
@@ -52,7 +52,7 @@ Llama 3 is the latest version of the open source LLM from Meta. Llama is friendl
 
 {{< accordion "Cohere Command R+" >}}
 
-Cohere Command R+ has a neutral voice that is well suited to technical applications. The large token context window is the longest of any open model, which is useful for text summarization and RAG applications with long documents. R+ also supports tool use. The model is running on a 4x Nvidia A100 system.
+Cohere Command R+ has an advanced self-hosted model well suited to technical applications. The large token context window is the longest of any open model, which is useful for text summarization and RAG applications with long documents. R+ also supports tool use / function calling. This model is running on a 4x Nvidia A100 system.
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Use Cases**: Chat, Text Summarization, RAG, Multi-Tool Use

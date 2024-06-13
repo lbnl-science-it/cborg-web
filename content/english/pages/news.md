@@ -10,11 +10,14 @@ draft: false
 
 ## Current Status
 
-All services are operational.
-
-**There will be intermittant system downtime on Monday, June 10th.**
+All services are operational. Expect intermittant system interruptions through June 21st as we adjust hardware configurations.**
 
 ## Recent Updates
+
+_June 12th, 2024_
+
+- LBNL-Hosted Llama-3 70B is now running on Nvidia H100 node for increased performance
+- Custom chat icons have been provided for self-hosted models
 
 _June 7th, 2024_
 
