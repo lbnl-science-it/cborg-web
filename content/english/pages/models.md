@@ -10,6 +10,8 @@ draft: false
 
 ## Available Models Summary
 
+### Generative AI Models
+
 | Model Endpoint Location  | Model Creator  | Model Name         | Context Length* | Vision | Cost**  | 
 | ---------------          | :------------: | :--------:         | :-----:         | :---:   | :---: | 
 | LBNL IT Division         | Meta           | LLaMA 3 70B        | 8K              | N       | Free  |
@@ -18,18 +20,24 @@ draft: false
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 4-Omni     | 128K            | Y       | $$    | 
 | Google Cloud             | Google         | Gemini 1.5 Flash   | 1.0M            | Y       | $     |
 | Google Cloud             | Google         | Gemini 1.5 Pro     | 1.0M            | Y       | $$    |
-| AWS Cloud                | Anthropic      | Claude Haiku       | 200k            | Y       | $     |
-| AWS Cloud                | Anthropic      | Claude Sonnet      | 200k            | Y       | $$    |
-| AWS Cloud                | Anthropic      | Claude Opus        | 200k            | Y       | $$$   |
+| AWS Cloud                | Anthropic      | Claude 3.0 Haiku   | 200k            | Y       | $     |
+| AWS Cloud                | Anthropic      | Claude 3.5 Sonnet  | 200k            | Y       | $$    |
+| AWS Cloud                | Anthropic      | Claude 3.0 Opus    | 200k            | Y       | $$$   |
+
+### Vector Embedding Models
+
+| Model Endpoint Location  | Model Creator      | Model Name  | Max Tokens | Embedding Dimensions | Cost**  | 
+| ---------------          | :------------:     | :--------:  | :-----:    | :---:                | :---: | 
+| LBNL IT Division         | Microsoft Research | e5-large-v2 | 512        | 1024                 | Free  |
+| LBNL IT Division         | NVidia             | NV-Embed-v1 | 8K         | 4096                 | Free  |
 
 {{< notice "note" >}}
 ** Cost for using commercial models are paid for by the IT Division. There is no cost to individual users at this time.
 {{< /notice >}}
 
 {{< notice "note" >}}
-* Context window sizes for commercially-hosted models are reduced in CBORG Chat to limit excessive usage. To make use of the full-length of context windows please request an API key or engage with Science IT Consulting to discuss using cloud services with a PID recharge.
+* Context window sizes for commercially-hosted Generative AI models are reduced in CBORG Chat to limit excessive usage. To make use of the full-length of context windows please request an API key or engage with Science IT Consulting to discuss using cloud services with a PID recharge.
 {{< /notice >}}
-
 
 ### LBNL-Hosted Models
 
@@ -62,6 +70,39 @@ Cohere Command R+ has an advanced self-hosted model well suited to technical app
 - **Cost**: Free to use 
 - **API Model Name**: `lbl/command-r-plus`
 - **Terms of Service**: [Cohere For AI Acceptable Use Policy](https://docs.cohere.com/docs/c4ai-acceptable-use-policy)
+
+{{< /accordion >}}
+
+{{< accordion "e5-large-v2" >}}
+
+e5-large-v2 is based on research originating from Microsoft Research, as described in Text Embeddings by Weakly-Supervised Contrastive Pre-training. Liang Wang, Nan Yang, Xiaolong Huang, Binxing Jiao, Linjun Yang, Daxin Jiang, Rangan Majumder, Furu Wei, arXiv 2022.
+
+e5-large-v2 is a popular embedding model for vector search and retreival augmented generation.
+
+- **Endpoint Location**: LBNL IT Division Data Center
+- **Use Cases**: Query and Passage Encoding
+- **Max Tokens**: 512
+- **Embedding Dimensions**: 1024
+- **Cost**: Free to use
+- **API Model Name**: `lbl/e5-large-v2`
+- **Model Card**: [HuggingFace intfloat/e5-large-v2](https://huggingface.co/intfloat/e5-large-v2)
+
+{{< /accordion >}}
+
+{{< accordion "e5-large-v2" >}}
+
+e5-large-v2 is based on research originating from Microsoft Research, as described in Text Embeddings by Weakly-Supervised Contrastive Pre-training. Liang Wang, Nan Yang, Xiaolong Huang, Binxing Jiao, Linjun Yang, Daxin Jiang, Rangan Majumder, Furu Wei, arXiv 2022.
+
+e5-large-v2 is a popular embedding model for vector search and retreival augmented generation.
+
+- **Endpoint Location**: LBNL IT Division Data Center
+- **Use Cases**: Instructed Query and Passage Encoding
+- **Max Tokens**: 8192
+- **Embedding Dimensions**: 4096
+- **Cost**: Free to use
+- **API Model Name**: `lbl/NV-Embed-v1`
+- **Notes**: For non-commercial use only.
+- **Model Card**: [HuggingFace nvidia/NV-Embed-v1](https://huggingface.co/nvidia/NV-Embed-v1)
 
 {{< /accordion >}}
 
@@ -138,7 +179,7 @@ Our service connects to the enterprise version of Google Gemini. Inputs are not 
 
 {{< /accordion >}}
 
-{{< accordion "Anthropic Claude Haiku" >}}
+{{< accordion "Anthropic Claude 3.0 Haiku" >}}
 
 Claude has excellent reasoning and code analysis capabilities compared to other leading models, but can be expensive in the largest variants. The 200K token context window is large compared to competitors. The Haiku version is suitable for short text summarization.
 
@@ -155,9 +196,9 @@ Claude has excellent reasoning and code analysis capabilities compared to other 
 
 {{< /accordion >}}
 
-{{< accordion "Anthropic Claude Sonnet" >}}
+{{< accordion "Anthropic Claude 3.5 Sonnet" >}}
 
-Claude has superior reasoning and code analysis capabilities compared to other leading models, but can be expensive in the largest variants. The 200K token context window is large compared to competitors. 
+Claude has superior reasoning and code analysis capabilities compared to other leading models, but can be expensive in the largest variants. The 200K token context window is large compared to competitors. The 3.5 Sonnet is the latest version of Claude, outperforming 3.0 Opus with lower cost and faster inference speed.
 
 - **Endpoint Location**: Amazon Web Services (US West)
 - **Use Cases**: Chat, Text Summarization, Image Description
@@ -173,7 +214,7 @@ Claude has superior reasoning and code analysis capabilities compared to other l
 {{< /accordion >}}
 
 
-{{< accordion "Anthropic Claude Opus" >}}
+{{< accordion "Anthropic Claude 3.0 Opus" >}}
 
 Claude has excellent reasoning and code analysis capabilities compared to other leading models, but can be expensive in the largest variants. 
 

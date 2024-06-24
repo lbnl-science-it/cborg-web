@@ -36,12 +36,12 @@ google_adsense = ""     # example: ca-pub-xxxxxxxxxxxxxxxx
 custom_script = ""
 
 # copyright
-copyright = "[Science IT](https://scienceit.lbl.gov) - [IT Division](https://it.lbl.gov) - [Berkeley Lab](https://lbl.gov)"
+copyright = "[IT Division](https://it.lbl.gov) / [Science IT](https://scienceit.lbl.gov) - [Berkeley Lab](https://lbl.gov)"
 
 footer_logo = "images/BL_IT_logo.png"
 footer_logo_darkmode = "images/BL_IT_logo_white.png"
 footer_dst = "https://it.lbl.gov"
-footer_alt = "Science IT - IT Division - Berkeley Lab"
+footer_alt = "IT Division / Science IT - Berkeley Lab"
 footer_logo_width = "150px"
 footer_logo_height = "150px"
 
@@ -80,7 +80,7 @@ content = "**NOTICE:** This website is currently under construction. Contents an
 [metadata]
 keywords = ["CBORG", "AI Services", "LLM Services"]
 description = "CBORG AI Portal at Berkeley Lab"
-author = "IT Division - Science IT Group - Lawrence Berkeley National Laboratory"
+author = "IT Division / Science IT - Lawrence Berkeley National Laboratory"
 image = "images/cborg-logo.png"
 
 # site verifications

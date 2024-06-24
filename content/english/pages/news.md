@@ -14,6 +14,14 @@ All services are operational in pre-launch phase. Occasional service interruptio
 
 ## Recent Updates
 
+_June 24th, 2024_
+
+- Upgraded Claude 3.0 Sonnet to the latest Claude 3.5 Sonnet. Details: https://www.anthropic.com/news/claude-3-5-sonnet
+
+_June 17th, 2024_
+
+- Added LBNL-hosted embedding models e5-large-v2 and NV-Embed-v1, a large 4096-dimension embedding model with a leading position on the MTEB Leaderboard.
+
 _June 13th, 2024_
 
 - Added graceful failover to LBNL-hosted models in event of server offline
