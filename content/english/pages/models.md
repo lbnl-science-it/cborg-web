@@ -89,18 +89,19 @@ e5-large-v2 is a popular embedding model for vector search and retreival augment
 
 {{< /accordion >}}
 
-{{< accordion "e5-large-v2" >}}
+{{< accordion "NV-Embed-v1" >}}
 
-e5-large-v2 is based on research originating from Microsoft Research, as described in Text Embeddings by Weakly-Supervised Contrastive Pre-training. Liang Wang, Nan Yang, Xiaolong Huang, Binxing Jiao, Linjun Yang, Daxin Jiang, Rangan Majumder, Furu Wei, arXiv 2022.
+NV-Embed-v1
 
-e5-large-v2 is a popular embedding model for vector search and retreival augmented generation.
+NV-Embed-v1 is a leading embedding model created by Nvidia, ranked No. 1 on the Massive Text Embedding Benchmark (MTEB benchmark) as of May 24, 2024.
+NV-Embed-v1 is licensed for non-commercial use only.
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Use Cases**: Instructed Query and Passage Encoding
 - **Max Tokens**: 8192
 - **Embedding Dimensions**: 4096
 - **Cost**: Free to use
-- **API Model Name**: `lbl/NV-Embed-v1`
+- **API Model Name**: `lbl/nv-embed-v1`
 - **Notes**: For non-commercial use only.
 - **Model Card**: [HuggingFace nvidia/NV-Embed-v1](https://huggingface.co/nvidia/NV-Embed-v1)
 
