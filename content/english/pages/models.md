@@ -77,7 +77,7 @@ Cohere Command R+ has an advanced self-hosted model well suited to technical app
 
 e5-large-v2 is based on research originating from Microsoft Research, as described in Text Embeddings by Weakly-Supervised Contrastive Pre-training. Liang Wang, Nan Yang, Xiaolong Huang, Binxing Jiao, Linjun Yang, Daxin Jiang, Rangan Majumder, Furu Wei, arXiv 2022.
 
-e5-large-v2 is a popular embedding model for vector search and retreival augmented generation.
+e5-large-v2 is a popular embedding model for vector search and retreival augmented generation, but is a small embedding model by current standards.
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Use Cases**: Query and Passage Encoding
@@ -93,8 +93,7 @@ e5-large-v2 is a popular embedding model for vector search and retreival augment
 
 NV-Embed-v1
 
-NV-Embed-v1 is a leading embedding model created by Nvidia, ranked No. 1 on the Massive Text Embedding Benchmark (MTEB benchmark) as of May 24, 2024.
-NV-Embed-v1 is licensed for non-commercial use only.
+NV-Embed-v1 is a leading embedding model created by Nvidia, ranked No. 1 on the Massive Text Embedding Benchmark (MTEB benchmark) as of May 24, 2024. NV-Embed-v1 is licensed for non-commercial use only.
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Use Cases**: Instructed Query and Passage Encoding
