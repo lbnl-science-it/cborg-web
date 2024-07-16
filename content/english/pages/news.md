@@ -10,9 +10,15 @@ draft: false
 
 ## Current Status
 
-All services are operational in pre-launch phase. Occasional service interruptions may occur as we adjust system configuration.
+All services are operational. 
+
+Occasional service interruptions may occur as we adjust system configuration.
 
 ## Recent Updates
+
+_July 2nd, 2024_
+
+- Added a local API endpoint, https://api-local.cborg.lbl.gov which bypasses Cloudflare for local network clients.
 
 _June 24th, 2024_
 

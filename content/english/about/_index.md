@@ -2,7 +2,7 @@
 title: "About the CBORG AI Portal"
 meta_title: "About the CBORG AI Portal"
 description: "this is meta description"
-image: "/images/ai-banner.png"
+image: "/images/cborg-logo.png"
 draft: false
 ---
 
