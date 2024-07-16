@@ -12,6 +12,8 @@ The CBORG API server is an LLM proxy server that provides token-authenticated ac
 
 To use the API server, you must provide your personal API key and set the model base endpoint to `https://api.cborg.lbl.gov`. 
 
+Local clients on the LBL Network (VPN, Employee Wifi or Ethernet) may also use `https://api-local.cborg.lbl.gov` to bypass Cloudflare, which could block your application if it exceeds rate-limits.
+
 To request a key, [complete this form](/api_request).
 
 ## Example Code
@@ -22,7 +24,7 @@ import os
 
 client = openai.OpenAI(
     api_key=os.environ.get('CBORG_API_KEY'), # Please do not store your API key in the code
-    base_url="https://api.cborg.lbl.gov"
+    base_url="https://api.cborg.lbl.gov" # Local clients can also use https://api-local.cborg.lbl.gov
 )
 
 models = [
@@ -83,18 +85,25 @@ LBNL Staff should familiarize themselves with the issues described above.
 
 ### Rate Limiting 
 
-Note that in production applications, your program will need to use ratelimiting otherwise requests will be rejected by the proxy server if they arrive too fast. 
+Note that in production applications, your program will need to use ratelimiting otherwise requests will be rejected by the proxy server if they arrive too fast.
 
 For example, you may use the Python `ratelimit` module to ensure your application does not exceed the maximum usage limits. 
 
 The proxy server will enforce reasonable limits for on the number of parallel requests, tokens per minute, requests per minute and budget consumption for commercial (non-free) models.
+
+## Useful Tips
+
+- [Best Practices for API Key Safety](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety)
+- [Best Practices for Prompt Engineering](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api)
 
 ## Supported Models
 
 ### LBL-Hosted Models (free to use)
 
 - `lbl/llamma-3`: 70B Parameter Model - Chat
-- `lbl/command-r-plus` : 104B Parameter Model - Tool Use, RAG, Summarization
+- `lbl/command-r-plus`: 104B Parameter Model - Tool Use, RAG, Summarization
+- `lbl/nv-embed-v1`: 4096-dimension Text Embedding Model
+- `lbl/e5-embed-v2`: 1024-dimension Text Embedding Model
 
 ### Commercial Cloud-Hosted Models
 
@@ -109,6 +118,6 @@ The proxy server will enforce reasonable limits for on the number of parallel re
 ## Example Code Requirements
 
 - Request an API Key
-- Save API key as an environment variable on your system
+- Save API key as an environment variable on your system.
 - Install the OpenAI SDK for Python: `pip install openai`
 

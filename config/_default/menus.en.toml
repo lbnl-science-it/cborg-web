@@ -22,12 +22,17 @@ pageRef = "/news"
 weight = 4
 
 [[main]]
-name = "Tools"
-pageRef = "/tools"
-weight = 5
+name = "FAQ"
+pageRef = "/faq"
+weight = 6
 
 [[main]]
-weight = 5
+name = "Tools"
+pageRef = "/tools"
+weight = 6
+
+[[main]]
+weight = 7
 name = "API"
 
 [[main]]
