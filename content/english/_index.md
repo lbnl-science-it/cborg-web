@@ -3,7 +3,7 @@
 banner:
   title: "CBORG - Multi-Model AI Portal for Berkeley Lab"
   image: "/images/ai-banner.png"
-  content: "The **CBORG AI Portal** provides Berkeley Lab staff with access to selected AI models for chat, text summarization, coding assistance, image analysis and more, including OpenAI ChatGPT, LBNL-hosted Llama3 70B and more..."
+  content: "The **CBORG AI Portal** provides Berkeley Lab staff with access to selected AI models for chat, text summarization, coding assistance, image analysis and more, including OpenAI ChatGPT, Lab-hosted Meta Llama 3.1 405B and more..."
   button:
     enable: true
     label: "Start Chat"
@@ -18,8 +18,8 @@ features:
       - "**OpenAI ChatGPT** via Azure Cloud"
       - "**Google Gemini Pro** via Google Cloud"
       - "**Anthropic Claude** via AWS Bedrock"
-      - "**Llama 3.0 70B** Open Source Chat Model (**LBNL-Hosted**)"
-      - "**Command R+ 104B** Chat, Multi-Tool Use & RAG Model (**LBNL-Hosted**)"
+      - "**Llama 3.1 405B** Open Source Chat Model (**Lab-hosted**)"
+      - "**Command R+ 104B** Chat, Multi-Tool Use & RAG Model (**Lab-hosted**)"
       - "...and more on the way!"
       #- "**IBM Granite Code 34B** AI-Coding Assistant Model"
       #- "**Stable Diffusion** Image Generation Model"
@@ -35,7 +35,7 @@ features:
     bulletpoints:
       - "**Secure Access:** Connect to our LLM Proxy Server with personal API key and budget controls"
       - "**Control Data**: Process data on Berkeley Lab-hosted infrastructure for IP-sensitive applications"
-      - "**Scale Up**: Utilize free-to-use LBNL-Hosted models for large-scale applications"
+      - "**Scale Up**: Utilize free-to-use Lab-hosted models for large-scale applications"
     button:
       enable: true
       label: "Learn More"

@@ -30,24 +30,26 @@ Yes, follow these instructions: [JSON Export/Import Conversations](https://www.l
 
 No, this system is not designed to accept PII or CUI data.
 
-#### 6. What are the legal issues associated with using generative AI in my work?*
+#### 6. Can I upload a PDF, text or CSV file to CBORG Chat?
 
-Some models are not permitted for specific uses such as for commercial use, or for generating synthetic data to train further models. 
+No, currently the CBORG Chat only accepts image files for vision models, e.g. "Describe what is in this picture". Support for chatting with PDF documents and other file types is on our roadmap but currently is not enabled.
 
-Users are responsible for complying with the [terms of use of each model](/models).
+#### 7. What are the legal issues associated with using generative AI in my work?*
 
-Cyber Security has published a document providing [Guidance on using Generative AI Tools](https://commons.lbl.gov/display/cpp/Guidance+on+using+Generative+AI+tools). LBNL Staff should familiarize themselves with the issues described above.
+- Commercial Use: Some open-source (LBL-hosted) models are not permitted for commercial use. All models provided allow for research use.
+- Synthetic Data: Some models do not permit use of the model to generate synthetic training data for further models. Users are responsible for complying with the [terms of use of each model](/models).
 
-For further guidance please consult the [LBL Intellectual Property Office](https://ipo.lbl.gov)
+- Legal Issues, Copyright Issues, Authorship Misattribution: Cyber Security has published a document providing [Guidance on using Generative AI Tools](https://commons.lbl.gov/display/cpp/Guidance+on+using+Generative+AI+tools). LBNL Staff should familiarize themselves with the issues described herein.
 
+For further guidance on legal issues please consult the [LBL Intellectual Property Office](https://ipo.lbl.gov)
 
-#### 7. **Why use LBNL-Hosted versus Commercial Models?**
+#### 8. **Why use LBNL-Hosted versus Commercial Models?**
 
 ##### Why use LBNL-Hosted Models?
 
 **Pros:** 
 
-- Your data is retained within LBNL systems and networks
+- Your data is retained within Berkeley Lab systems and networks
 - Free to use for building large scale LLM-powered applications
 - "Uncensored" models available without guardrail restrictions
 - Supports open research
@@ -71,19 +73,29 @@ For further guidance please consult the [LBL Intellectual Property Office](https
 - High cost in large-scale document processing use cases
 - Inputs and outputs may be subject to human review for provider policy violations
 
-#### 8. **Why pick model A or B (model selection)?**
+#### 9. **Why pick model A or B (model selection)?**
 
 - **Commercial cloud models provide the best quality**: Commercial cloud models run on large compute clusters with memory and bandwidth far exceeding what is possible with self-hosted models. If you need the highest quality output, an advanced commercial cloud-hosted model will be the best choice provided that it is compatible with any IP or privacy restrictions associated with your content.
 - **Nuanced reasoning, scientific research, coding, technical writing**: Use an advanced model, typically from the commercial cloud providers if self-hosted alternatives are not sufficient.
-- **Document summarization, document cleaning, translation & transcription**: Use a lower-cost model or LBNL-hosted model to reduce cost, as advanced reasoning is not required.
+- **Document summarization, document cleaning, translation & transcription**: Use a lower-cost model or Lab-hosted model to reduce cost, as advanced reasoning is not required.
 - **Image Analysis (vision)**: ChatGPT 4, Google Gemini and Anthropic Claude all support vision. Attach your image and then ask questions.
-- **Large-scale automated document processing**: Use a LBNL-Hosted model which are free to use, saving costs when processing thousands to millions of documents. Batch processing can also reduce costs, typically by 50% for results returned within 24 hours.
+- **Large-scale automated document processing**: Use a Lab-Hosted model which are free to use, saving costs when processing thousands to millions of documents. Batch processing can also reduce costs, typically by 50% for results returned within 24 hours.
 
-#### 9. **How do LBNL-Hosted Models compare to Self-Hosted Options?**
+#### 10. **How do LBNL-Hosted Models compare to Self-Hosted Options?**
 
 LBNL-Hosted models are served using the vLLM engine, which is capable of efficiently serving a large number of simultaneous users. We use multi-way GPU systems that improve the speed and amount of memory available to the model (e.g. 320GB or more of GPU RAM) compared to what is possible on consumer-grade laptop and desktop computers. In addition, our models are evaluated in FP16 precision, which increases the accuracy and quality of outputs compared to quantized models that have been compressed to fit into small-memory devices.
 
-#### 10. **Can I host my own model on IT Division infrastructure?**
+#### 11. **Can I host my own model on IT Division infrastructure?**
 
 Please reach out to us at [scienceit@lbl.gov](mailto:scienceit@lbl.gov) to discuss hosting of your own models or other LLM-powered applications.
+
+#### 12. **How can I improve the results in complex tasks?**
+
+When asking LLMs to perform complex analytical tasks such as code generation and text summarization it can be helpful to reduce the "Temperature" parameter to zero.
+
+When the temperature is non-zero (default is 1.0) the output from the LLM will vary as it randomly selects between possible outputs.
+By setting the temperature to zero, the LLM will always output the maximum likelihood answer (i.e., the best quality answer), and will 
+behave in a deterministic fashion producing repeatable outputs.
+
+In CBORG Chat, you can adjust the model temperature by creating a user preset and then activating the preset.
 

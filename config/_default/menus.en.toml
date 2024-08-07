@@ -43,6 +43,12 @@ pageRef = "/api_examples"
 
 [[main]]
 parent = "API"
+weight = 1
+name = "API FAQ"
+pageRef = "/api_faq"
+
+[[main]]
+parent = "API"
 weight = 2
 name = "Request API Key"
 pageRef = "/api_request"

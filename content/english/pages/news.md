@@ -10,11 +10,29 @@ draft: false
 
 ## Current Status
 
-All services are operational. 
-
-Occasional service interruptions may occur as we adjust system configuration.
+All services are operational. Occasional service interruptions may occur as we adjust system configuration.
 
 ## Recent Updates
+
+_August 6th, 2024_
+
+- Low cost ChatGPT 4o-mini with regional deployment on Azure cloud. Implemented performance improvements to self-hosted chat models: Llama 3.1 and Command R+. New Lab-hosted embedding model `lbl/nomic-embed-text` now available.
+
+_July 31st, 2024_
+
+- The default temperature of models has been adjusted to 0.5. To customize the behavior of chat models please use a user preset.
+
+_July 30th, 2024_
+
+- CBORG Chat now supports RAG using CSV, TXT and PDF files.
+
+_July 25th, 2024_
+
+- Meta Llama 3 70B has been upgraded to Meta Llama 3.1 405B.
+
+_July 24th, 2024_
+
+- Access to Anthropic Claude through the API service is now working. ChatGPT-4o endpoint bandwidth was increased to accomodate user demand.
 
 _July 2nd, 2024_
 

@@ -32,11 +32,9 @@ models = [
     "lbl/command-r-plus",   # LBNL-hosted model (free to use)
     "openai/gpt-3.5-turbo",
     "openai/gpt-4o",
-    "google/gemini-1.5-flash",
-    "google/gemini-1.5-pro",
-    "aws/claude-haiku",
-    "aws/claude-sonnet",
-    "aws/claude-opus"
+    "anthropic/claude-haiku",
+    "anthropic/claude-sonnet",
+    "anthropic/claude-opus"
 ]
 
 for m in models:
@@ -56,7 +54,7 @@ for m in models:
     except:
         print(f"Error calling model {m}")
 
-{{< / highlight >}}
+{{< /highlight >}}
 
 Now let's run the demo from the command line:
 
@@ -68,8 +66,49 @@ laboratory located in Berkeley, California, that conducts scientific research on
 of the United States Department of Energy (DOE). It is one of the 17 National Laboratories 
 in the United States and is managed by the University of California.
 ...
-{{< / highlight >}}
+{{< /highlight >}}
 
+
+## RAG Embedding Example
+
+{{< highlight python >}}
+
+import os
+import openai
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
+
+openai.api_key = os.environ.get('CBORG_API_KEY')
+openai.base_url = "https://api.cborg.lbl.gov"
+
+model = "lbl/nomic-embed-text"
+
+doc1 = "Apple"
+doc2 = "Bread"
+
+response = openai.embeddings.create(
+            model=model, # model to send to the proxy
+            input = [doc1, doc2] # documents to encode, **this must always be a list, even if only encoding 1 doc**
+        )
+
+d1 = response.data[0].embedding
+d2 = response.data[1].embedding
+
+query = "Orange"
+
+response = openai.embeddings.create(
+            model=model, # model to send to the proxy
+            input=query # query - this must be a string, **never send a list to generate a query vector**
+        )
+
+q = response.data[0].embedding
+
+query = np.array([q])
+documents = np.array([d1,d2])
+
+print('Similarity of query "Orange" to "Apple" versus "Bread" (higher is more similar):', cosine_similarity(query,documents))
+
+{{< / highlight >}}
 
 ## Usage Limitations
 
@@ -102,18 +141,20 @@ The proxy server will enforce reasonable limits for on the number of parallel re
 
 - `lbl/llamma-3`: 70B Parameter Model - Chat
 - `lbl/command-r-plus`: 104B Parameter Model - Tool Use, RAG, Summarization
-- `lbl/nv-embed-v1`: 4096-dimension Text Embedding Model
-- `lbl/e5-embed-v2`: 1024-dimension Text Embedding Model
+- `lbl/nomic-embed-text`: 768-dimension Text Embedding Model
+- `lbl/e5-embed-v2`: 1024-dimension Text Embedding Model (CURRENTLY OFFLINE)
+- `lbl/nv-embed-v1`: 4096-dimension Text Embedding Model (CURRENTLY OFFLINE)
 
 ### Commercial Cloud-Hosted Models
 
 - `openai/gpt-3.5-turbo`
 - `openai/gpt-4o`
-- `aws/claude-sonnet`
-- `aws/claude-opus`
-- `aws/claude-haiku`
-- `google/gemini-1.5-flash`
-- `google/gemini-1.5-pro`
+- `openai/gpt-4o-mini`
+- `anthropic/claude-sonnet`
+- `anthropic/claude-opus`
+- `anthropic/claude-haiku`
+
+Google Gemini Pro is not currently available through the API service.
 
 ## Example Code Requirements
 
