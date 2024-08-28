@@ -20,9 +20,9 @@ _August 26th, 2024_
 
 - Lab-hosted models have been renamed with generic "CBorg" naming; underlying model has been replaced from Llama 3.1 to Mistral Large 2047 (licensed for non-commercial use). Added "Cborg Coder" (also based on Mistral Large with customized system message) and "Cborg Nano" (based on Microsoft Phi 3.5 - lightweight model for summarization and extraction tasks).
 
-_August 6th, 2024_
+_August 24th, 2024_
 
-- Low cost ChatGPT 4o-mini with regional deployment on Azure cloud. Implemented performance improvements to self-hosted chat models: Llama 3.1 and Command R+. New Lab-hosted embedding model `lbl/nomic-embed-text` now available.
+- Google Gemini models are now available on the API service.
 
 _August 6th, 2024_
 
