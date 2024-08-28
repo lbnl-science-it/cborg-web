@@ -28,13 +28,16 @@ client = openai.OpenAI(
 )
 
 models = [
-    "lbl/llama-3",          # LBNL-hosted model (free to use)
-    "lbl/command-r-plus",   # LBNL-hosted model (free to use)
+    "lbl/cborg-chat:latest",       # LBL-hosted model 
+    "lbl/cborg-chat-nano:latest",  # LBL-hosted model
     "openai/gpt-3.5-turbo",
     "openai/gpt-4o",
+    "openai/gpt-4o-mini",
     "anthropic/claude-haiku",
     "anthropic/claude-sonnet",
-    "anthropic/claude-opus"
+    "anthropic/claude-opus",
+    "google/gemini-pro",
+    "google/gemini-flash",
 ]
 
 for m in models:
@@ -44,7 +47,7 @@ for m in models:
             messages = [
                 {
                     "role": "user",
-                    "content": "What is the Lawrence Berkeley National Laboratory?"
+                    "content": "What letter comes after A?"
                 }
             ],
             temperature=0.0 # Optional: set model temperature to control amount of variance in response
@@ -60,11 +63,20 @@ Now let's run the demo from the command line:
 
 {{< highlight shell >}}
 $ python ./test.py 
-Model: lbl/llama-3
-Response: The Lawrence Berkeley National Laboratory (LBNL) is a United States national 
-laboratory located in Berkeley, California, that conducts scientific research on behalf 
-of the United States Department of Energy (DOE). It is one of the 17 National Laboratories 
-in the United States and is managed by the University of California.
+Model: lbl/cborg-chat:latest
+Response:  The letter that comes after A in the English alphabet is B.
+Model: lbl/cborg-chat-nano:latest
+Response:  The letter that comes after A in the English alphabet is B. The English alphabet sequence is A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z.
+Model: openai/gpt-3.5-turbo
+Response: B.
+Model: openai/gpt-4o
+Response: The letter that comes after A is B.
+Model: openai/gpt-4o-mini
+Response: The letter that comes after A is B.
+Model: anthropic/claude-haiku
+Response: The letter that comes after A is B.
+Model: anthropic/claude-sonnet
+Response: The letter that comes after A in the English alphabet is B.
 ...
 {{< /highlight >}}
 
@@ -139,11 +151,19 @@ The proxy server will enforce reasonable limits for on the number of parallel re
 
 ### LBL-Hosted Models (free to use)
 
-- `lbl/llamma-3`: 70B Parameter Model - Chat
-- `lbl/command-r-plus`: 104B Parameter Model - Tool Use, RAG, Summarization
+- `lbl/cborg-chat:latest`: Mistral Large 2 - Chat, Coding Assistant, Tool Use
+- `lbl/mistral-large`: Same as above, direct name model route (may change)
+- `lbl/cborg-chat-nano:latest`: Microsoft Phi 3.5 - Summarization
+- `lbl/phi`: Same as above, direct name model route (may change)
 - `lbl/nomic-embed-text`: 768-dimension Text Embedding Model
 - `lbl/e5-embed-v2`: 1024-dimension Text Embedding Model (CURRENTLY OFFLINE)
 - `lbl/nv-embed-v1`: 4096-dimension Text Embedding Model (CURRENTLY OFFLINE)
+
+### Commercial Cloud-Hosted Model Aliases
+
+- `openai/chatgpt:latest`: Alias to ChatGPT 4o (latest version)
+- `anthropic/claude:latest`: Alias to Claude Sonnet 3.5 (latest version)
+- `google/gemini:latest`: Alias to Gemini 1.5 Pro (latest version)
 
 ### Commercial Cloud-Hosted Models
 
@@ -153,8 +173,8 @@ The proxy server will enforce reasonable limits for on the number of parallel re
 - `anthropic/claude-sonnet`
 - `anthropic/claude-opus`
 - `anthropic/claude-haiku`
-
-Google Gemini Pro is not currently available through the API service.
+- `google/gemini-pro`
+- `google/gemini-flash`
 
 ## Example Code Requirements
 

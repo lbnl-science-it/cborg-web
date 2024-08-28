@@ -12,10 +12,11 @@ draft: false
 
 ### Generative AI Models
 
-| Model Endpoint Location  | Model Creator  | Model Name         | Context Length* | Vision | Cost**  | 
+| Model Endpoint Location  | Model Creator  | Model Name         | Context Length* | Vision  | Cost**  | 
 | ---------------          | :------------: | :--------:         | :-----:         | :---:   | :---: | 
-| LBNL IT Division         | Meta           | LLaMA 3.1 405B     | 128K            | N       | Free  |
-| LBNL IT Division         | Cohere         | Command R+ 104B    | 80K             | N       | Free  |
+| LBL IT Division          | Mistral        | Mistral Large 2    | 128K            | N       | Free  |
+| LBL IT Division          | Mistral        | Mistral Large 2    | 128K            | N       | Free  |
+| LBL IT Division          | Microsoft      | Phi 3 Mini         | 128K            | N       | Free  |
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 3.5        | 16K             | N       | $$    | 
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o-Mini    | 128K            | Y       | $     | 
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 4-Omni     | 128K            | Y       | $$$   | 
@@ -41,37 +42,57 @@ draft: false
 * Context window sizes for commercially-hosted Generative AI models are reduced in CBORG Chat to limit excessive usage. To make use of the full-length of context windows please request an API key or engage with Science IT Consulting to discuss using cloud services with a PID recharge.
 {{< /notice >}}
 
-### LBNL-Hosted Models
+### LBL-Hosted Open Models
 
-The IT Division's Science IT group provides access to open models running on Berkeley Lab-owned networks and hardware, located in the Building 50 data center. LBNL-Hosted models are free-to-use.
+The IT Division's Science IT group provides access to open-weight models running on Berkeley Lab-owned networks and hardware, located in the Building 50 data center. LBL-Hosted models are free-to-use.
 
-{{< accordion "Meta Llama 3.1 405B" >}}
+These models are licensed for non-commercial research use.
 
-Llama 3.1 is the latest version of the open source LLM from Meta. Llama is friendly and conversational, with capabilities approximately equivalent to ChatGPT 4. The model is running on a single 8x Nvidia H100 accelerators.
+{{< accordion "CBorg Chat" >}}
 
 - **Endpoint Location**: LBNL IT Division Data Center
-- **Use Cases**: Chat, Text Summarization, Coding Assistant
+- **Underlying AI Model**: Mistral Large 2407, Temperature = 0.5
+- **Use Cases**: Chat, Summarization, Coding Assistant
+- **Vision Support**: No
+- **Tool Support**: Yes
+- **Context Window**: 128K Tokens
+- **Cost**: Free to use
+- **Alias Model Name**: `lbl/cborg-chat:latest`
+- **Base Model Name**: `lbl/mistral-large`
+- **Model Information**: [Mistral Large 2](https://mistral.ai/news/mistral-large-2407/)
+- **Terms of Service**: [Mistral Research License](https://mistral.ai/licenses/MRL-0.1.md)
+
+{{< /accordion >}}
+
+{{< accordion "CBorg Coder" >}}
+
+- **Endpoint Location**: LBNL IT Division Data Center
+- **Underlying AI Model**: Mistral Large 2407 with custom system prompt, Temperature = 0.0
+- **Use Cases**: Coding Assistant
+- **Vision Support**: No
+- **Tool Support**: Yes
+- **Context Window**: 128K Tokens
+- **Cost**: Free to use
+- **Alias Model Name**: `lbl/cborg-coder:latest`
+- **Base Model Name**: `lbl/mistral-large`
+- **Model Information**: [Mistral Large 2](https://mistral.ai/news/mistral-large-2407/)
+- **Terms of Service**: [Mistral Research License](https://mistral.ai/licenses/MRL-0.1.md)
+
+{{< /accordion >}}
+
+{{< accordion "CBorg Nano" >}}
+
+- **Endpoint Location**: LBNL IT Division Data Center
+- **Underlying AI Model**: Microsoft Phi 3.5 Mini, Temperature = 0.0
+- **Use Cases**: Summarization and Data Extraction
 - **Vision Support**: No
 - **Tool Support**: No
 - **Context Window**: 128K Tokens
 - **Cost**: Free to use
-- **API Model Name**: `lbl/llama-3`
-- **Terms of Service**: [Meta Llama Model Card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md)
-
-{{< /accordion >}}
-
-{{< accordion "Cohere Command R+" >}}
-
-Cohere Command R+ has an advanced self-hosted model well suited to technical applications. The large token context window is the longest of any open model, which is useful for text summarization and RAG applications with long documents. R+ also supports tool use / function calling. This model is running on a 4x Nvidia A100 system.
-
-- **Endpoint Location**: LBNL IT Division Data Center
-- **Use Cases**: Chat, Text Summarization, RAG, Multi-Tool Use
-- **Vision Support**: No
-- **Tool Support**: Yes
-- **Context Window**: 80K Tokens (Note: Context window is less than 128K model max due to current hardware limitations)
-- **Cost**: Free to use 
-- **API Model Name**: `lbl/command-r-plus`
-- **Terms of Service**: [Cohere For AI Acceptable Use Policy](https://docs.cohere.com/docs/c4ai-acceptable-use-policy)
+- **Alias Model Name**: `lbl/cborg-nano:latest`
+- **Base Model Name**: `lbl/phi`
+- **Model Information**: [Phi Open Models](https://huggingface.co/microsoft/Phi-3.5-mini-instruct)
+- **Terms of Service**: [MIT License](https://huggingface.co/microsoft/Phi-3.5-mini-instruct/blob/main/LICENSE)
 
 {{< /accordion >}}
 
@@ -130,6 +151,19 @@ NV-Embed-v1 is a leading embedding model created by Nvidia, ranked No. 1 on the 
 ### Commercial Models
 
 Commercial models are hosted in commercial cloud providers. Costs for using these models are paid for by the IT Division. Please select the appropriate model for your application, keeping in mind the cost burdens associated with each. Using these models will cause your data to be shared with cloud providers in accordance with their terms of service. For detailed terms of service of each provider, see the model details below.
+
+**Model Aliases**
+
+To simplify application development, alias model names are provided that point to the recommended
+version of each model provider, as follows:
+
+
+| Alias Name                   | Base Model                 |
+| ---------------------------  | :---------:                |
+| `/openai/chatgpt:latest`     | `/openai/gpt-4o`           | 
+| `/anthropic/claude:latest`   | `/anthropic/claude-sonnet` | 
+| `/google/gemini:latest`      | `google/gemini-1.5-pro`    | 
+
 
 {{< accordion "OpenAI ChatGPT 3.5 Turbo" >}}
 
@@ -193,7 +227,7 @@ Our service connects to the enterprise version of Google Gemini. Inputs are not 
 - **Context Window**: 1.0M Tokens (Note: Limited to 32K in CBORG Chat)
 - **Cost per 1M Tokens (Input)**: $0.35
 - **Cost per 1M Tokens (Output)**: $0.70
-- **API Model Name**: `google/gemini-1.5-flash-latest`
+- **API Model Name**: `google/gemini-1.5-flash`
 - **Pricing Details**: [Gemini API Pricing](https://ai.google.dev/pricing)
 - **Terms of Service**: [Gemini API Additional Terms of Use](https://ai.google.dev/gemini-api/terms)
 
@@ -210,7 +244,7 @@ Our service connects to the enterprise version of Google Gemini. Inputs are not 
 - **Context Window**: 1.0M Tokens (Note: Limited to 16K in CBORG Chat)
 - **Cost per 1M Tokens (Input)**: $3.50
 - **Cost per 1M Tokens (Output)**: $7.00
-- **API Model Name**: `google/gemini-1.5-pro-latest`
+- **API Model Name**: `google/gemini-1.5-pro`
 - **Pricing Details**: [Gemini API Pricing](https://ai.google.dev/pricing)
 - **Terms of Service**: [Gemini API Additional Terms of Use](https://ai.google.dev/gemini-api/terms)
 
@@ -227,7 +261,7 @@ Claude has excellent reasoning and code analysis capabilities compared to other 
 - **Context Window**: 200k Tokens (Note: Limited to 64K in CBORG Chat)
 - **Cost per 1M Tokens (Input)**: $0.25
 - **Cost per 1M Tokens (Output)**: $1.25
-- **API Model Name**: `anthropic/claude-haiku-latest`
+- **API Model Name**: `anthropic/claude-haiku`
 - **Pricing Details**: [Anthropic API Pricing](https://aws.amazon.com/bedrock/pricing/)
 - **Terms of Service**: [Anthropic Commercial Terms of Service](https://www-cdn.anthropic.com/6b68a6508f0210c5fe08f0199caa05c4ee6fb4dc/Anthropic-on-Bedrock-Commercial-Terms-of-Service_Dec_2023.pdf)
 
@@ -244,7 +278,7 @@ Claude has superior reasoning and code analysis capabilities compared to other l
 - **Context Window**: 200k Tokens (Note: Limited to 16K in CBORG Chat)
 - **Cost per 1M Tokens (Input)**: $3.00
 - **Cost per 1M Tokens (Output)**: $15.00
-- **API Model Name**: `anthropic/claude-sonnet-latest`
+- **API Model Name**: `anthropic/claude-sonnet`
 - **Pricing Details**: [Anthropic API Pricing](https://aws.amazon.com/bedrock/pricing/)
 - **Terms of Service**: [Anthropic Commercial Terms of Service](https://www-cdn.anthropic.com/6b68a6508f0210c5fe08f0199caa05c4ee6fb4dc/Anthropic-on-Bedrock-Commercial-Terms-of-Service_Dec_2023.pdf)
 
@@ -262,7 +296,7 @@ Claude has excellent reasoning and code analysis capabilities compared to other 
 - **Context Window**: 200k Tokens (Note: Limited to 4096 in CBORG Chat)
 - **Cost per 1M Tokens (Input)**: $15.00
 - **Cost per 1M Tokens (Output)**: $75.00
-- **API Model Name**: `anthropic/claude-opus-latest`
+- **API Model Name**: `anthropic/claude-opus`
 - **Pricing Details**: [Anthropic API Pricing](https://aws.amazon.com/bedrock/pricing/)
 - **Terms of Service**: [Anthropic Commercial Terms of Service](https://www-cdn.anthropic.com/6b68a6508f0210c5fe08f0199caa05c4ee6fb4dc/Anthropic-on-Bedrock-Commercial-Terms-of-Service_Dec_2023.pdf)
 
@@ -278,8 +312,7 @@ The context length is a measure of the approximate number of words that a model 
 | :------------: | :------------: | :-----------:        |
 | 1.0M           | 2000           | Google Gemini 1.5    |
 | 200K           | 400            | Anthropic Claude     |
-| 128K           | 250            | ChatGPT 4, Llama 3.1 405B |
-| 80K            | 160            | Command R+ (LBNL-Hosted) |
+| 128K           | 250            | ChatGPT 4, Mistral Large, Phi 3.5 |
 | 64K            | 128            |                      |
 | 32K            | 64             |                      |
 | 16K            | 32             | ChatGPT 3.5          |

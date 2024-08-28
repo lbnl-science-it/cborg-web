@@ -51,7 +51,6 @@ For further guidance on legal issues please consult the [LBL Intellectual Proper
 
 - Your data is retained within Berkeley Lab systems and networks
 - Free to use for building large scale LLM-powered applications
-- "Uncensored" models available without guardrail restrictions
 - Supports open research
 
 **Cons:**
@@ -98,4 +97,20 @@ By setting the temperature to zero, the LLM will always output the maximum likel
 behave in a deterministic fashion producing repeatable outputs.
 
 In CBORG Chat, you can adjust the model temperature by creating a user preset and then activating the preset.
+
+#### 13. **Does uploading a large document increase costs?**
+
+Documents uploaded through the file upload do not cause the entire document to be processed by the AI. Rather, the document is broken up into small chunks which are indexed into a database and then retreived to augment the context of the generative AI when it is deemed relevant to the user's input. Therefore, large documents (e.g. thousands of pages) can be uploaded without incurring a high per-token cost.
+
+#### 14. **Are these services expensive?**
+
+Providing generative AI services to the Lab through Cborg is very affordable, and less expensive than the cost of each user acquiring an individual subscription.
+
+In addition, cost control guardrails have been put into place to prevent the service from exceeding our expected budget.
+
+#### 15. **How can I optimize the computational cost / economic cost of using generative AI?**
+
+When chatting with the AI, do not switch topics mid-conversation. Instead, start a new chat session. This will improve the quality of responses from the AI and reduce costs.
+
+Explanation: Generative AI APIs are stateless and do not have any memory of your prior interactions. Instead, they rely on the client to re-transmit the entire chat history on every API call. As the chat history gets grows, the cost of each interaction increases approximately linearly as the number of input tokens increases. Therefore, starting a new chat session (or 'thread') will reset the baseline cost to zero.
 
