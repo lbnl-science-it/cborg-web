@@ -16,6 +16,10 @@ Lab-hosted systems will be offline during the week of Oct 14th through 19th duri
 
 ## Recent Updates
 
+_September 9th, 2024_
+
+- CBorg Nano model changed to Phi 3.5 with vision support - it can describe images and read text. VS Code 'Continue' support is now available in early beta for API users.
+
 _August 26th, 2024_
 
 - Lab-hosted models have been renamed with generic "CBorg" naming; underlying model has been replaced from Llama 3.1 to Mistral Large 2047 (licensed for non-commercial use). Added "Cborg Coder" (also based on Mistral Large with customized system message) and "Cborg Nano" (based on Microsoft Phi 3.5 - lightweight model for summarization and extraction tasks).

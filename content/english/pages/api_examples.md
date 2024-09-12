@@ -28,8 +28,11 @@ client = openai.OpenAI(
 )
 
 models = [
-    "lbl/cborg-chat:latest",       # LBL-hosted model 
-    "lbl/cborg-chat-nano:latest",  # LBL-hosted model
+    "lbl/cborg-chat:latest",       # LBL-hosted model with custom system prompt 
+    "lbl/cborg-coder:latest",      # LBL-hosted model with custom system prompt
+    "lbl/cborg-chat-nano:latest",  # LBL-hosted model with custom system prompt
+    "lbl/mistral-large",           # LBL-hosted model behind cborg-chat and cborg coder
+    "lbl/phi",                     # LBL-hosted model behind cborg-nano
     "openai/gpt-3.5-turbo",
     "openai/gpt-4o",
     "openai/gpt-4o-mini",
@@ -38,6 +41,11 @@ models = [
     "anthropic/claude-opus",
     "google/gemini-pro",
     "google/gemini-flash",
+    "aws/llama-3.1-405b",
+    "aws/llama-3.1-70b",
+    "aws/llama-3.1-8b",
+    "aws/command-r-plus-v1",
+    "aws/command-r-v1"
 ]
 
 for m in models:
@@ -50,7 +58,7 @@ for m in models:
                     "content": "What letter comes after A?"
                 }
             ],
-            temperature=0.0 # Optional: set model temperature to control amount of variance in response
+            temperature=0.0   # Optional: set model temperature to control amount of variance in response
         )
         
         print(f"Model: {m}\nResponse: {response.choices[-1].message.content}")
@@ -65,10 +73,7 @@ Now let's run the demo from the command line:
 $ python ./test.py 
 Model: lbl/cborg-chat:latest
 Response:  The letter that comes after A in the English alphabet is B.
-Model: lbl/cborg-chat-nano:latest
-Response:  The letter that comes after A in the English alphabet is B. The English alphabet sequence is A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z.
-Model: openai/gpt-3.5-turbo
-Response: B.
+...
 Model: openai/gpt-4o
 Response: The letter that comes after A is B.
 Model: openai/gpt-4o-mini

@@ -10,14 +10,28 @@ draft: false
 
 ## Available Models Summary
 
-### Generative AI Models
+### LBL-Hosted Customized Models
+
+LBL-Hosted Customized Models use a customized system prompt on top of a base model, to provide improved behavior for LBL users in chat modes.
+
+Note: API users can bypass the system prompt by accessing underlying models directly, if desired.
+
+| Model Endpoint Location  | Base Model        | Model Name         | Context Length* | Vision  | Cost**  | 
+| ---------------          | :---------------: | :--------:         | :-----:         | :---:   | :---:   | 
+| LBL IT Division          | Mistral Large 2   | CBorg Chat         | 128K            | N       | Free    |
+| LBL IT Division          | Mistral Large 2   | CBorg Coder        | 128K            | N       | Free    |
+| LBL IT Division          | Phi 3.5 Vision    | CBorg Nano         | 128K            | Y       | Free    |
+
+### Chat and Vision Models
+
+Note: This list is subject to change.
 
 | Model Endpoint Location  | Model Creator  | Model Name         | Context Length* | Vision  | Cost**  | 
 | ---------------          | :------------: | :--------:         | :-----:         | :---:   | :---: | 
 | LBL IT Division          | Mistral        | Mistral Large 2    | 128K            | N       | Free  |
 | LBL IT Division          | Mistral        | Mistral Large 2    | 128K            | N       | Free  |
-| LBL IT Division          | Microsoft      | Phi 3 Mini         | 128K            | N       | Free  |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 3.5        | 16K             | N       | $$    | 
+| LBL IT Division          | Microsoft      | Phi 3.5 Vision     | 128K            | Y       | Free  |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 3.5*       | 16K             | N       | $$    | 
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o-Mini    | 128K            | Y       | $     | 
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 4-Omni     | 128K            | Y       | $$$   | 
 | Google Cloud             | Google         | Gemini 1.5 Flash   | 1.0M            | Y       | $     |
@@ -25,24 +39,29 @@ draft: false
 | AWS Cloud                | Anthropic      | Claude 3.0 Haiku   | 200k            | Y       | $     |
 | AWS Cloud                | Anthropic      | Claude 3.5 Sonnet  | 200k            | Y       | $$    |
 | AWS Cloud                | Anthropic      | Claude 3.0 Opus    | 200k            | Y       | $$$   |
+| AWS Cloud                | Meta           | Llama 3.1 405b     | 128k            | N       | $$    |
+| AWS Cloud                | Meta           | Claude 3.0 Opus    | 128k            | N       | $     |
+| AWS Cloud                | Meta           | Claude 3.0 Opus    | 128k            | N       | $     |
+| AWS Cloud                | Cohere         | Command R+         | 128k            | N       | $$    |
+| AWS Cloud                | Cohere         | Command R          | 128k            | N       | $     |
+
+* ChatGPT 3.5 is deprecated, please switch to ChatGPT 4o-Mini
 
 ### Vector Embedding Models
 
-| Model Endpoint Location  | Model Creator      | Model Name  | Max Tokens | Embedding Dimensions | Cost**  | 
-| ---------------          | :------------:     | :--------:  | :-----:    | :---:     | :---: | 
-| LBNL IT Division         | Nomic.AI           | nomic-embed-text | 8192  | 768       | Free  |
-| LBNL IT Division         | Microsoft Research | e5-large-v2      | 512   | 1024      | Free  |
-| LBNL IT Division         | NVidia             | NV-Embed-v1      | 8192  | 4096      | Free  |
+| Model Endpoint Location  | Model Creator      | Model Name       | Max Tokens | Embedding Dimensions | Cost**  | 
+| ---------------          | :------------:     | :--------:       | :-----:    | :---:                | :---: | 
+| LBNL IT Division         | Nomic.AI           | nomic-embed-text | 8192       | 768                  | Free  |
 
 {{< notice "note" >}}
-** Cost for using commercial models are paid for by the IT Division. There is no cost to individual users at this time.
+** Cost for using commercial models are paid for by the IT Division. There is no cost to individual users at this time and no PID is required.
 {{< /notice >}}
 
 {{< notice "note" >}}
 * Context window sizes for commercially-hosted Generative AI models are reduced in CBORG Chat to limit excessive usage. To make use of the full-length of context windows please request an API key or engage with Science IT Consulting to discuss using cloud services with a PID recharge.
 {{< /notice >}}
 
-### LBL-Hosted Open Models
+### LBL-Hosted Models
 
 The IT Division's Science IT group provides access to open-weight models running on Berkeley Lab-owned networks and hardware, located in the Building 50 data center. LBL-Hosted models are free-to-use.
 
@@ -51,46 +70,50 @@ These models are licensed for non-commercial research use.
 {{< accordion "CBorg Chat" >}}
 
 - **Endpoint Location**: LBNL IT Division Data Center
-- **Underlying AI Model**: Mistral Large 2407, Temperature = 0.5
-- **Use Cases**: Chat, Summarization, Coding Assistant
-- **Vision Support**: No
-- **Tool Support**: Yes
-- **Context Window**: 128K Tokens
-- **Cost**: Free to use
-- **Alias Model Name**: `lbl/cborg-chat:latest`
-- **Base Model Name**: `lbl/mistral-large`
-- **Model Information**: [Mistral Large 2](https://mistral.ai/news/mistral-large-2407/)
-- **Terms of Service**: [Mistral Research License](https://mistral.ai/licenses/MRL-0.1.md)
+- **Model Name**: `lbl/cborg-chat:latest`
+- **Underlying Model**: Mistral Large 2407 with Custom System Prompt
 
 {{< /accordion >}}
 
 {{< accordion "CBorg Coder" >}}
 
 - **Endpoint Location**: LBNL IT Division Data Center
-- **Underlying AI Model**: Mistral Large 2407 with custom system prompt, Temperature = 0.0
-- **Use Cases**: Coding Assistant
-- **Vision Support**: No
-- **Tool Support**: Yes
-- **Context Window**: 128K Tokens
-- **Cost**: Free to use
-- **Alias Model Name**: `lbl/cborg-coder:latest`
-- **Base Model Name**: `lbl/mistral-large`
-- **Model Information**: [Mistral Large 2](https://mistral.ai/news/mistral-large-2407/)
-- **Terms of Service**: [Mistral Research License](https://mistral.ai/licenses/MRL-0.1.md)
+- **Model Name**: `lbl/cborg-coder:latest`
+- **Underlying Model**: Mistral Large 2407 with Custom System Prompt and Temperature = 0.0
 
 {{< /accordion >}}
 
 {{< accordion "CBorg Nano" >}}
 
 - **Endpoint Location**: LBNL IT Division Data Center
-- **Underlying AI Model**: Microsoft Phi 3.5 Mini, Temperature = 0.0
-- **Use Cases**: Summarization and Data Extraction
+- **Model Name**: `lbl/cborg-nano:latest`
+- **Underlying Model**: Phi 3.5 Vision with Custom System Prompt
+
+{{< /accordion >}}
+
+{{< accordion "Mistral Large 2407" >}}
+
+- **Endpoint Location**: LBNL IT Division Data Center
+- **Use Cases**: Chat, Summarization, Coding Assistant
 - **Vision Support**: No
-- **Tool Support**: No
+- **Tool Support**: Yes
 - **Context Window**: 128K Tokens
 - **Cost**: Free to use
-- **Alias Model Name**: `lbl/cborg-nano:latest`
-- **Base Model Name**: `lbl/phi`
+- **Model Name**: `lbl/mistral-large`
+- **Model Information**: [Mistral Large 2](https://mistral.ai/news/mistral-large-2407/)
+- **Terms of Service**: [Mistral Research License](https://mistral.ai/licenses/MRL-0.1.md)
+
+{{< /accordion >}}
+
+{{< accordion "Microsoft Phi 3.5 Vision" >}}
+
+- **Endpoint Location**: LBNL IT Division Data Center
+- **Use Cases**: Summarization, Vision
+- **Vision Support**: No
+- **Tool Support**: Yes
+- **Context Window**: 128K Tokens
+- **Cost**: Free to use
+- **Model Name**: `lbl/phi`
 - **Model Information**: [Phi Open Models](https://huggingface.co/microsoft/Phi-3.5-mini-instruct)
 - **Terms of Service**: [MIT License](https://huggingface.co/microsoft/Phi-3.5-mini-instruct/blob/main/LICENSE)
 
@@ -147,10 +170,9 @@ NV-Embed-v1 is a leading embedding model created by Nvidia, ranked No. 1 on the 
 
 {{< /accordion >}}
 
+### Cloud-Hosted Models
 
-### Commercial Models
-
-Commercial models are hosted in commercial cloud providers. Costs for using these models are paid for by the IT Division. Please select the appropriate model for your application, keeping in mind the cost burdens associated with each. Using these models will cause your data to be shared with cloud providers in accordance with their terms of service. For detailed terms of service of each provider, see the model details below.
+Cloud-hosted models are provided using on-demand services from commercial cloud providers. Costs for using these models are paid for by the IT Division. Please select the appropriate model for your application, keeping in mind the cost burdens associated with each. Using these models will cause your data to be shared with cloud providers in accordance with their terms of service. For detailed terms of service of each provider, see the model details below.
 
 **Model Aliases**
 
@@ -167,7 +189,7 @@ version of each model provider, as follows:
 
 {{< accordion "OpenAI ChatGPT 3.5 Turbo" >}}
 
-Note: We use ChatGPT through Microsoft Azure Cloud AI Services, subject to OpenAI/Azure commercial terms of service.
+Note: We use ChatGPT through Microsoft Azure Cloud AI Services, subject to OpenAI/Azure commercial terms of service. This model is deprecated, please switch to ChatGPT 4o-mini.
 
 - **Endpoint Location**: Microsoft Azure Cloud (East US)
 - **Use Cases**: Chat, Text Summarization
@@ -284,7 +306,6 @@ Claude has superior reasoning and code analysis capabilities compared to other l
 
 {{< /accordion >}}
 
-
 {{< accordion "Anthropic Claude 3.0 Opus" >}}
 
 Claude has excellent reasoning and code analysis capabilities compared to other leading models, but can be expensive in the largest variants. 
@@ -301,6 +322,39 @@ Claude has excellent reasoning and code analysis capabilities compared to other 
 - **Terms of Service**: [Anthropic Commercial Terms of Service](https://www-cdn.anthropic.com/6b68a6508f0210c5fe08f0199caa05c4ee6fb4dc/Anthropic-on-Bedrock-Commercial-Terms-of-Service_Dec_2023.pdf)
 
 {{< /accordion >}}
+
+{{< accordion "Meta Llama 3.1 405B" >}}
+
+Llama 3.1 is the latest version of the open source LLM from Meta. Llama is friendly and conversational, with capabilities approximately equivalent to ChatGPT 4 in the 405B-parameter version.
+
+- **Endpoint Location**: Amazon Web Services (US West)
+- **Use Cases**: Chat, Text Summarization, Coding Assistant
+- **Vision Support**: No
+- **Tool Support**: No
+- **Context Window**: 128K Tokens
+- **Cost per 1M Tokens (Input)**: $5.32
+- **Cost per 1M Tokens (Output)**: $16.00
+- **API Model Name**: `lbl/llama-3`
+- **Terms of Service**: [Meta Llama Model Card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md)
+
+{{< /accordion >}}
+
+{{< accordion "Cohere Command R+" >}}
+
+Cohere Command R and R+ has an advanced self-hosted model well suited to technical applications. The model works well for text summarization and RAG applications with long documents. R+ also supports tool use / function calling.
+
+- **Endpoint Location**: Amazon Web Services (US West)
+- **Use Cases**: Chat, Text Summarization, RAG, Tool Use
+- **Vision Support**: No
+- **Tool Support**: Yes
+- **Context Window**: 128K Tokens
+- **Cost per 1M Tokens (Input)**: $1.50
+- **Cost per 1M Tokens (Output)**: $3.00
+- **API Model Name**: `lbl/command-r-plus`
+- **Terms of Service**: [Cohere For AI Acceptable Use Policy](https://docs.cohere.com/docs/c4ai-acceptable-use-policy)
+
+{{< /accordion >}}
+
 
 ### Frequently Asked Questions
 

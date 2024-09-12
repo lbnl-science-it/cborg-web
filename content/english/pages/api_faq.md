@@ -51,14 +51,19 @@ for chunk in response:
 print(answer)
 {{< / highlight >}}
 
-#### 3. Why does my prompt hang and not return?
+#### 3. How do I check my key usage?
 
-In some cases we have seen non-printable ASCII characters or "garbage" inputs cause the LLM engine to hang indefinitely when generating a response.
+Assuming the API key is available in your user environment as $CBORG_API_KEY, you can check the current spend with `/key/info`, e.g.;
 
-You may need to apply HTML escaping to your prompt to ensure no non-printable characters are sent to the endpoint, e.g.
+```
+curl --location 'http://api.cborg.lbl.gov/key/info' --header 'Authorization: Bearer $CBORG_API_KEY'
+```
 
-{{< highlight python >}}
-import html
-html.escape(prompt)
-{{< / highlight >}}
+You can also calculate the estimated cost of an API call, before making the call, using /spend/calculate.
+
+The full API interface is documented here: [CBORG API Documentation](https://api.cborg.lbl.gov/)
+
+LBL-hosted models (anything model name starting with `/lbl`) are hosted in our on-prem datacenter therefore the cost will always return zero for these models.
+
+
 
