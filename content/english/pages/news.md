@@ -12,9 +12,15 @@ draft: false
 
 All services are operational. Occasional service interruptions may occur as we adjust system configuration.
 
-Lab-hosted systems will be offline during the week of Oct 14th through 19th during upgrades to the cooling and power systems in Building 50.
+**Notice:** Lab-hosted systems will be offline during the week of Oct 28th through Nov 1sth during upgrades to the cooling and power systems in Building 50B: [Read the Details Here](https://sites.google.com/lbl.gov/planned-utility-events/projects/building-50b-cooling-upgrade-october-2024)
 
 ## Recent Updates
+
+_September 19th, 2024_
+
+Underlying model for CBorg Chat and CBorg Coder changed to Llama 3.1 405b (FP8). Added experimental
+"CBorg Deepthought" model - based on Chain-of-Thought reasoning prompt. Fixed centering of text
+in CBorg logo. CBorg Nano has been renamed as CBorg Vision to clarify its primary function.
 
 _September 9th, 2024_
 

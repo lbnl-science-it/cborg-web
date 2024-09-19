@@ -18,28 +18,32 @@ Note: API users can bypass the system prompt by accessing underlying models dire
 
 | Model Endpoint Location  | Base Model        | Model Name         | Context Length* | Vision  | Cost**  | 
 | ---------------          | :---------------: | :--------:         | :-----:         | :---:   | :---:   | 
-| LBL IT Division          | Mistral Large 2   | CBorg Chat         | 128K            | N       | Free    |
-| LBL IT Division          | Mistral Large 2   | CBorg Coder        | 128K            | N       | Free    |
-| LBL IT Division          | Phi 3.5 Vision    | CBorg Nano         | 128K            | Y       | Free    |
+| LBL IT Division          | Llama 3.1 405b FP8 | CBorg Chat        | 128K            | N       | N/C    |
+| LBL IT Division          | Llama 3.1 405b FP8 | CBorg Coder       | 128K            | N       | N/C    |
+| LBL IT Division          | Llama 3.1 405b FP8 | CBorg Deepthought | 128K            | N       | N/C    |
+| LBL IT Division          | Llama 3.1 405b FP8 | CBorg Vision      | 128K            | Y       | N/C    |
 
 ### Chat and Vision Models
 
 Note: This list is subject to change.
 
-| Model Endpoint Location  | Model Creator  | Model Name         | Context Length* | Vision  | Cost**  | 
-| ---------------          | :------------: | :--------:         | :-----:         | :---:   | :---: | 
-| LBL IT Division          | Mistral        | Mistral Large 2    | 128K            | N       | Free  |
-| LBL IT Division          | Mistral        | Mistral Large 2    | 128K            | N       | Free  |
-| LBL IT Division          | Microsoft      | Phi 3.5 Vision     | 128K            | Y       | Free  |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 3.5*       | 16K             | N       | $$    | 
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o-Mini    | 128K            | Y       | $     | 
+| Model Endpoint Location  | Model Creator  | Model Name         | Context Length* | Vision  | Cost** | 
+| ---------------          | :------------: | :--------:         | :-----:         | :---:   | :---:  | 
+| LBL IT Division          | Meta           | Llama 3.1 405b FP8 | 128K            | N       | N/C    |
+| LBL IT Division          | Meta           | Llama 3.1 405b FP8 | 128K            | N       | N/C    |
+| LBL IT Division          | Microsoft      | Phi 3.5 Vision     | 128K            | Y       | N/C    |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT o1         | Not available yet  | Y       | $$$$   | 
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 4-Omni     | 128K            | Y       | $$$   | 
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o-Mini    | 128K            | Y       | $      | 
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 3.5*       | 16K             | N       | $$     | 
 | Google Cloud             | Google         | Gemini 1.5 Flash   | 1.0M            | Y       | $     |
 | Google Cloud             | Google         | Gemini 1.5 Pro     | 1.0M            | Y       | $$    |
 | AWS Cloud                | Anthropic      | Claude 3.0 Haiku   | 200k            | Y       | $     |
 | AWS Cloud                | Anthropic      | Claude 3.5 Sonnet  | 200k            | Y       | $$    |
 | AWS Cloud                | Anthropic      | Claude 3.0 Opus    | 200k            | Y       | $$$   |
 | AWS Cloud                | Meta           | Llama 3.1 405b     | 128k            | N       | $$    |
+| AWS Cloud                | Meta           | Llama 3.1 70b      | 128k            | N       | $     |
+| AWS Cloud                | Meta           | Llama 3.1 8b       | 128k            | N       | $     |
 | AWS Cloud                | Meta           | Claude 3.0 Opus    | 128k            | N       | $     |
 | AWS Cloud                | Meta           | Claude 3.0 Opus    | 128k            | N       | $     |
 | AWS Cloud                | Cohere         | Command R+         | 128k            | N       | $$    |
@@ -71,7 +75,7 @@ These models are licensed for non-commercial research use.
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Model Name**: `lbl/cborg-chat:latest`
-- **Underlying Model**: Mistral Large 2407 with Custom System Prompt
+- **Underlying Model**: Llama 3.1 405b FP8 with Custom System Prompt
 
 {{< /accordion >}}
 
@@ -79,29 +83,42 @@ These models are licensed for non-commercial research use.
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Model Name**: `lbl/cborg-coder:latest`
-- **Underlying Model**: Mistral Large 2407 with Custom System Prompt and Temperature = 0.0
+- **Underlying Model**: Llama 3.1 405b FP8 with Custom System Prompt and Temperature = 0.0
 
 {{< /accordion >}}
 
-{{< accordion "CBorg Nano" >}}
+{{< accordion "CBorg Deepthought" >}}
 
 - **Endpoint Location**: LBNL IT Division Data Center
-- **Model Name**: `lbl/cborg-nano:latest`
+- **Model Name**: `lbl/cborg-deepthought:latest`
+- **Underlying Model**: Llama 3.1 405b FP8 with Agentic Multi-step Reasoning (Experimental)
+
+{{< /accordion >}}
+
+{{< accordion "CBorg Vision" >}}
+
+- **Endpoint Location**: LBNL IT Division Data Center
+- **Model Name**: `lbl/cborg-vision:latest`
 - **Underlying Model**: Phi 3.5 Vision with Custom System Prompt
 
 {{< /accordion >}}
 
-{{< accordion "Mistral Large 2407" >}}
+{{< accordion "Meta Llama 3.1 405B FP8" >}}
+
+**Note:** This model is quantized from the original FP16 to FP8 format to reduce its memory footprint.
+
+The FP8 version has virtually identical performance according to standard benchmarks, however
+it may exhibit different behaviors under certain circumstances that are not detected by
+benchmark studies.
 
 - **Endpoint Location**: LBNL IT Division Data Center
-- **Use Cases**: Chat, Summarization, Coding Assistant
+- **Use Cases**: Chat, Summarization, Coding Assistant, Tool Use
 - **Vision Support**: No
 - **Tool Support**: Yes
 - **Context Window**: 128K Tokens
-- **Cost**: Free to use
-- **Model Name**: `lbl/mistral-large`
-- **Model Information**: [Mistral Large 2](https://mistral.ai/news/mistral-large-2407/)
-- **Terms of Service**: [Mistral Research License](https://mistral.ai/licenses/MRL-0.1.md)
+- **Cost**: No cost
+- **Model Name**: `lbl/llama-3`
+- **Terms of Service**: [Meta Llama Model Card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md)
 
 {{< /accordion >}}
 
