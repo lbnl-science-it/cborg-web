@@ -12,19 +12,22 @@ draft: false
 
 All services are operational. Occasional service interruptions may occur as we adjust system configuration.
 
+**ChatGPT o1:** The new ChatGPT o1 is not available yet on CBorg - we are working on it!
+
 **Notice:** Lab-hosted systems will be offline during the week of Oct 28th through Nov 1sth during upgrades to the cooling and power systems in Building 50B: [Read the Details Here](https://sites.google.com/lbl.gov/planned-utility-events/projects/building-50b-cooling-upgrade-october-2024)
 
 ## Recent Updates
 
 _September 19th, 2024_
 
-Underlying model for CBorg Chat and CBorg Coder changed to Llama 3.1 405b (FP8). Added experimental
+- Underlying model for CBorg Chat and CBorg Coder changed to Llama 3.1 405b (FP8). Added experimental
 "CBorg Deepthought" model - based on Chain-of-Thought reasoning prompt. Fixed centering of text
-in CBorg logo. CBorg Nano has been renamed as CBorg Vision to clarify its primary function.
+in CBorg logo. CBorg Nano has been renamed as CBorg Vision to clarify its primary function (currently
+offline)
 
 _September 9th, 2024_
 
-- CBorg Nano model changed to Phi 3.5 with vision support - it can describe images and read text. VS Code 'Continue' support is now available in early beta for API users.
+- CBorg Vision model changed to Phi 3.5 with vision support - it can describe images and read text. VS Code 'Continue' support is now available in early beta for API users.
 
 _August 26th, 2024_
 

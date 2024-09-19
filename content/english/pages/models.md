@@ -21,7 +21,6 @@ Note: API users can bypass the system prompt by accessing underlying models dire
 | LBL IT Division          | Llama 3.1 405b FP8 | CBorg Chat        | 128K            | N       | N/C    |
 | LBL IT Division          | Llama 3.1 405b FP8 | CBorg Coder       | 128K            | N       | N/C    |
 | LBL IT Division          | Llama 3.1 405b FP8 | CBorg Deepthought | 128K            | N       | N/C    |
-| LBL IT Division          | Llama 3.1 405b FP8 | CBorg Vision      | 128K            | Y       | N/C    |
 
 ### Chat and Vision Models
 
@@ -31,8 +30,8 @@ Note: This list is subject to change.
 | ---------------          | :------------: | :--------:         | :-----:         | :---:   | :---:  | 
 | LBL IT Division          | Meta           | Llama 3.1 405b FP8 | 128K            | N       | N/C    |
 | LBL IT Division          | Meta           | Llama 3.1 405b FP8 | 128K            | N       | N/C    |
-| LBL IT Division          | Microsoft      | Phi 3.5 Vision     | 128K            | Y       | N/C    |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT o1         | Not available yet  | Y       | $$$$   | 
+| LBL IT Division          | Microsoft      | Phi 3.5 Vision     | Currently Offline  | Y       | N/C    |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT o1         | Not Available Yet  | Y       | $$$$   | 
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 4-Omni     | 128K            | Y       | $$$   | 
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o-Mini    | 128K            | Y       | $      | 
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 3.5*       | 16K             | N       | $$     | 
@@ -123,6 +122,8 @@ benchmark studies.
 {{< /accordion >}}
 
 {{< accordion "Microsoft Phi 3.5 Vision" >}}
+
+**CURRENTLY OFFLINE - WILL BE RESTORED SOON**
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Use Cases**: Summarization, Vision
