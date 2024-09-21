@@ -8,31 +8,17 @@ description: "Details regarding AI-based tools available through the CBORG AI Po
 draft: false
 ---
 
-# CBorg AI-Powered AI Tools
+# CBorg-Powered AI Tools
 
-----
-
-### Coming Soon / Work In Progress
-
-- **PDF Reader:** Convert PDFs to Markdown and LaTeX for ingestion into LLM
-- **LabGPT:** Chatbot grounded with Berkeley Lab internal knowledgebase.
-- **Web Scraping Demo:** Automatically scrape news articles into JSON
-- **GraphRAG UI:** Convert documents into knowledge base for advanced RAG queries
-- **Stable Diffusion / FLUX:** Image generation tool
-
-----
-
-### Available Now
-
-#### CBorg Chat
+{{< accordion "CBorg Chat" >}}
 
 Use ChatGPT, Gemini, Anthropic, Llama3 and more.
 
 {{< button "CBorg Chat" "https://chat.cborg.lbl.gov" >}}
 
-----
+{{< /accordion >}}
 
-#### CBorg API Service
+{{< accordion "CBorg API Service" >}}
 
 Use CBorg LLMs from your own app or build your own LLM-powered programs.1
 
@@ -42,33 +28,69 @@ Use CBorg LLMs from your own app or build your own LLM-powered programs.1
 
 {{< button "CBorg API Swagger Documentation" "https://api.cborg.lbl.gov/" >}}
 
-----
+{{< /accordion >}}
 
-#### CBorg Client
+{{< accordion "CBorg Client Proxy" >}}
 
-Reverse proxy service that streamlines the connection between your local machine and the CBorg API server
+Reverse proxy service that streamlines the connection between your local machine and the CBorg API server.
 
-  - Inject API keys automatically from environment variable - no need to save keys in each application
-  - Detect when client is connected to LBL-net and automatically switch to locally-routed endpoint
+**Features**:
+
+- **Automatic Key Injection:** Inject API keys automatically from environment variable - no need to save keys in each application
+- **Automatic Endpoint Routing on LBL-Net:** Detects when client is connected to LBL-net and automatically switch to locally-routed endpoint, reducing latency.
+- **Usage Monitoring:** Periodically checks and reports on current key budget utilization.
 
 {{< button "CBorg Client GitHub Project" "https://github.com/lbnl-science-it/cborg-client" >}}
 
-----
+{{< /accordion >}}
 
-#### VS Code Continue Plugin (Beta)
+{{< accordion "VS Code Continue Plugin" >}}
 
-  Use the popular [VS Code Continue Plugin](https://www.continue.dev/) with the CBorg API Server.
+Use the popular [VS Code Continue Plugin](https://www.continue.dev/) with the CBorg API Server.
 
-  - Easy setup: provides chat and editor functions
-  - Advanced setup: provides tab-autocompletion and indexing, using CBorg Client Service (see above)
+Two options:
+1. **Easy setup:** provides chat and editor functions
+2. **Advanced setup:** full functionality with tab-autocompletion and indexing - requires CBorg Client Proxy
 
 {{< button "VS Code Continue Support on CBorg Client GitHub Project" "https://github.com/lbnl-science-it/cborg-client" >}}
 
-----
+{{< /accordion >}}
 
-#### Omni-Engineer (Experimental)
+{{< accordion "Cursor AI Code Editor" >}}
 
-Coding assistant capable of editing files in-place using simple commands. Best results with Claude Sonnet.
+Cursor is an AI-powered code editor, based on a fork of VS Code. Cursor requires less
+setup to configure compared to VS Code + Continue, but is dependent on a Cursor Pro 
+subscription for full functionality including "Composer" and "Fill-in-the middle" code
+completions.
+
+Cursor can be used with the CBorg API for chat, inline code generation and editing.
+
+## Setup Instructions
+
+Go to "Models" in the Cursor Settings:
+
+#### Step 1: Enter Model Names
+
+1. **Disable Default Models**: Delete or disable all default model names
+2. **Add CBorg Model Names**: Add and enable at least one of the following models:
+
+- lbl/cborg-coder:latest
+- openai/chatgpt:latest
+- google/gemini:latest
+- anthropic/claude:latest
+
+#### Step 2: Set API Key and Base URL
+
+1. **OpenAI API Key:** sk-... (paste your CBorg API Key here)
+2. **Override OpenAI Base URL:** https://api.cborg.lbl.gov
+
+*If using the CBorg Client, set API Key to "none" and OpenAI Base URL to http://127.0.0.1:8001*
+
+{{< /accordion >}}
+
+{{< accordion "Omni-Engineer (Experimental)" >}}
+
+Coding assistant capable of editing files in-place using simple commands. Best results with Claude Sonnet, but you can also use the on-prem CBorg Coder model.
 
 {{< button "Omni Engineer GitHub Project" "https://github.com/Doriandarko/omni-engineer/tree/main" >}}
 
@@ -83,4 +105,14 @@ client = OpenAI(
 DEFAULT_MODEL = "lbl/cborg-coder:latest"
 EDITOR_MODEL = "lbl/cborg-coder:latest"
 {{< /highlight >}}
+
+{{< /accordion >}}
+
+### Coming Soon / Work In Progress
+
+- **PDF Reader:** Convert PDFs to Markdown and LaTeX for ingestion into LLM
+- **LabGPT:** Chatbot grounded with Berkeley Lab internal knowledgebase.
+- **Web Scraping Demo:** Automatically scrape news articles into JSON
+- **GraphRAG UI:** Convert documents into knowledge base for advanced RAG queries
+- **Stable Diffusion / FLUX:** Image generation tool
 
