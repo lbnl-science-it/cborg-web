@@ -14,7 +14,7 @@ All services are operational. Occasional service interruptions may occur as we a
 
 **ChatGPT o1:** The new ChatGPT o1 is not available yet on CBorg - we are working on it!
 
-**Notice:** Lab-hosted systems will be offline during the week of Oct 28th through Nov 1sth during upgrades to the cooling and power systems in Building 50B: [Read the Details Here](https://sites.google.com/lbl.gov/planned-utility-events/projects/building-50b-cooling-upgrade-october-2024)
+**Notice:** **Lab-hosted systems will be offline during the week of Oct 28th through Nov 1st** during upgrades to the cooling and power systems in Building 50B: [Read the Details Here](https://sites.google.com/lbl.gov/planned-utility-events/projects/building-50b-cooling-upgrade-october-2024)
 
 ## Recent Updates
 
