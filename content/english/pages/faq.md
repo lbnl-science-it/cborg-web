@@ -3,45 +3,49 @@ title: "Frequently Asked Questions"
 # meta title
 meta_title: ""
 # meta description
-description: "Common questions regarding the CBORG AI Portal and CBORG Chat"
+description: "Common questions regarding the CBorg AI Portal and CBorg Chat"
 # save as draft
 draft: false
 ---
 
-#### 1. Where is the CBORG Portal hosted?
+#### 1. Where is the CBorg Portal hosted?
 
-The CBORG Chat user-interface, chat history database, and LBL-hosted models are all located on servers running in the IT Division's data center in Building 50. If you use commercial models (ChatGPT, Google Gemini or Anthropic Claude), these models are running in commercial cloud infrastructure which is external to the LBL network.
+The CBorg Chat user-interface, chat history database, and LBL-hosted models are all located on servers running in the IT Division's data center in Building 50. If you use commercial models (ChatGPT, Google Gemini or Anthropic Claude), these models are running in commercial cloud infrastructure which is external to the LBL network.
 
 #### 2. What GPUs are the LBL-hosted models running on?
 
 We use a small cluster containing an Nvidia DGX 8-way H100 node, in addition to 4-way A100, A40 and AMD MI100 GPUs nodes. Models are allocated to GPU resources to accomodate anticipated workloads.
 
-#### 3. Can I export chat from ChatGPT and import them to CBORG Chat?*
+#### 3. Can I export chat from ChatGPT and import them to CBorg Chat?*
 
 Yes, follow these instructions: [JSON Export/Import Conversations](https://www.librechat.ai/docs/user_guides/import_convo)
 
-#### 4. Where does my CBORG Chat data get stored?
+#### 4. Where does my CBorg Chat data get stored?
 
-*CBORG Chat*: Chat history (the transcript of messages between you and the AI) is saved in a database within the IT Division's LBL-hosted systems.
+*CBorg Chat*: Chat history (the transcript of messages between you and the AI) is saved in a database within the IT Division's LBL-hosted systems.
 
-*CBORG API*: Chat history is not saved, but in some cases chat content may appear in log transcripts visible to IT Division staff.
+*CBorg API*: Chat history is not saved, but in some cases chat content may appear in log transcripts visible to IT Division staff.
 
-#### 5. Can I use CBORG Chat with PII or CUI data?
+#### 5. Can I use CBorg Chat with PII or CUI data?
 
 No, this system is not designed to accept PII or CUI data.
 
-#### 6. Can I upload a PDF, text or CSV file to CBORG Chat?
+#### 6. Can I upload a PDF, text or CSV file to CBorg Chat?
 
-No, currently the CBORG Chat only accepts image files for vision models, e.g. "Describe what is in this picture". Support for chatting with PDF documents and other file types is on our roadmap but currently is not enabled.
+Some models on CBorg Chat provide vision support and accepts image file attachments. They can
+describe images and extract text from images (OCR), e.g. "Describe what is in this picture" or "Transcribe this picture". 
+
+PDF documents and text files can also be uploaded and added to the chat context using the RAG method.
 
 #### 7. What are the legal issues associated with using generative AI in my work?*
 
 - Commercial Use: Some open-source (LBL-hosted) models are not permitted for commercial use. All models provided allow for research use.
+
 - Synthetic Data: Some models do not permit use of the model to generate synthetic training data for further models. Users are responsible for complying with the [terms of use of each model](/models).
 
-- Legal Issues, Copyright Issues, Authorship Misattribution: Cyber Security has published a document providing [Guidance on using Generative AI Tools](https://commons.lbl.gov/display/cpp/Guidance+on+using+Generative+AI+tools). LBNL Staff should familiarize themselves with the issues described herein.
+- Legal Issues, Copyright Issues, Authorship Misattribution: Cyber Security has published a document providing [Guidance on using Generative AI Tools](https://commons.lbl.gov/display/cpp/Guidance+on+using+Generative+AI+tools). LBNL Staff should familiarize themselves with the issues described.
 
-For further guidance on legal issues please consult the [LBL Intellectual Property Office](https://ipo.lbl.gov)
+For further guidance on legal issues related to AI please consult the [LBL IT Policy](mailto:itpolicy@lbl.gov)
 
 #### 8. **Why use LBNL-Hosted versus Commercial Models?**
 
@@ -96,7 +100,7 @@ When the temperature is non-zero (default is 1.0) the output from the LLM will v
 By setting the temperature to zero, the LLM will always output the maximum likelihood answer (i.e., the best quality answer), and will 
 behave in a deterministic fashion producing repeatable outputs.
 
-In CBORG Chat, you can adjust the model temperature by creating a user preset and then activating the preset.
+In CBorg Chat, you can adjust the model temperature by creating a user preset and then activating the preset.
 
 #### 13. **Does uploading a large document increase costs?**
 

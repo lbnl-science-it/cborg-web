@@ -18,12 +18,17 @@ All services are operational. Occasional service interruptions may occur as we a
 
 ## Recent Updates
 
+_Oct 4th, 2024_
+
+- Added new CBorg Vision model based on Meta Llama 3.2 90B Vision.
+- Integrated Wolfram|Alpha into CBorg Chat.
+- Deployed new self-managed API Key Manager, enabling users to create and manage their own API keys.
+
 _September 19th, 2024_
 
 - Underlying model for CBorg Chat and CBorg Coder changed to Llama 3.1 405b (FP8). Added experimental
 "CBorg Deepthought" model - based on Chain-of-Thought reasoning prompt. Fixed centering of text
-in CBorg logo. CBorg Nano has been renamed as CBorg Vision to clarify its primary function (currently
-offline)
+in CBorg logo.
 
 _September 9th, 2024_
 

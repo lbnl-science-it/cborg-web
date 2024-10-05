@@ -20,6 +20,7 @@ Note: API users can bypass the system prompt by accessing underlying models dire
 | ---------------          | :---------------: | :--------:         | :-----:         | :---:   | :---:   | 
 | LBL IT Division          | Llama 3.1 405b FP8 | CBorg Chat        | 128K            | N       | N/C    |
 | LBL IT Division          | Llama 3.1 405b FP8 | CBorg Coder       | 128K            | N       | N/C    |
+| LBL IT Division          | Llama 3.2 Vision 90b | CBorg Vision    | 128K            | Y       | N/C    |
 | LBL IT Division          | Llama 3.1 405b FP8 | CBorg Deepthought | 128K            | N       | N/C    |
 
 ### Chat and Vision Models
@@ -30,11 +31,11 @@ Note: This list is subject to change.
 | ---------------          | :------------: | :--------:         | :-----:         | :---:   | :---:  | 
 | LBL IT Division          | Meta           | Llama 3.1 405b FP8 | 128K            | N       | N/C    |
 | LBL IT Division          | Meta           | Llama 3.1 405b FP8 | 128K            | N       | N/C    |
-| LBL IT Division          | Microsoft      | Phi 3.5 Vision     | Currently Offline  | Y       | N/C    |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT o1         | Not Available Yet  | Y       | $$$$   | 
+| LBL IT Division          | Meta           | Llama 3.2 90b Vision | 128K          | Y       | N/C    |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT o1         | **Not Available Yet**  | Y       | $$$$   | 
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 4-Omni     | 128K            | Y       | $$$   | 
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o-Mini    | 128K            | Y       | $      | 
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 3.5*       | 16K             | N       | $$     | 
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 3.5 **(Deprecated)**       | 16K             | N       | $$     | 
 | Google Cloud             | Google         | Gemini 1.5 Flash   | 1.0M            | Y       | $     |
 | Google Cloud             | Google         | Gemini 1.5 Pro     | 1.0M            | Y       | $$    |
 | AWS Cloud                | Anthropic      | Claude 3.0 Haiku   | 200k            | Y       | $     |
@@ -43,12 +44,11 @@ Note: This list is subject to change.
 | AWS Cloud                | Meta           | Llama 3.1 405b     | 128k            | N       | $$    |
 | AWS Cloud                | Meta           | Llama 3.1 70b      | 128k            | N       | $     |
 | AWS Cloud                | Meta           | Llama 3.1 8b       | 128k            | N       | $     |
-| AWS Cloud                | Meta           | Claude 3.0 Opus    | 128k            | N       | $     |
-| AWS Cloud                | Meta           | Claude 3.0 Opus    | 128k            | N       | $     |
 | AWS Cloud                | Cohere         | Command R+         | 128k            | N       | $$    |
 | AWS Cloud                | Cohere         | Command R          | 128k            | N       | $     |
+| Wolfram Cloud            | Wolfram Research  | Wolfram\|Alpha   | 1024            | N       | $     |
 
-* ChatGPT 3.5 is deprecated, please switch to ChatGPT 4o-Mini
+**Note:** ChatGPT 3.5 is deprecated, please switch to ChatGPT 4o-Mini
 
 ### Vector Embedding Models
 
@@ -86,19 +86,19 @@ These models are licensed for non-commercial research use.
 
 {{< /accordion >}}
 
-{{< accordion "CBorg Deepthought" >}}
-
-- **Endpoint Location**: LBNL IT Division Data Center
-- **Model Name**: `lbl/cborg-deepthought:latest`
-- **Underlying Model**: Llama 3.1 405b FP8 with Agentic Multi-step Reasoning (Experimental)
-
-{{< /accordion >}}
-
 {{< accordion "CBorg Vision" >}}
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Model Name**: `lbl/cborg-vision:latest`
 - **Underlying Model**: Phi 3.5 Vision with Custom System Prompt
+
+{{< /accordion >}}
+
+{{< accordion "CBorg Deepthought" >}}
+
+- **Endpoint Location**: LBNL IT Division Data Center
+- **Model Name**: `lbl/cborg-deepthought:latest`
+- **Underlying Model**: Llama 3.1 405b FP8 with Agentic Multi-step Reasoning (Experimental)
 
 {{< /accordion >}}
 
@@ -116,26 +116,28 @@ benchmark studies.
 - **Tool Support**: Yes
 - **Context Window**: 128K Tokens
 - **Cost**: No cost
-- **Model Name**: `lbl/llama-3`
+- **Model Name**: `lbl/llama`
 - **Terms of Service**: [Meta Llama Model Card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md)
 
 {{< /accordion >}}
 
-{{< accordion "Microsoft Phi 3.5 Vision" >}}
+{{< accordion "Meta Llama 3.2 Vision 90B" >}}
 
-**CURRENTLY OFFLINE - WILL BE RESTORED SOON**
+This model provides powerful vision capabilities and long-context chat functionality in one model.
+Due to the smaller model size it is slightly less reliable in factual citations and complex reasoning
+as compared to the text-only 405B model.
 
 - **Endpoint Location**: LBNL IT Division Data Center
-- **Use Cases**: Summarization, Vision
-- **Vision Support**: No
+- **Use Cases**: Chat, Summarization, Vision, OCR
+- **Vision Support**: Yes
 - **Tool Support**: Yes
 - **Context Window**: 128K Tokens
-- **Cost**: Free to use
-- **Model Name**: `lbl/phi`
-- **Model Information**: [Phi Open Models](https://huggingface.co/microsoft/Phi-3.5-mini-instruct)
-- **Terms of Service**: [MIT License](https://huggingface.co/microsoft/Phi-3.5-mini-instruct/blob/main/LICENSE)
+- **Cost**: No cost
+- **Model Name**: `lbl/llama-vision`
+- **Terms of Service**: [Meta Llama Model Card](https://huggingface.co/meta-llama/Llama-3.2-90B-Vision)
 
 {{< /accordion >}}
+
 
 {{< accordion "nomic-embed-text" >}}
 
@@ -341,7 +343,11 @@ Claude has excellent reasoning and code analysis capabilities compared to other 
 
 {{< /accordion >}}
 
-{{< accordion "Meta Llama 3.1 405B" >}}
+{{< accordion "AWS Meta Llama 3.1" >}}
+
+**Note:** This version of Llama 3.1 runs in the AWS cloud. The 405B model here uses full-precision BF16-format
+which may result in slightly different outputs compared to the LBL-hosted FP8-quantized model.
+Smaller model formats are also available.
 
 Llama 3.1 is the latest version of the open source LLM from Meta. Llama is friendly and conversational, with capabilities approximately equivalent to ChatGPT 4 in the 405B-parameter version.
 
@@ -352,14 +358,14 @@ Llama 3.1 is the latest version of the open source LLM from Meta. Llama is frien
 - **Context Window**: 128K Tokens
 - **Cost per 1M Tokens (Input)**: $5.32
 - **Cost per 1M Tokens (Output)**: $16.00
-- **API Model Name**: `lbl/llama-3`
+- **API Model Name**: `aws/llama-3.1-405b` (also available at lower costs: -70b and -8b)
 - **Terms of Service**: [Meta Llama Model Card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md)
 
 {{< /accordion >}}
 
-{{< accordion "Cohere Command R+" >}}
+{{< accordion "AWS Cohere Command R+" >}}
 
-Cohere Command R and R+ has an advanced self-hosted model well suited to technical applications. The model works well for text summarization and RAG applications with long documents. R+ also supports tool use / function calling.
+Cohere Command R and R+ are intended to support enterprise applications with tool use and RAG capabilities.
 
 - **Endpoint Location**: Amazon Web Services (US West)
 - **Use Cases**: Chat, Text Summarization, RAG, Tool Use
@@ -368,8 +374,24 @@ Cohere Command R and R+ has an advanced self-hosted model well suited to technic
 - **Context Window**: 128K Tokens
 - **Cost per 1M Tokens (Input)**: $1.50
 - **Cost per 1M Tokens (Output)**: $3.00
-- **API Model Name**: `lbl/command-r-plus`
+- **API Model Name**: `aws/command-r-plus`, `aws/command-r` (lower cost version)
 - **Terms of Service**: [Cohere For AI Acceptable Use Policy](https://docs.cohere.com/docs/c4ai-acceptable-use-policy)
+
+{{< /accordion >}}
+
+{{< accordion "Wolfram|Alpha" >}}
+
+Wolfram|Alpha can lookup information, consult databases and perform mathematical calculations.
+The CBorg endpoint accepts queries as OpenAI-compatible user messages and returns results
+in Markdown-formatted text.
+
+- **Endpoint Location**: Wolfram Cloud
+- **Use Cases**: Calculator, Database Lookup
+- **Vision Support**: No
+- **Tool Support**: No
+- **Input Length**: 1024 Characters
+- **API Model Name**: `wolfram/alpha`
+- **Terms of Service**: [Wolfram|Alpha Terms of Use](https://www.wolframalpha.com/termsofuse)
 
 {{< /accordion >}}
 

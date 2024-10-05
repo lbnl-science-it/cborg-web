@@ -20,13 +20,13 @@ Use ChatGPT, Gemini, Anthropic, Llama3 and more.
 
 {{< accordion "CBorg API Service" >}}
 
-Use CBorg LLMs from your own app or build your own LLM-powered programs.1
+Use CBorg LLMs from your own app or build your own LLM-powered programs.
 
-- [Request API Key](/api_request)
+{{< button "Request a CBorg API Key" "/api_request" >}}
+
 - [API Examples](/api_examples)
 - [API_FAQ](/api_faq)
-
-{{< button "CBorg API Swagger Documentation" "https://api.cborg.lbl.gov/" >}}
+- [API Swagger Documentation](https://api.cborg.lbl.gov/)
 
 {{< /accordion >}}
 
@@ -69,9 +69,9 @@ Cursor can be used with the CBorg API for chat, inline code generation and editi
 
 Go to "Models" in the Cursor Settings:
 
-#### Step 1: Enter Model Names
+#### Step 1: Add CBorg Model Names
 
-1. **Disable Default Models**: Delete or disable all default model names
+1. **Disable Default Models**: Disable all of the default model names
 2. **Add CBorg Model Names**: Add and enable at least one of the following models:
 
 - lbl/cborg-coder:latest

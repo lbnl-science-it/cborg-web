@@ -1,9 +1,9 @@
 ---
 # Banner
 banner:
-  title: "CBORG - Multi-Model AI Portal for Berkeley Lab"
+  title: "CBorg - Multi-Model AI Portal for Berkeley Lab"
   image: "/images/ai-banner.png"
-  content: "The **CBORG AI Portal** provides Berkeley Lab staff with access to selected AI models for chat, text summarization, coding assistance, image analysis and more, including ChatGPT, Claude, and Lab-hosted CBorg Chat..."
+  content: "The **CBorg AI Portal** provides Berkeley Lab staff with access to selected AI models for chat, text summarization, coding assistance, image analysis and more, including ChatGPT, Claude, and Lab-hosted CBorg Chat..."
   button:
     enable: true
     label: "Start Chat"
@@ -18,9 +18,8 @@ features:
       - "**OpenAI ChatGPT** via Azure Cloud"
       - "**Google Gemini Pro** via Google Cloud"
       - "**Anthropic Claude** via AWS Bedrock"
-      - "**Llama 3.1 405B** Open Source Chat Model via AWS Bedrock"
-      - "**LBL-Hosted Models** CBorg Chat, CBorg Coder and CBorg Nano"
-      - "...and more on the way!"
+      - "**Llama 3.1 405B and 90B** Lab-hosted Open Chat & Vision Models"
+      - "...and many more!"
     button:
       enable: true
       label: "Model Details"

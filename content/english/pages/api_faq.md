@@ -3,10 +3,12 @@ title: "Frequently Asked Questions for API Users"
 # meta title
 meta_title: ""
 # meta description
-description: "Common questions regarding the CBORG API Service"
+description: "Common questions regarding the CBorg API Service"
 # save as draft
 draft: false
 ---
+
+**Note:** The full API interface is documented here: [CBorg API Documentation](https://api.cborg.lbl.gov/)
 
 #### 1. How should I securely store the API key?
 
@@ -51,19 +53,29 @@ for chunk in response:
 print(answer)
 {{< / highlight >}}
 
-#### 3. How do I check my key usage?
+#### 3. I received message: "Invalid API Key Error" - How do I confirm my key is valid?
+
+When using your CBorg key with OpenAI-API-Compatible applications and/or libraries,
+*you must override the Base URL* to the CBorg API server at https://api.cborg.lbl.gov - otherwise these apps will reach out to OpenAI's servers which will reject your key!
+
+**Note**: If your client is on LBL-Net you can use https://api-local.cborg.lbl.gov
+which provides a direct network path without relaying your request through Cloudflare!
+
+Assuming the API key is available in your user environment as $CBORG_API_KEY, you can check the current key is valid using `/key/info`, e.g.;
+
+{{< highlight bash >}}
+curl --location 'https://api.cborg.lbl.gov/key/info' --header 'Authorization: Bearer $CBORG_API_KEY'
+{{< /highlight >}}
+
+#### 4. How do I check my key budget and spend?
 
 Assuming the API key is available in your user environment as $CBORG_API_KEY, you can check the current spend with `/key/info`, e.g.;
 
-```
-curl --location 'http://api.cborg.lbl.gov/key/info' --header 'Authorization: Bearer $CBORG_API_KEY'
-```
+{{< highlight bash >}}
+curl --location 'https://api.cborg.lbl.gov/key/info' --header 'Authorization: Bearer $CBORG_API_KEY'
+{{< /highlight >}}
 
 You can also calculate the estimated cost of an API call, before making the call, using /spend/calculate.
 
-The full API interface is documented here: [CBORG API Documentation](https://api.cborg.lbl.gov/)
-
 LBL-hosted models (anything model name starting with `/lbl`) are hosted in our on-prem datacenter therefore the cost will always return zero for these models.
-
-
 
