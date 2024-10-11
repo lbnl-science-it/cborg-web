@@ -27,15 +27,15 @@ Note: API users can bypass the system prompt by accessing underlying models dire
 
 Note: This list is subject to change.
 
-| Model Endpoint Location  | Model Creator  | Model Name         | Context Length* | Vision  | Cost** | 
-| ---------------          | :------------: | :--------:         | :-----:         | :---:   | :---:  | 
-| LBL IT Division          | Meta           | Llama 3.1 405b FP8 | 128K            | N       | N/C    |
-| LBL IT Division          | Meta           | Llama 3.1 405b FP8 | 128K            | N       | N/C    |
-| LBL IT Division          | Meta           | Llama 3.2 90b Vision | 128K          | Y       | N/C    |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT o1         | **Not Available Yet**  | Y       | $$$$   | 
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4-Omni     | 128K            | Y       | $$$   | 
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o-Mini    | 128K            | Y       | $      | 
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 3.5 **(Deprecated)**       | 16K             | N       | $$     | 
+| Model Endpoint Location  | Model Creator  | Model Name           | Context Length* | Vision  | Cost** | 
+| ---------------          | :------------: | :--------:           | :-----:         | :---:   | :---:  | 
+| LBL IT Division          | Meta           | Llama 3.1 405B FP8   | 128K            | N       | N/C    |
+| LBL IT Division          | Meta           | Llama 3.1 405B FP8   | 128K            | N       | N/C    |
+| LBL IT Division          | Meta           | Llama 3.2 90B Vision | 128K          | Y       | N/C    |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4-Omni       | 128K            | Y       | $$$   | 
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o-Mini      | 128K            | Y       | $      | 
+| Microsoft Azure Cloud    | OpenAI         | o1 Preview   | 128K            | N       | $$$$   | 
+| Microsoft Azure Cloud    | OpenAI         | o1 Mini      | 128K            | N       | $$$    | 
 | Google Cloud             | Google         | Gemini 1.5 Flash   | 1.0M            | Y       | $     |
 | Google Cloud             | Google         | Gemini 1.5 Pro     | 1.0M            | Y       | $$    |
 | AWS Cloud                | Anthropic      | Claude 3.0 Haiku   | 200k            | Y       | $     |
@@ -82,7 +82,7 @@ These models are licensed for non-commercial research use.
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Model Name**: `lbl/cborg-coder:latest`
-- **Underlying Model**: Llama 3.1 405b FP8 with Custom System Prompt and Temperature = 0.0
+- **Underlying Model**: Llama 3.1 405B FP8 with Custom System Prompt and Temperature = 0.0
 
 {{< /accordion >}}
 
@@ -90,7 +90,7 @@ These models are licensed for non-commercial research use.
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Model Name**: `lbl/cborg-vision:latest`
-- **Underlying Model**: Phi 3.5 Vision with Custom System Prompt
+- **Underlying Model**: Llama 3.2 90B Vision with Custom System Prompt
 
 {{< /accordion >}}
 
@@ -98,7 +98,7 @@ These models are licensed for non-commercial research use.
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Model Name**: `lbl/cborg-deepthought:latest`
-- **Underlying Model**: Llama 3.1 405b FP8 with Agentic Multi-step Reasoning (Experimental)
+- **Underlying Model**: Llama 3.1 405B FP8 with Agentic Multi-step Reasoning (Experimental)
 
 {{< /accordion >}}
 
@@ -209,7 +209,7 @@ version of each model provider, as follows:
 
 {{< accordion "OpenAI ChatGPT 3.5 Turbo" >}}
 
-Note: We use ChatGPT through Microsoft Azure Cloud AI Services, subject to OpenAI/Azure commercial terms of service. This model is deprecated, please switch to ChatGPT 4o-mini.
+**DEPRECATED - NO LONGER AVAILABLE**
 
 - **Endpoint Location**: Microsoft Azure Cloud (East US)
 - **Use Cases**: Chat, Text Summarization
@@ -257,6 +257,53 @@ ChatGPT-4o is the latest version of ChatGPT from OpenAI. It is faster and lower 
 - **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
 
 {{< /accordion >}}
+
+{{< accordion "OpenAI o1 Mini" >}}
+
+OpenAI o1 Mini is a lightweight text-only model with advanced reasoning capabilities.
+
+Note: We use OpenAI services through Microsoft Azure Cloud AI Services, subject to the Azure + OpenAI commercial terms of service. GPT o1 is accessed through the regional deployment based in in the East US 2 Azure region.
+
+**Note**: o1 models do not support streaming responses, tool use, vision, logprobs, temperature or system prompts. Responses may be slow - adjust timeout parameters to avoid network disconnection.
+
+**Cost**: o1 models also count "reasoning tokens" as output tokens, resulting in approximately 10x more output tokens compared to GPT 4-series models. 
+
+- **Endpoint Location**: Microsoft Azure Cloud (East US 2)
+- **Use Cases**: Chat, Advanced Reasoning, Text Analysis
+- **Vision Support**: No
+- **Tool Support**: No
+- **Context Window**: 128K Tokens (Note: Limited to 32K in CBORG Chat)
+- **Cost per 1M Tokens (Input)**: $3.30 
+- **Cost per 1M Tokens (Output)**: $13.20
+- **API Model Name**: `openai/o1-mini`
+- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
+- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
+
+{{< /accordion >}}
+
+{{< accordion "OpenAI o1 Preview" >}}
+
+OpenAI o1 Preview is a flagship text-only model with advanced reasoning capabilities.
+
+Note: We use OpenAI services through Microsoft Azure Cloud AI Services, subject to the Azure + OpenAI commercial terms of service. GPT o1 is accessed through the regional deployment based in in the East US 2 Azure region.
+
+**Note**: o1 models do not support streaming responses, tool use, vision, logprobs, temperature or system prompts. Responses may be slow - adjust timeout parameters to avoid network disconnection.
+
+**Cost**: o1 models also count "reasoning tokens" as output tokens, resulting in approximately 10x more output tokens compared to GPT 4-series models. 
+
+- **Endpoint Location**: Microsoft Azure Cloud (East US 2)
+- **Use Cases**: Chat, Advanced Reasoning, Text Analysis
+- **Vision Support**: No
+- **Tool Support**: No
+- **Context Window**: 128K Tokens (Note: Limited to 8K in CBORG Chat)
+- **Cost per 1M Tokens (Input)**: $16.50 
+- **Cost per 1M Tokens (Output)**: $66.00
+- **API Model Name**: `openai/o1`
+- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
+- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
+
+{{< /accordion >}}
+
 
 {{< accordion "Google Gemini 1.5 Flash" >}}
 

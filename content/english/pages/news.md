@@ -12,11 +12,16 @@ draft: false
 
 All services are operational. Occasional service interruptions may occur as we adjust system configuration.
 
-**ChatGPT o1:** The new ChatGPT o1 is not available yet on CBorg - we are working on it!
+**OpenAI o1 Status:** The new o1 models from OpenAI are available on API service and will come to CBorg Chat in the next couple of days!
 
-**Notice:** **Lab-hosted systems will be offline during the week of Oct 28th through Nov 1st** during upgrades to the cooling and power systems in Building 50B: [Read the Details Here](https://sites.google.com/lbl.gov/planned-utility-events/projects/building-50b-cooling-upgrade-october-2024)
+**Notice:** **CBorg will be **offline** from Friday Oct 25th through Monday Oct 28th during upgrades to the cooling and power systems in Building 50B: [Read the Details Here](https://sites.google.com/lbl.gov/planned-utility-events/projects/building-50b-cooling-upgrade-october-2024)
 
 ## Recent Updates
+
+_Oct 11th, 2024_
+
+- o1-mini and o1-preview are available on the CBorg API service.
+- Removed ChatGPT 3.5 from API and CBorg Chat
 
 _Oct 4th, 2024_
 

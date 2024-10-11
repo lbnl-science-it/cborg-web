@@ -15,10 +15,10 @@ features:
     image: "/images/model-logos.png"
     content: "We provide seamless, secure access to popular LLM services running in commercial cloud service providers, in addition to free-to-use open models running on Berkeley Lab's local computing infrastructure."
     bulletpoints:
-      - "**OpenAI ChatGPT** via Azure Cloud"
-      - "**Google Gemini Pro** via Google Cloud"
+      - "**OpenAI ChatGPT 4 and o1** via Azure Cloud"
+      - "**Google Gemini** via Google Cloud"
       - "**Anthropic Claude** via AWS Bedrock"
-      - "**Llama 3.1 405B and 90B** Lab-hosted Open Chat & Vision Models"
+      - "**Llama 3 405B and 90B** Lab-hosted Open Chat & Vision Models"
       - "...and many more!"
     button:
       enable: true

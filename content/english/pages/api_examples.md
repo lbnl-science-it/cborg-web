@@ -28,14 +28,15 @@ client = openai.OpenAI(
 )
 
 models = [
-    "lbl/cborg-chat:latest",       # LBL-hosted model with custom system prompt 
-    "lbl/cborg-coder:latest",      # LBL-hosted model with custom system prompt
-    "lbl/cborg-chat-nano:latest",  # LBL-hosted model with custom system prompt
-    "lbl/mistral-large",           # LBL-hosted model behind cborg-chat and cborg coder
-    "lbl/phi",                     # LBL-hosted model behind cborg-nano
-    "openai/gpt-3.5-turbo",
+    "lbl/cborg-chat:latest",       # LBL-hosted Llama 405B with custom system prompt
+    "lbl/cborg-coder:latest",      # LBL-hosted Llama 405B with custom system prompt
+    "lbl/cborg-vision:latest",     # LBL-hosted Llama 405B with custom system prompt
+    "lbl/llama",                   # LBL-hosted Llama 405B Chat model
+    "lbl/llama-vision",            # LBL-hosted Llama 90B Vision model
     "openai/gpt-4o",
     "openai/gpt-4o-mini",
+    "openai/o1",
+    "openai/o1-mini",
     "anthropic/claude-haiku",
     "anthropic/claude-sonnet",
     "anthropic/claude-opus",
