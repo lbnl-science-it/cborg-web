@@ -18,6 +18,12 @@ All services are operational. Occasional service interruptions may occur as we a
 
 ## Recent Updates
 
+_Oct 15th, 2024_
+
+- OpenAI o1 Mini and o1 Preview are available on CBorg Chat via a "streaming mode" middleware adapter
+- LBL-hosted fill-in-the-middle (FIM) code completion model fixed and changed to Starcoder 7B
+- Fixed a bug with code actions for VSCode Continue plugin when using LBL-hosted CBorg Coder - Continue users should update their config.json.
+
 _Oct 11th, 2024_
 
 - o1-mini and o1-preview are available on the CBorg API service.

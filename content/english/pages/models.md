@@ -10,29 +10,21 @@ draft: false
 
 ## Available Models Summary
 
-### LBL-Hosted Customized Models
-
-LBL-Hosted Customized Models use a customized system prompt on top of a base model, to provide improved behavior for LBL users in chat modes.
-
-Note: API users can bypass the system prompt by accessing underlying models directly, if desired.
-
-| Model Endpoint Location  | Base Model        | Model Name         | Context Length* | Vision  | Cost**  | 
-| ---------------          | :---------------: | :--------:         | :-----:         | :---:   | :---:   | 
-| LBL IT Division          | Llama 3.1 405b FP8 | CBorg Chat        | 128K            | N       | N/C    |
-| LBL IT Division          | Llama 3.1 405b FP8 | CBorg Coder       | 128K            | N       | N/C    |
-| LBL IT Division          | Llama 3.2 Vision 90b | CBorg Vision    | 128K            | Y       | N/C    |
-| LBL IT Division          | Llama 3.1 405b FP8 | CBorg Deepthought | 128K            | N       | N/C    |
-
 ### Chat and Vision Models
 
 Note: This list is subject to change.
+
+{{< notice "note" >}}
+** Cost for using commercial models are paid for by the IT Division. There is no cost to individual users at this time and no PID is required.
+{{< /notice >}}
+
 
 | Model Endpoint Location  | Model Creator  | Model Name           | Context Length* | Vision  | Cost** | 
 | ---------------          | :------------: | :--------:           | :-----:         | :---:   | :---:  | 
 | LBL IT Division          | Meta           | Llama 3.1 405B FP8   | 128K            | N       | N/C    |
 | LBL IT Division          | Meta           | Llama 3.1 405B FP8   | 128K            | N       | N/C    |
-| LBL IT Division          | Meta           | Llama 3.2 90B Vision | 128K          | Y       | N/C    |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4-Omni       | 128K            | Y       | $$$   | 
+| LBL IT Division          | Meta           | Llama 3.2 90B Vision | 128K            | Y       | N/C    |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4-Omni       | 128K            | Y       | $$$    | 
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o-Mini      | 128K            | Y       | $      | 
 | Microsoft Azure Cloud    | OpenAI         | o1 Preview   | 128K            | N       | $$$$   | 
 | Microsoft Azure Cloud    | OpenAI         | o1 Mini      | 128K            | N       | $$$    | 
@@ -48,17 +40,30 @@ Note: This list is subject to change.
 | AWS Cloud                | Cohere         | Command R          | 128k            | N       | $     |
 | Wolfram Cloud            | Wolfram Research  | Wolfram\|Alpha   | 1024            | N       | $     |
 
-**Note:** ChatGPT 3.5 is deprecated, please switch to ChatGPT 4o-Mini
-
 ### Vector Embedding Models
 
 | Model Endpoint Location  | Model Creator      | Model Name       | Max Tokens | Embedding Dimensions | Cost**  | 
 | ---------------          | :------------:     | :--------:       | :-----:    | :---:                | :---: | 
 | LBNL IT Division         | Nomic.AI           | nomic-embed-text | 8192       | 768                  | Free  |
 
-{{< notice "note" >}}
-** Cost for using commercial models are paid for by the IT Division. There is no cost to individual users at this time and no PID is required.
-{{< /notice >}}
+### Code Completion Models
+
+| Model Endpoint Location  | Model Creator           | Model Name           | Max Context | Cost**  | 
+| ---------------          | :------------:          | :--------:           | :-----:     | :---:   | 
+| LBNL IT Division         | BigCode Starcoder 7B    | lbl/cborg-coder-base | 8192        | N/C     |
+
+### LBL-Hosted Customized Models
+
+LBL-Hosted Customized Models use a customized system prompt on top of a base model, to provide improved behavior for LBL users in chat modes.
+
+Note: API users can bypass the system prompt by accessing underlying models directly, if desired.
+
+| Model Endpoint Location  | Base Model        | Model Name         | Context Length* | Vision  | Cost**  | 
+| ---------------          | :---------------: | :--------:         | :-----:         | :---:   | :---:   | 
+| LBL IT Division          | Llama 3.1 405b FP8 | CBorg Chat        | 128K            | N       | N/C    |
+| LBL IT Division          | Llama 3.1 405b FP8 | CBorg Coder       | 128K            | N       | N/C    |
+| LBL IT Division          | Llama 3.2 Vision 90b | CBorg Vision    | 128K            | Y       | N/C    |
+| LBL IT Division          | Llama 3.1 405b FP8 | CBorg Deepthought | 128K            | N       | N/C    |
 
 {{< notice "note" >}}
 * Context window sizes for commercially-hosted Generative AI models are reduced in CBORG Chat to limit excessive usage. To make use of the full-length of context windows please request an API key or engage with Science IT Consulting to discuss using cloud services with a PID recharge.
