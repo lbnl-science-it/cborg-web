@@ -12,8 +12,6 @@ draft: false
 
 All services are operational. Occasional service interruptions may occur as we adjust system configuration.
 
-**OpenAI o1 Status:** The new o1 models from OpenAI are available on API service and will come to CBorg Chat in the next couple of days!
-
 **Notice:** **CBorg will be **offline** from Friday Oct 25th through Monday Oct 28th during upgrades to the cooling and power systems in Building 50B: [Read the Details Here](https://sites.google.com/lbl.gov/planned-utility-events/projects/building-50b-cooling-upgrade-october-2024)
 
 ## Recent Updates
