@@ -49,15 +49,17 @@ PDF documents and text files can also be uploaded and added to the chat context 
 
 #### What are the legal issues associated with using generative AI in my work?*
 
-- Commercial Use: Some open-source (LBL-hosted) models are not permitted for commercial use. All models provided allow for research use.
+- Use of your data: All endpoints available through CBorg are enterprise-grade endpoints where cloud providers have promised to not utilize your chat data for training of future models. The same guarantee may not hold for other services, especially any "free" versions of AI-assisted chat.
 
-- Synthetic Data: Some models do not permit use of the model to generate synthetic training data for further models. Users are responsible for complying with the [terms of use of each model](/models).
+- Copyright and Attribution: Generally, if you are substantially "guiding" the LLM toward its output, then there should be minimal risk of copyright misattribution. However, if the LLM substantially generates its output in an automated manner this work may not be copyrightable.
 
-- Legal Issues, Copyright Issues, Authorship Misattribution: Cyber Security has published a document providing [Guidance on using Generative AI Tools](https://commons.lbl.gov/display/cpp/Guidance+on+using+Generative+AI+tools). LBNL Staff should familiarize themselves with the issues described.
+- Synthetic Data and Distillation: Some models do not permit use of the model to generate synthetic training data for further models. Users are responsible for complying with the [terms of use of each model](/models).
+
+- Legal Issues, Copyright Issues, Authorship Misattribution: Cyber Security has published a document providing [Guidance on using Generative AI Tools](https://commons.lbl.gov/display/cpp/Guidance+on+using+Generative+AI+tools). LBNL Staff should familiarize themselves with the issues described and contact IT Policy for any further questions.
 
 For further guidance on legal issues related to AI please consult the [LBL IT Policy](mailto:itpolicy@lbl.gov)
 
-#### **Why use LBNL-Hosted versus Commercial Models?**
+#### **Comparing LBL-Hosted versus Commercial Models?**
 
 ##### Why use LBNL-Hosted Models?
 
