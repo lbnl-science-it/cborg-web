@@ -8,36 +8,46 @@ description: "Common questions regarding the CBorg AI Portal and CBorg Chat"
 draft: false
 ---
 
-#### 1. Where is the CBorg Portal hosted?
+#### Where is the CBorg Portal hosted?
 
 The CBorg Chat user-interface, chat history database, and LBL-hosted models are all located on servers running in the IT Division's data center in Building 50. If you use commercial models (ChatGPT, Google Gemini or Anthropic Claude), these models are running in commercial cloud infrastructure which is external to the LBL network.
 
-#### 2. What GPUs are the LBL-hosted models running on?
+#### What GPUs are the LBL-hosted models running on?
 
 We use a small cluster containing an Nvidia DGX 8-way H100 node, in addition to 4-way A100, A40 and AMD MI100 GPUs nodes. Models are allocated to GPU resources to accomodate anticipated workloads.
 
-#### 3. Can I export chat from ChatGPT and import them to CBorg Chat?*
+#### How to copy/paste from CBorg Chat to/from Google Docs and preverse formatting?
+
+LLMs use Markdown to format text such as headings, bold, italics and for LaTeX equation typesetting. In addition to improving document readability, these formatting details improve the LLM's ability to parse the structure of text. 
+
+By default, Google Docs ignores Markdown formatting is OFF. It can be enabled in Google Docs by going to **Tools > Preferences > Enable Markdown**.
+
+After enabling, the “Copy as Markdown” and “Paste from “Markdown” options will appear in the Edit menu.
+
+For Microsoft Word, it is currently necessary (Oct 2024) to install a plugin to enable copy and paste with Markdown formatting.
+
+#### Can I export chat from ChatGPT and import them to CBorg Chat?*
 
 Yes, follow these instructions: [JSON Export/Import Conversations](https://www.librechat.ai/docs/user_guides/import_convo)
 
-#### 4. Where does my CBorg Chat data get stored?
+#### Where does my CBorg Chat data get stored?
 
 *CBorg Chat*: Chat history (the transcript of messages between you and the AI) is saved in a database within the IT Division's LBL-hosted systems.
 
 *CBorg API*: Chat history is not saved, but in some cases chat content may appear in log transcripts visible to IT Division staff.
 
-#### 5. Can I use CBorg Chat with PII or CUI data?
+#### Can I use CBorg Chat with PII or CUI data?
 
 No, this system is not designed to accept PII or CUI data.
 
-#### 6. Can I upload a PDF, text or CSV file to CBorg Chat?
+#### Can I upload a PDF, text or CSV file to CBorg Chat?
 
 Some models on CBorg Chat provide vision support and accepts image file attachments. They can
 describe images and extract text from images (OCR), e.g. "Describe what is in this picture" or "Transcribe this picture". 
 
 PDF documents and text files can also be uploaded and added to the chat context using the RAG method.
 
-#### 7. What are the legal issues associated with using generative AI in my work?*
+#### What are the legal issues associated with using generative AI in my work?*
 
 - Commercial Use: Some open-source (LBL-hosted) models are not permitted for commercial use. All models provided allow for research use.
 
@@ -47,7 +57,7 @@ PDF documents and text files can also be uploaded and added to the chat context 
 
 For further guidance on legal issues related to AI please consult the [LBL IT Policy](mailto:itpolicy@lbl.gov)
 
-#### 8. **Why use LBNL-Hosted versus Commercial Models?**
+#### **Why use LBNL-Hosted versus Commercial Models?**
 
 ##### Why use LBNL-Hosted Models?
 
@@ -76,7 +86,7 @@ For further guidance on legal issues related to AI please consult the [LBL IT Po
 - High cost in large-scale document processing use cases
 - Inputs and outputs may be subject to human review for provider policy violations
 
-#### 9. **Why pick model A or B (model selection)?**
+#### **Why pick model A or B (model selection)?**
 
 - **Commercial cloud models provide the best quality**: Commercial cloud models run on large compute clusters with memory and bandwidth far exceeding what is possible with self-hosted models. If you need the highest quality output, an advanced commercial cloud-hosted model will be the best choice provided that it is compatible with any IP or privacy restrictions associated with your content.
 - **Nuanced reasoning, scientific research, coding, technical writing**: Use an advanced model, typically from the commercial cloud providers if self-hosted alternatives are not sufficient.
@@ -84,15 +94,15 @@ For further guidance on legal issues related to AI please consult the [LBL IT Po
 - **Image Analysis (vision)**: ChatGPT 4, Google Gemini and Anthropic Claude all support vision. Attach your image and then ask questions.
 - **Large-scale automated document processing**: Use a Lab-Hosted model which are free to use, saving costs when processing thousands to millions of documents. Batch processing can also reduce costs, typically by 50% for results returned within 24 hours.
 
-#### 10. **How do LBNL-Hosted Models compare to Self-Hosted Options?**
+#### **How do LBNL-Hosted Models compare to Self-Hosted Options?**
 
 LBNL-Hosted models are served using the vLLM engine, which is capable of efficiently serving a large number of simultaneous users. We use multi-way GPU systems that improve the speed and amount of memory available to the model (e.g. 320GB or more of GPU RAM) compared to what is possible on consumer-grade laptop and desktop computers. In addition, our models are evaluated in FP16 precision, which increases the accuracy and quality of outputs compared to quantized models that have been compressed to fit into small-memory devices.
 
-#### 11. **Can I host my own model on IT Division infrastructure?**
+#### **Can I host my own model on IT Division infrastructure?**
 
 Please reach out to us at [scienceit@lbl.gov](mailto:scienceit@lbl.gov) to discuss hosting of your own models or other LLM-powered applications.
 
-#### 12. **How can I improve the results in complex tasks?**
+#### **How can I improve the results in complex tasks?**
 
 When asking LLMs to perform complex analytical tasks such as code generation and text summarization it can be helpful to reduce the "Temperature" parameter to zero.
 
@@ -102,17 +112,17 @@ behave in a deterministic fashion producing repeatable outputs.
 
 In CBorg Chat, you can adjust the model temperature by creating a user preset and then activating the preset.
 
-#### 13. **Does uploading a large document increase costs?**
+#### **Does uploading a large document increase costs?**
 
 Documents uploaded through the file upload do not cause the entire document to be processed by the AI. Rather, the document is broken up into small chunks which are indexed into a database and then retreived to augment the context of the generative AI when it is deemed relevant to the user's input. Therefore, large documents (e.g. thousands of pages) can be uploaded without incurring a high per-token cost.
 
-#### 14. **Are these services expensive?**
+#### **Are these services expensive?**
 
 Providing generative AI services to the Lab through Cborg is very affordable, and less expensive than the cost of each user acquiring an individual subscription.
 
 In addition, cost control guardrails have been put into place to prevent the service from exceeding our expected budget.
 
-#### 15. **How can I optimize the computational cost / economic cost of using generative AI?**
+#### **How can I optimize the computational cost / economic cost of using generative AI?**
 
 When chatting with the AI, do not switch topics mid-conversation. Instead, start a new chat session. This will improve the quality of responses from the AI and reduce costs.
 
