@@ -31,7 +31,7 @@ Note: This list is subject to change.
 | Google Cloud             | Google         | Gemini 1.5 Flash   | 1.0M            | Y       | $     |
 | Google Cloud             | Google         | Gemini 1.5 Pro     | 1.0M            | Y       | $$    |
 | AWS Cloud                | Anthropic      | Claude 3.0 Haiku   | 200k            | Y       | $     |
-| AWS Cloud                | Anthropic      | Claude 3.5 Sonnet  | 200k            | Y       | $$    |
+| AWS Cloud                | Anthropic      | Claude 3.5 Sonnet v2  | 200k            | Y       | $$    |
 | AWS Cloud                | Anthropic      | Claude 3.0 Opus    | 200k            | Y       | $$$   |
 | AWS Cloud                | Meta           | Llama 3.1 405b     | 128k            | N       | $$    |
 | AWS Cloud                | Meta           | Llama 3.1 70b      | 128k            | N       | $     |
@@ -321,7 +321,7 @@ Our service connects to the enterprise version of Google Gemini. Inputs are not 
 - **Context Window**: 1.0M Tokens (Note: Limited to 32K in CBORG Chat)
 - **Cost per 1M Tokens (Input)**: $0.35
 - **Cost per 1M Tokens (Output)**: $0.70
-- **API Model Name**: `google/gemini-1.5-flash`
+- **API Model Name**: `google/gemini-flash`
 - **Pricing Details**: [Gemini API Pricing](https://ai.google.dev/pricing)
 - **Terms of Service**: [Gemini API Additional Terms of Use](https://ai.google.dev/gemini-api/terms)
 
@@ -338,30 +338,32 @@ Our service connects to the enterprise version of Google Gemini. Inputs are not 
 - **Context Window**: 1.0M Tokens (Note: Limited to 16K in CBORG Chat)
 - **Cost per 1M Tokens (Input)**: $3.50
 - **Cost per 1M Tokens (Output)**: $7.00
-- **API Model Name**: `google/gemini-1.5-pro`
+- **API Model Name**: `google/gemini-pro`
 - **Pricing Details**: [Gemini API Pricing](https://ai.google.dev/pricing)
 - **Terms of Service**: [Gemini API Additional Terms of Use](https://ai.google.dev/gemini-api/terms)
 
 {{< /accordion >}}
 
-{{< accordion "Anthropic Claude 3.0 Haiku" >}}
+{{< accordion "Anthropic Claude 3.5 Haiku" >}}
 
 Claude has excellent reasoning and code analysis capabilities compared to other leading models, but can be expensive in the largest variants. The 200K token context window is large compared to competitors. The Haiku version is suitable for short text summarization.
 
-- **Endpoint Location**: Amazon Web Services (US West)
+**NOTE**: Pricing for Claude Haiku increased with the 3.5 release.
+
+- **Endpoint Location**: Amazon Web Services (US West 2)
 - **Use Cases**: Chat, Text Summarization, Image Description
 - **Vision Support**: Yes
 - **Tool Support**: Yes
 - **Context Window**: 200k Tokens (Note: Limited to 64K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $0.25
-- **Cost per 1M Tokens (Output)**: $1.25
+- **Cost per 1M Tokens (Input)**: $1.00
+- **Cost per 1M Tokens (Output)**: $5.00
 - **API Model Name**: `anthropic/claude-haiku`
 - **Pricing Details**: [Anthropic API Pricing](https://aws.amazon.com/bedrock/pricing/)
 - **Terms of Service**: [Anthropic Commercial Terms of Service](https://www-cdn.anthropic.com/6b68a6508f0210c5fe08f0199caa05c4ee6fb4dc/Anthropic-on-Bedrock-Commercial-Terms-of-Service_Dec_2023.pdf)
 
 {{< /accordion >}}
 
-{{< accordion "Anthropic Claude 3.5 Sonnet" >}}
+{{< accordion "Anthropic Claude 3.5 Sonnet v2" >}}
 
 Claude has superior reasoning and code analysis capabilities compared to other leading models, but can be expensive in the largest variants. The 200K token context window is large compared to competitors. The 3.5 Sonnet is the latest version of Claude, outperforming 3.0 Opus with lower cost and faster inference speed.
 

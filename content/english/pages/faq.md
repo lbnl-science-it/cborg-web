@@ -124,9 +124,22 @@ Providing generative AI services to the Lab through Cborg is very affordable, an
 
 In addition, cost control guardrails have been put into place to prevent the service from exceeding our expected budget.
 
-#### **How can I optimize the computational cost / economic cost of using generative AI?**
+#### **How can I optimize the cost of using generative AI?**
 
-When chatting with the AI, do not switch topics mid-conversation. Instead, start a new chat session. This will improve the quality of responses from the AI and reduce costs.
+**In CBorg Chat**
 
-Explanation: Generative AI APIs are stateless and do not have any memory of your prior interactions. Instead, they rely on the client to re-transmit the entire chat history on every API call. As the chat history gets grows, the cost of each interaction increases approximately linearly as the number of input tokens increases. Therefore, starting a new chat session (or 'thread') will reset the baseline cost to zero.
+- **Reduce Unnecessary Context:** When chatting with the AI, do not switch topics mid-conversation. Instead, start a new chat session. This will improve the quality of responses from the AI and reduce costs (see explanation below).
+- **Test Model Alternatives:** Test your prompts using "side-by-side" comparison mode (click the (+) icon at the top of the screen. Sometimes a lower cost model can provide substantially equivalent results.
+- **Try Chain-of-Thought instead of Reasoning**: Advanced "reasoning" models such as OpenAI o1 Preview are very expensive. In some cases, similar performances can be obtained by adding "chain-of-thought" prompts to a standard completion model. e.g., try asking the LLM to think through its answer step by step before providing the final result. 
+- **Use LBL-Hosted Models:** Models starting with "CBorg" (Chat, Coder, etc) are hosted on hardware owned by Berkeley Lab and have no per-token cost overhead.
+
+**Explanation:** Generative AI APIs are stateless and do not have any memory of your prior interactions. Instead, they rely on the client to re-transmit the entire chat history on every API call. As the chat history gets grows, the cost of each interaction increases approximately linearly as the number of input tokens increases. Therefore, starting a new chat session (or 'thread') will reset the baseline cost to zero.
+
+**For API Users and Bulk Processing**
+
+- **Try a Lightweight Model:** Switch to a "lightweight" model such as Google Gemini Flash, Anthropic Claude Haiku, ChatGPT 4o Mini or OpenAI o1 Mini. Lightweight models can deliver similar performance on summarization and extraction tasks with cost savings up to 90%. Flagship models are still needed if your application requires extensive internet-scale background knowledge to operate correctly.
+- **Use a LBL-hosted Model:** Use LBL-hosted models (model name starting with "lbl/", such as lbl/llama). These models run on hardware owned by Berkeley Lab and have no per-token costs to use.
+- **Use Batch Inference:** If your application does not require real-time response, batch processing can save up to 90% of costs. Results of bulk processing are typically returned within 24 hours.
+- **Get your own project:** For AWS or Google Users, you can access many of the models on CBorg through your own AWS Cloud or GCP Cloud account, attached to your PID. This will let you controls the costs directly and take advantage of negotiated discounts between DOE and cloud providers. Email [scienceit@lbl.gov](mailto:scienceit@lbl.gov) to get setup with a cloud account.
+
 

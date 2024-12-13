@@ -10,11 +10,29 @@ draft: false
 
 ## Current Status
 
-All services are operational. Occasional service interruptions may occur as we adjust system configuration.
-
-**Notice:** **CBorg will be **offline** from Friday Oct 25th through Monday Oct 28th during upgrades to the cooling and power systems in Building 50B: [Read the Details Here](https://sites.google.com/lbl.gov/planned-utility-events/projects/building-50b-cooling-upgrade-october-2024)
+All systems are operational.
 
 ## Recent Updates
+
+_Nov 8th, 2024_
+
+- Upgraded Claude Haiku to new 3.5 release. Updated pricing for API use.
+- Fixed low constrast issue in splash screen image when dark mode enabled.
+
+_Oct 31st, 2024_
+
+- Upgraded CBorg Chat to Librechat v0.7.5
+- Improved layout of login page on mobile devices
+- Fixed icons and app name for CBorg Chat installable PWA
+
+_Oct 25th, 2024_
+
+- Claude Sonnet 3.5 upgraded to the newly released v2 model.
+- Endpoint for Anthropic Claude models on CBorg Chat is changed to AWS Bedrock for improved contract terms.
+
+_Oct 24th, 2024_
+
+- Downtime for power systems upgrades has been postponed. New dates will be announced in the coming weeks.
 
 _Oct 15th, 2024_
 
