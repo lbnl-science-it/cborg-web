@@ -14,6 +14,32 @@ All systems are operational.
 
 ## Recent Updates
 
+_Feb 6th, 2025_
+
+- Google Gemini models upgraded to Gemini Flash 2.0 and Gemini Pro 2.0
+
+_Feb 4th, 2025_
+
+- CBorg Vision model changed to Qwen 2-VL 72B - also available on API as lbl/qwen-vision
+
+_Jan 31st, 2025_
+
+- OpenAI o1-preview upgraded to o1 full release
+- OpenAI o1 and o3-mini now available on CBorg Chat and API
+
+_Jan 22nd, 2025_
+
+- Upgrated CBorg Deepthought to use DeepSeekR1 Llama 70B Distilled - also available on API
+- Upgraded CBorg Coder Base (fill-in-the-middle code completion) to Qwen Coder 32B Base.
+- Enhanced CBorg Chat with vision capability by deploying merged Llama 70B 3.3 with Llama 90B Vision 3.2
+- Adjusted model deployment configuration for improved GPU allocation in on-prem cluster
+
+_Dec 13th, 2024_
+
+- Underlying model for CBorg Chat is changed from Llama 3.1 405B to Llama 3.3 70B for increased speed and performance.
+- Underlying model for CBorg Coder is changed from Llama 3.1 405B to Qwen Coder 32B
+- Google Gemini Flash upgraded from 1.5 to new version 2.0 Experimental
+
 _Nov 8th, 2024_
 
 - Upgraded Claude Haiku to new 3.5 release. Updated pricing for API use.

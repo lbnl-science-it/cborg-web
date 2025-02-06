@@ -88,23 +88,54 @@ Go to "Models" in the Cursor Settings:
 
 {{< /accordion >}}
 
-{{< accordion "Omni-Engineer (Experimental)" >}}
+{{< accordion "Aider" >}}
 
-Coding assistant capable of editing files in-place using simple commands. Best results with Claude Sonnet, but you can also use the on-prem CBorg Coder model.
+CLI-based coding agent that can edit code in a local git repo.
 
-{{< button "Omni Engineer GitHub Project" "https://github.com/Doriandarko/omni-engineer/tree/main" >}}
+{{< button "Aider with OpenAI-compatible API" "https://aider.chat/docs/llms/openai-compat.html" >}}
 
-To setup, change main.py endpoint and models as follows:
+{{< highlight bash >}}
+python -m pip install -U aider-chat
 
-{{< highlight python >}}
-client = OpenAI(
-    base_url="https://api.cborg.lbl.gov",
-    api_key=os.getenv("CBORG_API_KEY"),
-)
+# Mac/Linux:
+export OPENAI_API_BASE=https://api.cborg.lbl.gov
+export OPENAI_API_KEY=(your CBORG_API_KEY)
+# ... restart shell after adding these to ~.bashrc
 
-DEFAULT_MODEL = "lbl/cborg-coder:latest"
-EDITOR_MODEL = "lbl/cborg-coder:latest"
+# Windows:
+setx OPENAI_API_BASE https://api.cborg.lbl.gov
+setx OPENAI_API_KEY (your CBORG_API_KEY)
+# ... restart shell after setx commands
+
+# Prefix the model name with openai/
+
+# e.g. using CBorg Coder (LBL-hosted coding model)
+aider --model openai/lbl/cborg-coder:latest
+
+# e.g. using Claude Sonnet 3.5 via CBorg (best results)
+aider --model openai/anthropic/claude-sonnet
+
+# e.g. using OpenAI ChatGPT 4o via CBorg
+aider --model openai/openai/gpt-4o
 {{< /highlight >}}
+
+{{< /accordion >}}
+
+{{< accordion "Omni-Engineer" >}}
+
+CLI-based coding assistant capable of editing files in-place using simple commands. Best results with Claude Sonnet, but you can also use the on-prem CBorg Coder model.
+
+{{< button "Omni Engineer-LBL GitHub Project (LBL Forked Version)" "https://github.com/lbnl-science-it/omni-engineer-lbl/tree/utilities" >}}
+
+Make sure to check out the 'utilities' branch, not "main".
+
+{{< highlight bash >}}
+git checkout utilities
+pip install -r requirements.txt
+python ./main.py
+{{< /highlight >}}
+
+CBORG_API_KEY environment variable must be defined before launching the tool. 
 
 {{< /accordion >}}
 

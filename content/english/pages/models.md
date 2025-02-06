@@ -21,24 +21,28 @@ Note: This list is subject to change.
 
 | Model Endpoint Location  | Model Creator  | Model Name           | Context Length* | Vision  | Cost** | 
 | ---------------          | :------------: | :--------:           | :-----:         | :---:   | :---:  | 
-| LBL IT Division          | Meta           | Llama 3.1 405B FP8   | 128K            | N       | N/C    |
-| LBL IT Division          | Meta           | Llama 3.1 405B FP8   | 128K            | N       | N/C    |
+| LBL IT Division          | Meta           | Llama 3.3 70B | 3.2 Vision        | 128K            | Y       | N/C    |
+| LBL IT Division          | Alibaba        | Qwen 2.5 Coder       | 32K             | N       | N/C    |
 | LBL IT Division          | Meta           | Llama 3.2 90B Vision | 128K            | Y       | N/C    |
+| LBL IT Division          | DeepSeek       | DeepSeek R1 Llama 70B | 128K           | N       | N/C    |
+| LBL IT Division          | Alibaba        | Qwen 2 Vision 72B    | 32K             | Y       | N/C    |
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 4-Omni       | 128K            | Y       | $$$    | 
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o-Mini      | 128K            | Y       | $      | 
-| Microsoft Azure Cloud    | OpenAI         | o1 Preview   | 128K            | N       | $$$$   | 
-| Microsoft Azure Cloud    | OpenAI         | o1 Mini      | 128K            | N       | $$$    | 
-| Google Cloud             | Google         | Gemini 1.5 Flash   | 1.0M            | Y       | $     |
-| Google Cloud             | Google         | Gemini 1.5 Pro     | 1.0M            | Y       | $$    |
-| AWS Cloud                | Anthropic      | Claude 3.0 Haiku   | 200k            | Y       | $     |
-| AWS Cloud                | Anthropic      | Claude 3.5 Sonnet v2  | 200k            | Y       | $$    |
-| AWS Cloud                | Anthropic      | Claude 3.0 Opus    | 200k            | Y       | $$$   |
-| AWS Cloud                | Meta           | Llama 3.1 405b     | 128k            | N       | $$    |
-| AWS Cloud                | Meta           | Llama 3.1 70b      | 128k            | N       | $     |
-| AWS Cloud                | Meta           | Llama 3.1 8b       | 128k            | N       | $     |
-| AWS Cloud                | Cohere         | Command R+         | 128k            | N       | $$    |
-| AWS Cloud                | Cohere         | Command R          | 128k            | N       | $     |
-| Wolfram Cloud            | Wolfram Research  | Wolfram\|Alpha   | 1024            | N       | $     |
+| Microsoft Azure Cloud    | OpenAI         | o1                   | 200K            | Y       | $$$$   | 
+| Microsoft Azure Cloud    | OpenAI         | o1 Mini              | 128K            | N       | $$$    | 
+| Microsoft Azure Cloud    | OpenAI         | o3 Mini              | 200K            | N       | $$     |
+| Microsoft Azure Cloud    | OpenAI         | DALL-E 3.0           | 4000            | N       | $$    |
+| Google Cloud             | Google         | Gemini 2.0 Flash     | 1.0M            | Y       | $     |
+| Google Cloud             | Google         | Gemini 2.0 Pro       | 1.0M            | Y       | $$    |
+| AWS Cloud                | Anthropic      | Claude 3.0 Haiku     | 200k            | Y       | $     |
+| AWS Cloud                | Anthropic      | Claude 3.5 Sonnet v2 | 200k            | Y       | $$    |
+| AWS Cloud                | Anthropic      | Claude 3.0 Opus      | 200k            | Y       | $$$   |
+| AWS Cloud                | Meta           | Llama 3.1 405b       | 128k            | N       | $$    |
+| AWS Cloud                | Meta           | Llama 3.1 70b        | 128k            | N       | $     |
+| AWS Cloud                | Meta           | Llama 3.1 8b         | 128k            | N       | $     |
+| AWS Cloud                | Cohere         | Command R+           | 128k            | N       | $$    |
+| AWS Cloud                | Cohere         | Command R            | 128k            | N       | $     |
+| Wolfram Cloud            | Wolfram Research | Wolfram\|Alpha    | 1024             | N       | $     |
 
 ### Vector Embedding Models
 
@@ -50,7 +54,7 @@ Note: This list is subject to change.
 
 | Model Endpoint Location  | Model Creator           | Model Name           | Max Context | Cost**  | 
 | ---------------          | :------------:          | :--------:           | :-----:     | :---:   | 
-| LBNL IT Division         | BigCode Starcoder 7B    | lbl/cborg-coder-base | 8192        | N/C     |
+| LBNL IT Division         | Qwen 2.5 Coder Base     | lbl/cborg-coder-base | 32768       | N/C     |
 
 ### LBL-Hosted Customized Models
 
@@ -60,10 +64,10 @@ Note: API users can bypass the system prompt by accessing underlying models dire
 
 | Model Endpoint Location  | Base Model        | Model Name         | Context Length* | Vision  | Cost**  | 
 | ---------------          | :---------------: | :--------:         | :-----:         | :---:   | :---:   | 
-| LBL IT Division          | Llama 3.1 405b FP8 | CBorg Chat        | 128K            | N       | N/C    |
-| LBL IT Division          | Llama 3.1 405b FP8 | CBorg Coder       | 128K            | N       | N/C    |
-| LBL IT Division          | Llama 3.2 Vision 90b | CBorg Vision    | 128K            | Y       | N/C    |
-| LBL IT Division          | Llama 3.1 405b FP8 | CBorg Deepthought | 128K            | N       | N/C    |
+| LBL IT Division          | Llama 3.3 70B     | CBorg Chat         | 128K            | N       | N/C    |
+| LBL IT Division          | Qwen 2.5 Coder Instruct   | CBorg Coder        | 32K             | N       | N/C    |
+| LBL IT Division          | Llama 3.2 Vision 90B | CBorg Vision    | 128K            | Y       | N/C    |
+| LBL IT Division          | DeepSeekR1 Llama 70B Distill     | CBorg Deepthought  | 128K            | N       | N/C    |
 
 {{< notice "note" >}}
 * Context window sizes for commercially-hosted Generative AI models are reduced in CBORG Chat to limit excessive usage. To make use of the full-length of context windows please request an API key or engage with Science IT Consulting to discuss using cloud services with a PID recharge.
@@ -79,7 +83,7 @@ These models are licensed for non-commercial research use.
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Model Name**: `lbl/cborg-chat:latest`
-- **Underlying Model**: Llama 3.1 405b FP8 with Custom System Prompt
+- **Underlying Model**: Llama 3.3 70B merged with Llama 3.2 90B Vision with Custom System Prompt
 
 {{< /accordion >}}
 
@@ -87,7 +91,7 @@ These models are licensed for non-commercial research use.
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Model Name**: `lbl/cborg-coder:latest`
-- **Underlying Model**: Llama 3.1 405B FP8 with Custom System Prompt and Temperature = 0.0
+- **Underlying Model**: Qwen Coder 2.5 with Custom System Prompt and Temperature = 0.0
 
 {{< /accordion >}}
 
@@ -95,7 +99,7 @@ These models are licensed for non-commercial research use.
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Model Name**: `lbl/cborg-vision:latest`
-- **Underlying Model**: Llama 3.2 90B Vision with Custom System Prompt
+- **Underlying Model**: Qwen 2-VL Instruct 72B
 
 {{< /accordion >}}
 
@@ -103,46 +107,71 @@ These models are licensed for non-commercial research use.
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Model Name**: `lbl/cborg-deepthought:latest`
-- **Underlying Model**: Llama 3.1 405B FP8 with Agentic Multi-step Reasoning (Experimental)
+- **Underlying Model**: DeepSeekR1 Llama 3.3 70B Distill Deep Reasoning Model 
 
 {{< /accordion >}}
 
-{{< accordion "Meta Llama 3.1 405B FP8" >}}
-
-**Note:** This model is quantized from the original FP16 to FP8 format to reduce its memory footprint.
-
-The FP8 version has virtually identical performance according to standard benchmarks, however
-it may exhibit different behaviors under certain circumstances that are not detected by
-benchmark studies.
+{{< accordion "Meta Llama 3.3 70B" >}}
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Use Cases**: Chat, Summarization, Coding Assistant, Tool Use
-- **Vision Support**: No
+- **Vision Support**: Yes (via model merge with Llama 3.2 90B Vision)
 - **Tool Support**: Yes
 - **Context Window**: 128K Tokens
 - **Cost**: No cost
 - **Model Name**: `lbl/llama`
-- **Terms of Service**: [Meta Llama Model Card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md)
+- **Terms of Service**: [Meta Llama Model Card](https://www.llama.com/docs/model-cards-and-prompt-formats/llama3_3/)
 
 {{< /accordion >}}
 
-{{< accordion "Meta Llama 3.2 Vision 90B" >}}
 
-This model provides powerful vision capabilities and long-context chat functionality in one model.
-Due to the smaller model size it is slightly less reliable in factual citations and complex reasoning
-as compared to the text-only 405B model.
+{{< accordion "Qwen 2 Vision 72B" >}}
+
+Note that a minimum image size of 256x256 pixels is required. Upsampling images can improve results.
 
 - **Endpoint Location**: LBNL IT Division Data Center
-- **Use Cases**: Chat, Summarization, Vision, OCR
+- **Use Cases**: Image Description, OCR, Agentic Computer Use 
 - **Vision Support**: Yes
-- **Tool Support**: Yes
-- **Context Window**: 128K Tokens
+- **Tool Support**: No
+- **Context Window**: 32K Tokens
 - **Cost**: No cost
-- **Model Name**: `lbl/llama-vision`
-- **Terms of Service**: [Meta Llama Model Card](https://huggingface.co/meta-llama/Llama-3.2-90B-Vision)
+- **Model Name**: `lbl/qwen-vision`
+- **Terms of Service**: [Qwen 2-VL Model Card](https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct)
 
 {{< /accordion >}}
 
+{{< accordion "DeepSeek R1 Distill Llama 70B" >}}
+
+This is an open-weight reasoning model, hosted on IT-division hardware. The Llama 70B Distilled version is smaller than the "full" DeepSeek R1 671B model, but is still very performant on math and coding tasks.
+It outputs is "thinking" before responding, enclosed in <think>...</think> tags.
+
+- **Endpoint Location**: LBNL IT Division Data Center
+- **Use Cases**: Math, Code Generation, Logic 
+- **Vision Support**: No 
+- **Tool Support**: No
+- **Context Window**: 128K Tokens
+- **Cost**: No cost
+- **Model Name**: `lbl/deepseek-r1:llama-70b`
+- **Terms of Service**: [DeepSeek R1 Model Card](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B)
+
+{{< /accordion >}}
+
+{{< accordion "Qwen 2.5 Coder 32B Instruct" >}}
+
+Current leading open model for code generation, trained on permissively licensed open source code.
+
+- **Endpoint Location**: LBNL IT Division Data Center
+- **Use Cases**: Code Generation 
+- **Vision Support**: No 
+- **Tool Support**: No 
+- **Context Window**: 32K Tokens*
+- **Cost**: No cost
+- **Model Name**: `lbl/qwen-coder`
+- **Terms of Service**: [Qwen 2.5 Coder](https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct)
+
+* Context length of this model can be extended to 128K but for practical performance reasons is limited to 32K in the Lab-hosted instance.
+
+{{< /accordion >}}
 
 {{< accordion "nomic-embed-text" >}}
 
@@ -158,43 +187,6 @@ A high-performing open embedding model with a large token context window. nomic-
 
 {{< /accordion >}}
 
-{{< accordion "e5-large-v2" >}}
-
-**CURRENTLY OFFLINE - WILL BE RESTORED SOON**
-
-e5-large-v2 is based on research originating from Microsoft Research, as described in Text Embeddings by Weakly-Supervised Contrastive Pre-training. Liang Wang, Nan Yang, Xiaolong Huang, Binxing Jiao, Linjun Yang, Daxin Jiang, Rangan Majumder, Furu Wei, arXiv 2022.
-
-e5-large-v2 is a popular embedding model for vector search and retreival augmented generation, but is a small embedding model by current standards.
-
-- **Endpoint Location**: LBNL IT Division Data Center
-- **Use Cases**: Query and Passage Encoding
-- **Max Tokens**: 512
-- **Embedding Dimensions**: 1024
-- **Cost**: Free to use
-- **API Model Name**: `lbl/e5-large-v2`
-- **Model Card**: [HuggingFace intfloat/e5-large-v2](https://huggingface.co/intfloat/e5-large-v2)
-
-{{< /accordion >}}
-
-{{< accordion "NV-Embed-v1" >}}
-
-**CURRENTLY OFFLINE - WILL BE RESTORED SOON**
-
-NV-Embed-v1
-
-NV-Embed-v1 is a leading embedding model created by Nvidia, ranked No. 1 on the Massive Text Embedding Benchmark (MTEB benchmark) as of May 24, 2024. NV-Embed-v1 is licensed for non-commercial use only.
-
-- **Endpoint Location**: LBNL IT Division Data Center
-- **Use Cases**: Instructed Query and Passage Encoding
-- **Max Tokens**: 8192
-- **Embedding Dimensions**: 4096
-- **Cost**: Free to use
-- **API Model Name**: `lbl/nv-embed-v1`
-- **Notes**: For non-commercial use only.
-- **Model Card**: [HuggingFace nvidia/NV-Embed-v1](https://huggingface.co/nvidia/NV-Embed-v1)
-
-{{< /accordion >}}
-
 ### Cloud-Hosted Models
 
 Cloud-hosted models are provided using on-demand services from commercial cloud providers. Costs for using these models are paid for by the IT Division. Please select the appropriate model for your application, keeping in mind the cost burdens associated with each. Using these models will cause your data to be shared with cloud providers in accordance with their terms of service. For detailed terms of service of each provider, see the model details below.
@@ -207,10 +199,9 @@ version of each model provider, as follows:
 
 | Alias Name                   | Base Model                 |
 | ---------------------------  | :---------:                |
-| `/openai/chatgpt:latest`     | `/openai/gpt-4o`           | 
-| `/anthropic/claude:latest`   | `/anthropic/claude-sonnet` | 
-| `/google/gemini:latest`      | `google/gemini-1.5-pro`    | 
-
+| `/openai/chatgpt:latest`     | `openai/gpt-4o`            | 
+| `/anthropic/claude:latest`   | `anthropic/claude-sonnet`  | 
+| `/google/gemini:latest`      | `google/gemini-2.0-pro`    | 
 
 {{< accordion "OpenAI ChatGPT 3.5 Turbo" >}}
 
@@ -267,11 +258,9 @@ ChatGPT-4o is the latest version of ChatGPT from OpenAI. It is faster and lower 
 
 OpenAI o1 Mini is a lightweight text-only model with advanced reasoning capabilities.
 
-Note: We use OpenAI services through Microsoft Azure Cloud AI Services, subject to the Azure + OpenAI commercial terms of service. GPT o1 is accessed through the regional deployment based in in the East US 2 Azure region.
+**NOTE**: o3 Mini is newer and has lower cost compared to o1 Mini.
 
-**Note**: o1 models do not support streaming responses, tool use, vision, logprobs, temperature or system prompts. Responses may be slow - adjust timeout parameters to avoid network disconnection.
-
-**Cost**: o1 models also count "reasoning tokens" as output tokens, resulting in approximately 10x more output tokens compared to GPT 4-series models. 
+**Cost**: o1 models also count "reasoning tokens" as output tokens, resulting in approximately 2-10x more output tokens compared to GPT 4-series models. 
 
 - **Endpoint Location**: Microsoft Azure Cloud (East US 2)
 - **Use Cases**: Chat, Advanced Reasoning, Text Analysis
@@ -286,13 +275,32 @@ Note: We use OpenAI services through Microsoft Azure Cloud AI Services, subject 
 
 {{< /accordion >}}
 
-{{< accordion "OpenAI o1 Preview" >}}
 
-OpenAI o1 Preview is a flagship text-only model with advanced reasoning capabilities.
+{{< accordion "OpenAI o3-Mini" >}}
+
+OpenAI o3 Mini is the latest lightweight text-only model with advanced reasoning capabilities.
+
+**Cost**: o1 models also count "reasoning tokens" as output tokens, resulting in approximately 2-10x more output tokens compared to GPT 4-series models. 
+
+- **Endpoint Location**: Microsoft Azure Cloud (East US 2)
+- **Use Cases**: Chat, Advanced Reasoning, Text Analysis
+- **Vision Support**: No
+- **Tool Support**: No
+- **Context Window**: 128K Tokens (Note: Limited to 32K in CBORG Chat)
+- **Cost per 1M Tokens (Input)**: $0.55 
+- **Cost per 1M Tokens (Output)**: $4.40
+- **API Model Name**: `openai/o3-mini`
+- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
+- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
+
+{{< /accordion >}}
+
+
+{{< accordion "OpenAI o1" >}}
+
+OpenAI o1 is a flagship text-only model with advanced reasoning capabilities.
 
 Note: We use OpenAI services through Microsoft Azure Cloud AI Services, subject to the Azure + OpenAI commercial terms of service. GPT o1 is accessed through the regional deployment based in in the East US 2 Azure region.
-
-**Note**: o1 models do not support streaming responses, tool use, vision, logprobs, temperature or system prompts. Responses may be slow - adjust timeout parameters to avoid network disconnection.
 
 **Cost**: o1 models also count "reasoning tokens" as output tokens, resulting in approximately 10x more output tokens compared to GPT 4-series models. 
 
@@ -301,8 +309,8 @@ Note: We use OpenAI services through Microsoft Azure Cloud AI Services, subject 
 - **Vision Support**: No
 - **Tool Support**: No
 - **Context Window**: 128K Tokens (Note: Limited to 8K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $16.50 
-- **Cost per 1M Tokens (Output)**: $66.00
+- **Cost per 1M Tokens (Input)**: $15.50 
+- **Cost per 1M Tokens (Output)**: $60.00
 - **API Model Name**: `openai/o1`
 - **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
 - **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
@@ -310,14 +318,16 @@ Note: We use OpenAI services through Microsoft Azure Cloud AI Services, subject 
 {{< /accordion >}}
 
 
-{{< accordion "Google Gemini 1.5 Flash" >}}
+
+{{< accordion "Google Gemini 2.0 Flash" >}}
 
 Our service connects to the enterprise version of Google Gemini. Inputs are not used by Google for training of future AI models.
+Gemini 2.0 Flash outpeforms Gemini 1.5 Pro at 1/10th the price.
 
 - **Endpoint Location**: Google Cloud
 - **Use Cases**: Chat, Text Summarization, Image Description
 - **Vision Support**: Yes
-- **Tool Support**: No
+- **Tool Support**: Yes 
 - **Context Window**: 1.0M Tokens (Note: Limited to 32K in CBORG Chat)
 - **Cost per 1M Tokens (Input)**: $0.35
 - **Cost per 1M Tokens (Output)**: $0.70
@@ -327,14 +337,14 @@ Our service connects to the enterprise version of Google Gemini. Inputs are not 
 
 {{< /accordion >}}
 
-{{< accordion "Google Gemini 1.5 Pro" >}}
+{{< accordion "Google Gemini 2.0 Pro" >}}
 
 Our service connects to the enterprise version of Google Gemini. Inputs are not used by Google for training of future AI models.
 
 - **Endpoint Location**: Google Cloud
 - **Use Cases**: Chat, Text Summarization, Image Description
 - **Vision Support**: Yes
-- **Tool Support**: No
+- **Tool Support**: Yes 
 - **Context Window**: 1.0M Tokens (Note: Limited to 16K in CBORG Chat)
 - **Cost per 1M Tokens (Input)**: $3.50
 - **Cost per 1M Tokens (Output)**: $7.00
