@@ -27,5 +27,5 @@ By using this service, you acknowledge and agree to the following terms and cond
 **Usage Limitations:** Keys are configured with an initial monthly budget and expire after one year. Contact Science IT Consulting if you need more budget for a project.
 
 **For User Support / Help / Feedback:**
-Please contact Science IT Consulting at [scienceit@lbl.gov](mailto:scienceit@lbl.gov).
+Please contact Science IT Consulting at [scienceit@lbl.gov](mailto:scienceit@lbl.gov) or join the [https://chat.google.com/room/AAQAqGsqgfQ?cls=7](CBorg Users Chatroom).
 

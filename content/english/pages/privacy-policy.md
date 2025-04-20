@@ -12,7 +12,7 @@ draft: false
 
 Use of AI models are subject to the terms of conditions of each model provider. Read [Model Details](/models) for more information.
 
-### Guidance Document for LBNL Employees
+### AI Guidance Document for LBNL Employees
 
 Cyber Security has published a document providing [Guidance on using Generative AI Tools](https://commons.lbl.gov/display/cpp/Guidance+on+using+Generative+AI+tools)
 

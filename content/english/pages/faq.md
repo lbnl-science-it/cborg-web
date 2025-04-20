@@ -8,6 +8,10 @@ description: "Common questions regarding the CBorg AI Portal and CBorg Chat"
 draft: false
 ---
 
+{{< notice "note" >}}
+Got a question? Email us at [scienceit@lbl.gov](mailto:scienceit@lbl.gov) or join the [CBorg Users Chatroom](https://chat.google.com/room/AAQAqGsqgfQ?cls=7)
+{{< / notice >}}
+
 #### Where is the CBorg Portal hosted?
 
 The CBorg Chat user-interface, chat history database, and LBL-hosted models are all located on servers running in the IT Division's data center in Building 50. If you use commercial models (ChatGPT, Google Gemini or Anthropic Claude), these models are running in commercial cloud infrastructure which is external to the LBL network.

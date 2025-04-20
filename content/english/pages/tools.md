@@ -10,15 +10,17 @@ draft: false
 
 # CBorg-Powered AI Tools
 
-{{< accordion "CBorg Chat" >}}
+{{< notice "note" >}}
+Got a question? Email us at [scienceit@lbl.gov](mailto:scienceit@lbl.gov) or join the [CBorg Users Chatroom](https://chat.google.com/room/AAQAqGsqgfQ?cls=7)
+{{< / notice >}}
+
+#### CBorg Chat
 
 Use ChatGPT, Gemini, Anthropic, Llama3 and more.
 
 {{< button "CBorg Chat" "https://chat.cborg.lbl.gov" >}}
 
-{{< /accordion >}}
-
-{{< accordion "CBorg API Service" >}}
+#### CBorg API Service
 
 Use CBorg LLMs from your own app or build your own LLM-powered programs.
 
@@ -28,11 +30,9 @@ Use CBorg LLMs from your own app or build your own LLM-powered programs.
 - [API_FAQ](/api_faq)
 - [API Swagger Documentation](https://api.cborg.lbl.gov/)
 
-{{< /accordion >}}
+#### CBorg Client Proxy
 
-{{< accordion "CBorg Client Proxy" >}}
-
-Reverse proxy service that streamlines the connection between your local machine and the CBorg API server.
+For advanced API users, this client-side everse proxy service streamlines the connection between your local machine and the CBorg API server by injecting your API key automatically and handling parallel connections.
 
 **Features**:
 
@@ -42,9 +42,7 @@ Reverse proxy service that streamlines the connection between your local machine
 
 {{< button "CBorg Client GitHub Project" "https://github.com/lbnl-science-it/cborg-client" >}}
 
-{{< /accordion >}}
-
-{{< accordion "VS Code Continue Plugin" >}}
+#### VS Code Continue Plugin
 
 Use the popular [VS Code Continue Plugin](https://www.continue.dev/) with the CBorg API Server.
 
@@ -54,9 +52,7 @@ Two options:
 
 {{< button "VS Code Continue Support on CBorg Client GitHub Project" "https://github.com/lbnl-science-it/cborg-client" >}}
 
-{{< /accordion >}}
-
-{{< accordion "Cursor AI Code Editor" >}}
+#### Cursor AI Code Editor
 
 Cursor is an AI-powered code editor, based on a fork of VS Code. Cursor requires less
 setup to configure compared to VS Code + Continue, but is dependent on a Cursor Pro 
@@ -65,12 +61,10 @@ completions.
 
 Cursor can be used with the CBorg API for chat, inline code generation and editing.
 
-## Setup Instructions
+##### Step 1: Add CBorg Model Names
 
 Go to "Models" in the Cursor Settings:
-
-#### Step 1: Add CBorg Model Names
-
+ 
 1. **Disable Default Models**: Disable all of the default model names
 2. **Add CBorg Model Names**: Add and enable at least one of the following models:
 
@@ -79,16 +73,12 @@ Go to "Models" in the Cursor Settings:
 - google/gemini:latest
 - anthropic/claude:latest
 
-#### Step 2: Set API Key and Base URL
+##### Step 2: Set API Key and Base URL
 
 1. **OpenAI API Key:** sk-... (paste your CBorg API Key here)
 2. **Override OpenAI Base URL:** https://api.cborg.lbl.gov
 
-*If using the CBorg Client, set API Key to "none" and OpenAI Base URL to http://127.0.0.1:8001*
-
-{{< /accordion >}}
-
-{{< accordion "Aider" >}}
+#### Aider
 
 CLI-based coding agent that can edit code in a local git repo.
 
@@ -112,16 +102,14 @@ setx OPENAI_API_KEY (your CBORG_API_KEY)
 # e.g. using CBorg Coder (LBL-hosted coding model)
 aider --model openai/lbl/cborg-coder:latest
 
-# e.g. using Claude Sonnet 3.5 via CBorg (best results)
+# e.g. using Claude Sonnet 3.7 via CBorg (best results)
 aider --model openai/anthropic/claude-sonnet
 
 # e.g. using OpenAI ChatGPT 4o via CBorg
 aider --model openai/openai/gpt-4o
 {{< /highlight >}}
 
-{{< /accordion >}}
-
-{{< accordion "Omni-Engineer" >}}
+#### LBL Omni-Engineer
 
 CLI-based coding assistant capable of editing files in-place using simple commands. Best results with Claude Sonnet, but you can also use the on-prem CBorg Coder model.
 
@@ -136,14 +124,4 @@ python ./main.py
 {{< /highlight >}}
 
 CBORG_API_KEY environment variable must be defined before launching the tool. 
-
-{{< /accordion >}}
-
-### Coming Soon / Work In Progress
-
-- **PDF Reader:** Convert PDFs to Markdown and LaTeX for ingestion into LLM
-- **LabGPT:** Chatbot grounded with Berkeley Lab internal knowledgebase.
-- **Web Scraping Demo:** Automatically scrape news articles into JSON
-- **GraphRAG UI:** Convert documents into knowledge base for advanced RAG queries
-- **Stable Diffusion / FLUX:** Image generation tool
 

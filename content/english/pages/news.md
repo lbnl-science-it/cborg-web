@@ -14,6 +14,25 @@ All systems are operational.
 
 ## Recent Updates
 
+_Apr 19th, 2025_
+
+- Auto-tool-calling enabled for LBL-hosted Llama 4
+
+_Apr 18th, 2025_
+
+- LBL-hosted Llama model upgraded to Llama 4 Scout
+- Grok 3 Beta and Grok 3 Beta Mini are available on chat and API
+- Google Flash 2.5 Preview and Pro 2.5 Preview now available on chat and API
+- ChatGPT 4.1 Mini, ChatGPT 4.1 Nano and ChatGPT 4.5 Preview now available on chat and API
+- Science IT and HPCS Support chatbot now available on CBorg Chat
+- Stability and scaling improvements to API configuration
+
+_Feb 28th, 2025_
+
+- Claude 3.7 Sonnet and Claude 3.7 Sonnet with Extended Thinking are available on chat and API
+- Google Flash Lite available on API - ideal for low latency applications
+- Grok 2 is available on chat and API. Grok 3 support is not available yet.
+
 _Feb 6th, 2025_
 
 - Google Gemini models upgraded to Gemini Flash 2.0 and Gemini Pro 2.0

@@ -8,7 +8,16 @@ description: "Details regarding AI models available through the CBORG AI Portal"
 draft: false
 ---
 
-## Available Models Summary
+## Currently NOT Available
+
+- OpenAI o3
+- OpenAI o4-Mini
+- OpenAI o1-Pro
+- OpenAI DeepResearch
+
+**These will be added if & when they become available.**
+
+## Available Models
 
 ### Chat and Vision Models
 
@@ -21,21 +30,31 @@ Note: This list is subject to change.
 
 | Model Endpoint Location  | Model Creator  | Model Name           | Context Length* | Vision  | Cost** | 
 | ---------------          | :------------: | :--------:           | :-----:         | :---:   | :---:  | 
-| LBL IT Division          | Meta           | Llama 3.3 70B | 3.2 Vision        | 128K            | Y       | N/C    |
+| LBL IT Division          | Meta           | Llama 4 Scout FP8    | 256K            | N       | N/C    |
 | LBL IT Division          | Alibaba        | Qwen 2.5 Coder       | 32K             | N       | N/C    |
-| LBL IT Division          | Meta           | Llama 3.2 90B Vision | 128K            | Y       | N/C    |
-| LBL IT Division          | DeepSeek       | DeepSeek R1 Llama 70B | 128K           | N       | N/C    |
-| LBL IT Division          | Alibaba        | Qwen 2 Vision 72B    | 32K             | Y       | N/C    |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4-Omni       | 128K            | Y       | $$$    | 
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o-Mini      | 128K            | Y       | $      | 
+| LBL IT Division          | DeepSeek/Perplexity | Perplexity R1 1776 DeepSeek R1 Llama 70B | 128K          | N       | N/C    |
+| LBL IT Division          | Alibaba        | Qwen 2.5 Vision 72B    | 8K            | Y       | N/C    |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o           | 128K            | Y       | $$$    | 
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o Mini      | 128K            | Y       | $      | 
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4.1 Mini     | 1M              | Y       | $      | 
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4.1 Nano     | 1M              | Y       | $      | 
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4.5 Preview  | 128K            | Y       | $$$$$  | 
 | Microsoft Azure Cloud    | OpenAI         | o1                   | 200K            | Y       | $$$$   | 
 | Microsoft Azure Cloud    | OpenAI         | o1 Mini              | 128K            | N       | $$$    | 
+| Microsoft Azure Cloud    | OpenAI         | o3                   | 200K            | Y       | $$$    | 
 | Microsoft Azure Cloud    | OpenAI         | o3 Mini              | 200K            | N       | $$     |
+| Microsoft Azure Cloud    | OpenAI         | o3 Mini High         | 200K            | N       | $$$    |
+| Microsoft Azure Cloud    | OpenAI         | o4 Mini              | 200K            | N       | $$     |
 | Microsoft Azure Cloud    | OpenAI         | DALL-E 3.0           | 4000            | N       | $$    |
 | Google Cloud             | Google         | Gemini 2.0 Flash     | 1.0M            | Y       | $     |
-| Google Cloud             | Google         | Gemini 2.0 Pro       | 1.0M            | Y       | $$    |
+| Google Cloud             | Google         | Gemini 1.5 Pro       | 2.0M            | Y       | $     |
+| Google Cloud             | Google         | Gemini 2.5 Pro Preview | 1.0M          | Y       | $$    |
+| Google Cloud             | Google         | Gemini 2.5 Flash Preview | 1.0M            | Y       | $$    |
+| xAI Cloud                | xAI            | Grok 3 Beta          | 128K            | Y       | $$$   |
+| xAI Cloud                | xAI            | Grok 3 Mini Beta     | 128K            | Y       | $$    |
 | AWS Cloud                | Anthropic      | Claude 3.0 Haiku     | 200k            | Y       | $     |
-| AWS Cloud                | Anthropic      | Claude 3.5 Sonnet v2 | 200k            | Y       | $$    |
+| AWS Cloud                | Anthropic      | Claude 3.7 Sonnet    | 200k            | Y       | $$    |
+| AWS Cloud                | Anthropic      | Claude 3.7 Sonnet Thinking    | 200k            | Y       | $$$    |
 | AWS Cloud                | Anthropic      | Claude 3.0 Opus      | 200k            | Y       | $$$   |
 | AWS Cloud                | Meta           | Llama 3.1 405b       | 128k            | N       | $$    |
 | AWS Cloud                | Meta           | Llama 3.1 70b        | 128k            | N       | $     |
@@ -64,14 +83,33 @@ Note: API users can bypass the system prompt by accessing underlying models dire
 
 | Model Endpoint Location  | Base Model        | Model Name         | Context Length* | Vision  | Cost**  | 
 | ---------------          | :---------------: | :--------:         | :-----:         | :---:   | :---:   | 
-| LBL IT Division          | Llama 3.3 70B     | CBorg Chat         | 128K            | N       | N/C    |
+| LBL IT Division          | Llama 4 Scout NeuralMagic FP8 Dynamic     | CBorg Chat         | 256K            | Y       | N/C    |
 | LBL IT Division          | Qwen 2.5 Coder Instruct   | CBorg Coder        | 32K             | N       | N/C    |
-| LBL IT Division          | Llama 3.2 Vision 90B | CBorg Vision    | 128K            | Y       | N/C    |
-| LBL IT Division          | DeepSeekR1 Llama 70B Distill     | CBorg Deepthought  | 128K            | N       | N/C    |
+| LBL IT Division          | Qwen 2.5 VL 72B   | CBorg Vision       | 8K            | Y       | N/C    |
+| LBL IT Division          | Perplexity R1 1776 DeepSeek R1 Llama 70B Distill  | CBorg Deepthought  | 128K            | N       | N/C    |
+
+## Understanding the Context Window Length
+
+The context length is a measure of the approximate number of words that a model can process as inputs. Some models support extremely long context lengths, such as Command R+ and ChatGPT 4-Omni (128K tokens), the Anthropic Claude models (200K) and Google Gemini 1.5 (1.0M Tokens). For a typical book with 300 words per page, the correspondence between pages and tokens is approximately as follows:
+
+| Context Length | Pages of Text  | Model Support*       | 
+| :------------: | :------------: | :-----------:        |
+| 1.0M           | 2000           | Google Gemini 1.5    |
+| 200K           | 400            | Anthropic Claude     |
+| 128K           | 250            | ChatGPT 4, Mistral Large, Phi 3.5 |
+| 64K            | 128            |                      |
+| 32K            | 64             |                      |
+| 16K            | 32             | ChatGPT 3.5          |
+| 8K             | 16             | Llama 3 70B          |
+| 4K             | 8              |                      |
+
+When chatting with a model, your entire chat history of the session is fed into the context window with every message sent. Therefore, as you send more messages the context length will increase. Over time this can cause the cost of each message exchange to increase until the model's maximum token limit is reached.
 
 {{< notice "note" >}}
 * Context window sizes for commercially-hosted Generative AI models are reduced in CBORG Chat to limit excessive usage. To make use of the full-length of context windows please request an API key or engage with Science IT Consulting to discuss using cloud services with a PID recharge.
 {{< /notice >}}
+
+## Model Information Details
 
 ### LBL-Hosted Models
 
@@ -79,84 +117,73 @@ The IT Division's Science IT group provides access to open-weight models running
 
 These models are licensed for non-commercial research use.
 
-{{< accordion "CBorg Chat" >}}
+#### CBorg Chat
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Model Name**: `lbl/cborg-chat:latest`
-- **Underlying Model**: Llama 3.3 70B merged with Llama 3.2 90B Vision with Custom System Prompt
+- **Underlying Model**: Meta Llama 4 Scout Instruct with Custom System Prompt
 
-{{< /accordion >}}
-
-{{< accordion "CBorg Coder" >}}
+#### CBorg Coder
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Model Name**: `lbl/cborg-coder:latest`
 - **Underlying Model**: Qwen Coder 2.5 with Custom System Prompt and Temperature = 0.0
 
-{{< /accordion >}}
-
-{{< accordion "CBorg Vision" >}}
+#### CBorg Vision
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Model Name**: `lbl/cborg-vision:latest`
-- **Underlying Model**: Qwen 2-VL Instruct 72B
+- **Underlying Model**: Qwen 2.5 VL Instruct 72B
 
-{{< /accordion >}}
-
-{{< accordion "CBorg Deepthought" >}}
+#### CBorg Deepthought
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Model Name**: `lbl/cborg-deepthought:latest`
-- **Underlying Model**: DeepSeekR1 Llama 3.3 70B Distill Deep Reasoning Model 
+- **Underlying Model**: Perplexity R1 1776 de-biased DeepSeek R1 Llama 3.3 70B Distill Deep Reasoning Model 
 
-{{< /accordion >}}
+#### Meta Llama 4 Scout
 
-{{< accordion "Meta Llama 3.3 70B" >}}
+Underlying model is Llama 4 Scout FP8 Dynamic from NeuralMagic / RedHat AI. Context length is limited to 256K tokens.
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Use Cases**: Chat, Summarization, Coding Assistant, Tool Use
-- **Vision Support**: Yes (via model merge with Llama 3.2 90B Vision)
+- **Vision Support**: No
 - **Tool Support**: Yes
-- **Context Window**: 128K Tokens
+- **Context Window**: 256K Tokens
 - **Cost**: No cost
 - **Model Name**: `lbl/llama`
-- **Terms of Service**: [Meta Llama Model Card](https://www.llama.com/docs/model-cards-and-prompt-formats/llama3_3/)
+- **Terms of Service**: [Meta Llama Use Policy](https://www.llama.com/llama4/use-policy/)
 
-{{< /accordion >}}
+#### Qwen 2.5 Vision 72B
 
-
-{{< accordion "Qwen 2 Vision 72B" >}}
-
-Note that a minimum image size of 256x256 pixels is required. Upsampling images can improve results.
+Note that a minimum image size of 256x256 pixels is required. Upsampling images can improve results. Context is limited to 8K in this deployment.
+The model supports object location with bounding boxes, OCR-to-HTML output and agentic computer use. Detail: [Qwen 2.5 Examples](https://qwenlm.github.io/blog/qwen2.5-vl/)
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Use Cases**: Image Description, OCR, Agentic Computer Use 
 - **Vision Support**: Yes
-- **Tool Support**: No
-- **Context Window**: 32K Tokens
+- **Tool Support**: No, but includes native tools for browser use, OCR-to-HTML and object grounding
+- **Context Window**: 8K Tokens
 - **Cost**: No cost
 - **Model Name**: `lbl/qwen-vision`
-- **Terms of Service**: [Qwen 2-VL Model Card](https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct)
+- **Terms of Service**: [Qwen 2.5-VL Model Card](https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct)
 
-{{< /accordion >}}
+#### Perplexity R1 1776 DeepSeek R1 Distill Llama 70B
 
-{{< accordion "DeepSeek R1 Distill Llama 70B" >}}
+This is an open-weight reasoning model, hosted on IT-division hardware (no prompts will be sent outside the LBL network).
 
-This is an open-weight reasoning model, hosted on IT-division hardware. The Llama 70B Distilled version is smaller than the "full" DeepSeek R1 671B model, but is still very performant on math and coding tasks.
-It outputs is "thinking" before responding, enclosed in <think>...</think> tags.
+This deployment is based on a version of DeepSeek R1 that has undergone post-training by Perplexity to remove censorship and bias in the original model.
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Use Cases**: Math, Code Generation, Logic 
 - **Vision Support**: No 
-- **Tool Support**: No
+- **Tool Support**: No - but workarounds exist
 - **Context Window**: 128K Tokens
 - **Cost**: No cost
 - **Model Name**: `lbl/deepseek-r1:llama-70b`
 - **Terms of Service**: [DeepSeek R1 Model Card](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B)
 
-{{< /accordion >}}
-
-{{< accordion "Qwen 2.5 Coder 32B Instruct" >}}
+#### Qwen 2.5 Coder 32B Instruct
 
 Current leading open model for code generation, trained on permissively licensed open source code.
 
@@ -171,9 +198,7 @@ Current leading open model for code generation, trained on permissively licensed
 
 * Context length of this model can be extended to 128K but for practical performance reasons is limited to 32K in the Lab-hosted instance.
 
-{{< /accordion >}}
-
-{{< accordion "nomic-embed-text" >}}
+#### Nomic AI nomic-embed-text
 
 A high-performing open embedding model with a large token context window. nomic-embed-text is popular for use with self-hosted ollama installations. This provides a hosted endpoint with the same model.
 
@@ -184,8 +209,6 @@ A high-performing open embedding model with a large token context window. nomic-
 - **Cost**: Free to use
 - **API Model Name**: `lbl/nomic-embed-text`
 - **Model Information**: [Nomic.AI](https://www.nomic.ai/blog/posts/nomic-embed-text-v1)
-
-{{< /accordion >}}
 
 ### Cloud-Hosted Models
 
@@ -201,45 +224,26 @@ version of each model provider, as follows:
 | ---------------------------  | :---------:                |
 | `/openai/chatgpt:latest`     | `openai/gpt-4o`            | 
 | `/anthropic/claude:latest`   | `anthropic/claude-sonnet`  | 
-| `/google/gemini:latest`      | `google/gemini-2.0-pro`    | 
+| `/google/gemini:latest`      | `google/gemini-pro`        | 
 
-{{< accordion "OpenAI ChatGPT 3.5 Turbo" >}}
+#### OpenAI ChatGPT 4o Mini
 
-**DEPRECATED - NO LONGER AVAILABLE**
-
-- **Endpoint Location**: Microsoft Azure Cloud (East US)
-- **Use Cases**: Chat, Text Summarization
-- **Vision Support**: No
-- **Tool Support**: No
-- **Context Window**: 16K Tokens
-- **Cost per 1M Tokens (Input)**: $0.50 
-- **Cost per 1M Tokens (Output)**: $1.50
-- **API Model Name**: `openai/gpt-3.5-turbo`
-- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
-- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
-
-{{< /accordion >}}
-
-{{< accordion "OpenAI ChatGPT 4o Mini" >}}
-
-ChatGPT-4o-Mini is the latest cost-efficient version ChatGPT from OpenAI. It is faster and lower cost compared to the GPT-4o model, and less than half the cost of ChatGPT 3.5. In addition, 4o-Mini supports a long context window and is multi-modal with vision support. Note: We use ChatGPT through Microsoft Azure Cloud AI Services, subject to the Azure + OpenAI commercial terms of service. GPT 4o-Mini is accessed through the regional deployment based in in the East US Azure region.
+ChatGPT-4o-Mini is a lightweight version ChatGPT 4o from OpenAI. It is faster and lower cost compared to the GPT-4o model, and less than half the cost of ChatGPT 3.5.
 
 - **Endpoint Location**: Microsoft Azure Cloud (East US)
 - **Use Cases**: Chat, Text Summarization, Image Description, Tool Use
 - **Vision Support**: Yes
 - **Tool Support**: Yes
 - **Context Window**: 128K Tokens (Note: Limited to 32K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $0.165 
+- **Cost per 1M Tokens (Input)**: $0.165
 - **Cost per 1M Tokens (Output)**: $0.66
 - **API Model Name**: `openai/gpt-4o-mini`
 - **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
 - **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
 
-{{< /accordion >}}
+#### OpenAI ChatGPT 4o
 
-{{< accordion "OpenAI ChatGPT 4 Omni" >}}
-
-ChatGPT-4o is the latest version of ChatGPT from OpenAI. It is faster and lower cost compared to the legacy GPT-4 model. Note: We use ChatGPT through Microsoft Azure Cloud AI Services, subject to the Azure + OpenAI commercial terms of service.
+ChatGPT-4o is the latest version of ChatGPT from OpenAI. It is faster and lower cost compared to the legacy GPT-4 model.
 
 - **Endpoint Location**: Microsoft Azure Cloud (East US)
 - **Use Cases**: Chat, Text Summarization, Image Description, Tool Use
@@ -252,9 +256,7 @@ ChatGPT-4o is the latest version of ChatGPT from OpenAI. It is faster and lower 
 - **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
 - **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
 
-{{< /accordion >}}
-
-{{< accordion "OpenAI o1 Mini" >}}
+#### OpenAI o1 Mini
 
 OpenAI o1 Mini is a lightweight text-only model with advanced reasoning capabilities.
 
@@ -273,12 +275,25 @@ OpenAI o1 Mini is a lightweight text-only model with advanced reasoning capabili
 - **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
 - **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
 
-{{< /accordion >}}
+#### OpenAI o1
 
+OpenAI o1 is a flagship text-only model with advanced reasoning capabilities.
 
-{{< accordion "OpenAI o3-Mini" >}}
+**Cost**: o1 models also count "reasoning tokens" as output tokens, resulting in approximately 10x more output tokens compared to GPT 4-series models. 
+- **Endpoint Location**: Microsoft Azure Cloud (East US 2)
+- **Use Cases**: Chat, Advanced Reasoning, Text Analysis
+- **Vision Support**: No
+- **Tool Support**: No
+- **Context Window**: 128K Tokens (Note: Limited to 8K in CBORG Chat)
+- **Cost per 1M Tokens (Input)**: $15.50 
+- **Cost per 1M Tokens (Output)**: $60.00
+- **API Model Name**: `openai/o1`
+- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
+- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
 
-OpenAI o3 Mini is the latest lightweight text-only model with advanced reasoning capabilities.
+#### OpenAI o3-Mini / OpenAI o3-Mini High
+
+OpenAI o3 Mini is the latest lightweight text-only model with advanced reasoning capabilities. o3 Mini High variant has the reasoning effort set to "High".
 
 **Cost**: o1 models also count "reasoning tokens" as output tokens, resulting in approximately 2-10x more output tokens compared to GPT 4-series models. 
 
@@ -293,33 +308,8 @@ OpenAI o3 Mini is the latest lightweight text-only model with advanced reasoning
 - **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
 - **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
 
-{{< /accordion >}}
 
-
-{{< accordion "OpenAI o1" >}}
-
-OpenAI o1 is a flagship text-only model with advanced reasoning capabilities.
-
-Note: We use OpenAI services through Microsoft Azure Cloud AI Services, subject to the Azure + OpenAI commercial terms of service. GPT o1 is accessed through the regional deployment based in in the East US 2 Azure region.
-
-**Cost**: o1 models also count "reasoning tokens" as output tokens, resulting in approximately 10x more output tokens compared to GPT 4-series models. 
-
-- **Endpoint Location**: Microsoft Azure Cloud (East US 2)
-- **Use Cases**: Chat, Advanced Reasoning, Text Analysis
-- **Vision Support**: No
-- **Tool Support**: No
-- **Context Window**: 128K Tokens (Note: Limited to 8K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $15.50 
-- **Cost per 1M Tokens (Output)**: $60.00
-- **API Model Name**: `openai/o1`
-- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
-- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
-
-{{< /accordion >}}
-
-
-
-{{< accordion "Google Gemini 2.0 Flash" >}}
+##### Google Gemini 2.0 Flash
 
 Our service connects to the enterprise version of Google Gemini. Inputs are not used by Google for training of future AI models.
 Gemini 2.0 Flash outpeforms Gemini 1.5 Pro at 1/10th the price.
@@ -335,9 +325,24 @@ Gemini 2.0 Flash outpeforms Gemini 1.5 Pro at 1/10th the price.
 - **Pricing Details**: [Gemini API Pricing](https://ai.google.dev/pricing)
 - **Terms of Service**: [Gemini API Additional Terms of Use](https://ai.google.dev/gemini-api/terms)
 
-{{< /accordion >}}
+##### Google Gemini 2.5 Flash Preview
 
-{{< accordion "Google Gemini 2.0 Pro" >}}
+Our service connects to the enterprise version of Google Gemini. Inputs are not used by Google for training of future AI models.
+
+**Note**: Gemini 2.5 Flash Preview is subject to rate limitations and is not suitable for production use.
+
+- **Endpoint Location**: Google Cloud
+- **Use Cases**: Chat, Text Summarization, Image Description
+- **Vision Support**: Yes
+- **Tool Support**: Yes 
+- **Context Window**: 1.0M Tokens (Note: Limited to 32K in CBORG Chat)
+- **Cost per 1M Tokens (Input)**: $0.0
+- **Cost per 1M Tokens (Output)**: $0.0
+- **API Model Name**: `google/gemini-flash-exp`
+- **Pricing Details**: [Gemini API Pricing](https://ai.google.dev/pricing)
+- **Terms of Service**: [Gemini API Additional Terms of Use](https://ai.google.dev/gemini-api/terms)
+
+##### Google Gemini 1.5 Pro
 
 Our service connects to the enterprise version of Google Gemini. Inputs are not used by Google for training of future AI models.
 
@@ -345,16 +350,32 @@ Our service connects to the enterprise version of Google Gemini. Inputs are not 
 - **Use Cases**: Chat, Text Summarization, Image Description
 - **Vision Support**: Yes
 - **Tool Support**: Yes 
-- **Context Window**: 1.0M Tokens (Note: Limited to 16K in CBORG Chat)
+- **Context Window**: 2.0M Tokens (Note: Limited to 16K in CBORG Chat)
 - **Cost per 1M Tokens (Input)**: $3.50
 - **Cost per 1M Tokens (Output)**: $7.00
 - **API Model Name**: `google/gemini-pro`
 - **Pricing Details**: [Gemini API Pricing](https://ai.google.dev/pricing)
 - **Terms of Service**: [Gemini API Additional Terms of Use](https://ai.google.dev/gemini-api/terms)
 
-{{< /accordion >}}
+##### Google Gemini 2.5 Pro Preview
 
-{{< accordion "Anthropic Claude 3.5 Haiku" >}}
+Our service connects to the enterprise version of Google Gemini. Inputs are not used by Google for training of future AI models.
+Gemini 2.0 Flash outpeforms Gemini 1.5 Pro at 1/10th the price.
+
+**Note**: Gemini 2.5 Pro Preview is subject to rate limitations and is not suitable for production use.
+
+- **Endpoint Location**: Google Cloud
+- **Use Cases**: Chat, Text Summarization, Image Description
+- **Vision Support**: Yes
+- **Tool Support**: Yes 
+- **Context Window**: 1.0M Tokens (Note: Limited to 32K in CBORG Chat)
+- **Cost per 1M Tokens (Input)**: $0.0
+- **Cost per 1M Tokens (Output)**: $0.0
+- **API Model Name**: `google/gemini-pro-preview`
+- **Pricing Details**: [Gemini API Pricing](https://ai.google.dev/pricing)
+- **Terms of Service**: [Gemini API Additional Terms of Use](https://ai.google.dev/gemini-api/terms)
+
+#### Anthropic Claude 3.5 Haiku
 
 Claude has excellent reasoning and code analysis capabilities compared to other leading models, but can be expensive in the largest variants. The 200K token context window is large compared to competitors. The Haiku version is suitable for short text summarization.
 
@@ -371,11 +392,9 @@ Claude has excellent reasoning and code analysis capabilities compared to other 
 - **Pricing Details**: [Anthropic API Pricing](https://aws.amazon.com/bedrock/pricing/)
 - **Terms of Service**: [Anthropic Commercial Terms of Service](https://www-cdn.anthropic.com/6b68a6508f0210c5fe08f0199caa05c4ee6fb4dc/Anthropic-on-Bedrock-Commercial-Terms-of-Service_Dec_2023.pdf)
 
-{{< /accordion >}}
+#### Anthropic Claude 3.7 Sonnet
 
-{{< accordion "Anthropic Claude 3.5 Sonnet v2" >}}
-
-Claude has superior reasoning and code analysis capabilities compared to other leading models, but can be expensive in the largest variants. The 200K token context window is large compared to competitors. The 3.5 Sonnet is the latest version of Claude, outperforming 3.0 Opus with lower cost and faster inference speed.
+Claude has superior reasoning and code analysis capabilities compared to other leading models, but can be expensive in the largest variants. The 200K token context window is large compared to competitors. The 3.7 Sonnet is the latest version of Claude, outperforming 3.0 Opus with lower cost and faster inference speed. 3.7 Sonnet with Extended Thinking enables additional reasoning at a higher output token cost.
 
 - **Endpoint Location**: Amazon Web Services (US West)
 - **Use Cases**: Chat, Text Summarization, Image Description
@@ -388,11 +407,9 @@ Claude has superior reasoning and code analysis capabilities compared to other l
 - **Pricing Details**: [Anthropic API Pricing](https://aws.amazon.com/bedrock/pricing/)
 - **Terms of Service**: [Anthropic Commercial Terms of Service](https://www-cdn.anthropic.com/6b68a6508f0210c5fe08f0199caa05c4ee6fb4dc/Anthropic-on-Bedrock-Commercial-Terms-of-Service_Dec_2023.pdf)
 
-{{< /accordion >}}
+#### Anthropic Claude 3.0 Opus
 
-{{< accordion "Anthropic Claude 3.0 Opus" >}}
-
-Claude has excellent reasoning and code analysis capabilities compared to other leading models, but can be expensive in the largest variants. 
+Claude 3.0 Opus is an older model, and expensive. Newer models are recommended until Opus 3.5 is released.
 
 - **Endpoint Location**: Amazon Web Services (US West)
 - **Use Cases**: Chat, Text Summarization, Image Description
@@ -405,9 +422,7 @@ Claude has excellent reasoning and code analysis capabilities compared to other 
 - **Pricing Details**: [Anthropic API Pricing](https://aws.amazon.com/bedrock/pricing/)
 - **Terms of Service**: [Anthropic Commercial Terms of Service](https://www-cdn.anthropic.com/6b68a6508f0210c5fe08f0199caa05c4ee6fb4dc/Anthropic-on-Bedrock-Commercial-Terms-of-Service_Dec_2023.pdf)
 
-{{< /accordion >}}
-
-{{< accordion "AWS Meta Llama 3.1" >}}
+#### AWS Bedrock Meta Llama 3.1 405B
 
 **Note:** This version of Llama 3.1 runs in the AWS cloud. The 405B model here uses full-precision BF16-format
 which may result in slightly different outputs compared to the LBL-hosted FP8-quantized model.
@@ -425,9 +440,7 @@ Llama 3.1 is the latest version of the open source LLM from Meta. Llama is frien
 - **API Model Name**: `aws/llama-3.1-405b` (also available at lower costs: -70b and -8b)
 - **Terms of Service**: [Meta Llama Model Card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md)
 
-{{< /accordion >}}
-
-{{< accordion "AWS Cohere Command R+" >}}
+#### AWS Bedrock Cohere Command R+
 
 Cohere Command R and R+ are intended to support enterprise applications with tool use and RAG capabilities.
 
@@ -441,9 +454,7 @@ Cohere Command R and R+ are intended to support enterprise applications with too
 - **API Model Name**: `aws/command-r-plus`, `aws/command-r` (lower cost version)
 - **Terms of Service**: [Cohere For AI Acceptable Use Policy](https://docs.cohere.com/docs/c4ai-acceptable-use-policy)
 
-{{< /accordion >}}
-
-{{< accordion "Wolfram|Alpha" >}}
+#### Wolfram|Alpha
 
 Wolfram|Alpha can lookup information, consult databases and perform mathematical calculations.
 The CBorg endpoint accepts queries as OpenAI-compatible user messages and returns results
@@ -457,31 +468,4 @@ in Markdown-formatted text.
 - **API Model Name**: `wolfram/alpha`
 - **Terms of Service**: [Wolfram|Alpha Terms of Use](https://www.wolframalpha.com/termsofuse)
 
-{{< /accordion >}}
-
-
-### Frequently Asked Questions
-
-#### 1. **What is the role of context length?**
-
-The context length is a measure of the approximate number of words that a model can process as inputs. Some models support extremely long context lengths, such as Command R+ and ChatGPT 4-Omni (128K tokens), the Anthropic Claude models (200K) and Google Gemini 1.5 (1.0M Tokens). For a typical book with 300 words per page, the correspondence between pages and tokens is approximately as follows:
-
-| Context Length | Pages of Text  | Model Support*       | 
-| :------------: | :------------: | :-----------:        |
-| 1.0M           | 2000           | Google Gemini 1.5    |
-| 200K           | 400            | Anthropic Claude     |
-| 128K           | 250            | ChatGPT 4, Mistral Large, Phi 3.5 |
-| 64K            | 128            |                      |
-| 32K            | 64             |                      |
-| 16K            | 32             | ChatGPT 3.5          |
-| 8K             | 16             | Llama 3 70B          |
-| 4K             | 8              |                      |
-
-When chatting with a model, your entire chat history of the session is fed into the context window with every message sent. Therefore, as you send more messages the context length will increase. Over time this can cause the cost of each message exchange to increase until the model's maximum token limit is reached.
-
-{{< notice "note" >}}
-
-* Note: In CBORG Chat, we have set the maximum context length of commercial models to significnatly lower limits compared to their design maximum, in order to control costs for the IT Division. If you need to use a model employing the full-length context window, our API key service provides access to commercial models with the full context window.
-
-{{</ notice >}}
 

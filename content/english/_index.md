@@ -15,10 +15,11 @@ features:
     image: "/images/model-logos.png"
     content: "We provide seamless, secure access to popular LLM services running in commercial cloud service providers, in addition to free-to-use open models running on Berkeley Lab's local computing infrastructure."
     bulletpoints:
-      - "**OpenAI ChatGPT 4 and o1** via Azure Cloud"
+      - "**OpenAI ChatGPT 4, o1 and o3** via Azure Cloud"
       - "**Google Gemini** via Google Cloud"
       - "**Anthropic Claude** via AWS Bedrock"
-      - "**Llama 3 405B and 90B** Lab-hosted Open Chat & Vision Models"
+      - "**Grok 3 Beta via xAI"
+      - "Lab-hosted on-prem **Llama 4, Qwen 2.5 Coder, Vision and DeepSeek R1**"
       - "...and many more!"
     button:
       enable: true
@@ -49,4 +50,5 @@ features:
       enable: true
       label: "Contact Science IT Consulting"
       link: "mailto:scienceit@lbl.gov"
+
 ---

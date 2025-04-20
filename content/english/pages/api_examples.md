@@ -8,18 +8,73 @@ description: ""
 draft: false
 ---
 
-The CBORG API server is an LLM proxy server that provides token-authenticated access to provided models. The proxy server is _OpenAI-compatible_, which means that in most cases it can be used as a drop-in replacement for any program that is built to work with OpenAI's ChatGPT.
+The CBORG API server is an proxy server that provides token-authenticated access to provided models. The proxy server is _OpenAI-compatible_, which means that in most cases it can be used as a drop-in replacement for any program that is built to work with OpenAI's ChatGPT.
 
-To use the API server, you must provide your personal API key and set the model base endpoint to `https://api.cborg.lbl.gov`. 
+## Key Management
 
-Local clients on the LBL Network (VPN, Employee Wifi or Ethernet) may also use `https://api-local.cborg.lbl.gov` to bypass Cloudflare, which could block your application if it exceeds rate-limits.
+To request a key go to the [CBorg Key Manager](/api_request).
 
-To request a key, [complete this form](/api_request).
+## Endpoint Location
 
-## Example Code
+The API base for CBorg is `https://api.cborg.lbl.gov`. 
+
+**Note:** `https://api.cborg.lbl.gov` is routed through Cloudflare, which can occasionally result in your client being blocked due to high request rate. To route directly to the API server without using Cloudflare, clients on the LBL Network (VPN, Employee Wifi or Ethernet) may use `https://api-local.cborg.lbl.gov`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Usage Limitations
+
+### Acceptable Use
+
+Users are responsible for complying with the [terms of use of each model](/models).
+
+### Guidance Document for LBNL Employees
+
+Cyber Security has published a document providing [Guidance on using Generative AI Tools](https://commons.lbl.gov/display/cpp/Guidance+on+using+Generative+AI+tools)
+
+LBNL Staff should familiarize themselves with the issues described above.
+
+### Rate Limiting 
+
+Note that in production applications, your program will need to use ratelimiting otherwise requests will be rejected by the proxy server if they arrive too fast.
+
+For example, you may use the Python `ratelimit` module to ensure your application does not exceed the maximum usage limits. 
+
+The proxy server will enforce reasonable limits for on the number of parallel requests, tokens per minute, requests per minute and budget consumption for commercial (non-free) models.
+
+## Useful Tips
+
+- [Best Practices for API Key Safety](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety)
+- [Best Practices for Prompt Engineering](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api)
+
+## Example Code Requirements
+
+- Request an API Key
+- Save API key as an environment variable on your system.
+- Install the OpenAI SDK for Python: `pip install openai`
+
+{{< notice "note" >}}
+Please also see the examples on the [API FAQ](/api_faq) page for more examples.
+{{< / notice >}}
+
+## Example Code - Call All Models
 
 {{< highlight python >}}
-import openai # CBORG API Proxy Server is OpenAI-compatible through the openai module
+import openai
 import os
 
 client = openai.OpenAI(
@@ -28,20 +83,25 @@ client = openai.OpenAI(
 )
 
 models = [
-    "lbl/cborg-chat:latest",       # LBL-hosted Llama 405B with custom system prompt
-    "lbl/cborg-coder:latest",      # LBL-hosted Llama 405B with custom system prompt
-    "lbl/cborg-vision:latest",     # LBL-hosted Llama 405B with custom system prompt
-    "lbl/llama",                   # LBL-hosted Llama 405B Chat model
-    "lbl/llama-vision",            # LBL-hosted Llama 90B Vision model
+    "lbl/cborg-chat:latest",       # LBL-hosted Llama with custom system prompt
+    "lbl/cborg-coder:latest",      # LBL-hosted Llama with custom system prompt
+    "lbl/cborg-vision:latest",     # LBL-hosted Llama with custom system prompt
+    "lbl/llama",                   # LBL-hosted Chat model
+    "lbl/qwen-coder",              # LBL-hosted Coding model
+    "lbl/qwen-vision",             # LBL-hosted Vision model
     "openai/gpt-4o",
     "openai/gpt-4o-mini",
     "openai/o1",
     "openai/o1-mini",
+    "openai/o3-mini",
     "anthropic/claude-haiku",
     "anthropic/claude-sonnet",
     "anthropic/claude-opus",
     "google/gemini-pro",
     "google/gemini-flash",
+    "google/gemini-flash-lite",
+    "xai/grok",
+    "xai/grok-mini",
     "aws/llama-3.1-405b",
     "aws/llama-3.1-70b",
     "aws/llama-3.1-8b",
@@ -86,7 +146,6 @@ Response: The letter that comes after A in the English alphabet is B.
 ...
 {{< /highlight >}}
 
-
 ## RAG Embedding Example
 
 {{< highlight python >}}
@@ -127,64 +186,4 @@ documents = np.array([d1,d2])
 print('Similarity of query "Orange" to "Apple" versus "Bread" (higher is more similar):', cosine_similarity(query,documents))
 
 {{< / highlight >}}
-
-## Usage Limitations
-
-### Acceptable Use
-
-Users are responsible for complying with the [terms of use of each model](/models).
-
-### Guidance Document for LBNL Employees
-
-Cyber Security has published a document providing [Guidance on using Generative AI Tools](https://commons.lbl.gov/display/cpp/Guidance+on+using+Generative+AI+tools)
-
-LBNL Staff should familiarize themselves with the issues described above.
-
-### Rate Limiting 
-
-Note that in production applications, your program will need to use ratelimiting otherwise requests will be rejected by the proxy server if they arrive too fast.
-
-For example, you may use the Python `ratelimit` module to ensure your application does not exceed the maximum usage limits. 
-
-The proxy server will enforce reasonable limits for on the number of parallel requests, tokens per minute, requests per minute and budget consumption for commercial (non-free) models.
-
-## Useful Tips
-
-- [Best Practices for API Key Safety](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety)
-- [Best Practices for Prompt Engineering](https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api)
-
-## Supported Models
-
-### LBL-Hosted Models (free to use)
-
-- `lbl/cborg-chat:latest`: Mistral Large 2 - Chat, Coding Assistant, Tool Use
-- `lbl/mistral-large`: Same as above, direct name model route (may change)
-- `lbl/cborg-chat-nano:latest`: Microsoft Phi 3.5 - Summarization
-- `lbl/phi`: Same as above, direct name model route (may change)
-- `lbl/nomic-embed-text`: 768-dimension Text Embedding Model
-- `lbl/e5-embed-v2`: 1024-dimension Text Embedding Model (CURRENTLY OFFLINE)
-- `lbl/nv-embed-v1`: 4096-dimension Text Embedding Model (CURRENTLY OFFLINE)
-
-### Commercial Cloud-Hosted Model Aliases
-
-- `openai/chatgpt:latest`: Alias to ChatGPT 4o (latest version)
-- `anthropic/claude:latest`: Alias to Claude Sonnet 3.5 (latest version)
-- `google/gemini:latest`: Alias to Gemini 1.5 Pro (latest version)
-
-### Commercial Cloud-Hosted Models
-
-- `openai/gpt-3.5-turbo`
-- `openai/gpt-4o`
-- `openai/gpt-4o-mini`
-- `anthropic/claude-sonnet`
-- `anthropic/claude-opus`
-- `anthropic/claude-haiku`
-- `google/gemini-pro`
-- `google/gemini-flash`
-
-## Example Code Requirements
-
-- Request an API Key
-- Save API key as an environment variable on your system.
-- Install the OpenAI SDK for Python: `pip install openai`
 
