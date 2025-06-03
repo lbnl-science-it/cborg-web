@@ -22,21 +22,35 @@ Read this: [Best Practices for API Key Security](https://help.openai.com/en/arti
 
 #### How do I check my key budget and spend?
 
-Assuming the API key is available in your user environment as $CBORG_API_KEY, you can check the current spend with `/key/info`, e.g.;
+Assuming the API key is available in your user environment as $CBORG_API_KEY, you can check the current spend with `/user/info`, e.g.;
 
 {{< highlight bash >}}
-curl --location 'https://api.cborg.lbl.gov/key/info' --header "Authorization: Bearer $CBORG_API_KEY"
+curl --location 'https://api.cborg.lbl.gov/user/info' --header "Authorization: Bearer $CBORG_API_KEY"
 {{< /highlight >}}
 
-You can also calculate the estimated cost of an API call, before making the call, using /spend/calculate.
+#### How do I retreive all available models?
 
-LBL-hosted models (anything model name starting with `/lbl`) are hosted in our on-prem datacenter therefore the cost will always return zero for these models.
-
-Note that commercial models return the number of input and output tokens consumed by a request, but do not return the actual cost - it is up to the user to apply the appropriate cost-conversion logic to determine the actual cost.
+{{< highlight bash >}}
+curl --location 'https://api.cborg.lbl.gov/model/info' --header "Authorization: Bearer $CBORG_API_KEY" | jq | less
+{{< /highlight >}}
 
 #### How do I avoid models with a default system promt? I need full control.
 
 The "CBorg" models "lbl/cborg-chat" and "lbl/cborg-coder" have default system messages. For full control you should directly access the underlying model, e.g. "lbl/llama" and "lbl/qwen-coder".
+
+#### What models support prompt caching?
+
+Check the model property `supports_prompt_caching = true` in the JSON structure returned from `https://api.cborg.lbl.gov/model/info`.
+
+#### How do I get the actual cost of an API call?
+
+Before making the call, you can estimate the cost using `/cost/calculate`.
+
+After making the call, you can get the true calculated cost from the HTTP response header `x-litellm-response-cost`.
+
+#### How to I specify the exact model name - I need full control of the version
+
+Some model names, e.g. `anthropic/claude-sonnet` are aliases that point to the latest version of that model. To ensure that your application does not "auto-upgrade" to newer versions, you may refer to the exact underlying model. Check the complete list of models using the API call `https://api.cborg.lbl.gov/model/info`. Note that the underlying model name is also returned by the API when making requests to any model.
 
 #### How do I send a batch inference request?
 

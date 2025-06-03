@@ -14,6 +14,23 @@ All systems are operational.
 
 ## Recent Updates
 
+_May 22nd, 2025_
+
+- Claude 4.0 models are now available
+- All Anthropic endpoints switched over to AWS Bedrock
+- Agent Builder now available on CBorg Chat
+
+_Apr 28th, 2025_
+
+- Improve configuration for VS Code 'Continue' integration
+- Fix autocomplete / FIM model for code completions
+- Changed LBL-hosted CBorg Deepthought from Perplexity Debiased Deepseek R1-Llama to QwQ 32B
+
+_Apr 21st, 2025_
+
+- Enabled support for OpenAI Codex CLI to CBorg API Server
+- Added ChatGPT 4.1 and OpenAI o3 models to chat and API
+
 _Apr 19th, 2025_
 
 - Auto-tool-calling enabled for LBL-hosted Llama 4

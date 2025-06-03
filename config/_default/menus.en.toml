@@ -32,6 +32,78 @@ pageRef = "/tools"
 weight = 6
 
 [[main]]
+name = "VS Code Continue"
+parent = "Tools"
+pageRef = "/tools_continue"
+weight = 1
+
+[[main]]
+name = "VS Code Cline"
+parent = "Tools"
+pageRef = "/tools_cline"
+weight = 1
+
+[[main]]
+name = "VS Code Roo Code"
+parent = "Tools"
+pageRef = "/tools_roo"
+weight = 1
+
+[[main]]
+name = "Aider"
+parent = "Tools"
+pageRef = "/tools_aider"
+weight = 1
+
+[[main]]
+name = "Omni-Engineer"
+parent = "Tools"
+pageRef = "/tools_omniengineer"
+weight = 1
+
+[[main]]
+name = "OpenAI Codex CLI"
+parent = "Tools"
+pageRef = "/tools_codex"
+weight = 1
+
+[[main]]
+name = "Claude Code"
+parent = "Tools"
+pageRef = "/tools_claudecode"
+weight = 1
+
+[[main]]
+name = "JupyterLab AI"
+parent = "Tools"
+pageRef = "/tools_jupyter"
+weight = 1
+
+[[main]]
+name = "Cursor AI Editor"
+parent = "Tools"
+pageRef = "/tools_cursor"
+weight = 1
+
+[[main]]
+name = "CBorg Client Proxy"
+parent = "Tools"
+pageRef = "/tools_cborgproxy"
+weight = 1
+
+[[main]]
+name= "CBorg Chat"
+parent = "Tools"
+pageRef = "/tools_cborgchat"
+weight = 1
+
+[[main]]
+name = "CBorg API Service"
+parent = "Tools"
+pageRef = "/api_request"
+weight = 1
+
+[[main]]
 weight = 7
 name = "API"
 

@@ -42,7 +42,9 @@ The API base for CBorg is `https://api.cborg.lbl.gov`.
 
 Users are responsible for complying with the [terms of use of each model](/models).
 
-### Guidance Document for LBNL Employees
+***Not for Public Deployment**: The CBorg API should not be connected to any publicly accessible chatbot or interactive user interface. CBorg does not include security measures and guardrails required for public deployment of LLMs. Static (offline) generated content is okay. Please contact [Science IT Consulting](scienceit@lbl.gov) if you have any questions about deployment of software incorporating the CBorg API.
+
+### IT Policy Guidance for LBNL Employees
 
 Cyber Security has published a document providing [Guidance on using Generative AI Tools](https://commons.lbl.gov/display/cpp/Guidance+on+using+Generative+AI+tools)
 
@@ -82,6 +84,7 @@ client = openai.OpenAI(
     base_url="https://api.cborg.lbl.gov" # Local clients can also use https://api-local.cborg.lbl.gov
 )
 
+# Note this list of models is frequently updated and may be out-of-date
 models = [
     "lbl/cborg-chat:latest",       # LBL-hosted Llama with custom system prompt
     "lbl/cborg-coder:latest",      # LBL-hosted Llama with custom system prompt
@@ -186,4 +189,44 @@ documents = np.array([d1,d2])
 print('Similarity of query "Orange" to "Apple" versus "Bread" (higher is more similar):', cosine_similarity(query,documents))
 
 {{< / highlight >}}
+
+# Prompt Caching Example
+
+Automatic (implicit) prompt caching is supported by OpenAI models (GPT and o1...o4). Anthropic prompt caching is supported using an explicit cache-write via the cache_control flag (there is a cost for cache writes). Currently, other models such as Gemini do not support prompt caching via CBorg API, but can be available via direct access (requires your own cloud account).
+
+{{< highlight python >}}
+
+import os
+import json
+import openai
+
+client = openai.OpenAI(
+    api_key=os.environ.get('CBORG_API_KEY'),
+    base_url="https://api.cborg.lbl.gov" # CBORG API proxy is OpenAI compatible
+)
+
+for i in range(2):
+
+    for m in [ "openai/gpt-4.1", "anthropic/claude-sonnet" ]:
+        r = client.chat.completions.with_raw_response.create(
+            model=m,
+            messages = [
+                {
+                    "role": "system",
+                    "content": "Always talk like a pirate. " * 200, # must be at least 1024 tokens to use cache on OpenAI models
+                    "cache_control": {"type": "ephemeral"}, # explicit cache write command is required for Anthropic models
+                }, 
+                {
+                    "role": "user",
+                    "content": "What letter comes afte A in the alphabet?"
+                }
+            ]
+        )
+
+        data = json.loads(r.content)
+        print(m, i+1, "Cached Tokens:", data['usage']['prompt_tokens_details']['cached_tokens'])
+        print(m, i+1, 'Calculated Cost:', r.headers.get('x-litellm-response-cost'))
+
+{{< / highlight >}}
+
 

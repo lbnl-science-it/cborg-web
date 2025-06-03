@@ -8,60 +8,57 @@ description: "Details regarding AI models available through the CBORG AI Portal"
 draft: false
 ---
 
-## Currently NOT Available
-
-- OpenAI o3
-- OpenAI o4-Mini
-- OpenAI o1-Pro
-- OpenAI DeepResearch
-
-**These will be added if & when they become available.**
-
 ## Available Models
 
 ### Chat and Vision Models
 
-Note: This list is subject to change.
+Note: This list changes frequently - please check back here for updates.
+
+| Model Endpoint Location  | Model Creator  | Model Name           | Context Length* | Vision  | Cost** | P2P Okay*** | 
+| ---------------          | :------------: | :--------:           | :-----:         | :---:   | :---:  | :-----: |
+| LBL IT Division          | Meta           | Llama 4 Scout FP8    | 256K            | N       | N/C    | Y       |
+| LBL IT Division          | Alibaba        | Qwen 2.5 Coder       | 32K             | N       | N/C    | Y       |
+| LBL IT Division          | Alibaba        | Qwen QwQ             | 32K             | N       | N/C    | Y       |
+| LBL IT Division          | Alibaba        | Qwen 2.5 Vision 72B  | 8K              | Y       | N/C    | Y       |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o           | 128K            | Y       | $$$    | Y       |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o Mini      | 128K            | Y       | $      | Y       |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4.1          | 1M              | Y       | $$     | Y       |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4.1 Mini     | 1M              | Y       | $      | Y       |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4.1 Nano     | 1M              | Y       | $      | Y       |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4.5 Preview  | 128K            | Y       | $$$$$  | Y       |
+| Microsoft Azure Cloud    | OpenAI         | o1                   | 200K            | Y       | $$$$   | Y       |
+| Microsoft Azure Cloud    | OpenAI         | o1 Mini              | 128K            | N       | $$$    | Y       | 
+| Microsoft Azure Cloud    | OpenAI         | o3                   | 200K            | Y       | $$$    | Y       |
+| Microsoft Azure Cloud    | OpenAI         | o3 Mini              | 200K            | N       | $$     | Y       |
+| Microsoft Azure Cloud    | OpenAI         | o3 Mini High         | 200K            | N       | $$$    | Y       |
+| Microsoft Azure Cloud    | OpenAI         | o4 Mini              | 200K            | Y       | $$     | Y       |
+| Microsoft Azure Cloud    | OpenAI         | DALL-E 3.0           | 4000            | N       | $$     | Y       |
+| Google Cloud             | Google         | Gemini 2.0 Flash     | 1.0M            | Y       | $      | Y       | 
+| Google Cloud             | Google         | Gemini 1.5 Pro       | 2.0M            | Y       | $      | Y       |
+| Google Cloud             | Google         | Gemini 2.5 Pro Preview | 1.0M          | Y       | $$     | Y       |
+| Google Cloud             | Google         | Gemini 2.5 Flash Preview | 1.0M        | Y       | $$     | Y       |
+| AWS Cloud                | Anthropic      | Claude 3.0 Haiku     | 200k            | Y       | $      | Y       |
+| AWS Cloud                | Anthropic      | Claude 4.0 Sonnet    | 200k            | Y       | $$     | Y       |
+| AWS Cloud                | Anthropic      | Claude 4.0 Opus      | 200k            | Y       | $$$    | Y       |
+| AWS Cloud                | Meta           | Llama 3.1 405b       | 128k            | N       | $$     | Y       |
+| AWS Cloud                | Meta           | Llama 3.1 70b        | 128k            | N       | $      | Y       |
+| AWS Cloud                | Meta           | Llama 3.1 8b         | 128k            | N       | $      | Y       |
+| AWS Cloud                | Cohere         | Command R+           | 128k            | N       | $$     | Y       |
+| AWS Cloud                | Cohere         | Command R            | 128k            | N       | $      | Y       |
+| xAI Cloud                | xAI            | Grok 3 Beta          | 128K            | Y       | $$$    | N***    |
+| xAI Cloud                | xAI            | Grok 3 Mini Beta     | 128K            | Y       | $$     | N***    |
+| Wolfram Cloud            | Wolfram Research | Wolfram\|Alpha    | 1024             | N       | $      | N***    |
 
 {{< notice "note" >}}
-** Cost for using commercial models are paid for by the IT Division. There is no cost to individual users at this time and no PID is required.
+** **Cost Explanation**: This column provides a rough order-of-magnitude estimate of costs associated with the model. Detailed cost data is provided further on this page. Cost for using commercial models are paid for by the IT Division. There is no cost to individual users at this time and no PID is required.
 {{< /notice >}}
 
+{{< notice "note" >}}
+*** **P2P Okay Explanation**
+**Y** = Acceptable for use with Prudent-to-Protect (P2P) Information (e.g. pre-publication data). May be approved for protected R&D information including ECI or S&T Matrix as part of an approved Access Plan. Please contact [IT Policy](mailto:itpolicy@lbl.gov) for more information. 
 
-| Model Endpoint Location  | Model Creator  | Model Name           | Context Length* | Vision  | Cost** | 
-| ---------------          | :------------: | :--------:           | :-----:         | :---:   | :---:  | 
-| LBL IT Division          | Meta           | Llama 4 Scout FP8    | 256K            | N       | N/C    |
-| LBL IT Division          | Alibaba        | Qwen 2.5 Coder       | 32K             | N       | N/C    |
-| LBL IT Division          | DeepSeek/Perplexity | Perplexity R1 1776 DeepSeek R1 Llama 70B | 128K          | N       | N/C    |
-| LBL IT Division          | Alibaba        | Qwen 2.5 Vision 72B    | 8K            | Y       | N/C    |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o           | 128K            | Y       | $$$    | 
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o Mini      | 128K            | Y       | $      | 
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4.1 Mini     | 1M              | Y       | $      | 
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4.1 Nano     | 1M              | Y       | $      | 
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4.5 Preview  | 128K            | Y       | $$$$$  | 
-| Microsoft Azure Cloud    | OpenAI         | o1                   | 200K            | Y       | $$$$   | 
-| Microsoft Azure Cloud    | OpenAI         | o1 Mini              | 128K            | N       | $$$    | 
-| Microsoft Azure Cloud    | OpenAI         | o3                   | 200K            | Y       | $$$    | 
-| Microsoft Azure Cloud    | OpenAI         | o3 Mini              | 200K            | N       | $$     |
-| Microsoft Azure Cloud    | OpenAI         | o3 Mini High         | 200K            | N       | $$$    |
-| Microsoft Azure Cloud    | OpenAI         | o4 Mini              | 200K            | N       | $$     |
-| Microsoft Azure Cloud    | OpenAI         | DALL-E 3.0           | 4000            | N       | $$    |
-| Google Cloud             | Google         | Gemini 2.0 Flash     | 1.0M            | Y       | $     |
-| Google Cloud             | Google         | Gemini 1.5 Pro       | 2.0M            | Y       | $     |
-| Google Cloud             | Google         | Gemini 2.5 Pro Preview | 1.0M          | Y       | $$    |
-| Google Cloud             | Google         | Gemini 2.5 Flash Preview | 1.0M            | Y       | $$    |
-| xAI Cloud                | xAI            | Grok 3 Beta          | 128K            | Y       | $$$   |
-| xAI Cloud                | xAI            | Grok 3 Mini Beta     | 128K            | Y       | $$    |
-| AWS Cloud                | Anthropic      | Claude 3.0 Haiku     | 200k            | Y       | $     |
-| AWS Cloud                | Anthropic      | Claude 3.7 Sonnet    | 200k            | Y       | $$    |
-| AWS Cloud                | Anthropic      | Claude 3.7 Sonnet Thinking    | 200k            | Y       | $$$    |
-| AWS Cloud                | Anthropic      | Claude 3.0 Opus      | 200k            | Y       | $$$   |
-| AWS Cloud                | Meta           | Llama 3.1 405b       | 128k            | N       | $$    |
-| AWS Cloud                | Meta           | Llama 3.1 70b        | 128k            | N       | $     |
-| AWS Cloud                | Meta           | Llama 3.1 8b         | 128k            | N       | $     |
-| AWS Cloud                | Cohere         | Command R+           | 128k            | N       | $$    |
-| AWS Cloud                | Cohere         | Command R            | 128k            | N       | $     |
-| Wolfram Cloud            | Wolfram Research | Wolfram\|Alpha    | 1024             | N       | $     |
+**N** = Only cleared for use with non-sensitive Public information. No negotiated terms. No S&T or ECI or anything with FN or sponsor-specified protections permitted. For details consult [IT Policy AI Tool Security Levels](https://docs.google.com/spreadsheets/d/1l-ZX0wAajcaQClKd6tAPxUDQUQhnj7CMTSYoR-J-cmc/edit?gid=0#gid=0)
+{{< /notice >}}
 
 ### Vector Embedding Models
 
@@ -86,7 +83,7 @@ Note: API users can bypass the system prompt by accessing underlying models dire
 | LBL IT Division          | Llama 4 Scout NeuralMagic FP8 Dynamic     | CBorg Chat         | 256K            | Y       | N/C    |
 | LBL IT Division          | Qwen 2.5 Coder Instruct   | CBorg Coder        | 32K             | N       | N/C    |
 | LBL IT Division          | Qwen 2.5 VL 72B   | CBorg Vision       | 8K            | Y       | N/C    |
-| LBL IT Division          | Perplexity R1 1776 DeepSeek R1 Llama 70B Distill  | CBorg Deepthought  | 128K            | N       | N/C    |
+| LBL IT Division          | Qwen QwQ          | CBorg Deepthought  | 32K            | N       | N/C    |
 
 ## Understanding the Context Window Length
 
@@ -139,7 +136,7 @@ These models are licensed for non-commercial research use.
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Model Name**: `lbl/cborg-deepthought:latest`
-- **Underlying Model**: Perplexity R1 1776 de-biased DeepSeek R1 Llama 3.3 70B Distill Deep Reasoning Model 
+- **Underlying Model**: Qwen QwQ 32B with Reasoning and Tool Use
 
 #### Meta Llama 4 Scout
 
@@ -168,7 +165,7 @@ The model supports object location with bounding boxes, OCR-to-HTML output and a
 - **Model Name**: `lbl/qwen-vision`
 - **Terms of Service**: [Qwen 2.5-VL Model Card](https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct)
 
-#### Perplexity R1 1776 DeepSeek R1 Distill Llama 70B
+#### Perplexity R1 1776 DeepSeek R1 Distill Llama 70B (currently offline)
 
 This is an open-weight reasoning model, hosted on IT-division hardware (no prompts will be sent outside the LBL network).
 
@@ -182,6 +179,19 @@ This deployment is based on a version of DeepSeek R1 that has undergone post-tra
 - **Cost**: No cost
 - **Model Name**: `lbl/deepseek-r1:llama-70b`
 - **Terms of Service**: [DeepSeek R1 Model Card](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B)
+
+#### Qwen QwQ Reasoning Model
+
+- **Endpoint Location**: LBNL IT Division Data Center
+- **Use Cases**: Tool use, code architect
+- **Vision Support**: No 
+- **Tool Support**: Yes
+- **Context Window**: 32K Tokens*
+- **Cost**: No cost
+- **Model Name**: `lbl/qwen-qwq`
+- **Terms of Service**: [Qwen QwQ](https://huggingface.co/Qwen/QwQ-32B)
+
+* Context length of this model can be extended to 128K but for practical performance reasons is limited to 32K in the Lab-hosted instance.
 
 #### Qwen 2.5 Coder 32B Instruct
 
@@ -222,72 +232,53 @@ version of each model provider, as follows:
 
 | Alias Name                   | Base Model                 |
 | ---------------------------  | :---------:                |
-| `/openai/chatgpt:latest`     | `openai/gpt-4o`            | 
+| `/openai/chatgpt:latest`     | `openai/gpt-4.1`           | 
 | `/anthropic/claude:latest`   | `anthropic/claude-sonnet`  | 
 | `/google/gemini:latest`      | `google/gemini-pro`        | 
 
-#### OpenAI ChatGPT 4o Mini
+#### OpenAI ChatGPT 4.1
 
-ChatGPT-4o-Mini is a lightweight version ChatGPT 4o from OpenAI. It is faster and lower cost compared to the GPT-4o model, and less than half the cost of ChatGPT 3.5.
-
-- **Endpoint Location**: Microsoft Azure Cloud (East US)
-- **Use Cases**: Chat, Text Summarization, Image Description, Tool Use
-- **Vision Support**: Yes
-- **Tool Support**: Yes
-- **Context Window**: 128K Tokens (Note: Limited to 32K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $0.165
-- **Cost per 1M Tokens (Output)**: $0.66
-- **API Model Name**: `openai/gpt-4o-mini`
-- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
-- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
-
-#### OpenAI ChatGPT 4o
-
-ChatGPT-4o is the latest version of ChatGPT from OpenAI. It is faster and lower cost compared to the legacy GPT-4 model.
+ChatGPT 4.1 is the latest standard edition of ChatGPT from OpenAI. Mini and Nano variants are also available (-mini and -nano model names)
 
 - **Endpoint Location**: Microsoft Azure Cloud (East US)
 - **Use Cases**: Chat, Text Summarization, Image Description, Tool Use
 - **Vision Support**: Yes
 - **Tool Support**: Yes
-- **Context Window**: 128K Tokens (Note: Limited to 8K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $5.00 
-- **Cost per 1M Tokens (Output)**: $15.00
-- **API Model Name**: `openai/gpt-4o`
+- **Context Window**: 1M Tokens
+- **Cost per 1M Tokens (Input)**: $2.00 
+- **Cost per 1M Tokens (Output)**: $8.00
+- **API Model Name**: `openai/gpt-4.1`
 - **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
 - **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
 
-#### OpenAI o1 Mini
+#### OpenAI ChatGPT 4.5 Preview
 
-OpenAI o1 Mini is a lightweight text-only model with advanced reasoning capabilities.
+ChatGPT 4.5 Preview is a "heavy duty" version of ChatGPT. Due to the high expense it should only be used for "high-value" output generation.
 
-**NOTE**: o3 Mini is newer and has lower cost compared to o1 Mini.
-
-**Cost**: o1 models also count "reasoning tokens" as output tokens, resulting in approximately 2-10x more output tokens compared to GPT 4-series models. 
-
-- **Endpoint Location**: Microsoft Azure Cloud (East US 2)
-- **Use Cases**: Chat, Advanced Reasoning, Text Analysis
-- **Vision Support**: No
-- **Tool Support**: No
-- **Context Window**: 128K Tokens (Note: Limited to 32K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $3.30 
-- **Cost per 1M Tokens (Output)**: $13.20
-- **API Model Name**: `openai/o1-mini`
+- **Endpoint Location**: Microsoft Azure Cloud (East US)
+- **Use Cases**: Chat, Text Summarization, Image Description, Tool Use
+- **Vision Support**: Yes
+- **Tool Support**: Yes
+- **Context Window**: 1M Tokens
+- **Cost per 1M Tokens (Input)**: $75.00
+- **Cost per 1M Tokens (Output)**: $150.00
+- **API Model Name**: `openai/gpt-4.5`
 - **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
 - **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
 
-#### OpenAI o1
+#### OpenAI o3
 
-OpenAI o1 is a flagship text-only model with advanced reasoning capabilities.
+OpenAI o3 is a multi-modal deep reasoning model.
 
-**Cost**: o1 models also count "reasoning tokens" as output tokens, resulting in approximately 10x more output tokens compared to GPT 4-series models. 
+**Cost**: o* models also count "reasoning tokens" as output tokens, resulting in approximately 10x more output tokens compared to GPT 4-series models. 
 - **Endpoint Location**: Microsoft Azure Cloud (East US 2)
 - **Use Cases**: Chat, Advanced Reasoning, Text Analysis
 - **Vision Support**: No
 - **Tool Support**: No
 - **Context Window**: 128K Tokens (Note: Limited to 8K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $15.50 
-- **Cost per 1M Tokens (Output)**: $60.00
-- **API Model Name**: `openai/o1`
+- **Cost per 1M Tokens (Input)**: $10.00 
+- **Cost per 1M Tokens (Output)**: $40.00
+- **API Model Name**: `openai/o3`
 - **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
 - **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
 
@@ -305,6 +296,84 @@ OpenAI o3 Mini is the latest lightweight text-only model with advanced reasoning
 - **Cost per 1M Tokens (Input)**: $0.55 
 - **Cost per 1M Tokens (Output)**: $4.40
 - **API Model Name**: `openai/o3-mini`
+- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
+- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
+
+#### OpenAI o4-Mini / OpenAI o4-Mini High
+
+OpenAI o4 Mini is the latest lightweight multi-modal model with advanced reasoning capabilities. o4 Mini High variant has the reasoning effort set to "High".
+
+- **Endpoint Location**: Microsoft Azure Cloud (East US 2)
+- **Use Cases**: Chat, Advanced Reasoning, Text Analysis
+- **Vision Support**: No
+- **Tool Support**: No
+- **Context Window**: 128K Tokens (Note: Limited to 32K in CBORG Chat)
+- **Cost per 1M Tokens (Input)**: $1.1 
+- **Cost per 1M Tokens (Output)**: $4.40
+- **API Model Name**: `openai/o4-mini`
+- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
+- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
+
+#### OpenAI o1 (Deprecated)
+
+OpenAI o1 is a deep reasoning text-only model with advanced reasoning capabilities.
+
+**Cost**: o1 models also count "reasoning tokens" as output tokens, resulting in approximately 10x more output tokens compared to GPT 4-series models. 
+- **Endpoint Location**: Microsoft Azure Cloud (East US 2)
+- **Use Cases**: Chat, Advanced Reasoning, Text Analysis
+- **Vision Support**: No
+- **Tool Support**: No
+- **Context Window**: 128K Tokens (Note: Limited to 8K in CBORG Chat)
+- **Cost per 1M Tokens (Input)**: $15.50 
+- **Cost per 1M Tokens (Output)**: $60.00
+- **API Model Name**: `openai/o1`
+- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
+- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
+
+#### OpenAI o1 Mini (Deprecated)
+
+OpenAI o1 Mini is a lightweight text-only model with advanced reasoning capabilities.
+
+**NOTE**: o3 Mini is newer and has lower cost compared to o1 Mini.
+
+- **Endpoint Location**: Microsoft Azure Cloud (East US 2)
+- **Use Cases**: Chat, Advanced Reasoning, Text Analysis
+- **Vision Support**: No
+- **Tool Support**: No
+- **Context Window**: 128K Tokens (Note: Limited to 32K in CBORG Chat)
+- **Cost per 1M Tokens (Input)**: $3.30 
+- **Cost per 1M Tokens (Output)**: $13.20
+- **API Model Name**: `openai/o1-mini`
+- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
+- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
+
+#### OpenAI ChatGPT 4o (Deprecated)
+
+ChatGPT-4o is the previous version of ChatGPT from OpenAI.
+
+- **Endpoint Location**: Microsoft Azure Cloud (East US)
+- **Use Cases**: Chat, Text Summarization, Image Description, Tool Use
+- **Vision Support**: Yes
+- **Tool Support**: Yes
+- **Context Window**: 128K Tokens (Note: Limited to 8K in CBORG Chat)
+- **Cost per 1M Tokens (Input)**: $5.00 
+- **Cost per 1M Tokens (Output)**: $15.00
+- **API Model Name**: `openai/gpt-4o`
+- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
+- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
+
+#### OpenAI ChatGPT 4o Mini (Deprecated)
+
+ChatGPT-4o-Mini is a lightweight version ChatGPT 4o from OpenAI. It is faster and lower cost compared to the GPT-4o model, and less than half the cost of ChatGPT 3.5.
+
+- **Endpoint Location**: Microsoft Azure Cloud (East US)
+- **Use Cases**: Chat, Text Summarization, Image Description, Tool Use
+- **Vision Support**: Yes
+- **Tool Support**: Yes
+- **Context Window**: 128K Tokens (Note: Limited to 32K in CBORG Chat)
+- **Cost per 1M Tokens (Input)**: $0.165
+- **Cost per 1M Tokens (Output)**: $0.66
+- **API Model Name**: `openai/gpt-4o-mini`
 - **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
 - **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
 
@@ -392,11 +461,11 @@ Claude has excellent reasoning and code analysis capabilities compared to other 
 - **Pricing Details**: [Anthropic API Pricing](https://aws.amazon.com/bedrock/pricing/)
 - **Terms of Service**: [Anthropic Commercial Terms of Service](https://www-cdn.anthropic.com/6b68a6508f0210c5fe08f0199caa05c4ee6fb4dc/Anthropic-on-Bedrock-Commercial-Terms-of-Service_Dec_2023.pdf)
 
-#### Anthropic Claude 3.7 Sonnet
+#### Anthropic Claude 4.0 Sonnet
 
-Claude has superior reasoning and code analysis capabilities compared to other leading models, but can be expensive in the largest variants. The 200K token context window is large compared to competitors. The 3.7 Sonnet is the latest version of Claude, outperforming 3.0 Opus with lower cost and faster inference speed. 3.7 Sonnet with Extended Thinking enables additional reasoning at a higher output token cost.
+Claude has superior reasoning and code analysis capabilities compared to other leading models, but can be expensive in the largest variants. The 200K token context window is large compared to competitors. Sonnet 4.0 is the latest version with extended thinking (reasoning) available. Prompt caching is also supported.
 
-- **Endpoint Location**: Amazon Web Services (US West)
+- **Endpoint Location**: Amazon Web Services (US West 2)
 - **Use Cases**: Chat, Text Summarization, Image Description
 - **Vision Support**: Yes
 - **Tool Support**: Yes
@@ -407,11 +476,11 @@ Claude has superior reasoning and code analysis capabilities compared to other l
 - **Pricing Details**: [Anthropic API Pricing](https://aws.amazon.com/bedrock/pricing/)
 - **Terms of Service**: [Anthropic Commercial Terms of Service](https://www-cdn.anthropic.com/6b68a6508f0210c5fe08f0199caa05c4ee6fb4dc/Anthropic-on-Bedrock-Commercial-Terms-of-Service_Dec_2023.pdf)
 
-#### Anthropic Claude 3.0 Opus
+#### Anthropic Claude 4.0 Opus
 
-Claude 3.0 Opus is an older model, and expensive. Newer models are recommended until Opus 3.5 is released.
+Claude 4.0 Opus is the newest version of Anthropic's flagship model.
 
-- **Endpoint Location**: Amazon Web Services (US West)
+- **Endpoint Location**: Amazon Web Services (US West 2)
 - **Use Cases**: Chat, Text Summarization, Image Description
 - **Vision Support**: Yes
 - **Tool Support**: Yes
@@ -453,6 +522,17 @@ Cohere Command R and R+ are intended to support enterprise applications with too
 - **Cost per 1M Tokens (Output)**: $3.00
 - **API Model Name**: `aws/command-r-plus`, `aws/command-r` (lower cost version)
 - **Terms of Service**: [Cohere For AI Acceptable Use Policy](https://docs.cohere.com/docs/c4ai-acceptable-use-policy)
+
+#### xAI Grok
+
+- **Endpoint Location**: xAI Cloud
+- **Vision Support**: Yes
+- **Tool Support**: Yes
+- **Cost per 1M Tokens (Input)**: $3.00 ($0.30 for mini)
+- **Cost per 1M Tokens (Output)**: $15.00 ($0.50 for mini)
+- **Input Length**: 128K Tokens
+- **API Model Name**: `xai/grok`, `xai/grok-mini`
+- **Terms of Service**: [xAI Terms of Service - Enterprise](https://x.ai/legal/terms-of-service-enterprise)
 
 #### Wolfram|Alpha
 
