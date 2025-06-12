@@ -56,6 +56,12 @@ pageRef = "/tools_aider"
 weight = 1
 
 [[main]]
+name = "RStudio (gptstudio)"
+parent = "Tools"
+pageRef = "/tools_rstudio"
+weight = 1
+
+[[main]]
 name = "Omni-Engineer"
 parent = "Tools"
 pageRef = "/tools_omniengineer"
