@@ -45,10 +45,18 @@ install dev version of gptstudiopak::pak("MichelNivard/gptstudio")
 
 ##### 3. Start gptstudio Chat
 
+Note: the port number of the shiny background process (shown as *3442* below) will change on each startup - so, this line of code cannot be hard coded in a file - you must click on the link in RStudio console when starting up the Chat.
+
 {{< highlight bash >}}
 gptstudio::gptstudio_chat()
 rstudioapi::viewer("http://127.0.0.1:3442")
 {{< /highlight >}}
 
 You can then configure the models in the Chat UI by clicking the ">" button in the top left corner of that Viewer pane.
+
+Recommended model: openai/gpt-4.1
+
+##### Troubleshooting
+
+Make sure that the `promises` package is at least version 1.3.3
 
