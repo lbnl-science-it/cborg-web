@@ -39,8 +39,8 @@ remove.packages("gptstudio")
 Install development version using pak:
 
 {{< highlight bash >}}
-install pakinstall.packages("pak")
-install dev version of gptstudiopak::pak("MichelNivard/gptstudio")
+install.packages("pak")
+pak::pak("MichelNivard/gptstudio")
 {{< /highlight >}}
 
 ##### 3. Start gptstudio Chat
