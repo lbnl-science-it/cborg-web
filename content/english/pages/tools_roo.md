@@ -7,61 +7,53 @@ title: "Using Roo Code with CBorg"
 draft: false
 ---
 
-#### Roo Code Setup
+#### 1. Install Roo Code
 
-Install the agentic [Roo Code Plugin](https://docs.roocode.com/) for VS Code.
+Install the [Roo Code Extension](https://docs.roocode.com/) for VS Code.
 
-Click on the kangaroo icon in the left sidebar.
+#### 2. Configure Provider
 
-**Best Setup with LBL-Hosted Models**
+1. Open the **Settings** menu.
+2. Go to **Providers**
+3. Click **+** to create a new profile
+4. Name the profile something appropriate, e.g. '**CBorg Claude Sonnet**' (can be changed later)
+5. For API Provider select **LiteLLM**
+6. Set Base URL to **https://api.cborg.lbl.gov**
+6. Add your CBORG_API_KEY to LiteLLM API Key
+7. Click **Refresh Models**
+8. Select the desired model
 
-1. Go to "Settings" - 
-2. Add a new setting "Planning"
-  - API Provider: OpenAI Compatible
-  - Base URL: https://api.cborg.lbl.gov
-  - API Key: Your CBorg API key
-  - Model ID: lbl/cborg-deepthought
-  - **Enable R1 Messages Format**
-  - Context Window: 32768
-  - Max Output Tokens: 16384
-3. Add a new setting "Editor"
-  - API Provider: OpenAI Compatible
-  - Base URL: https://api.cborg.lbl.gov
-  - API Key: Your CBorg API key
-  - Model ID: lbl/cborg-coder
-  - Context Window: 32768
-  - Max Output Tokens: 16384
+**Note:** With the LiteLLM provider, Roo Code will display accurate calculations of the cost of each operation and supports prompt caching for Anthropic models. 
+Do not use "OpenAI Compatible" as the provider, as this will result in a reduced feature set.
 
-**Economical Setup with Anthropic Claude**
+For more information please consult the RooCode documentation: [Using LiteLLM with RooCode](https://docs.roocode.com/providers/litellm)
 
-1. Go to "Settings" - 
-2. Add a new setting "Planning"
-  - API Provider: OpenAI Compatible
-  - Base URL: https://api.cborg.lbl.gov
-  - API Key: Your CBorg API key
-  - Model ID: anthropic/claude-sonnet
-  - Context Window: 65536 (up to 200000 but can increase cost)
-  - Max Output Tokens: 16384
-3. Add a new setting "Editor"
-  - API Provider: OpenAI Compatible
-  - Base URL: https://api.cborg.lbl.gov
-  - API Key: Your CBorg API key
-  - Model ID: anthropic/claude-sonnet
-  - Context Window: 65536
-  - Max Output Tokens: 16384
+#### Advanced / Experimental Options
 
-**Select Default Model for Each Mode**
+Advanced users may wish to configure multiple profiles for different tasks.
 
-When selecting a mode, e.g. 'Code', choose the configuration 'Editor'.
+Enable "Power Steering" under Experimental options in the menu - this will use slightly more tokens but helps keep the model on-task (strongly recommended for use with CBorg Coder)
 
-For 'Architect', choose configuration 'Planning'.
+#### Model Configuration Notes
 
-Model configuration can be adjusted to optimize costs by selecting lower cost models for basic functions like editing, and reasoning or flagship models for 'high value' operations.
+`lbl/cborg-coder`: Best free-to-use model (unlimited usage) - keeps your data on CBorg self-hosted model server. Medium speed.
 
-**Other Options**
+`anthropic/claude-haiku`: Very fast, low cost. Suggested use: adding documentation, simple tasks.
 
-For longer context up to 1 million tokens, try Gemini (Flash or Pro), or ChatGPT 4.1.
+`anthropic/claude-sonnet`: Strong performance for every day use, reasonable cost. Also supports computer use. Fastest.
 
-For "high effort" (and high cost) use OpenAI o3 for planning.
+`anthropic/claude-sonnet-high`: Claude Sonnet with reasoning enabled - can improve performance, but also increases cost.
+
+`anthropic/claude-opus`: Very expensive and probably not needed. Slow.
+
+`anthropic/claude-opus-high`: Reserve for only the most challenging tasks where other models fail. Very slow.
+
+`openai/o4-mini`: Excellent performance at a very low cost. A bit slower than non-reasoning models.
+
+`openai/o3-high`: Best-in-class performance for challenging tasks (refactoring, math, etc). More expensive but still reasonable. Slow.
+
+`google/gemini-pro`: Solid performance, moderate cost.
+
+`google/gemini-pro-high`: Gemini with reasoning enabled - higher cost and slower.
 
 

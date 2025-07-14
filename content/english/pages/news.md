@@ -10,9 +10,26 @@ draft: false
 
 ## Current Status
 
-All systems are operational.
+`lbl/cborg-deepthought` is currently offline. All other systems are operational.
 
 ## Recent Updates
+
+_July 14th, 2025_
+
+- Improved stability for Anthropic Claude models.
+- Added `-high` aliases for Anthropic, OpenAI and Gemini reasoning models (automatically engages "high" reasoning effort)
+- Updated documentation on coding tools for Cline, Roo Code
+
+_June 30th, 2025_
+
+- Added system prompts to Claude and Gemini models on CBorg Chat
+
+_June 29th, 2025_
+
+- Claude Code is now supported with CBorg - updated documentation
+- Updated documentation for OpenAI Codex CLI
+- Reconfigured model name structure to support direct access to Anthropic Claude on Bedrock
+- Reconfigured model name / alias structure to support direct access to Google Gemini models
 
 _May 22nd, 2025_
 

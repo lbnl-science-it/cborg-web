@@ -8,22 +8,26 @@ meta_title: ""
 draft: false
 ---
 
-#### OpenAI Codex CLI
-
-Codex CLI expects the API key and Base URL to be defined in OPENAI_API_KEY and OPENAI_BASE_URL.
+#### 1. Configure OpenAI keys
 
 {{< highlight bash >}}
-# Install OpenAI Codex
-npm i -g @openai/codex
-
-# Set Base URL to CBorg API Server
-export OPENAI_BASE_URL=https://api.cborg.lbl.gov
-
-# Set OPENAI_API_KEY to your CBorg API Key 
 export OPENAI_API_KEY=$CBORG_API_KEY
+export OPENAI_BASE_URL=https://api.cborg.lbl.gov
+{{< /highlight >}}
 
-# Now you can use Codex with any CBorg model, e.g.:
-codex --model lbl/cborg-coder
-{{< / highlight >}}
+#### 2. Restart shell and verify key settings
+
+{{< highlight bash >}}
+env | grep OPENAI
+{{< /highlight >}}
+
+#### 3. Start Codex
+
+{{< highlight bash >}}
+cd my-project
+codex
+{{< /highlight >}}
+
+**Note:** The default model is o4-mini (recommended). The model can be configured in a .codex file or passing the --model argument.
 
 For more information see [OpenAI Codex Github](https://github.com/openai/codex)

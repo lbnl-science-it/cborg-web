@@ -16,38 +16,31 @@ Note: This list changes frequently - please check back here for updates.
 
 | Model Endpoint Location  | Model Creator  | Model Name           | Context Length* | Vision  | Cost** | P2P Okay*** | 
 | ---------------          | :------------: | :--------:           | :-----:         | :---:   | :---:  | :-----: |
-| LBL IT Division          | Meta           | Llama 4 Scout FP8    | 256K            | N       | N/C    | Y       |
-| LBL IT Division          | Alibaba        | Qwen 2.5 Coder       | 32K             | N       | N/C    | Y       |
+| LBL IT Division          | Meta           | Llama 4 Scout FP8    | 128K            | N       | N/C    | Y       |
+| LBL IT Division          | Mistral        | Devstral Small 2505  | 128K            | N       | N/C    | Y       |
 | LBL IT Division          | Alibaba        | Qwen QwQ             | 32K             | N       | N/C    | Y       |
 | LBL IT Division          | Alibaba        | Qwen 2.5 Vision 72B  | 8K              | Y       | N/C    | Y       |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o           | 128K            | Y       | $$$    | Y       |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o Mini      | 128K            | Y       | $      | Y       |
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 4.1          | 1M              | Y       | $$     | Y       |
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 4.1 Mini     | 1M              | Y       | $      | Y       |
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 4.1 Nano     | 1M              | Y       | $      | Y       |
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 4.5 Preview  | 128K            | Y       | $$$$$  | Y       |
-| Microsoft Azure Cloud    | OpenAI         | o1                   | 200K            | Y       | $$$$   | Y       |
-| Microsoft Azure Cloud    | OpenAI         | o1 Mini              | 128K            | N       | $$$    | Y       | 
 | Microsoft Azure Cloud    | OpenAI         | o3                   | 200K            | Y       | $$$    | Y       |
 | Microsoft Azure Cloud    | OpenAI         | o3 Mini              | 200K            | N       | $$     | Y       |
 | Microsoft Azure Cloud    | OpenAI         | o3 Mini High         | 200K            | N       | $$$    | Y       |
 | Microsoft Azure Cloud    | OpenAI         | o4 Mini              | 200K            | Y       | $$     | Y       |
 | Microsoft Azure Cloud    | OpenAI         | DALL-E 3.0           | 4000            | N       | $$     | Y       |
-| Google Cloud             | Google         | Gemini 2.0 Flash     | 1.0M            | Y       | $      | Y       | 
-| Google Cloud             | Google         | Gemini 1.5 Pro       | 2.0M            | Y       | $      | Y       |
-| Google Cloud             | Google         | Gemini 2.5 Pro Preview | 1.0M          | Y       | $$     | Y       |
-| Google Cloud             | Google         | Gemini 2.5 Flash Preview | 1.0M        | Y       | $$     | Y       |
-| AWS Cloud                | Anthropic      | Claude 3.0 Haiku     | 200k            | Y       | $      | Y       |
+| Google Cloud             | Google         | Gemini 2.5 Pro       | 1.0M            | Y       | $$$    | Y       |
+| Google Cloud             | Google         | Gemini 2.5 Flash     | 1.0M            | Y       | $$     | Y       |
+| Google Cloud             | Google         | Gemini 2.5 Flash Lite Preview | 1.0M           | Y       | $      | Y       |
+| Google Cloud             | Google         | Gemini 2.0 Flash Lite | 1.0M           | Y       | $      | Y       |
+| AWS Cloud                | Anthropic      | Claude 3.5 Haiku     | 200k            | Y       | $      | Y       |
 | AWS Cloud                | Anthropic      | Claude 4.0 Sonnet    | 200k            | Y       | $$     | Y       |
 | AWS Cloud                | Anthropic      | Claude 4.0 Opus      | 200k            | Y       | $$$    | Y       |
-| AWS Cloud                | Meta           | Llama 3.1 405b       | 128k            | N       | $$     | Y       |
-| AWS Cloud                | Meta           | Llama 3.1 70b        | 128k            | N       | $      | Y       |
-| AWS Cloud                | Meta           | Llama 3.1 8b         | 128k            | N       | $      | Y       |
 | AWS Cloud                | Cohere         | Command R+           | 128k            | N       | $$     | Y       |
 | AWS Cloud                | Cohere         | Command R            | 128k            | N       | $      | Y       |
-| xAI Cloud                | xAI            | Grok 3 Beta          | 128K            | Y       | $$$    | N***    |
-| xAI Cloud                | xAI            | Grok 3 Mini Beta     | 128K            | Y       | $$     | N***    |
-| Wolfram Cloud            | Wolfram Research | Wolfram\|Alpha    | 1024             | N       | $      | N***    |
+| xAI Cloud                | xAI            | Grok 3               | 128K            | Y       | $$$    | Y       |
+| xAI Cloud                | xAI            | Grok 3 Mini          | 128K            | Y       | $$     | Y       |
+| Wolfram Cloud            | Wolfram Research | Wolfram\|Alpha     | 1024            | N      | $       | N***    |
 
 {{< notice "note" >}}
 ** **Cost Explanation**: This column provides a rough order-of-magnitude estimate of costs associated with the model. Detailed cost data is provided further on this page. Cost for using commercial models are paid for by the IT Division. There is no cost to individual users at this time and no PID is required.
@@ -59,6 +52,24 @@ Note: This list changes frequently - please check back here for updates.
 
 **N** = Only cleared for use with non-sensitive Public information. No negotiated terms. No S&T or ECI or anything with FN or sponsor-specified protections permitted. For details consult [IT Policy AI Tool Security Levels](https://docs.google.com/spreadsheets/d/1l-ZX0wAajcaQClKd6tAPxUDQUQhnj7CMTSYoR-J-cmc/edit?gid=0#gid=0)
 {{< /notice >}}
+
+#### Legacy Models
+
+Legacy Models (Please upgrade soon if you are using these)
+
+| Model Endpoint Location  | Model Creator  | Model Name           | Context Length* | Vision  | Cost** | P2P Okay*** | 
+| ---------------          | :------------: | :--------:           | :-----:         | :---:   | :---:  | :-----: |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o           | 128K            | Y       | $$$    | Y       |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o Mini      | 128K            | Y       | $      | Y       |
+| Microsoft Azure Cloud    | OpenAI         | o1                   | 200K            | Y       | $$$$   | Y       |
+| Microsoft Azure Cloud    | OpenAI         | o1 Mini              | 128K            | N       | $$$    | Y       | 
+| AWS Cloud                | Anthropic      | Claude 3.7 Sonnet    | 200k            | Y       | $$     | Y       |
+| AWS Cloud                | Anthropic      | Claude 3.0 Haiku     | 200k            | Y       | $      | Y       |
+| AWS Cloud                | Anthropic      | Claude 3.0 Opus      | 200k            | Y       | $$$$   | Y       |
+| Google Cloud             | Google         | Gemini 1.5 Pro       | 2.0M            | Y       | $      | Y       |
+| AWS Cloud                | Meta           | Llama 3.1 405b       | 128k            | N       | $$     | Y       |
+| AWS Cloud                | Meta           | Llama 3.1 70b        | 128k            | N       | $      | Y       |
+| AWS Cloud                | Meta           | Llama 3.1 8b         | 128k            | N       | $      | Y       |
 
 ### Vector Embedding Models
 
@@ -81,7 +92,7 @@ Note: API users can bypass the system prompt by accessing underlying models dire
 | Model Endpoint Location  | Base Model        | Model Name         | Context Length* | Vision  | Cost**  | 
 | ---------------          | :---------------: | :--------:         | :-----:         | :---:   | :---:   | 
 | LBL IT Division          | Llama 4 Scout NeuralMagic FP8 Dynamic     | CBorg Chat         | 256K            | Y       | N/C    |
-| LBL IT Division          | Qwen 2.5 Coder Instruct   | CBorg Coder        | 32K             | N       | N/C    |
+| LBL IT Division          | MistralAI Devstral Small   | CBorg Coder        | 128K             | N       | N/C    |
 | LBL IT Division          | Qwen 2.5 VL 72B   | CBorg Vision       | 8K            | Y       | N/C    |
 | LBL IT Division          | Qwen QwQ          | CBorg Deepthought  | 32K            | N       | N/C    |
 
@@ -123,8 +134,8 @@ These models are licensed for non-commercial research use.
 #### CBorg Coder
 
 - **Endpoint Location**: LBNL IT Division Data Center
-- **Model Name**: `lbl/cborg-coder:latest`
-- **Underlying Model**: Qwen Coder 2.5 with Custom System Prompt and Temperature = 0.0
+- **Model Name**: `lbl/cborg-coder`
+- **Underlying Model**: MistralAI Devstral Small 2505 with Custom System Prompt and Temperature = 0.15
 
 #### CBorg Vision
 
@@ -140,15 +151,15 @@ These models are licensed for non-commercial research use.
 
 #### Meta Llama 4 Scout
 
-Underlying model is Llama 4 Scout FP8 Dynamic from NeuralMagic / RedHat AI. Context length is limited to 256K tokens.
+Underlying model is Llama 4 Scout. Context length is limited to 128K tokens.
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Use Cases**: Chat, Summarization, Coding Assistant, Tool Use
 - **Vision Support**: No
 - **Tool Support**: Yes
-- **Context Window**: 256K Tokens
+- **Context Window**: 128K Tokens
 - **Cost**: No cost
-- **Model Name**: `lbl/llama`
+- **Model Name**: `Llama-4-Scout-17B-16E-Instruct`
 - **Terms of Service**: [Meta Llama Use Policy](https://www.llama.com/llama4/use-policy/)
 
 #### Qwen 2.5 Vision 72B
@@ -377,11 +388,9 @@ ChatGPT-4o-Mini is a lightweight version ChatGPT 4o from OpenAI. It is faster an
 - **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
 - **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
 
-
-##### Google Gemini 2.0 Flash
+##### Google Gemini 2.5 Flash
 
 Our service connects to the enterprise version of Google Gemini. Inputs are not used by Google for training of future AI models.
-Gemini 2.0 Flash outpeforms Gemini 1.5 Pro at 1/10th the price.
 
 - **Endpoint Location**: Google Cloud
 - **Use Cases**: Chat, Text Summarization, Image Description
@@ -394,24 +403,7 @@ Gemini 2.0 Flash outpeforms Gemini 1.5 Pro at 1/10th the price.
 - **Pricing Details**: [Gemini API Pricing](https://ai.google.dev/pricing)
 - **Terms of Service**: [Gemini API Additional Terms of Use](https://ai.google.dev/gemini-api/terms)
 
-##### Google Gemini 2.5 Flash Preview
-
-Our service connects to the enterprise version of Google Gemini. Inputs are not used by Google for training of future AI models.
-
-**Note**: Gemini 2.5 Flash Preview is subject to rate limitations and is not suitable for production use.
-
-- **Endpoint Location**: Google Cloud
-- **Use Cases**: Chat, Text Summarization, Image Description
-- **Vision Support**: Yes
-- **Tool Support**: Yes 
-- **Context Window**: 1.0M Tokens (Note: Limited to 32K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $0.0
-- **Cost per 1M Tokens (Output)**: $0.0
-- **API Model Name**: `google/gemini-flash-exp`
-- **Pricing Details**: [Gemini API Pricing](https://ai.google.dev/pricing)
-- **Terms of Service**: [Gemini API Additional Terms of Use](https://ai.google.dev/gemini-api/terms)
-
-##### Google Gemini 1.5 Pro
+##### Google Gemini 2.5 Pro
 
 Our service connects to the enterprise version of Google Gemini. Inputs are not used by Google for training of future AI models.
 
@@ -423,24 +415,6 @@ Our service connects to the enterprise version of Google Gemini. Inputs are not 
 - **Cost per 1M Tokens (Input)**: $3.50
 - **Cost per 1M Tokens (Output)**: $7.00
 - **API Model Name**: `google/gemini-pro`
-- **Pricing Details**: [Gemini API Pricing](https://ai.google.dev/pricing)
-- **Terms of Service**: [Gemini API Additional Terms of Use](https://ai.google.dev/gemini-api/terms)
-
-##### Google Gemini 2.5 Pro Preview
-
-Our service connects to the enterprise version of Google Gemini. Inputs are not used by Google for training of future AI models.
-Gemini 2.0 Flash outpeforms Gemini 1.5 Pro at 1/10th the price.
-
-**Note**: Gemini 2.5 Pro Preview is subject to rate limitations and is not suitable for production use.
-
-- **Endpoint Location**: Google Cloud
-- **Use Cases**: Chat, Text Summarization, Image Description
-- **Vision Support**: Yes
-- **Tool Support**: Yes 
-- **Context Window**: 1.0M Tokens (Note: Limited to 32K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $0.0
-- **Cost per 1M Tokens (Output)**: $0.0
-- **API Model Name**: `google/gemini-pro-preview`
 - **Pricing Details**: [Gemini API Pricing](https://ai.google.dev/pricing)
 - **Terms of Service**: [Gemini API Additional Terms of Use](https://ai.google.dev/gemini-api/terms)
 
