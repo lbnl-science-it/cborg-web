@@ -14,6 +14,10 @@ draft: false
 
 ## Recent Updates
 
+_July 25th, 2025_
+
+- Gemini CLI is now supported by CBorg API
+
 _July 24th, 2025_
 
 - GPT 4.5 Preview has been removed due to API deprecation. Suggested replacement GPT 4.1, until GPT 5 is released in the coming months.

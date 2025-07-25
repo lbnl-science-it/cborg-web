@@ -8,15 +8,19 @@ meta_title: ""
 draft: false
 ---
 
-{{< highlight note >}}
-Gemini CLI is not fully supported yet, but will be enabled in the next 1-2 weeks (as of June 30th 2025). Please check back on this page for updates.
-{{< /highlight >}}
-
 #### 1. Install Gemini CLI
+
+Using NPM
 
 {{< highlight bash >}}
 npm install -g @google/gemini-cli
 {{< /highlight >}} 
+
+For Mac users with Homebrew
+
+{{< highlight bash >}}
+brew install gemini
+{{< /highlight >}}
 
 #### 2. Set the following variables in your environment:
 
@@ -31,7 +35,7 @@ export GOOGLE_GEMINI_BASE_URL="https://api.cborg.lbl.gov"
 env | grep GEMINI 
 {{< /highlight >}}
 
-#### 4. Now start Claude Code in your project directory.
+#### 4. Now start Gemini CLI in your project directory
 
 {{< highlight bash >}}
 cd my-project

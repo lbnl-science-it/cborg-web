@@ -8,11 +8,32 @@ meta_title: ""
 draft: false
 ---
 
-### Introduction
+##### Contents
 
-There are many models on CBorg and it is not obvious which model may be the best choice for you. This page provides some notes.
+- Coding Tools
+- Technical Writing
+- Data Extraction & Summarization
 
-### Models for Coding
+---------------
+
+### Getting Started with Coding Tools
+
+#### Recommended Tools
+
+Currently, we have found the best results with the following coding tools:
+
+- **VS Code with RooCode**: Works well with CBorg API - powerful agentic features.
+- **VS Code with Continue**: Works well for more targeted code edits (insertion, line editing).
+- **Claude Code**: Excellent overall. Efficient with token use. Can integrate with VS Code to show diffs
+
+You may also get good results with other tools - if you do, please let us know about it!
+
+#### Unsupported Tools:
+
+- **Cursor**: You need a subscription from Cursor for best results, which is not available from CBorg
+- **Github Copilot**: Not supported by CBorg - you need a subscription from GitHub to use it
+
+### Model Selection for Coding
 
 | Model                          | Cost | Speed  | Comments                                                           |
 | -----------------            | -- | ---- | ----------------------------------------------------------------- |
@@ -30,10 +51,12 @@ There are many models on CBorg and it is not obvious which model may be the best
 #### TLDR - Which model to use?
 
 - `lbl/cborg-coder`: Never need to worry about budget.
-- `openai/o4-mini-high`: Best performance-to-cost ratio, strong performer. Best daily for heavy use.
-- `anthropic/claude-sonnet-high`: Best daily driver for moderate use.
-- `openai/o3-high`: Most challenging reasoning tasks (math, refactoring, etc)
+- `openai/o4-mini-high`: Best performance-to-cost ratio, strong performer. Best daily for heavy use, but can be a bit slow.
+- `anthropic/claude-sonnet-high`: Best daily driver for moderate use - will eat up budget quickly.
+- `openai/o3-high`: Use for the most challenging reasoning tasks (math, refactoring, etc)
 - `google/gemini-pro-high`: Alternative for challenging reasoning tasks
+
+---------
 
 ### Models for Technical Writing
 
@@ -44,6 +67,7 @@ Recommended Best Practices:
 
 Best models: `anthropic/claude-opus-high` and `openai/o3-high`.
 
+---------
 
 ### Models for Data Extraction / Summarization
 
@@ -51,13 +75,13 @@ Recommended Best Practice:
 - Use a small / lightweight model and extract data one piece at a time. 
 - Use chain of thought prompting to enhance accuracy.
 - Structure prompts with data first, then question, to leverage prompt caching.
+- Extract a small amount of information in each iteration for best results
 
 ### Models for Data Extraction
 
 | Model                          | Cost | Speed  | Comments                                                           |
 | -----------------              | -- | ---- | ----------------------------------------------------------------- |
 | `lbl/cborg-chat`               | Free | Medium | Unlimited usage |
-| `lbl/cborg-mini`               | Free | Fast   | Unlimited usage, lower latency |
 | `anthropic/claude-haiku`       | $$   | Fast   | More expensive than other lightweight models                 |
 | `anthropic/gemini-flash`       | $    | Fast   | Strong performance, low cost |
 | `anthropic/gemini-flash-lite`  | $    | Very Fast | Low latency applications |
