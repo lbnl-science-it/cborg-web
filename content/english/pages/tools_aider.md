@@ -29,19 +29,17 @@ setx OPENAI_API_KEY (your CBORG_API_KEY)
 
 # Prefix the model name with openai/
 
-# e.g. using CBorg Coder (LBL-hosted coding model)
-aider --model openai/lbl/cborg-coder:latest
-
-# e.g. using Claude Sonnet 3.7 via CBorg (best results)
+# e.g. using Claude Sonnet 4.0
 aider --model openai/anthropic/claude-sonnet
 
-# e.g. using OpenAI ChatGPT 4o via CBorg
-aider --model openai/openai/gpt-4o
+# e.g. using OpenAI o4-mini with high reasoning effort
+aider --model openai/openai/o4-mini-high
 {{< /highlight >}}
 
-For best results using only open-source models, try the following combination which uses a reasoning model for the 'architect' and a coding model for the 'editor':
+For best results using only free LBL-hosted models use the following:
 
 {{< highlight "bash" >}}
-aider --model lbl/cborg-deepthought --editor-model lbl/cborg-coder --editor-edit-format editor-whole
+aider --model openai/lbl/cborg-coder --edit-format whole
 {{< /highlight >}}
 
+The --edit-format whole produces fewer errors compared to diff format.
