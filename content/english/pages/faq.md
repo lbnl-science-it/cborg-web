@@ -16,9 +16,19 @@ Got a question? Email us at [scienceit@lbl.gov](mailto:scienceit@lbl.gov) or joi
 
 The CBorg Chat user-interface, chat history database, and LBL-hosted models are all located on servers running in the IT Division's data center in Building 50. If you use commercial models (ChatGPT, Google Gemini or Anthropic Claude), these models are running in commercial cloud infrastructure which is external to the LBL network.
 
-#### What GPUs are the LBL-hosted models running on?
+#### How do I install CBorg Chat?
 
-We use a small cluster containing an Nvidia DGX 8-way H100 node, in addition to 4-way A100, A40 and AMD MI100 GPUs nodes. Models are allocated to GPU resources to accomodate anticipated workloads.
+CBorg Chat can be used in your browser, or can be installed as an app. It is a "PWA" or "Progressive Web App" that is installed from the browser, not from an app store.
+
+You can find install instructions for Android, iOS/iPad OS and Desktop here: [chat.cborg.lbl.gov PWA Install Howto (via installpwa.com)](https://www.installpwa.com/from/chat.cborg.lbl.gov).
+
+#### I reached my spend limit - can I get a higher budget?
+
+First, keep an eye on your budget to understand the costs. You can check [https://api.cborg.lbl.gov/key/manage](https://api.cborg.lbl.gov/key/manage) to view your current real-time spend.
+
+Second, try to optimize your model inference cost by selecting the lowest cost model that can perform your task correctly. Read [Model Selection Overview](https://cborg.lbl.gov/tools_ai_101) for more information.
+
+Finally, if you have a PID for recharges the funding to support your budget, please contact Science IT Consulting at [scienceit@lbl.gov](mailto:scienceit@lbl.gov) to discuss your project - we can help get you set up with a GCP or AWS project to access the needed models directly.
 
 #### How to copy/paste from CBorg Chat to/from Google Docs and preverse formatting?
 
@@ -63,6 +73,10 @@ PDF documents and text files can also be uploaded and added to the chat context 
 
 For further guidance on legal issues related to AI please consult the [LBL IT Policy](mailto:itpolicy@lbl.gov)
 
+#### What GPUs are the LBL-hosted models running on?
+
+We use a small cluster containing an Nvidia DGX 8-way H100 node, in addition to 4-way A100, A40 and AMD MI100 GPUs nodes. Models are allocated to GPU resources to accomodate anticipated workloads.
+
 #### **Comparing LBL-Hosted versus Commercial Models?**
 
 ##### Why use LBNL-Hosted Models?
@@ -99,6 +113,8 @@ For further guidance on legal issues related to AI please consult the [LBL IT Po
 - **Document summarization, document cleaning, translation & transcription**: Use a lower-cost model or Lab-hosted model to reduce cost, as advanced reasoning is not required.
 - **Image Analysis (vision)**: ChatGPT 4, Google Gemini and Anthropic Claude all support vision. Attach your image and then ask questions.
 - **Large-scale automated document processing**: Use a Lab-Hosted model which are free to use, saving costs when processing thousands to millions of documents. Batch processing can also reduce costs, typically by 50% for results returned within 24 hours.
+
+More info about [Model Selection](https://cborg.lbl.gov/tools_ai_101).
 
 #### **How do LBNL-Hosted Models compare to Self-Hosted Options?**
 
