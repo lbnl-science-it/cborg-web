@@ -16,13 +16,13 @@ Note: This list changes frequently - please check back here for updates.
 
 | Model Endpoint Location  | Model Creator  | Model Name           | Context Length* | Vision  | Cost** | P2P Okay*** | 
 | ---------------          | :------------: | :--------:           | :-----:         | :---:   | :---:  | :-----: |
-| LBL IT Division          | Meta           | Llama 4 Scout FP8    | 128K            | N       | N/C    | Y       |
-| LBL IT Division          | Mistral        | Devstral Small 2505  | 128K            | N       | N/C    | Y       |
-| LBL IT Division          | Alibaba        | Qwen QwQ             | 32K             | N       | N/C    | Y       |
-| LBL IT Division          | Alibaba        | Qwen 2.5 Vision 72B  | 8K              | Y       | N/C    | Y       |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4.1          | 1M              | Y       | $$     | Y       |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4.1 Mini     | 1M              | Y       | $      | Y       |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4.1 Nano     | 1M              | Y       | $      | Y       |
+| LBL IT Division          | Meta           | Llama 4 Scout FP8    | 500K            | N       | N/C    | Y       |
+| LBL IT Division          | OpenAI         | GPT-OSS 120b         | 128K            | N       | N/C    | Y       |
+| LBL IT Division          | OpenAI         | GPT-OSS 20b          | 128K            | N       | N/C    | Y       |
+| LBL IT Division          | IBM            | Granite 3.2 Vision   | 32K             | N       | N/C    | Y       |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 5            | 272K            | Y       | $$     | Y       |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 5 Mini       | 272K            | Y       | $      | Y       |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 5 Nano       | 272K            | Y       | $      | Y       |
 | Microsoft Azure Cloud    | OpenAI         | o3                   | 200K            | Y       | $$$    | Y       |
 | Microsoft Azure Cloud    | OpenAI         | o3 Mini              | 200K            | N       | $$     | Y       |
 | Microsoft Azure Cloud    | OpenAI         | o3 Mini High         | 200K            | N       | $$$    | Y       |
@@ -56,19 +56,20 @@ Note: This list changes frequently - please check back here for updates.
 
 Legacy Models (Please upgrade soon if you are using these)
 
-| Model Endpoint Location  | Model Creator  | Model Name           | Context Length* | Vision  | Cost** | P2P Okay*** | 
-| ---------------          | :------------: | :--------:           | :-----:         | :---:   | :---:  | :-----: |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o           | 128K            | Y       | $$$    | Y       |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o Mini      | 128K            | Y       | $      | Y       |
-| Microsoft Azure Cloud    | OpenAI         | o1                   | 200K            | Y       | $$$$   | Y       |
-| Microsoft Azure Cloud    | OpenAI         | o1 Mini              | 128K            | N       | $$$    | Y       | 
-| AWS Cloud                | Anthropic      | Claude 3.7 Sonnet    | 200k            | Y       | $$     | Y       |
-| AWS Cloud                | Anthropic      | Claude 3.0 Haiku     | 200k            | Y       | $      | Y       |
-| AWS Cloud                | Anthropic      | Claude 3.0 Opus      | 200k            | Y       | $$$$   | Y       |
-| Google Cloud             | Google         | Gemini 1.5 Pro       | 2.0M            | Y       | $      | Y       |
-| AWS Cloud                | Meta           | Llama 3.1 405b       | 128k            | N       | $$     | Y       |
-| AWS Cloud                | Meta           | Llama 3.1 70b        | 128k            | N       | $      | Y       |
-| AWS Cloud                | Meta           | Llama 3.1 8b         | 128k            | N       | $      | Y       |
+| Model Endpoint Location  | Model Creator  | Model Name           |  
+| ---------------          | :------------: | :--------:           | 
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4.1          | 
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o           | 
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o Mini      | 
+| Microsoft Azure Cloud    | OpenAI         | o1                   | 
+| Microsoft Azure Cloud    | OpenAI         | o1 Mini              |  
+| AWS Cloud                | Anthropic      | Claude 3.7 Sonnet    | 
+| AWS Cloud                | Anthropic      | Claude 3.0 Haiku     |
+| AWS Cloud                | Anthropic      | Claude 3.0 Opus      |
+| Google Cloud             | Google         | Gemini 1.5 Pro       |
+| AWS Cloud                | Meta           | Llama 3.1 405b       |
+| AWS Cloud                | Meta           | Llama 3.1 70b        |
+| AWS Cloud                | Meta           | Llama 3.1 8b         |
 
 ### Vector Embedding Models
 
@@ -88,12 +89,12 @@ LBL-Hosted Customized Models use a customized system prompt on top of a base mod
 
 Note: API users can bypass the system prompt by accessing underlying models directly, if desired.
 
-| Model Endpoint Location  | Base Model        | Model Name         | Context Length* | Vision  | Cost**  | 
-| ---------------          | :---------------: | :--------:         | :-----:         | :---:   | :---:   | 
-| LBL IT Division          | Llama 4 Scout NeuralMagic FP8 Dynamic     | CBorg Chat         | 256K            | Y       | N/C    |
-| LBL IT Division          | MistralAI Devstral Small   | CBorg Coder        | 128K             | N       | N/C    |
-| LBL IT Division          | Qwen 2.5 VL 72B   | CBorg Vision       | 8K            | Y       | N/C    |
-| LBL IT Division          | Qwen QwQ          | CBorg Deepthought  | 32K            | N       | N/C    |
+| Model Endpoint Location  | Base Model         | Model Name         | Context Length* | Vision  | Cost**  | 
+| ---------------          | :---------------:  | :--------:         | :-----:         | :---:   | :---:   | 
+| LBL IT Division          | Llama 4 Scout FP8  | CBorg Chat         | 256K            | Y       | N/C    |
+| LBL IT Division          | GPT OSS 120b       | CBorg Coder        | 128K            | N       | N/C    |
+| LBL IT Division          | Granite 3.2 Vision | CBorg Vision       | 8K              | Y       | N/C    |
+| LBL IT Division          | GPT OSS 120b       | CBorg Deepthought  | 128K            | N       | N/C    |
 
 ## Understanding the Context Window Length
 
@@ -134,19 +135,25 @@ These models are licensed for non-commercial research use.
 
 - **Endpoint Location**: LBNL IT Division Data Center
 - **Model Name**: `lbl/cborg-coder`
-- **Underlying Model**: MistralAI Devstral Small 2505 with Custom System Prompt and Temperature = 0.15
+- **Underlying Model**: OpenAI gpt-oss-120b with Reasoning: high, Temperature = 1.0, Top-P = 1.0
 
 #### CBorg Vision
 
 - **Endpoint Location**: LBNL IT Division Data Center
-- **Model Name**: `lbl/cborg-vision:latest`
-- **Underlying Model**: Qwen 2.5 VL Instruct 72B
+- **Model Name**: `lbl/cborg-vision`
+- **Underlying Model**: IBM Granite 3.2 Vision 
 
 #### CBorg Deepthought
 
 - **Endpoint Location**: LBNL IT Division Data Center
-- **Model Name**: `lbl/cborg-deepthought:latest`
-- **Underlying Model**: Qwen QwQ 32B with Reasoning and Tool Use
+- **Model Name**: `lbl/cborg-deepthought`
+- **Underlying Model**: OpenAI gpt-oss-120b with Reasoning: high, Temperature = 1.0, Top-P = 1.0 
+
+#### CBorg Mini
+
+- **Endpoint Location**: LBNL IT Division Data Center
+- **Model Name**: `lbl/cborg-mini`
+- **Underlying Model**: OpenAI gpt-oss-20b with Reasoning: high, Temperature = 1.0, Top-P = 1.0 
 
 #### Meta Llama 4 Scout
 
@@ -160,63 +167,6 @@ Underlying model is Llama 4 Scout. Context length is limited to 128K tokens.
 - **Cost**: No cost
 - **Model Name**: `Llama-4-Scout-17B-16E-Instruct`
 - **Terms of Service**: [Meta Llama Use Policy](https://www.llama.com/llama4/use-policy/)
-
-#### Qwen 2.5 Vision 72B
-
-Note that a minimum image size of 256x256 pixels is required. Upsampling images can improve results. Context is limited to 8K in this deployment.
-The model supports object location with bounding boxes, OCR-to-HTML output and agentic computer use. Detail: [Qwen 2.5 Examples](https://qwenlm.github.io/blog/qwen2.5-vl/)
-
-- **Endpoint Location**: LBNL IT Division Data Center
-- **Use Cases**: Image Description, OCR, Agentic Computer Use 
-- **Vision Support**: Yes
-- **Tool Support**: No, but includes native tools for browser use, OCR-to-HTML and object grounding
-- **Context Window**: 8K Tokens
-- **Cost**: No cost
-- **Model Name**: `lbl/qwen-vision`
-- **Terms of Service**: [Qwen 2.5-VL Model Card](https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct)
-
-#### Perplexity R1 1776 DeepSeek R1 Distill Llama 70B (currently offline)
-
-This is an open-weight reasoning model, hosted on IT-division hardware (no prompts will be sent outside the LBL network).
-
-This deployment is based on a version of DeepSeek R1 that has undergone post-training by Perplexity to remove censorship and bias in the original model.
-
-- **Endpoint Location**: LBNL IT Division Data Center
-- **Use Cases**: Math, Code Generation, Logic 
-- **Vision Support**: No 
-- **Tool Support**: No - but workarounds exist
-- **Context Window**: 128K Tokens
-- **Cost**: No cost
-- **Model Name**: `lbl/deepseek-r1:llama-70b`
-- **Terms of Service**: [DeepSeek R1 Model Card](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Llama-70B)
-
-#### Qwen QwQ Reasoning Model
-
-- **Endpoint Location**: LBNL IT Division Data Center
-- **Use Cases**: Tool use, code architect
-- **Vision Support**: No 
-- **Tool Support**: Yes
-- **Context Window**: 32K Tokens*
-- **Cost**: No cost
-- **Model Name**: `lbl/qwen-qwq`
-- **Terms of Service**: [Qwen QwQ](https://huggingface.co/Qwen/QwQ-32B)
-
-* Context length of this model can be extended to 128K but for practical performance reasons is limited to 32K in the Lab-hosted instance.
-
-#### Qwen 2.5 Coder 32B Instruct
-
-Current leading open model for code generation, trained on permissively licensed open source code.
-
-- **Endpoint Location**: LBNL IT Division Data Center
-- **Use Cases**: Code Generation 
-- **Vision Support**: No 
-- **Tool Support**: No 
-- **Context Window**: 32K Tokens*
-- **Cost**: No cost
-- **Model Name**: `lbl/qwen-coder`
-- **Terms of Service**: [Qwen 2.5 Coder](https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct)
-
-* Context length of this model can be extended to 128K but for practical performance reasons is limited to 32K in the Lab-hosted instance.
 
 #### Nomic AI nomic-embed-text
 
@@ -242,13 +192,28 @@ version of each model provider, as follows:
 
 | Alias Name                   | Base Model                 |
 | ---------------------------  | :---------:                |
-| `/openai/chatgpt:latest`     | `openai/gpt-4.1`           | 
+| `/openai/chatgpt:latest`     | `openai/gpt-5`             | 
 | `/anthropic/claude:latest`   | `anthropic/claude-sonnet`  | 
 | `/google/gemini:latest`      | `google/gemini-pro`        | 
 
+#### OpenAI ChatGPT 5
+
+Latest edition of ChatGPT from OpenAI. Mini and Nano variants are also available (-mini and -nano model names)
+
+- **Endpoint Location**: Microsoft Azure Cloud (East US 2)
+- **Use Cases**: Chat, Text Summarization, Image Description, Tool Use
+- **Vision Support**: Yes
+- **Tool Support**: Yes
+- **Context Window**: 1M Tokens
+- **Cost per 1M Tokens (Input)**: $1.50 
+- **Cost per 1M Tokens (Output)**: $10
+- **API Model Name**: `gpt-5`, `gpt-5-mini`, `gpt-5-nano`
+- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
+- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
+
 #### OpenAI ChatGPT 4.1
 
-ChatGPT 4.1 is the latest standard edition of ChatGPT from OpenAI. Mini and Nano variants are also available (-mini and -nano model names)
+Prior edition of ChatGPT from OpenAI. Mini and Nano variants are also available (-mini and -nano model names)
 
 - **Endpoint Location**: Microsoft Azure Cloud (East US)
 - **Use Cases**: Chat, Text Summarization, Image Description, Tool Use
@@ -258,21 +223,6 @@ ChatGPT 4.1 is the latest standard edition of ChatGPT from OpenAI. Mini and Nano
 - **Cost per 1M Tokens (Input)**: $2.00 
 - **Cost per 1M Tokens (Output)**: $8.00
 - **API Model Name**: `openai/gpt-4.1`
-- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
-- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
-
-#### OpenAI ChatGPT 4.5 Preview
-
-ChatGPT 4.5 Preview is a "heavy duty" version of ChatGPT. Due to the high expense it should only be used for "high-value" output generation.
-
-- **Endpoint Location**: Microsoft Azure Cloud (East US)
-- **Use Cases**: Chat, Text Summarization, Image Description, Tool Use
-- **Vision Support**: Yes
-- **Tool Support**: Yes
-- **Context Window**: 1M Tokens
-- **Cost per 1M Tokens (Input)**: $75.00
-- **Cost per 1M Tokens (Output)**: $150.00
-- **API Model Name**: `openai/gpt-4.5`
 - **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
 - **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
 
@@ -449,9 +399,9 @@ Claude has superior reasoning and code analysis capabilities compared to other l
 - **Pricing Details**: [Anthropic API Pricing](https://aws.amazon.com/bedrock/pricing/)
 - **Terms of Service**: [Anthropic Commercial Terms of Service](https://www-cdn.anthropic.com/6b68a6508f0210c5fe08f0199caa05c4ee6fb4dc/Anthropic-on-Bedrock-Commercial-Terms-of-Service_Dec_2023.pdf)
 
-#### Anthropic Claude 4.0 Opus
+#### Anthropic Claude 4.1 Opus
 
-Claude 4.0 Opus is the newest version of Anthropic's flagship model.
+Claude 4.1 Opus is the newest version of Anthropic's flagship model.
 
 - **Endpoint Location**: Amazon Web Services (US West 2)
 - **Use Cases**: Chat, Text Summarization, Image Description

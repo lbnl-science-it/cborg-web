@@ -10,9 +10,20 @@ draft: false
 
 ## Current Status
 
-`lbl/cborg-deepthought` is currently offline. All other systems are operational.
+System maintenance is scheduled for August 19th-26th. Intermittent service interruptions may occur.
 
 ## Recent Updates
+
+_August 7th, 2025_
+
+- Fixed a bug in CBorg Coder that would cause premature response termination in long generations
+- Chat GPT 5 is now available on CBorg Chat
+- The GPT 5 family of models is now available on CBorg API (gpt-5, gpt-5-mini, gpt-5-nano)
+
+_August 5, 2025_
+
+- CBorg Coder and CBorg Deepthought replaced with GPT-OSS 120b (Reasoning: high).
+- Claude Opus 4.1 available on chat and API
 
 _July 25th, 2025_
 
