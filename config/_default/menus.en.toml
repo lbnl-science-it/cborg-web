@@ -32,82 +32,94 @@ pageRef = "/tools"
 weight = 6
 
 [[main]]
-name = "VS Code Continue"
+name = "Getting Started"
+pageRef = "/tools_ai_101"
+parent = "Tools"
+weight = -10
+
+[[main]]
+name = "Coding: Continue"
 parent = "Tools"
 pageRef = "/tools_continue"
-weight = 1
+weight = -8
 
 [[main]]
-name = "VS Code Cline"
+name = "Coding: Cline"
 parent = "Tools"
 pageRef = "/tools_cline"
-weight = 1
+weight = -6
 
 [[main]]
-name = "VS Code Roo Code"
+name = "Coding: Roo Code"
 parent = "Tools"
 pageRef = "/tools_roo"
-weight = 1
+weight = -9
 
 [[main]]
-name = "Aider"
+name = "Coding: Aider"
 parent = "Tools"
 pageRef = "/tools_aider"
-weight = 1
+weight = -6
 
 [[main]]
-name = "RStudio (gptstudio)"
+name = "Integration: RStudio (gptstudio)"
 parent = "Tools"
 pageRef = "/tools_rstudio"
-weight = 1
+weight = 2
 
 [[main]]
-name = "Omni-Engineer"
+name = "Coding: Omni-Engineer"
 parent = "Tools"
 pageRef = "/tools_omniengineer"
 weight = 1
 
 [[main]]
-name = "OpenAI Codex CLI"
+name = "Coding: Gemini CLI"
+parent = "Tools"
+pageRef = "/tools_geminicli"
+weight = -6
+
+[[main]]
+name = "Coding: Codex CLI"
 parent = "Tools"
 pageRef = "/tools_codex"
-weight = 1
+weight = -6
 
 [[main]]
-name = "Claude Code"
+name = "Coding: ClaudeCode"
 parent = "Tools"
 pageRef = "/tools_claudecode"
-weight = 1
+weight = -7
 
 [[main]]
-name = "JupyterLab AI"
+name = "Integration: JupyterLab"
 parent = "Tools"
 pageRef = "/tools_jupyter"
 weight = 1
 
 [[main]]
-name = "Cursor AI Editor"
+name = "Coding: Cursor"
 parent = "Tools"
 pageRef = "/tools_cursor"
-weight = 1
+weight = -4 
 
 [[main]]
-name = "CBorg Client Proxy"
+name = "Advanced: CBorg Client Proxy"
 parent = "Tools"
 pageRef = "/tools_cborgproxy"
-weight = 1
+weight = 10
 
-[[main]]
-name= "CBorg Chat"
-parent = "Tools"
-pageRef = "/tools_cborgchat"
-weight = 1
+#[[main]]
+#name= "CBorg Chat"
+#parent = "Tools"
+#pageRef = "/tools_cborgchat"
+#weight = 1
 
-[[main]]
-name = "CBorg API Service"
-parent = "Tools"
-pageRef = "/api_request"
-weight = 1
+#[[main]]
+#name = "CBorg API Service"
+#parent = "Tools"
+#pageRef = "/api_request"
+#weight = 1
 
 [[main]]
 weight = 7
