@@ -10,9 +10,33 @@ draft: false
 
 ## Current Status
 
-System maintenance is scheduled for August 19th-26th. Intermittent service interruptions may occur.
+{{< notice "note" >}}
+** **B50 Maintenance Notice**: 
+
+Due to scheduled power systems maintenance in the B50 data center, _CBorg 'on-prem' models will temporarily redirect to cloud-based equivalents with API charges waived_. Power systems maintenance is expected to conclude by August 27th. Refer to the following table for the temporary configuration:
+
+| Model              | Temporary Location    |
+| ---------          | --------------------  |
+| CBorg Chat         | Llama 4 Scout on AWS Bedrock  | 
+| CBorg Vision       | Llama 4 Scout on AWS Bedrock            | 
+| CBorg Coder        | gpt-oss-120b on Google Vertex AI        | 
+| CBorg Coder Base   | Not available - Suggested replacement: gcp/codestral    | 
+| CBorg Deepthought  | gpt-oss-120b on Google Vertex AI        | 
+| CBorg Mini         | gpt-oss-20b on Google Vertex AI         | 
+| nomic-embed-text   | TBD                                     | 
+| granite-vision     | Not available         | 
+| gemma3n            | Not available         | 
+
+{{< /notice >}}
 
 ## Recent Updates
+
+_August 17th, 2025_
+
+- Added Llama 4 Scout and Maverick via AWS Bedrock
+- Added gpt-oss-120b models via Azure, GCP and AWS
+- Updated azure/deepseek-r1 to use azure/MSAI-DS-R1 (uncensored version of DeepSeek retrained by Microsoft AI)
+- Migrated CBorg Chat and API to IT-IS Vmware for improved uptime
 
 _August 7th, 2025_
 
