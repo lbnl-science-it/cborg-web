@@ -14,32 +14,33 @@ draft: false
 
 Note: This list changes frequently - please check back here for updates.
 
-| Model Endpoint Location  | Model Creator  | Model Name           | Context Length* | Vision  | Cost** | P2P Okay*** | 
-| ---------------          | :------------: | :--------:           | :-----:         | :---:   | :---:  | :-----: |
-| LBL IT Division          | Meta           | Llama 4 Scout FP8    | 500K            | N       | N/C    | Y       |
-| LBL IT Division          | OpenAI         | GPT-OSS 120b         | 128K            | N       | N/C    | Y       |
-| LBL IT Division          | OpenAI         | GPT-OSS 20b          | 128K            | N       | N/C    | Y       |
-| LBL IT Division          | IBM            | Granite 3.2 Vision   | 32K             | N       | N/C    | Y       |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 5            | 272K            | Y       | $$     | Y       |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 5 Mini       | 272K            | Y       | $      | Y       |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 5 Nano       | 272K            | Y       | $      | Y       |
-| Microsoft Azure Cloud    | OpenAI         | o3                   | 200K            | Y       | $$$    | Y       |
-| Microsoft Azure Cloud    | OpenAI         | o3 Mini              | 200K            | N       | $$     | Y       |
-| Microsoft Azure Cloud    | OpenAI         | o3 Mini High         | 200K            | N       | $$$    | Y       |
-| Microsoft Azure Cloud    | OpenAI         | o4 Mini              | 200K            | Y       | $$     | Y       |
-| Microsoft Azure Cloud    | OpenAI         | DALL-E 3.0           | 4000            | N       | $$     | Y       |
-| Google Cloud             | Google         | Gemini 2.5 Pro       | 1.0M            | Y       | $$$    | Y       |
-| Google Cloud             | Google         | Gemini 2.5 Flash     | 1.0M            | Y       | $$     | Y       |
-| Google Cloud             | Google         | Gemini 2.5 Flash Lite Preview | 1.0M           | Y       | $      | Y       |
-| Google Cloud             | Google         | Gemini 2.0 Flash Lite | 1.0M           | Y       | $      | Y       |
-| AWS Cloud                | Anthropic      | Claude 3.5 Haiku     | 200k            | Y       | $      | Y       |
-| AWS Cloud                | Anthropic      | Claude 4.0 Sonnet    | 200k            | Y       | $$     | Y       |
-| AWS Cloud                | Anthropic      | Claude 4.0 Opus      | 200k            | Y       | $$$    | Y       |
-| AWS Cloud                | Cohere         | Command R+           | 128k            | N       | $$     | Y       |
-| AWS Cloud                | Cohere         | Command R            | 128k            | N       | $      | Y       |
-| xAI Cloud                | xAI            | Grok 3               | 128K            | Y       | $$$    | Y       |
-| xAI Cloud                | xAI            | Grok 3 Mini          | 128K            | Y       | $$     | Y       |
-| Wolfram Cloud            | Wolfram Research | Wolfram\|Alpha     | 1024            | N      | $       | N***    |
+| Model Endpoint Location  | Model Creator  | Model Name            | Context Length* | Vision  | Cost** | P2P Okay*** | 
+| ---------------          | :------------: | :--------:            | :-----:         | :---:   | :---:  | :-----: |
+| LBL IT Division          | Meta           | Llama 4 Scout FP8     | 500K            | N       | N/C    | Y       |
+| LBL IT Division          | OpenAI         | GPT-OSS 120b          | 128K            | N       | N/C    | Y       |
+| LBL IT Division          | OpenAI         | GPT-OSS 20b           | 128K            | N       | N/C    | Y       |
+| LBL IT Division          | IBM            | Granite 3.2 Vision    | 32K             | N       | N/C    | Y       |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 5             | 272K            | Y       | $$     | Y       |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 5 Mini        | 272K            | Y       | $      | Y       |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 5 Nano        | 272K            | Y       | $      | Y       |
+| Microsoft Azure Cloud    | OpenAI         | o3                    | 200K            | Y       | $$$    | Y       |
+| Microsoft Azure Cloud    | OpenAI         | o3 Mini               | 200K            | N       | $$     | Y       |
+| Microsoft Azure Cloud    | OpenAI         | o3 Mini High          | 200K            | N       | $$$    | Y       |
+| Microsoft Azure Cloud    | OpenAI         | o4 Mini               | 200K            | Y       | $$     | Y       |
+| Microsoft Azure Cloud    | OpenAI         | DALL-E 3.0            | 4000            | N       | $$     | Y       |
+| Google Cloud             | Google         | Gemini 2.5 Pro        | 1.0M            | Y       | $$$    | Y       |
+| Google Cloud             | Google         | Gemini 2.5 Flash      | 1.0M            | Y       | $$     | Y       |
+| Google Cloud             | Google         | Gemini 2.0 Flash Lite | 1.0M            | Y       | $      | Y       |
+| Google Cloud             | Qwen           | Qwen 3 Coder          | 256K            | Y       | $$     | Y       |
+| Google Cloud             | Qwen           | Qwen 3                | 32K             | Y       | $      | Y       |
+| Google Vertex AI         | Anthropic      | Claude 3.5 Haiku      | 200k            | Y       | $      | Y       |
+| Google Vertex AI         | Anthropic      | Claude 4.0 Sonnet     | 200k            | Y       | $$     | Y       |
+| Google Vertex AI         | Anthropic      | Claude 4.1 Opus       | 200k            | Y       | $$$    | Y       |
+| AWS Cloud                | Meta           | Llama 4 Scout         | 1.0M            | N       | $$     | Y       |
+| AWS Cloud                | Meta           | Llama 4 Maverik       | 128k            | N       | $      | Y       |
+| Microsoft Azure Cloud    | xAI            | Grok 3                | 128K            | Y       | $$$    | Y       |
+| Microsoft Azure Cloud    | xAI            | Grok 3 Mini           | 128K            | Y       | $$     | Y       |
+| Wolfram Cloud            | Wolfram Research | Wolfram\|Alpha      | 1024            | N       | $      | N***    |
 
 {{< notice "note" >}}
 ** **Cost Explanation**: This column provides a rough order-of-magnitude estimate of costs associated with the model. Detailed cost data is provided further on this page. Cost for using commercial models are paid for by the IT Division. There is no cost to individual users at this time and no PID is required.
@@ -47,7 +48,7 @@ Note: This list changes frequently - please check back here for updates.
 
 {{< notice "note" >}}
 *** **P2P Okay Explanation**
-**Y** = Acceptable for use with Prudent-to-Protect (P2P) Information (e.g. pre-publication data). May be approved for protected R&D information including ECI or S&T Matrix as part of an approved Access Plan. Please contact [IT Policy](mailto:itpolicy@lbl.gov) for more information. 
+**Y** = Model usage is licensed under enterprise agreements and will not use your data for training. Acceptable for use with Prudent-to-Protect (P2P) Information (e.g. pre-publication data). May be approved for protected R&D information including ECI or S&T Matrix as part of an approved Access Plan. Please contact [IT Policy](mailto:itpolicy@lbl.gov) for more information. 
 
 **N** = Only cleared for use with non-sensitive Public information. No negotiated terms. No S&T or ECI or anything with FN or sponsor-specified protections permitted. For details consult [IT Policy AI Tool Security Levels](https://docs.google.com/spreadsheets/d/1l-ZX0wAajcaQClKd6tAPxUDQUQhnj7CMTSYoR-J-cmc/edit?gid=0#gid=0)
 {{< /notice >}}
