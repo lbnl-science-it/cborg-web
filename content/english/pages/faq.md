@@ -22,14 +22,6 @@ CBorg Chat can be used in your browser, or can be installed as an app. It is a "
 
 You can find install instructions for Android, iOS/iPad OS and Desktop here: [chat.cborg.lbl.gov PWA Install Howto (via installpwa.com)](https://www.installpwa.com/from/chat.cborg.lbl.gov).
 
-#### I reached my spend limit - can I get a higher budget?
-
-First, keep an eye on your budget to understand the costs. You can check [https://api.cborg.lbl.gov/key/manage](https://api.cborg.lbl.gov/key/manage) to view your current real-time spend.
-
-Second, try to optimize your model inference cost by selecting the lowest cost model that can perform your task correctly. Read [Model Selection Overview](https://cborg.lbl.gov/tools_ai_101) for more information.
-
-Finally, if you have a PID for recharges the funding to support your budget, please contact Science IT Consulting at [scienceit@lbl.gov](mailto:scienceit@lbl.gov) to discuss your project - we can help get you set up with a GCP or AWS project to access the needed models directly.
-
 #### How to copy/paste from CBorg Chat to/from Google Docs and preverse formatting?
 
 LLMs use Markdown to format text such as headings, bold, italics and for LaTeX equation typesetting. In addition to improving document readability, these formatting details improve the LLM's ability to parse the structure of text. 
