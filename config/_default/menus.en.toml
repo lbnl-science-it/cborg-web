@@ -12,114 +12,114 @@ pageRef = "/about"
 weight = 2
 
 [[main]]
-name = "Models"
-pageRef = "/models"
-weight = 3
-
-[[main]]
-name = "News"
-pageRef = "/news"
-weight = 4
+name = "About CBorg"
+pageRef = "/about"
+parent = "About"
+weight = 2
 
 [[main]]
 name = "FAQ"
 pageRef = "/faq"
+parent = "About"
 weight = 6
 
 [[main]]
-name = "Tools"
+name = "News"
+pageRef = "/news"
+weight = 3
+
+[[main]]
+name = "Models"
+pageRef = "/models"
+weight = 4
+
+[[main]]
+name = "Benchmarks"
+pageRef = "/benchmarks"
+weight = 5
+
+[[main]]
+name = "SciCode"
+pageRef = "/bench_scicode"
+parent = "Benchmarks"
+weight = -1
+
+[[main]]
+name = "Coding"
 pageRef = "/tools"
 weight = 6
 
 [[main]]
 name = "Getting Started"
 pageRef = "/tools_ai_101"
-parent = "Tools"
+parent = "Coding"
 weight = -10
 
 [[main]]
-name = "Coding: Continue"
-parent = "Tools"
+name = "Continue (VS Code)"
+parent = "Coding"
 pageRef = "/tools_continue"
 weight = -8
 
 [[main]]
-name = "Coding: Cline"
-parent = "Tools"
+name = "Cline (VS Code)"
+parent = "Coding"
 pageRef = "/tools_cline"
 weight = -6
 
 [[main]]
-name = "Coding: Roo Code"
-parent = "Tools"
+name = "Roo Code (VS Code)"
+parent = "Coding"
 pageRef = "/tools_roo"
 weight = -9
 
 [[main]]
-name = "Coding: Aider"
-parent = "Tools"
+name = "Aider"
+parent = "Coding"
 pageRef = "/tools_aider"
 weight = -6
 
 [[main]]
-name = "Integration: RStudio (gptstudio)"
-parent = "Tools"
+name = "RStudio (gptstudio)"
+parent = "Coding"
 pageRef = "/tools_rstudio"
 weight = 2
 
 [[main]]
-name = "Coding: Omni-Engineer"
-parent = "Tools"
-pageRef = "/tools_omniengineer"
-weight = 1
-
-[[main]]
-name = "Coding: Gemini CLI"
-parent = "Tools"
+name = "Gemini CLI"
+parent = "Coding"
 pageRef = "/tools_geminicli"
 weight = -6
 
 [[main]]
-name = "Coding: Codex CLI"
-parent = "Tools"
+name = "Codex CLI"
+parent = "Coding"
 pageRef = "/tools_codex"
 weight = -6
 
 [[main]]
-name = "Coding: ClaudeCode"
-parent = "Tools"
+name = "ClaudeCode"
+parent = "Coding"
 pageRef = "/tools_claudecode"
 weight = -7
 
 [[main]]
-name = "Integration: JupyterLab"
-parent = "Tools"
+name = "JupyterLab"
+parent = "Coding"
 pageRef = "/tools_jupyter"
 weight = 1
 
 [[main]]
-name = "Coding: Cursor"
-parent = "Tools"
+name = "Cursor"
+parent = "Coding"
 pageRef = "/tools_cursor"
 weight = -4 
 
 [[main]]
-name = "Advanced: CBorg Client Proxy"
-parent = "Tools"
+name = "CBorg Client Proxy"
+parent = "Coding"
 pageRef = "/tools_cborgproxy"
 weight = 10
-
-#[[main]]
-#name= "CBorg Chat"
-#parent = "Tools"
-#pageRef = "/tools_cborgchat"
-#weight = 1
-
-#[[main]]
-#name = "CBorg API Service"
-#parent = "Tools"
-#pageRef = "/api_request"
-#weight = 1
 
 [[main]]
 weight = 7
