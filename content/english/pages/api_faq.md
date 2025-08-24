@@ -28,6 +28,18 @@ Assuming the API key is available in your user environment as $CBORG_API_KEY, yo
 curl --location 'https://api.cborg.lbl.gov/user/info' --header "Authorization: Bearer $CBORG_API_KEY"
 {{< /highlight >}}
 
+#### I reached my spend limit and free models don't work now!
+
+Please email [scienceit@lbl.gov](mailto:scienceit@lbl.gov) for assistance.
+
+#### I reached my spend limit - can I get a higher budget?
+
+First, keep an eye on your budget to understand the costs. You can check [https://api.cborg.lbl.gov/key/manage](https://api.cborg.lbl.gov/key/manage) to view your current real-time spend.
+
+Second, try to optimize your model inference cost by selecting the lowest cost model that can perform your task correctly. Read [Model Selection Overview](https://cborg.lbl.gov/tools_ai_101) for more information.
+
+Finally, if you have a PID for recharges the funding to support your budget, please contact Science IT Consulting at [scienceit@lbl.gov](mailto:scienceit@lbl.gov) to discuss your project - we can help get you set up with a GCP or AWS project to access the needed models directly.
+
 #### How do I retreive all available models?
 
 {{< highlight bash >}}
