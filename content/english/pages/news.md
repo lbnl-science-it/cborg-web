@@ -13,23 +13,34 @@ draft: false
 {{< notice "note" >}}
 ** **B50 Maintenance Notice**: 
 
-Due to scheduled power systems maintenance in the B50 data center, _CBorg 'on-prem' models will temporarily redirect to cloud-based equivalents with API charges waived_. Power systems maintenance is expected to conclude by August 27th. Refer to the following table for the temporary configuration:
+Due to scheduled power systems maintenance in the Building 50 data center, _CBorg 'on-prem' models will temporarily redirect to cloud-based equivalents with API charges waived_. Power systems maintenance is expected to conclude by **September 4th**. Refer to the following table for the temporary configuration:
 
 | Model              | Temporary Location    |
 | ---------          | --------------------  |
 | CBorg Chat         | Llama 4 Scout on AWS Bedrock  | 
 | CBorg Vision       | Llama 4 Scout on AWS Bedrock            | 
-| CBorg Coder        | gpt-oss-120b on Google Vertex AI        | 
+| CBorg Coder        | gpt-oss-120b on Google Vertex AI reasoning_effort=high       | 
 | CBorg Coder Base   | Not available - Suggested replacement: gcp/codestral    | 
-| CBorg Deepthought  | gpt-oss-120b on Google Vertex AI        | 
-| CBorg Mini         | gpt-oss-20b on Google Vertex AI         | 
-| nomic-embed-text   | TBD                                     | 
+| CBorg Deepthought  | gpt-oss-120b on Google Vertex AI reasoning_effort=high        | 
+| CBorg Mini         | gpt-oss-20b on Google Vertex AI reasoning_effort=high         | 
+| nomic-embed-text   | Google Cloud VM with NVIDIA T4 GPU      | 
 | granite-vision     | Not available         | 
 | gemma3n            | Not available         | 
 
 {{< /notice >}}
 
 ## Recent Updates
+
+_August 28th, 2025_
+
+- Added xAI Grok 4-0709 and Grok Code Fast 1 to Chat and API
+
+_August 24th, 2025_
+
+- Added SciCode benchmarks
+- Added gpt-oss-120b-high and gpt-oss-20b-high with reasoning_effort="high" config
+- Addressed a configuration bug in Opus 4.1 that was causing reasoning effort to be ignored
+- Moved xAI Grok 3 model endpoint to Azure Foundry
 
 _August 17th, 2025_
 
