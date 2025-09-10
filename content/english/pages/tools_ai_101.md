@@ -21,14 +21,14 @@ draft: false
 #### Top Recommended Tools
 
 - **[VS Code with RooCode](/tools_roo)**: Works well with CBorg API - powerful agentic features and easy to switch between models to control costs.
-- **[Aider CLI](/tools/aider)**: An open-source CLI "agentic" tool that works well with CBorg Coder (lbl/cborg-coder) for unlimited free usage.
-- **[Codex CLI](/tools/codex)**: Recommended to use with o4-mini (excellent cost-performance efficiency) or gpt-oss-120b (free to use).
+- **[Aider CLI](/tools_aider)**: An open-source CLI "agentic" tool that works well with CBorg Coder (lbl/cborg-coder) for unlimited free usage.
+- **[Codex CLI](/tools_codex)**: Recommended to use with o4-mini (excellent cost-performance efficiency) or gpt-oss-120b (free to use).
 
 #### Also Good with Caveats
 
 - **[VS Code with Continue](/tools_continue)**: Works well for more targeted code edits (insertion, line editing). However, setup is more complicated.
-- **[Claude Code](/tools/claude)**: Excellent overall, but _very expensive_. The "agentic" nature of this tool can lead to very high cost to complete simple operations. Lacks support for codebase indexing.
-- **[Gemini CLI](/tools/geminicli)**: Excellent overall, but also very expensive to use when Gemini Pro is enabled. Recommended to reserve this model for use with high-complexity tasks.
+- **[Claude Code](/tools_claudecode)**: Excellent overall, but _very expensive_. The "agentic" nature of this tool can lead to very high cost to complete simple operations. Lacks support for codebase indexing.
+- **[Gemini CLI](/tools_geminicli)**: Excellent overall, but also very expensive to use when Gemini Pro is enabled. Recommended to reserve this model for use with high-complexity tasks.
 
 #### Unsupported Tools:
 
@@ -39,8 +39,8 @@ draft: false
 
 - **Knowledge Cutoff Date**: Models are trained on a corpus of data that is typically 6-12 months old and cannot generate code for features or APIs newer than the model's cutoff date.
 - **Poor performance in scientific coding**: Coding models are currently weak in most scientific and numerical programming tasks (see [SciCode](/bench_scicode) benchmark results)
-- **Poor performance on obscure APIs**: Models will hallucinate frequently when generating code for APIs that are obscure, due to lack of sufficient examples in their training data. Consider augmenting your coder's knowledge with access to the API documentation, e.g. using the Context7 MCP tool.
-- **Context Length Limit**: Models can only ingest a finite amount of code at inference time, limiting its total field of view in large codebases. Use of indexing (vector search) can help, but is not guaranteed to ensure the coding agent is aware of all relevant code to a prompt.
+- **Poor performance on new, obscure or unstable APIs**: Models will hallucinate frequently when generating code for APIs that are obscure, due to lack of sufficient examples in their training data. Due to knowledge cut-off dates, models will be unaware of recent changes to APIs newer than 6-12 months ago. Unstable APIs with multiple incompatible versions may result in broken code generation. Consider augmenting your coder's knowledge with access to the API documentation, e.g. using the Context7 MCP tool.
+- **Context Length Limit**: Models can only ingest a finite amount of code at inference time, limiting its total field of view in large codebases. Use of indexing (vector search) can help, but is not guaranteed to ensure the coding agent is aware of all relevant code to a prompt. Models can only generate a finite and usually relatively small amount of output code in each turn, limiting its ability to rewrite large sections of code. Use of 'diff' for edits can enable working with large files, but comes with issues of impect diff matching causing errors.
 - **Context Rot**: Models are easily overwhelmed when presented with multiple instructions in a prompt, and randomly "forget" to follow instructions particularly when the context length becomes long. Keep prompts as simple as possible and do not attempt to perform multiple tasks in a single prompt.
 - **Poor adherence to DRY principles**: LLM-generated code tends to have a lower "information density" due to excessive repetition and underutilization of abstractions, leading to code that is less efficient to execute and more difficult to maintain.
 - **Bias toward on Legacy Solutions**: LLMs tend to over-use legacy code libraries because there is more documentation for these in the training data, causing underutilization of newer and better alternatives.

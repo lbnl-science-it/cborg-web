@@ -31,6 +31,12 @@ Due to scheduled power systems maintenance in the Building 50 data center, _CBor
 
 ## Recent Updates
 
+_Sept 9th, 2025_
+
+- Fixed bug in xAI model cost calculation not including reasoning tokens
+- Fixed support for tool use on GPT-oss models
+- Improved Claude Code documentation re: correct model names
+
 _August 28th, 2025_
 
 - Added xAI Grok 4-0709 and Grok Code Fast 1 to Chat and API
