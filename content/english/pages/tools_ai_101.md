@@ -18,15 +18,17 @@ draft: false
 
 ### Getting Started with Coding Tools
 
-#### Recommended Tools
+#### Top Recommended Tools
 
-Currently, we have found the best results with the following coding tools:
+- **[VS Code with RooCode](/tools_roo)**: Works well with CBorg API - powerful agentic features and easy to switch between models to control costs.
+- **[Aider CLI](/tools/aider)**: An open-source CLI "agentic" tool that works well with CBorg Coder (lbl/cborg-coder) for unlimited free usage.
+- **[Codex CLI](/tools/codex)**: Recommended to use with o4-mini (excellent cost-performance efficiency) or gpt-oss-120b (free to use).
 
-- **VS Code with RooCode**: Works well with CBorg API - powerful agentic features and easy to switch between models.
-- **VS Code with Continue**: Works well for more targeted code edits (insertion, line editing).
-- **Claude Code**: Excellent overall. Can be very expensive in large code bases. Can integrate with VS Code to show diffs
+#### Also Good with Caveats
 
-You may also get good results with other tools - if you do, please let us know about it!
+- **[VS Code with Continue](/tools_continue)**: Works well for more targeted code edits (insertion, line editing). However, setup is more complicated.
+- **[Claude Code](/tools/claude)**: Excellent overall, but _very expensive_. The "agentic" nature of this tool can lead to very high cost to complete simple operations. Lacks support for codebase indexing.
+- **[Gemini CLI](/tools/geminicli)**: Excellent overall, but also very expensive to use when Gemini Pro is enabled. Recommended to reserve this model for use with high-complexity tasks.
 
 #### Unsupported Tools:
 
@@ -36,12 +38,15 @@ You may also get good results with other tools - if you do, please let us know a
 #### Limitations of AI Coders:
 
 - **Knowledge Cutoff Date**: Models are trained on a corpus of data that is typically 6-12 months old and cannot generate code for features or APIs newer than the model's cutoff date.
+- **Poor performance in scientific coding**: Coding models are currently weak in most scientific and numerical programming tasks (see [SciCode](/bench_scicode) benchmark results)
 - **Poor performance on obscure APIs**: Models will hallucinate frequently when generating code for APIs that are obscure, due to lack of sufficient examples in their training data. Consider augmenting your coder's knowledge with access to the API documentation, e.g. using the Context7 MCP tool.
-- **Context Length Limit**: Models can only ingest a finite amount of code at inference time, limiting its total field of view in large codebases. Use of indexing (vector search) can help but is not guaranteed to ensure the coding agent is aware of all relevant code to a prompt.
+- **Context Length Limit**: Models can only ingest a finite amount of code at inference time, limiting its total field of view in large codebases. Use of indexing (vector search) can help, but is not guaranteed to ensure the coding agent is aware of all relevant code to a prompt.
 - **Context Rot**: Models are easily overwhelmed when presented with multiple instructions in a prompt, and randomly "forget" to follow instructions particularly when the context length becomes long. Keep prompts as simple as possible and do not attempt to perform multiple tasks in a single prompt.
-- **Poor adherence to DRY principles**: LLM-generated code tends to have a lower "information density" due to excessive repetition and underutilization of abstractions, leading to code that is less efficient to execute and more difficult to maintain. 
+- **Poor adherence to DRY principles**: LLM-generated code tends to have a lower "information density" due to excessive repetition and underutilization of abstractions, leading to code that is less efficient to execute and more difficult to maintain.
 - **Bias toward on Legacy Solutions**: LLMs tend to over-use legacy code libraries because there is more documentation for these in the training data, causing underutilization of newer and better alternatives.
 - **Low Quality of Tab-Completion**: "Fill-in-the-middle" models which are used for tab-style autocomplete rely on extremely small models, which have very low performance on complex coding tasks. Large models cannot be used for tab completion because of high latency.
+- **Potential Data Loss**: AI coding tools can perform unexpected actions such as deleting code, corrupting files, breaking code or even deleting files. Always use a version control system and maintain backups of your code base to guard against potential data loss.
+
 
 ### Model Selection for Coding
 
@@ -52,14 +57,14 @@ _Last updated: 2025-08-25_
 | Model                          | Cost | Speed  | Comments                                                          |
 | -----------------              | ---- | ----   | ----------------------------------------------------------------- |
 | `lbl/cborg-coder`              | Free | Fast   | Good performance and fast. Unlimited usage                        |
-| `google/gemini-pro-high`       | $$$  | Medium | Best for complex coding, scientific coding. Expensive - watch usage |
-| `anthropic/claude-sonnet-high` | $$$  | Medium | Good for complex coding. Expensive. Recommended for ClaudeCode CLI |
+| `google/gemini-pro-high`       | $$$  | Slow | Best for complex coding, scientific coding. Expensive - watch usage |
+| `anthropic/claude-sonnet-high` | $$$  | Slow | Good for complex coding. Expensive. Recommended for ClaudeCode CLI |
 | `xai/grok-3-mini`              | $    | Medium | Solid performer and very low cost |
 | `gcp/qwen-3-coder`*            | $    | Medium | Excellent performance and low cost. See comments |
 | `openai/o3-high`               | $$$  | Slow   | Good performance. Recommended model for OpenAI Codex CLI |
 | `openai/o4-mini-high`          | $$   | Slow   | Good performance. Recommended model for OpenAI Codex CLI |
 
-**Currently Not Recommended**
+**Currently Not Recommended for Coding**
 
 | Model                          | Cost | Speed  | Comments                                                          |
 | -----------------              | ---- | ----   | ----------------------------------------------------------------- |
@@ -68,7 +73,7 @@ _Last updated: 2025-08-25_
 | `anthropic/claude-opus-high`   | $$$$ | Slow   | Very expensive, with minimal improvements over Sonnet           |
 | `xai/grok-3`                   | $$   | Medium | Recommended alternative xai/grok-3-mini which has reasoning     |
 | `openai/gpt-5`                 | $$   | Medium | Recommended alternative openai/o3-high or openai/o4-mini-high  |
-| `lbl/cborg-chat`               | Free | Slow   | Underperforming |
+| `lbl/cborg-chat`               | Free | Slow   | Underperforming for coding tasks |
 | `azure/deepseek-r1`*           | $$$  | Slow   | Good performance but excessive reasoning. See comments |
 
 Comments:
@@ -78,14 +83,14 @@ Comments:
 
 ---------
 
-### Models for Technical Writing
+### Models for Advanced Technical Writing
 
 Recommended Best Practices: 
 
 - **Style Emulation**: Using a custom system prompt, provide a large corpus of sample writing and ask the model to emulate the style and language. This is more effective for maintaining style than using general descriptions of writing style.
 - **Complex Document Formation**: Use multiple prompts to construct the document one paragraph or one section at a time. This is more scalable and will maintain accuracy and tone throughout.
 
-Best models: `google/gemini-pro-high`, `anthropic/claude-opus-high`, `openai/o3-high`
+Best models: `google/gemini-pro-high`, `anthropic/claude-sonnet-high`, `openai/o3-high`
 
 ---------
 

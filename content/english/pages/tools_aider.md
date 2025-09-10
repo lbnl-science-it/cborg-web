@@ -29,14 +29,17 @@ setx OPENAI_API_KEY (your CBORG_API_KEY)
 
 # Prefix the model name with openai/
 
-# e.g. using Claude Sonnet 4.0
-aider --model openai/anthropic/claude-sonnet
+# e.g. using Gemini Pro with reasoning effort = high (expensive - watch your budget)
+aider --model openai/google/gemini-pro-high
 
-# e.g. using OpenAI o4-mini with high reasoning effort
+# e.g. using Claude Sonnet 4.0 with reasoning effort = high (expensive - watch your budget)
+aider --model openai/anthropic/claude-sonnet-high
+
+# e.g. using OpenAI o4-mini with high reasoning effort (cost efficient option)
 aider --model openai/openai/o4-mini-high
 {{< /highlight >}}
 
-For best results using only free LBL-hosted models use the following:
+For best results using only free-to-use LBL-hosted models use the following:
 
 {{< highlight "bash" >}}
 aider --model openai/lbl/cborg-coder --edit-format whole

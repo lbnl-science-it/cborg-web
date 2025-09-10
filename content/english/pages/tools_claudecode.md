@@ -10,16 +10,21 @@ draft: false
 
 #### 1. Set the following variables in your environment:
 
+Note that using the "official" model names as per below is recommended so that Claude Code calculates costs correctly.  Use of aliases e.g. anthropic/claude-sonnet will work but the tools' cost estimates may be incorrect.
+
 {{< highlight bash >}} 
 # set authorization and base URL
 export ANTHROPIC_AUTH_TOKEN=$CBORG_API_KEY
 export ANTHROPIC_BASE_URL=https://api.cborg.lbl.gov
 
-# set fast model; alternative=anthropic/claude-sonnet (more expensive)
-export ANTHROPIC_SMALL_FAST_MODEL=anthropic/claude-haiku
+# set fast model - this is only used for minor tasks like documentation
+export ANTHROPIC_SMALL_FAST_MODEL=claude-3-5-haiku-latest
 
-# set main model; alternative=anthropic/claude-opus (more expensive)
-export ANTHROPIC_MODEL=anthropic/claude-sonnet
+# set main model - sonnet is recommended
+export ANTHROPIC_MODEL=claude-sonnet-4-0
+
+# alternative setting for main model - beware of expense!
+export ANTHROPIC_MODEL=claude-opus-4-1
 
 # recommended setting
 export DISABLE_NON_ESSENTIAL_MODEL_CALLS=1
