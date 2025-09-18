@@ -143,6 +143,12 @@ weight = 2
 name = "Request API Key"
 pageRef = "/api_request"
 
+[[main]]
+parent = "API"
+weight = 3
+name = "Request API Budget Allocation"
+pageRef = "/api_projectkey"
+
 # footer menu
 [[footer]]
 name = "About"
