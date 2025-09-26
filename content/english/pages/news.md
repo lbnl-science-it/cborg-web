@@ -11,18 +11,20 @@ draft: false
 ## Current Status
 
 {{< notice "note" >}}
-** **B50 Maintenance Notice**: 
+** **Maintenance Notice**: 
 
-Due to scheduled power systems maintenance in the Building 50 data center, _CBorg 'on-prem' models will temporarily redirect to cloud-based equivalents with API charges waived_. Power systems maintenance is expected to conclude by **September 4th**. Refer to the following table for the temporary configuration:
+Due to recent system changes, the self-hosted models for CBorg are still being restored.
+
+Some 'on-prem' models are redirecting to cloud-based equivalents with API charges waived. Refer to the following table for the temporary configuration:
 
 | Model              | Temporary Location    |
 | ---------          | --------------------  |
 | CBorg Chat         | Llama 4 Scout on AWS Bedrock  | 
 | CBorg Vision       | Llama 4 Scout on AWS Bedrock            | 
-| CBorg Coder        | gpt-oss-120b on Google Vertex AI reasoning_effort=high       | 
+| CBorg Coder        | On-prem Berkelium H100       | 
 | CBorg Coder Base   | Not available - Suggested replacement: gcp/codestral    | 
-| CBorg Deepthought  | gpt-oss-120b on Google Vertex AI reasoning_effort=high        | 
-| CBorg Mini         | gpt-oss-20b on Google Vertex AI reasoning_effort=high         | 
+| CBorg Deepthought  | On-prem Berkelium H100        | 
+| CBorg Mini         | On-prem Berkelium H100         | 
 | nomic-embed-text   | Google Cloud VM with NVIDIA T4 GPU      | 
 | granite-vision     | Not available         | 
 | gemma3n            | Not available         | 
@@ -30,6 +32,13 @@ Due to scheduled power systems maintenance in the Building 50 data center, _CBor
 {{< /notice >}}
 
 ## Recent Updates
+
+_Sept 26th, 2025_
+
+- gpt-5-codex model is now available via API and with OpenAI Codex CLI
+- On-prem inference of gpt-oss models is restored
+- Adjusted system prompts for CBorg Coder and CBorg Deepthought in CBorg Chat
+- Corrected a parameter misconfiguration of CBorg Coder causing suboptimal reasoning performance on CBorg Chat
 
 _Sept 9th, 2025_
 
