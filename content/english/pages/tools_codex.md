@@ -28,6 +28,14 @@ cd my-project
 codex
 {{< /highlight >}}
 
-**Note:** The default model is o4-mini (recommended). The model can be configured in a .codex file or passing the --model argument.
+**Note:** The default model is o4-mini. 
+
+The gpt-5-codex model is also supported and is recommended for best performance.
+
+The model can be configured in a .codex file or passing the --model argument., e.g.
+
+{{< highlight bash >}}
+alias codex=codex -m gpt-5-codex
+{{< /highlight >}}
 
 For more information see [OpenAI Codex Github](https://github.com/openai/codex)
