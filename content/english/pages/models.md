@@ -23,6 +23,7 @@ Note: This list changes frequently - please check back here for updates.
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 5             | 272K            | Y       | $$     | E       |
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 5 Mini        | 272K            | Y       | $      | E       |
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 5 Nano        | 272K            | Y       | $      | E       |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 5 Codex       | 272K            | Y       | $$     | E       |
 | Microsoft Azure Cloud    | OpenAI         | o3                    | 200K            | Y       | $$$    | E       |
 | Microsoft Azure Cloud    | OpenAI         | o3 Mini               | 200K            | N       | $$     | E       |
 | Microsoft Azure Cloud    | OpenAI         | o3 Mini High          | 200K            | N       | $$$    | E       |
