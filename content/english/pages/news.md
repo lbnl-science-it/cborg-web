@@ -10,28 +10,13 @@ draft: false
 
 ## Current Status
 
-{{< notice "note" >}}
-** **Maintenance Notice**: 
-
-Due to recent system changes, the self-hosted models for CBorg are still being restored.
-
-Some 'on-prem' models are redirecting to cloud-based equivalents with API charges waived. Refer to the following table for the temporary configuration:
-
-| Model              | Temporary Location    |
-| ---------          | --------------------  |
-| CBorg Chat         | Llama 4 Scout on AWS Bedrock  | 
-| CBorg Vision       | Llama 4 Scout on AWS Bedrock            | 
-| CBorg Coder        | On-prem Berkelium H100       | 
-| CBorg Coder Base   | Not available - Suggested replacement: gcp/codestral    | 
-| CBorg Deepthought  | On-prem Berkelium H100        | 
-| CBorg Mini         | On-prem Berkelium H100         | 
-| nomic-embed-text   | Google Cloud VM with NVIDIA T4 GPU      | 
-| granite-vision     | Not available         | 
-| gemma3n            | Not available         | 
-
-{{< /notice >}}
+All systems are operational.
 
 ## Recent Updates
+
+_Sept 29th, 2025_
+
+- Updated Claude Sonnet to version 4.5
 
 _Sept 26th, 2025_
 
