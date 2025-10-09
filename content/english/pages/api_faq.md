@@ -28,6 +28,8 @@ Assuming the API key is available in your user environment as $CBORG_API_KEY, yo
 curl --location 'https://api.cborg.lbl.gov/user/info' --header "Authorization: Bearer $CBORG_API_KEY"
 {{< /highlight >}}
 
+Note: You must allow up to 5 seconds since your last API call for spend logs to be written to the database.
+
 #### I reached my spend limit and free models don't work now!
 
 Please email [scienceit@lbl.gov](mailto:scienceit@lbl.gov) for assistance.
