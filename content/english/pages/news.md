@@ -14,6 +14,10 @@ All systems are operational.
 
 ## Recent Updates
 
+_Oct 9th, 2025_
+
+- Added Context7 MCP server to CBorg Chat as available agent tools
+
 _Sept 29th, 2025_
 
 - Updated Claude Sonnet to version 4.5
