@@ -146,6 +146,12 @@ pageRef = "/api_request"
 [[main]]
 parent = "API"
 weight = 3
+name = "Check API Key Spend"
+pageRef = "/api_spendcheck"
+
+[[main]]
+parent = "API"
+weight = 4
 name = "Request API Budget Allocation"
 pageRef = "/api_projectkey"
 
