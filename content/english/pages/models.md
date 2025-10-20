@@ -34,7 +34,7 @@ Note: This list changes frequently - please check back here for updates.
 | Google Cloud             | Google         | Gemini 2.0 Flash Lite | 1.0M            | Y       | $      | E       |
 | Google Cloud             | Qwen           | Qwen 3 Coder          | 256K            | Y       | $$     | E       |
 | Google Cloud             | Qwen           | Qwen 3                | 32K             | Y       | $      | E       |
-| Google Vertex AI         | Anthropic      | Claude 3.5 Haiku      | 200k            | Y       | $      | E       |
+| Google Vertex AI         | Anthropic      | Claude 4.5 Haiku      | 200k            | Y       | $      | E       |
 | Google Vertex AI         | Anthropic      | Claude 4.0 Sonnet     | 200k            | Y       | $$     | E       |
 | Google Vertex AI         | Anthropic      | Claude 4.1 Opus       | 200k            | Y       | $$$    | E       |
 | AWS Cloud                | Meta           | Llama 4 Scout         | 1.0M            | N       | $$     | E       |
@@ -67,6 +67,7 @@ Legacy Models (Please upgrade soon if you are using these)
 | Microsoft Azure Cloud    | OpenAI         | o1                   | 
 | Microsoft Azure Cloud    | OpenAI         | o1 Mini              |  
 | AWS Cloud                | Anthropic      | Claude 3.7 Sonnet    | 
+| AWS Cloud                | Anthropic      | Claude 3.5 Haiku     |
 | AWS Cloud                | Anthropic      | Claude 3.0 Haiku     |
 | AWS Cloud                | Anthropic      | Claude 3.0 Opus      |
 | Google Cloud             | Google         | Gemini 1.5 Pro       |
@@ -370,13 +371,11 @@ Our service connects to the enterprise version of Google Gemini. Inputs are not 
 - **Pricing Details**: [Gemini API Pricing](https://ai.google.dev/pricing)
 - **Terms of Service**: [Gemini API Additional Terms of Use](https://ai.google.dev/gemini-api/terms)
 
-#### Anthropic Claude 3.5 Haiku
+#### Anthropic Claude 4.5 Haiku
 
 Claude has excellent reasoning and code analysis capabilities compared to other leading models, but can be expensive in the largest variants. The 200K token context window is large compared to competitors. The Haiku version is suitable for short text summarization.
 
-**NOTE**: Pricing for Claude Haiku increased with the 3.5 release.
-
-- **Endpoint Location**: Amazon Web Services (US West 2)
+- **Endpoint Location**: AWS Bedrock and GCP Vertex AI
 - **Use Cases**: Chat, Text Summarization, Image Description
 - **Vision Support**: Yes
 - **Tool Support**: Yes
@@ -387,11 +386,11 @@ Claude has excellent reasoning and code analysis capabilities compared to other 
 - **Pricing Details**: [Anthropic API Pricing](https://aws.amazon.com/bedrock/pricing/)
 - **Terms of Service**: [Anthropic Commercial Terms of Service](https://www-cdn.anthropic.com/6b68a6508f0210c5fe08f0199caa05c4ee6fb4dc/Anthropic-on-Bedrock-Commercial-Terms-of-Service_Dec_2023.pdf)
 
-#### Anthropic Claude 4.0 Sonnet
+#### Anthropic Claude 4.5 Sonnet
 
 Claude has superior reasoning and code analysis capabilities compared to other leading models, but can be expensive in the largest variants. The 200K token context window is large compared to competitors. Sonnet 4.0 is the latest version with extended thinking (reasoning) available. Prompt caching is also supported.
 
-- **Endpoint Location**: Amazon Web Services (US West 2)
+- **Endpoint Location**: AWS Bedrock and GCP Vertex AI
 - **Use Cases**: Chat, Text Summarization, Image Description
 - **Vision Support**: Yes
 - **Tool Support**: Yes
@@ -484,5 +483,3 @@ in Markdown-formatted text.
 - **Input Length**: 1024 Characters
 - **API Model Name**: `wolfram/alpha`
 - **Terms of Service**: [Wolfram|Alpha Terms of Use](https://www.wolframalpha.com/termsofuse)
-
-

@@ -14,6 +14,10 @@ All systems are operational.
 
 ## Recent Updates
 
+_Oct 17th, 2025_
+
+- Added Claude 4.5 Haiku to CBorg Chat and API
+
 _Oct 9th, 2025_
 
 - Added Context7 MCP server to CBorg Chat as available agent tools

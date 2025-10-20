@@ -18,7 +18,7 @@ We run this benchmark with "background" enabled, meaning the model is given a de
 
 *Note: These findings are based on internal research and do not constitute an endorsement of any model for any specific purpose. This list will be updated frequently - please check back here for updates.*
 
-![SciCode Benchmark](/images/scicode_bench_20250930-3.jpg) 
+![SciCode Benchmark](/images/scicode_bench_20251017.jpg) 
 
 | Model                              | % Correct              | Cost        | Note  | Config                                       | Date       |
 | ------------------------           | ---------------------- | ----------- | ----  | -----------------------------------------    | ---------- |
@@ -42,8 +42,10 @@ We run this benchmark with "background" enabled, meaning the model is given a de
 | xai/grok-3-mini                    | 10.8%                  | $0.94       |       | xAI Grok 3 Mini                             | 2025-08-29 |
 | **gcp/gpt-oss-120b-high**          | 10.8%                  | $0.36       | ✅    | gpt-oss-120b reasoning_effort="high"         | 2025-08-24 |
 | **gcp/gpt-oss-20b-high**           | 9.3%                   | $0.19       | ✅    | gpt-oss-20b reasoning_effort="high"          | 2025-08-24 |
+| haiku-4-5-high                     | 9.3%                   | $4.25       |      | Anthropic Haiku 4.5 reasoning_effort="high"   | 2025-10-17 |
 | openai/o4-mini                     | 9.3%                   | $3.21       |       | OpenAI o4-mini reasoning_effort="high"       | 2025-08-22 |
 | openai/gpt-5                       | 7.6%                   | $9.60       | ⛔    | OpenAI gpt-5 non-reasoning                   | 2025-08-22 |
+| haiku-4-5                          | 7.6%                   | $1.99       |      | Anthropic Haiku 4.5                          | 2025-10-17 |
 | **openai/gpt-5-mini**              | 7.6%                   | $1.20       |      | OpenAI gpt-5-mini                            | 2025-08-22 |
 | google/gemini-flash-high           | 7.6%                   | $3.12       |      | Gemini 2.5 Flash reasoning_effort="high"     | 2025-08-22 |
 | xai/grok-3                         | 7.6%                   | $3.96       |      | xAI Grok 3                                   | 2025-08-23 |
@@ -52,7 +54,7 @@ We run this benchmark with "background" enabled, meaning the model is given a de
 | **gcp/gpt-oss-20b**                | 6.1%                   | $0.14       | ✅    | gpt-oss-20b                                  | 2025-08-22 |
 | openai/gpt-5-nano                  | 6.1%                   | $0.47       |      | OpenAI gpt-5-nano                            | 2025-08-22 |
 | deepseek-r1-0528                   | 6.1%                   | $10.00      | ⛔ ⚠️  | DeepSeek R1-0528 on GCP Vertex AI            | 2025-08-23 |
-| anthropic/claude-haiku             | 3%                     | $1.72       | ⛔    | Claude 3.5 Haiku                             | 2025-08-22 |
+| haiku-3-5                          | 3%                     | $1.72       | ⛔    | Claude 3.5 Haiku                             | 2025-08-22 |
 | gcp/codestral                      | 1.5%                   | $0.21       |      | Mistral AI Codestral                          | 2025-08-22 |
 | meta/llama-4-scout                 | 0.0%                   | $0.24       |      | Vertex AI Llama 4 Scout                        | 2025-08-22 |
 
