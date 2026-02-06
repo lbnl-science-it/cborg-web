@@ -61,7 +61,7 @@ PDF documents and text files can also be uploaded and added to the chat context 
 
 - Synthetic Data and Distillation: Some models do not permit use of the model to generate synthetic training data for further models. Users are responsible for complying with the [terms of use of each model](/models).
 
-- Legal Issues, Copyright Issues, Authorship Misattribution: Cyber Security has published a document providing [Guidance on using Generative AI Tools](https://commons.lbl.gov/display/cpp/Guidance+on+using+Generative+AI+tools). LBNL Staff should familiarize themselves with the issues described and contact IT Policy for any further questions.
+- Legal Issues, Copyright Issues, Authorship Misattribution: Cyber Security has published a document providing [Guidance on using Generative AI Tools](https://it.lbl.gov/itpolicy/policy/guidance-on-using-generative-ai-tools/). LBNL Staff should familiarize themselves with the issues described and contact IT Policy for any further questions.
 
 For further guidance on legal issues related to AI please consult the [LBL IT Policy](mailto:itpolicy@lbl.gov)
 
