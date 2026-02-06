@@ -20,10 +20,10 @@ Note: This list changes frequently - please check back here for updates.
 | LBL IT Division          | OpenAI         | GPT-OSS 120b          | 128K            | N       | N/C    | E       |
 | LBL IT Division          | OpenAI         | GPT-OSS 20b           | 128K            | N       | N/C    | E       |
 | LBL IT Division          | IBM            | Granite 3.2 Vision    | 32K             | N       | N/C    | E       |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 5             | 272K            | Y       | $$     | E       |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 5.1           | 272K            | Y       | $$     | E       |
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 5 Mini        | 272K            | Y       | $      | E       |
 | Microsoft Azure Cloud    | OpenAI         | ChatGPT 5 Nano        | 272K            | Y       | $      | E       |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 5 Codex       | 272K            | Y       | $$     | E       |
+| Microsoft Azure Cloud    | OpenAI         | ChatGPT 5.1 Codex     | 272K            | Y       | $$     | E       |
 | Microsoft Azure Cloud    | OpenAI         | o3                    | 200K            | Y       | $$$    | E       |
 | Microsoft Azure Cloud    | OpenAI         | o3 Mini               | 200K            | N       | $$     | E       |
 | Microsoft Azure Cloud    | OpenAI         | o3 Mini High          | 200K            | N       | $$$    | E       |
@@ -35,8 +35,8 @@ Note: This list changes frequently - please check back here for updates.
 | Google Cloud             | Qwen           | Qwen 3 Coder          | 256K            | Y       | $$     | E       |
 | Google Cloud             | Qwen           | Qwen 3                | 32K             | Y       | $      | E       |
 | Google Vertex AI         | Anthropic      | Claude 4.5 Haiku      | 200k            | Y       | $      | E       |
-| Google Vertex AI         | Anthropic      | Claude 4.0 Sonnet     | 200k            | Y       | $$     | E       |
-| Google Vertex AI         | Anthropic      | Claude 4.1 Opus       | 200k            | Y       | $$$    | E       |
+| Google Vertex AI         | Anthropic      | Claude 4.5 Sonnet     | 200k            | Y       | $$     | E       |
+| Google Vertex AI         | Anthropic      | Claude 4.5 Opus       | 200k            | Y       | $$$    | E       |
 | AWS Cloud                | Meta           | Llama 4 Scout         | 1.0M            | N       | $$     | E       |
 | AWS Cloud                | Meta           | Llama 4 Maverik       | 128k            | N       | $      | E       |
 | Microsoft Azure Cloud    | xAI            | Grok 3                | 128K            | Y       | $$$    | E       |
@@ -200,7 +200,7 @@ version of each model provider, as follows:
 | `/anthropic/claude:latest`   | `anthropic/claude-sonnet`  | 
 | `/google/gemini:latest`      | `google/gemini-pro`        | 
 
-#### OpenAI ChatGPT 5
+#### OpenAI ChatGPT 5/5.1
 
 Latest edition of ChatGPT from OpenAI. Mini and Nano variants are also available (-mini and -nano model names)
 
@@ -356,6 +356,21 @@ Our service connects to the enterprise version of Google Gemini. Inputs are not 
 - **Pricing Details**: [Gemini API Pricing](https://ai.google.dev/pricing)
 - **Terms of Service**: [Gemini API Additional Terms of Use](https://ai.google.dev/gemini-api/terms)
 
+##### Google Gemini 3.0 Pro
+
+Our service connects to the enterprise version of Google Gemini. Inputs are not used by Google for training of future AI models.
+
+- **Endpoint Location**: Google Cloud
+- **Use Cases**: Chat, Text Summarization, Image Description
+- **Vision Support**: Yes
+- **Tool Support**: Yes 
+- **Context Window**: 2.0M Tokens (Note: Limited to 16K in CBORG Chat)
+- **Cost per 1M Tokens (Input)**: $3.50
+- **Cost per 1M Tokens (Output)**: $7.00
+- **API Model Name**: `google/gemini-pro`
+- **Pricing Details**: [Gemini API Pricing](https://ai.google.dev/pricing)
+- **Terms of Service**: [Gemini API Additional Terms of Use](https://ai.google.dev/gemini-api/terms)
+
 ##### Google Gemini 2.5 Pro
 
 Our service connects to the enterprise version of Google Gemini. Inputs are not used by Google for training of future AI models.
@@ -394,24 +409,24 @@ Claude has superior reasoning and code analysis capabilities compared to other l
 - **Use Cases**: Chat, Text Summarization, Image Description
 - **Vision Support**: Yes
 - **Tool Support**: Yes
-- **Context Window**: 200k Tokens (Note: Limited to 16K in CBORG Chat)
+- **Context Window**: 200k Tokens
 - **Cost per 1M Tokens (Input)**: $3.00
 - **Cost per 1M Tokens (Output)**: $15.00
 - **API Model Name**: `anthropic/claude-sonnet`
 - **Pricing Details**: [Anthropic API Pricing](https://aws.amazon.com/bedrock/pricing/)
 - **Terms of Service**: [Anthropic Commercial Terms of Service](https://www-cdn.anthropic.com/6b68a6508f0210c5fe08f0199caa05c4ee6fb4dc/Anthropic-on-Bedrock-Commercial-Terms-of-Service_Dec_2023.pdf)
 
-#### Anthropic Claude 4.1 Opus
+#### Anthropic Claude 4.5 Opus
 
-Claude 4.1 Opus is the newest version of Anthropic's flagship model.
+Claude 4.5 Opus is the newest version of Anthropic's flagship model.
 
 - **Endpoint Location**: Amazon Web Services (US West 2)
 - **Use Cases**: Chat, Text Summarization, Image Description
 - **Vision Support**: Yes
 - **Tool Support**: Yes
-- **Context Window**: 200k Tokens (Note: Limited to 4096 in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $15.00
-- **Cost per 1M Tokens (Output)**: $75.00
+- **Context Window**: 200k Tokens
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
 - **API Model Name**: `anthropic/claude-opus`
 - **Pricing Details**: [Anthropic API Pricing](https://aws.amazon.com/bedrock/pricing/)
 - **Terms of Service**: [Anthropic Commercial Terms of Service](https://www-cdn.anthropic.com/6b68a6508f0210c5fe08f0199caa05c4ee6fb4dc/Anthropic-on-Bedrock-Commercial-Terms-of-Service_Dec_2023.pdf)
