@@ -18,46 +18,61 @@ We run this benchmark with "background" enabled, meaning the model is given a de
 
 *Note: These findings are based on internal research and do not constitute an endorsement of any model for any specific purpose. This list will be updated frequently - please check back here for updates.*
 
-![SciCode Benchmark](/images/scicode_bench_20251017.jpg) 
+![SciCode Benchmark](/images/scicode_bench_20260123.png) 
 
 | Model                              | % Correct              | Cost        | Note  | Config                                       | Date       |
 | ------------------------           | ---------------------- | ----------- | ----  | -----------------------------------------    | ---------- |
-| **google/gemini-pro-high**         | 16.9%                  | $12.60      | ✅    | Gemini 2.5 Pro reasoning_effort="high"       | 2025-08-22 |
-| openai/gpt-5-high                  | 16.9%                  | $16.80      |       | OpenAI gpt-5 reasoning_effort="high"       | 2025-09-26 |
-| **claude-sonnet-4-5-high**         | 15.4%                  | $11.25      | ✅    | Sonnet 4.5 reasoning_budget=8192             | 2025-09-30 |
-| openai/gpt-5-codex                 | 13.8%                  | $14.35      |      | OpenAI gpt-5-codex                           | 2025-09-26 |
-| **claude-sonnet-4-5**              | 13.8%                  | $5.47       | ✅     | Sonnet 4.5                                  | 2025-09-30 |
+| gemini-3-flash-high                | 24.6%                  | $9.77       | ✅    | Gemini 3 Flash reasoning_effort="high"       | 2026-01-23 |
+| claude-opus-4-5-high               | 24.6%                  | $26.37      |       | Opus 4.5 reasoning_effort="high"             | 2025-12-02 |
+| gemini-3.0-pro-preview             | 21.5%                  | $27.63      |       | Gemini 3.0 Pro Preview                      | 2025-12-02 |
+| gemini-3-flash                     | 18.5%                  | $0.28       | ✅    | Gemini 3 Flash                               | 2026-01-23 |
+| gpt-5-1-codex-max                  | 18.5%                  | $7.72       |       | OpenAI gpt-5-1-codex                         | 2026-01-23 |
+| claude-opus-4-5                    | 18.5%                  | $10.78      |       | Opus 4.5                                     | 2025-12-02 |
+| gemini-2.5-pro-high                | 16.9%                  | $12.60      |       | Gemini 2.5 Pro reasoning_effort="high"       | 2025-08-22 |
+| gpt-5-high                         | 16.9%                  | $16.80      |       | OpenAI gpt-5 reasoning_effort="high"       | 2025-09-26 |
+| gpt-5.2                            | 15.4%                  | $3.87       |       | OpenAI GPT 5.2                                | 2026-01-23 |
+| glm-4.7                            | 15.4%                  | $7.97       | ⚠️     | GLM 4.7 on GCP Vertex AI                     | 2026-01-23 |
+| claude-sonnet-4-5-high             | 15.4%                  | $11.25      |       | Sonnet 4.5 reasoning_budget=8192             | 2025-09-30 |
+| claude-sonnet-4-5                  | 13.8%                  | $5.47       |       | Sonnet 4.5                                  | 2025-09-30 |
+| gpt-5-codex                        | 13.8%                  | $14.35      |      | OpenAI gpt-5-codex                           | 2025-09-26 |
 | claude-sonnet-4-high               | 13.8%                  | $10.49      |       | Sonnet 4.0 reasoning_budget=8192             | 2025-08-22 |
-| google/gemini-pro                  | 13.8%                  | $25.33      | ⛔    | Gemini 2.5 Pro                               | 2025-08-22 |
-| xai/grok-4-0709                    | 13.8%                  | $7.13       | 😢   | xAI Grok 4 0709 (unable to complete)          | 2025-08-24 |
-| **openai/gpt-5-nano-high**         | 12.3%                  | $1.09       | ✅   | OpenAI gpt-5-nano reasoning_effort="high"     | 2025-09-26 |
+| gemini-2.5-pro                     | 13.8%                  | $25.33      |       | Gemini 2.5 Pro                               | 2025-08-22 |
+| gpt-5-1-codex                      | 13.8%                  | >$40        | 😢    | OpenAI gpt-5-1-codex (unable to complete)    | 2025-12-02 |
+| grok-4-0709                        | 13.8%                  | $7.13       | 😢   | xAI Grok 4 0709 (unable to complete)          | 2025-08-24 |
+| gpt-5-nano-high                    | 12.3%                  | $1.09       |      | OpenAI gpt-5-nano reasoning_effort="high"     | 2025-09-26 |
+| qwen-3-coder                       | 12.3%                  | $1.50       | ⚠️    | qwen3-coder-480b-a35b-instruct               | 2025-08-22 |
+| kimi-k2-thinking                   | 12.3%                  | $4.85       | ⚠️    | qwen3-coder-480b-a35b-instruct               | 2025-08-22 |
 | claude-sonnet-4                    | 12.3%                  | $5.32       |       | Sonnet 4.0 reasoning=false                   | 2025-08-22 |
-| claude-opus-4-1-high               | 12.3%                  | $45.00      | ⛔    | Opus 4.1 reasoning_budget=8192               | 2025-08-22 |
 | claude-opus-4-1                    | 12.3%                  | $28.85      |       | Opus 4.1 reasoning=false                     | 2025-08-22 |
-| gcp/qwen-3-coder                   | 12.3%                  | $1.50       | ⚠️    | qwen3-coder-480b-a35b-instruct               | 2025-08-22 |
-| openai/o3-high                     | 10.8%                  | $6.14       |      | OpenAI o3 reasoning_effort="high"            | 2025-08-22 |
-| openai/gpt-5-mini-high             | 10.8%                  | $3.49       |      | OpenAI gpt-5-mini reasoning_effort="high"      | 2025-09-26 |
-| azure/deepseek-r1                  | 10.8%                  | $10.00      | ⛔ ⚠️ | Azure Foundry MSAI-DS-R1                     | 2025-08-23 |
-| xai/grok-code-fast- 1              | 10.8%                  | $2.09       |       | xAI Code Fast 1                             | 2025-08-29 |
-| xai/grok-3-mini                    | 10.8%                  | $0.94       |       | xAI Grok 3 Mini                             | 2025-08-29 |
-| **gcp/gpt-oss-120b-high**          | 10.8%                  | $0.36       | ✅    | gpt-oss-120b reasoning_effort="high"         | 2025-08-24 |
-| **gcp/gpt-oss-20b-high**           | 9.3%                   | $0.19       | ✅    | gpt-oss-20b reasoning_effort="high"          | 2025-08-24 |
+| claude-opus-4-1-high               | 12.3%                  | $45.00      | ⛔    | Opus 4.1 reasoning_budget=8192               | 2025-08-22 |
+| deepseek-3.2                       | 10.8%                  | $0.76       | ⚠️    | Deepseek 3.2 on GCP Vertex AI                | 2026-01-23 |
+| gpt-oss-120b-high                  | 10.8%                  | $0.36       |      | gpt-oss-120b reasoning_effort="high"         | 2025-08-24 |
+| grok-3-mini                        | 10.8%                  | $0.94       |       | xAI Grok 3 Mini                             | 2025-08-29 |
+| grok-code-fast-1                   | 10.8%                  | $2.09       |       | xAI Code Fast 1                             | 2025-08-29 |
+| gpt-5-mini-high                    | 10.8%                  | $3.49       |      | OpenAI gpt-5-mini reasoning_effort="high"      | 2025-09-26 |
+| o3-high                            | 10.8%                  | $6.14       |      | OpenAI o3 reasoning_effort="high"            | 2025-08-22 |
+| gpt-oss-20b-high                   | 9.3%                   | $0.19       | ✅    | gpt-oss-20b reasoning_effort="high"          | 2025-08-24 |
+| o4-mini                            | 9.3%                   | $3.21       |      | OpenAI o4-mini reasoning_effort="high"       | 2025-08-22 |
 | haiku-4-5-high                     | 9.3%                   | $4.25       |      | Anthropic Haiku 4.5 reasoning_effort="high"   | 2025-10-17 |
-| openai/o4-mini                     | 9.3%                   | $3.21       |       | OpenAI o4-mini reasoning_effort="high"       | 2025-08-22 |
-| openai/gpt-5                       | 7.6%                   | $9.60       | ⛔    | OpenAI gpt-5 non-reasoning                   | 2025-08-22 |
+| gpt-oss-20b                        | 6.1%                   | $0.14       | ✅   | gpt-oss-20b                                  | 2025-08-22 |
+| llama-4-maverick                   | 7.6%                   | $0.24       |      | Vertex AI Llama 4 Maverick                     | 2025-08-24 |
+| gpt-oss-120b                       | 7.6%                   | $0.35       |      | gpt-oss-120b                                 | 2025-08-22 |
+| gpt-5-mini                         | 7.6%                   | $1.20       |      | OpenAI gpt-5-mini                            | 2025-08-22 |
 | haiku-4-5                          | 7.6%                   | $1.99       |      | Anthropic Haiku 4.5                          | 2025-10-17 |
-| **openai/gpt-5-mini**              | 7.6%                   | $1.20       |      | OpenAI gpt-5-mini                            | 2025-08-22 |
-| google/gemini-flash-high           | 7.6%                   | $3.12       |      | Gemini 2.5 Flash reasoning_effort="high"     | 2025-08-22 |
-| xai/grok-3                         | 7.6%                   | $3.96       |      | xAI Grok 3                                   | 2025-08-23 |
-| meta/llama-4-maverick              | 7.6%                   | $0.24       |      | Vertex AI Llama 4 Maverick                     | 2025-08-24 |
-| gcp/gpt-oss-120b                   | 7.6%                   | $0.35       |      | gpt-oss-120b                                 | 2025-08-22 |
-| **gcp/gpt-oss-20b**                | 6.1%                   | $0.14       | ✅    | gpt-oss-20b                                  | 2025-08-22 |
-| openai/gpt-5-nano                  | 6.1%                   | $0.47       |      | OpenAI gpt-5-nano                            | 2025-08-22 |
-| deepseek-r1-0528                   | 6.1%                   | $10.00      | ⛔ ⚠️  | DeepSeek R1-0528 on GCP Vertex AI            | 2025-08-23 |
+| gemini-2.5-flash-high              | 7.6%                   | $3.12       |      | Gemini 2.5 Flash reasoning_effort="high"     | 2025-08-22 |
+| grok-3                             | 7.6%                   | $3.96       |      | xAI Grok 3                                   | 2025-08-23 |
+| gpt-5                              | 7.6%                   | $9.60       |     | OpenAI gpt-5 non-reasoning                   | 2025-08-22 |
+| gpt-5-nano                         | 6.1%                   | $0.47       |      | OpenAI gpt-5-nano                            | 2025-08-22 |
+| deepseek-r1-0528                   | 6.1%                   | $10.00      | ⛔ ⚠️ | DeepSeek R1-0528 on GCP Vertex AI            | 2025-08-23 |
 | haiku-3-5                          | 3%                     | $1.72       | ⛔    | Claude 3.5 Haiku                             | 2025-08-22 |
-| gcp/codestral                      | 1.5%                   | $0.21       |      | Mistral AI Codestral                          | 2025-08-22 |
-| meta/llama-4-scout                 | 0.0%                   | $0.24       |      | Vertex AI Llama 4 Scout                        | 2025-08-22 |
+| codestral                          | 1.5%                   | $0.21       |       | Mistral AI Codestral                          | 2025-08-22 |
+| llama-4-scout                      | 0.0%                   | $0.24       | ⛔    | Vertex AI Llama 4 Scout                        | 2025-08-22 |
 
+### Discontinued Models
+
+| Model                              | % Correct              | Cost        | Note  | Config                                       | Date       |
+| ------------------------           | ---------------------- | ----------- | ----  | -----------------------------------------    | ---------- |
+| azure/deepseek-r1                  | 10.8%                  | $10.00      | ⛔ ⚠️ | Azure Foundry MSAI-DS-R1                     | 2025-08-23 |
 
 ### Explanation of Notes
 
@@ -80,6 +95,10 @@ We run this benchmark with "background" enabled, meaning the model is given a de
 **lbl/cborg-chat**: llama-4-scout
 
 ### Changelog
+
+_Dec 2nd, 2025_
+
+- Added results for Claude Opus 4.5 and Gemini 3.0 Pro Preview
 
 _Sept 30th, 2025_
 
