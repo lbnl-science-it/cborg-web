@@ -98,6 +98,12 @@ pageRef = "/tools_codex"
 weight = -6
 
 [[main]]
+name = "Opencode CLI"
+parent = "Coding"
+pageRef = "/tools_opencode"
+weight = -6
+
+[[main]]
 name = "ClaudeCode"
 parent = "Coding"
 pageRef = "/tools_claudecode"
