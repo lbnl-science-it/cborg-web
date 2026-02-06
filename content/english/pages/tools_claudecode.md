@@ -18,13 +18,14 @@ export ANTHROPIC_AUTH_TOKEN=$CBORG_API_KEY
 export ANTHROPIC_BASE_URL=https://api.cborg.lbl.gov
 
 # set fast model - this is only used for minor tasks like documentation
-export ANTHROPIC_SMALL_FAST_MODEL=claude-3-5-haiku-latest
+export ANTHROPIC_SMALL_FAST_MODEL=claude-haiku-4-5
 
 # set main model - sonnet is recommended
-export ANTHROPIC_MODEL=claude-sonnet-4-0
+# you can also try opus but its more expensive
+export ANTHROPIC_MODEL=claude-sonnet-4-5
 
-# alternative setting for main model - beware of expense!
-export ANTHROPIC_MODEL=claude-opus-4-1
+# alternative configuration (free to use with LBL-hosted model)
+export ANTHROPIC_MODEL=lbl/cborg-coder
 
 # recommended setting
 export DISABLE_NON_ESSENTIAL_MODEL_CALLS=1
@@ -32,9 +33,11 @@ export DISABLE_NON_ESSENTIAL_MODEL_CALLS=1
 # recommended setting
 export DISABLE_TELEMETRY=1
 
+# recommended setting for compatibility
+export CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1
+
 # recommended setting to reduce model throttling
-# however, can be set up to 64000 tokens
-# recommended to set to a reasonable limit
+# higher limits can be used but may cause prompts to be rejected
 export CLAUDE_CODE_MAX_OUTPUT_TOKENS=8192
 {{< /highlight >}}
 
