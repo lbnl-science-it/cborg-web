@@ -10,82 +10,197 @@ draft: false
 
 ## Available Models
 
+*Last updated: 2026-02-07*
+
+**Note:** This page is auto-generated from our current configuration and may contain inaccuracies. Confirm API configuration using the `/model/info` API call.
+
+**Model Licensing Terms**
+
+**Enterprise** = Model usage is licensed under UCOP and/or DOE negotiated enterprise agreements. Model provider will not use your data for training. Acceptable for use with Prudent-to-Protect (P2P) Information (e.g. pre-publication data). May be approved for protected R&D information including ECI or S&T Matrix as part of an approved Access Plan. Please contact [IT Policy](mailto:itpolicy@lbl.gov) for more information. 
+
+**Commercial** = Model usage is licensed under non-negotiated standard commercial agreements. Model providers will not use your data for training. Acceptable for use with non-sensitive open scientific data and pre-publication research. No S&T or ECI or anything with FN or sponsor-specified protections permitted. For details consult [IT Policy AI Tool Security Levels](https://docs.google.com/spreadsheets/d/1l-ZX0wAajcaQClKd6tAPxUDQUQhnj7CMTSYoR-J-cmc/edit?gid=0#gid=0)
+
 ### Chat and Vision Models
 
-Note: This list changes frequently - please check back here for updates.
+| Provider                 | Creator        | Name                           | Input/Output   | Vision  | Tools | Cost (I/O)         | License |
+| ------------------------ | :------------: | :----------------------------: | :------------: | :-----: | :---: | :----------------: | :-----: |
+| Amazon Bedrock           | Anthropic      | amazon/claude-haiku-3-5        | 200K / 8.192K  | N       | Y     | $0.80 / $4.00      | E       |
+| Amazon Bedrock           | Anthropic      | amazon/claude-haiku-4-5        | 200K / 64K     | Y       | Y     | $1.00 / $5.00      | E       |
+| Amazon Bedrock           | Anthropic      | amazon/claude-haiku-4-5-high   | 200K / 64K     | Y       | Y     | $1.00 / $5.00      | E       |
+| Amazon Bedrock           | Anthropic      | amazon/claude-opus-4           | 200K / 8.192K  | Y       | Y     | $15.00 / $75.00    | E       |
+| Amazon Bedrock           | Anthropic      | amazon/claude-opus-4-1         | 200K / 8.192K  | Y       | Y     | $15.00 / $75.00    | E       |
+| Amazon Bedrock           | Anthropic      | amazon/claude-opus-4-1-high    | 200K / 8.192K  | Y       | Y     | $15.00 / $75.00    | E       |
+| Amazon Bedrock           | Anthropic      | amazon/claude-opus-4-5         | 200K / 8.192K  | Y       | Y     | $5.00 / $25.00     | E       |
+| Amazon Bedrock           | Anthropic      | amazon/claude-opus-4-5-high    | 200K / 8.192K  | Y       | Y     | $5.00 / $25.00     | E       |
+| Amazon Bedrock           | Anthropic      | amazon/claude-opus-4-6         | 200K / 8.192K  | N       | N     | $5.00 / $25.00     | E       |
+| Amazon Bedrock           | Anthropic      | amazon/claude-opus-4-6-high    | 200K / 8.192K  | N       | N     | $5.00 / $25.00     | E       |
+| Amazon Bedrock           | Anthropic      | amazon/claude-opus-4-high      | 200K / 8.192K  | Y       | Y     | $15.00 / $75.00    | E       |
+| Amazon Bedrock           | Anthropic      | amazon/claude-sonnet-4         | 200K / 16.384K | Y       | Y     | $3.00 / $15.00     | E       |
+| Amazon Bedrock           | Anthropic      | amazon/claude-sonnet-4-5       | 200K / 16.384K | Y       | Y     | $3.00 / $15.00     | E       |
+| Amazon Bedrock           | Anthropic      | amazon/claude-sonnet-4-5-high  | 200K / 16.384K | Y       | Y     | $3.00 / $15.00     | E       |
+| Amazon Bedrock           | Anthropic      | amazon/claude-sonnet-4-high    | 200K / 16.384K | Y       | Y     | $3.00 / $15.00     | E       |
+| Amazon Bedrock           | Meta           | amazon/llama-4-maverick        | 128K / 4.096K  | N       | Y     | $0.24 / $0.97      | E       |
+| Amazon Bedrock           | Meta           | amazon/llama-4-scout           | 128K / 4.096K  | N       | Y     | $0.17 / $0.66      | E       |
+| Amazon Bedrock           | OpenAI         | amazon/gpt-oss-120b            | 128K / 128K    | N       | Y     | $0.15 / $0.60      | E       |
+| Amazon Bedrock           | OpenAI         | amazon/gpt-oss-20b             | 128K / 128K    | N       | Y     | $0.07 / $0.30      | E       |
+| Google Vertex AI         | Anthropic      | anthropic/claude-haiku         | 200K / 8.192K  | Y       | Y     | $1.00 / $5.00      | E       |
+| Google Vertex AI         | Anthropic      | anthropic/claude-haiku-high    | 200K / 8.192K  | Y       | Y     | $1.00 / $5.00      | E       |
+| Google Vertex AI         | Anthropic      | anthropic/claude-opus          | 200K / 8.192K  | N       | N     | $5.00 / $25.00     | E       |
+| Google Vertex AI         | Anthropic      | anthropic/claude-opus-high     | 200K / 8.192K  | N       | N     | $5.00 / $25.00     | E       |
+| Google Vertex AI         | Anthropic      | anthropic/claude-sonnet        | 200K / 16.384K | Y       | Y     | $3.00 / $15.00     | E       |
+| Google Vertex AI         | Anthropic      | anthropic/claude-sonnet-high   | 200K / 16.384K | Y       | Y     | $3.00 / $15.00     | E       |
+| Google Vertex AI         | Anthropic      | claude-3-5-haiku               | 200K / 8.192K  | N       | Y     | $1.00 / $5.00      | E       |
+| Google Vertex AI         | Anthropic      | claude-haiku-4-5               | 200K / 8.192K  | Y       | Y     | $1.00 / $5.00      | E       |
+| Google Vertex AI         | Anthropic      | claude-haiku-high-latest       | 200K / 8.192K  | Y       | Y     | $1.00 / $5.00      | E       |
+| Google Vertex AI         | Anthropic      | claude-haiku-latest            | 200K / 8.192K  | Y       | Y     | $1.00 / $5.00      | E       |
+| Google Vertex AI         | Anthropic      | claude-opus-4-0                | 200K / 8.192K  | Y       | Y     | $15.00 / $75.00    | E       |
+| Google Vertex AI         | Anthropic      | claude-opus-4-1                | 200K / 8.192K  | Y       | Y     | $15.00 / $75.00    | E       |
+| Google Vertex AI         | Anthropic      | claude-opus-4-5                | 200K / 8.192K  | Y       | Y     | $5.00 / $25.00     | E       |
+| Google Vertex AI         | Anthropic      | claude-opus-4-6                | 200K / 8.192K  | N       | N     | $5.00 / $25.00     | E       |
+| Google Vertex AI         | Anthropic      | claude-opus-high-latest        | 200K / 8.192K  | N       | N     | $5.00 / $25.00     | E       |
+| Google Vertex AI         | Anthropic      | claude-opus-latest             | 200K / 8.192K  | N       | N     | $5.00 / $25.00     | E       |
+| Google Vertex AI         | Anthropic      | claude-sonnet-4-5              | 200K / 16.384K | Y       | Y     | $3.00 / $15.00     | E       |
+| Google Vertex AI         | Anthropic      | claude-sonnet-high-latest      | 200K / 16.384K | Y       | Y     | $3.00 / $15.00     | E       |
+| Google Vertex AI         | Anthropic      | claude-sonnet-latest           | 200K / 16.384K | Y       | Y     | $3.00 / $15.00     | E       |
+| Google Vertex AI         | Anthropic      | google/claude-haiku-3-5        | 200K / 8.192K  | N       | Y     | $1.00 / $5.00      | E       |
+| Google Vertex AI         | Anthropic      | google/claude-haiku-4-5        | 200K / 8.192K  | Y       | Y     | $1.00 / $5.00      | E       |
+| Google Vertex AI         | Anthropic      | google/claude-haiku-4-5-high   | 200K / 8.192K  | Y       | Y     | $1.00 / $5.00      | E       |
+| Google Vertex AI         | Anthropic      | google/claude-opus-4           | 200K / 8.192K  | Y       | Y     | $15.00 / $75.00    | E       |
+| Google Vertex AI         | Anthropic      | google/claude-opus-4-1         | 200K / 8.192K  | Y       | Y     | $15.00 / $75.00    | E       |
+| Google Vertex AI         | Anthropic      | google/claude-opus-4-1-high    | 200K / 8.192K  | Y       | Y     | $15.00 / $75.00    | E       |
+| Google Vertex AI         | Anthropic      | google/claude-opus-4-5         | 200K / 8.192K  | Y       | Y     | $5.00 / $25.00     | E       |
+| Google Vertex AI         | Anthropic      | google/claude-opus-4-5-high    | 200K / 8.192K  | Y       | Y     | $5.00 / $25.00     | E       |
+| Google Vertex AI         | Anthropic      | google/claude-opus-4-6         | 200K / 8.192K  | N       | N     | $5.00 / $25.00     | E       |
+| Google Vertex AI         | Anthropic      | google/claude-opus-4-6-high    | 200K / 8.192K  | N       | N     | $5.00 / $25.00     | E       |
+| Google Vertex AI         | Anthropic      | google/claude-opus-4-high      | 200K / 8.192K  | Y       | Y     | $15.00 / $75.00    | E       |
+| Google Vertex AI         | Anthropic      | google/claude-sonnet-4         | 200K / 16.384K | Y       | Y     | $3.00 / $15.00     | E       |
+| Google Vertex AI         | Anthropic      | google/claude-sonnet-4-5       | 200K / 16.384K | Y       | Y     | $3.00 / $15.00     | E       |
+| Google Vertex AI         | Anthropic      | google/claude-sonnet-4-5-high  | 200K / 16.384K | Y       | Y     | $3.00 / $15.00     | E       |
+| Google Vertex AI         | Anthropic      | google/claude-sonnet-4-high    | 200K / 16.384K | Y       | Y     | $3.00 / $15.00     | E       |
+| Google Vertex AI         | DeepSeek       | google/deepseek-3.2            | 163.84K / 32.768K | N       | Y     | $0.56 / $1.68      | E       |
+| Google Vertex AI         | DeepSeek       | google/deepseek-r1             | 65.336K / 8.192K | N       | Y     | $1.35 / $5.40      | E       |
+| Google Vertex AI         | Google         | gemini-1.5-flash               | 1M / 8.192K    | Y       | Y     | $0.07 / $0.30      | E       |
+| Google Vertex AI         | Google         | gemini-1.5-pro                 | 2.09715M / 8.192K | Y       | Y     | $1.25 / $5.00      | E       |
+| Google Vertex AI         | Google         | gemini-2.0-flash               | 1.04858M / 8.192K | Y       | Y     | $0.10 / $0.40      | E       |
+| Google Vertex AI         | Google         | gemini-2.0-flash-lite          | 1.04858M / 8.192K | Y       | Y     | $0.07 / $0.30      | E       |
+| Google Vertex AI         | Google         | gemini-2.5-flash               | 1.04858M / 65.535K | Y       | Y     | $0.30 / $2.50      | E       |
+| Google Vertex AI         | Google         | gemini-2.5-flash-high          | 1.04858M / 65.535K | Y       | Y     | $0.30 / $2.50      | E       |
+| Google Vertex AI         | Google         | gemini-2.5-flash-image         | N/A / N/A      | N       | N     | $0 / $0            | E       |
+| Google Vertex AI         | Google         | gemini-2.5-flash-lite          | 1.04858M / 65.535K | Y       | Y     | $0.10 / $0.40      | E       |
+| Google Vertex AI         | Google         | gemini-2.5-pro                 | 1.04858M / 65.535K | Y       | Y     | $2.00 / $12.00     | E       |
+| Google Vertex AI         | Google         | gemini-2.5-pro-high            | 1.04858M / 65.535K | Y       | Y     | $2.00 / $12.00     | E       |
+| Google Vertex AI         | Google         | gemini-3-flash                 | 1.04858M / 65.535K | Y       | Y     | $0.50 / $3.00      | E       |
+| Google Vertex AI         | Google         | gemini-3-flash-high            | 1.04858M / 65.535K | Y       | Y     | $0.50 / $3.00      | E       |
+| Google Vertex AI         | Google         | gemini-3-pro                   | 1.04858M / 65.535K | Y       | Y     | $2.00 / $12.00     | E       |
+| Google Vertex AI         | Google         | gemini-3-pro-high              | 1.04858M / 65.535K | Y       | Y     | $2.00 / $12.00     | E       |
+| Google Vertex AI         | Google         | gemini-flash-high-latest       | 1.04858M / 65.535K | Y       | Y     | $0.50 / $3.00      | E       |
+| Google Vertex AI         | Google         | gemini-flash-image-latest      | N/A / N/A      | N       | N     | $0 / $0            | E       |
+| Google Vertex AI         | Google         | gemini-flash-latest            | 1.04858M / 65.535K | Y       | Y     | $0.50 / $3.00      | E       |
+| Google Vertex AI         | Google         | gemini-pro-high-latest         | 1.04858M / 65.535K | Y       | Y     | $2.00 / $12.00     | E       |
+| Google Vertex AI         | Google         | gemini-pro-latest              | 1.04858M / 65.535K | Y       | Y     | $2.00 / $12.00     | E       |
+| Google Vertex AI         | Mistral AI     | google/codestral               | 128K / 128K    | N       | Y     | $0.20 / $0.60      | E       |
+| Google Vertex AI         | OpenAI         | google/gpt-oss-120b            | 131.072K / 32.768K | N       | N     | $0 / $0            | E       |
+| Google Vertex AI         | OpenAI         | google/gpt-oss-120b-high       | 131.072K / 32.768K | N       | N     | $0 / $0            | E       |
+| Google Vertex AI         | OpenAI         | google/gpt-oss-20b             | 131.072K / 32.768K | N       | N     | $0.07 / $0.30      | E       |
+| Google Vertex AI         | OpenAI         | google/gpt-oss-20b-high        | 131.072K / 32.768K | N       | N     | $0.07 / $0.30      | E       |
+| Google Vertex AI         | Qwen           | google/qwen-3                  | 262.144K / 16.384K | N       | Y     | $0.25 / $1.00      | E       |
+| Google Vertex AI         | Qwen           | google/qwen-3-coder            | 262.144K / 32.768K | N       | Y     | $1.00 / $4.00      | E       |
+| Google Vertex AI         | Unknown        | google/glm-4.7                 | 200K / 128K    | N       | Y     | $0.60 / $2.20      | E       |
+| Google Vertex AI         | Unknown        | google/kimi-k2-thinking        | 256K / 256K    | N       | Y     | $0.60 / $2.50      | E       |
+| Google Vertex AI         | Unknown        | google/minimax-m2              | N/A / N/A      | N       | N     | $0 / $0            | E       |
+| LBL IT Division          | IBM            | lbl/granite-docling            | 8.192K / N/A   | N       | N     | $0 / $0            | E       |
+| LBL IT Division          | Meta           | Llama-4-Scout-17B-16E-Instruct | 131.072K / 8.192K | N       | N     | $0 / $0            | E       |
+| LBL IT Division          | Meta           | lbl/Llama-4-Scout-17B-16E-Instruct | 131.072K / 8.192K | N       | N     | $0 / $0            | E       |
+| LBL IT Division          | Meta           | lbl/llama                      | 131.072K / 8.192K | N       | N     | $0 / $0            | E       |
+| LBL IT Division          | Meta           | lbl/llama-4-scout              | 131.072K / 8.192K | N       | N     | $0 / $0            | E       |
+| LBL IT Division          | Meta           | meta/llama-4-scout             | 131.072K / 8.192K | N       | N     | $0 / $0            | E       |
+| LBL IT Division          | OpenAI         | gpt-oss-120b                   | 131.072K / 131.072K | N       | N     | $0 / $0            | E       |
+| LBL IT Division          | OpenAI         | gpt-oss-120b-high              | 131.072K / 131.072K | N       | N     | $0 / $0            | E       |
+| LBL IT Division          | OpenAI         | gpt-oss-20b                    | N/A / N/A      | N       | N     | $0 / $0            | E       |
+| LBL IT Division          | OpenAI         | gpt-oss-20b-high               | N/A / N/A      | N       | N     | $0 / $0            | E       |
+| LBL IT Division          | OpenAI         | lbl/gpt-oss-120b               | 131.072K / 131.072K | N       | N     | $0 / $0            | E       |
+| LBL IT Division          | OpenAI         | lbl/gpt-oss-120b-high          | 131.072K / 131.072K | N       | N     | $0 / $0            | E       |
+| LBL IT Division          | OpenAI         | lbl/gpt-oss-120b-medium        | 131.072K / 131.072K | N       | N     | $0 / $0            | E       |
+| LBL IT Division          | OpenAI         | lbl/gpt-oss-20b                | N/A / N/A      | N       | N     | $0 / $0            | E       |
+| LBL IT Division          | OpenAI         | lbl/gpt-oss-20b-high           | N/A / N/A      | N       | N     | $0 / $0            | E       |
+| LBL IT Division          | Unknown        | lbl/Nanonets-OCR               | N/A / N/A      | N       | N     | $0 / $0            | E       |
+| LBL IT Division          | Unknown        | lbl/jbei-publications-chat     | N/A / N/A      | N       | N     | $0 / $0            | E       |
+| Microsoft Azure          | OpenAI         | azure/gpt-oss-120b             | N/A / 131.072K | N       | N     | $0.15 / $0.60      | E       |
+| Microsoft Azure          | xAI            | azure/grok-3                   | N/A / N/A      | N       | N     | $3.00 / $15.00     | E       |
+| Microsoft Azure          | xAI            | azure/grok-3-mini              | N/A / N/A      | N       | N     | $0.25 / $1.27      | E       |
+| OpenAI                   | Google         | gemini-embedding-001           | N/A / N/A      | N       | N     | $0 / $0            | E       |
+| OpenAI                   | Meta           | google/llama-4-maverick        | N/A / N/A      | N       | N     | $0 / $0            | E       |
+| OpenAI                   | OpenAI         | gpt-4.1                        | 1.04758M / 32.768K | Y       | Y     | $2.00 / $8.00      | E       |
+| OpenAI                   | OpenAI         | gpt-4.1-mini                   | 1.04758M / 32.768K | Y       | Y     | $0.40 / $1.60      | E       |
+| OpenAI                   | OpenAI         | gpt-4.1-nano                   | 1.04758M / 32.768K | Y       | Y     | $0.10 / $0.40      | E       |
+| OpenAI                   | OpenAI         | gpt-4o                         | 128K / 16.384K | Y       | Y     | $2.50 / $10.00     | E       |
+| OpenAI                   | OpenAI         | gpt-4o-mini                    | 128K / 16.384K | Y       | Y     | $0.15 / $0.60      | E       |
+| OpenAI                   | OpenAI         | gpt-5                          | 272K / 128K    | Y       | Y     | $1.25 / $10.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5-chat                     | 128K / 16.384K | Y       | N     | $1.25 / $10.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5-codex                    | 272K / 128K    | Y       | Y     | $1.25 / $10.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5-high                     | 272K / 128K    | Y       | Y     | $1.25 / $10.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5-mini                     | 272K / 128K    | Y       | Y     | $0.25 / $2.00      | E       |
+| OpenAI                   | OpenAI         | gpt-5-mini-high                | 272K / 128K    | Y       | Y     | $0.25 / $2.00      | E       |
+| OpenAI                   | OpenAI         | gpt-5-nano                     | 272K / 128K    | Y       | Y     | $0.05 / $0.40      | E       |
+| OpenAI                   | OpenAI         | gpt-5-nano-high                | 272K / 128K    | Y       | Y     | $0.05 / $0.40      | E       |
+| OpenAI                   | OpenAI         | gpt-5.1                        | 272K / 128K    | Y       | Y     | $1.25 / $10.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5.1-chat                   | 128K / 16.384K | Y       | N     | $1.25 / $10.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5.1-codex                  | 272K / 128K    | Y       | Y     | $1.25 / $10.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5.1-codex-max              | 272K / 128K    | Y       | Y     | $1.25 / $10.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5.1-codex-mini             | 272K / 128K    | Y       | Y     | $0.25 / $2.00      | E       |
+| OpenAI                   | OpenAI         | gpt-5.1-high                   | 272K / 128K    | Y       | Y     | $1.25 / $10.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5.2                        | 272K / 128K    | Y       | Y     | $1.75 / $14.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5.2-chat                   | 128K / 16.384K | Y       | Y     | $1.75 / $14.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5.2-codex                  | 272K / 128K    | Y       | Y     | $1.75 / $14.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5.2-high                   | 272K / 128K    | Y       | Y     | $1.25 / $10.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5.2-pro                    | 272K / 128K    | Y       | Y     | $1.75 / $14.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5.2-xhigh                  | 272K / 128K    | Y       | Y     | $1.75 / $14.00     | E       |
+| OpenAI                   | OpenAI         | o1                             | 200K / 100K    | Y       | Y     | $15.00 / $60.00    | E       |
+| OpenAI                   | OpenAI         | o3                             | 200K / 100K    | Y       | Y     | $2.00 / $8.00      | E       |
+| OpenAI                   | OpenAI         | o3-high                        | 200K / 100K    | Y       | Y     | $2.00 / $8.00      | E       |
+| OpenAI                   | OpenAI         | o3-mini                        | 200K / 100K    | N       | Y     | $1.10 / $4.40      | E       |
+| OpenAI                   | OpenAI         | o3-mini-high                   | 200K / 100K    | N       | Y     | $1.10 / $4.40      | E       |
+| OpenAI                   | OpenAI         | o4-mini                        | 200K / 100K    | Y       | Y     | $1.10 / $4.40      | E       |
+| OpenAI                   | OpenAI         | o4-mini-high                   | 200K / 100K    | Y       | Y     | $1.10 / $4.40      | E       |
+| OpenAI                   | Unknown        | Nanonets-OCR                   | N/A / N/A      | N       | N     | $0 / $0            | E       |
+| OpenAI                   | Unknown        | o1-high                        | 200K / 100K    | Y       | Y     | $15.00 / $60.00    | E       |
+| OpenAI                   | Unknown        | o1-mini                        | 128K / 65.536K | Y       | N     | $1.10 / $4.40      | E       |
+| OpenAI                   | Unknown        | o1-mini-high                   | 128K / 65.536K | Y       | N     | $1.10 / $4.40      | E       |
+| OpenAI                   | Unknown        | text-embedding-004             | N/A / N/A      | N       | N     | $0 / $0            | E       |
+| xAI                      | xAI            | xai/grok-3                     | 131.072K / 131.072K | N       | Y     | $3.00 / $15.00     | C       |
+| xAI                      | xAI            | xai/grok-3-mini                | 131.072K / 131.072K | N       | Y     | $0.30 / $0.50      | C       |
+| xAI                      | xAI            | xai/grok-4-0709                | 256K / 256K    | N       | Y     | $3.00 / $15.00     | C       |
+| xAI                      | xAI            | xai/grok-4-1-fast              | 2M / 2M        | Y       | Y     | $0.20 / $0.50      | C       |
+| xAI                      | xAI            | xai/grok-4-1-fast-reasoning    | 2M / 2M        | Y       | Y     | $0.20 / $0.50      | C       |
+| xAI                      | xAI            | xai/grok-code-fast-1           | 256K / 256K    | N       | Y     | $0.20 / $1.50      | C       |
 
-| Model Endpoint Location  | Model Creator  | Model Name            | Context Length* | Vision  | Cost** | Security Level | 
-| ---------------          | :------------: | :--------:            | :-----:         | :---:   | :---:  | :-----: |
-| LBL IT Division          | Meta           | Llama 4 Scout FP8     | 500K            | N       | N/C    | E       |
-| LBL IT Division          | OpenAI         | GPT-OSS 120b          | 128K            | N       | N/C    | E       |
-| LBL IT Division          | OpenAI         | GPT-OSS 20b           | 128K            | N       | N/C    | E       |
-| LBL IT Division          | IBM            | Granite 3.2 Vision    | 32K             | N       | N/C    | E       |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 5.1           | 272K            | Y       | $$     | E       |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 5 Mini        | 272K            | Y       | $      | E       |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 5 Nano        | 272K            | Y       | $      | E       |
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 5.1 Codex     | 272K            | Y       | $$     | E       |
-| Microsoft Azure Cloud    | OpenAI         | o3                    | 200K            | Y       | $$$    | E       |
-| Microsoft Azure Cloud    | OpenAI         | o3 Mini               | 200K            | N       | $$     | E       |
-| Microsoft Azure Cloud    | OpenAI         | o3 Mini High          | 200K            | N       | $$$    | E       |
-| Microsoft Azure Cloud    | OpenAI         | o4 Mini               | 200K            | Y       | $$     | E       |
-| Microsoft Azure Cloud    | OpenAI         | DALL-E 3.0            | 4000            | N       | $$     | E       |
-| Google Cloud             | Google         | Gemini 2.5 Pro        | 1.0M            | Y       | $$$    | E       |
-| Google Cloud             | Google         | Gemini 2.5 Flash      | 1.0M            | Y       | $$     | E       |
-| Google Cloud             | Google         | Gemini 2.0 Flash Lite | 1.0M            | Y       | $      | E       |
-| Google Cloud             | Qwen           | Qwen 3 Coder          | 256K            | Y       | $$     | E       |
-| Google Cloud             | Qwen           | Qwen 3                | 32K             | Y       | $      | E       |
-| Google Vertex AI         | Anthropic      | Claude 4.5 Haiku      | 200k            | Y       | $      | E       |
-| Google Vertex AI         | Anthropic      | Claude 4.5 Sonnet     | 200k            | Y       | $$     | E       |
-| Google Vertex AI         | Anthropic      | Claude 4.5 Opus       | 200k            | Y       | $$$    | E       |
-| AWS Cloud                | Meta           | Llama 4 Scout         | 1.0M            | N       | $$     | E       |
-| AWS Cloud                | Meta           | Llama 4 Maverik       | 128k            | N       | $      | E       |
-| Microsoft Azure Cloud    | xAI            | Grok 3                | 128K            | Y       | $$$    | E       |
-| Microsoft Azure Cloud    | xAI            | Grok 3 Mini           | 128K            | Y       | $$     | E       |
-| xAI Cloud                | xAI            | Grok 4 0709           | 256K            | Y       | $$$    | C       |
-| xAI Cloud                | xAI            | Grok Code Fast 1      | 256K            | N       | $      | C       |
-| Wolfram Cloud            | Wolfram Research | Wolfram\|Alpha      | 1024            | N       | $      | C       |
+### Image Generation Models
 
-{{< notice "note" >}}
-** **Cost Explanation**: This column provides a rough order-of-magnitude estimate of costs associated with the model. Detailed cost data is provided further on this page. Cost for using commercial models are paid for by the IT Division. There is no cost to individual users at this time and no PID is required.
-{{< /notice >}}
-
-**Security Levels Explanation**
-
-**E** = Model usage is licensed under UCOP and/or DOE negotiated enterprise agreements. Model provider will not use your data for training. Acceptable for use with Prudent-to-Protect (P2P) Information (e.g. pre-publication data). May be approved for protected R&D information including ECI or S&T Matrix as part of an approved Access Plan. Please contact [IT Policy](mailto:itpolicy@lbl.gov) for more information. 
-
-**C** = Model usage is licensed under non-negotiated commercial agreements. Model providers will not use your data for training. Acceptable for use with Prudent-to-Protect (P2P) Information (e.g. pre-publication data). No S&T or ECI or anything with FN or sponsor-specified protections permitted. For details consult [IT Policy AI Tool Security Levels](https://docs.google.com/spreadsheets/d/1l-ZX0wAajcaQClKd6tAPxUDQUQhnj7CMTSYoR-J-cmc/edit?gid=0#gid=0)
-
-#### Legacy Models
-
-Legacy Models (Please upgrade soon if you are using these)
-
-| Model Endpoint Location  | Model Creator  | Model Name           |  
-| ---------------          | :------------: | :--------:           | 
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4.1          | 
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o           | 
-| Microsoft Azure Cloud    | OpenAI         | ChatGPT 4o Mini      | 
-| Microsoft Azure Cloud    | OpenAI         | o1                   | 
-| Microsoft Azure Cloud    | OpenAI         | o1 Mini              |  
-| AWS Cloud                | Anthropic      | Claude 3.7 Sonnet    | 
-| AWS Cloud                | Anthropic      | Claude 3.5 Haiku     |
-| AWS Cloud                | Anthropic      | Claude 3.0 Haiku     |
-| AWS Cloud                | Anthropic      | Claude 3.0 Opus      |
-| Google Cloud             | Google         | Gemini 1.5 Pro       |
-| AWS Cloud                | Meta           | Llama 3.1 405b       |
-| AWS Cloud                | Meta           | Llama 3.1 70b        |
-| AWS Cloud                | Meta           | Llama 3.1 8b         |
+| Provider                 | Creator        | Name                           | Input/Output   | Cost (I/O)         | License |
+| ------------------------ | :------------: | :----------------------------: | :------------: | :----------------: | :-----: |
+| Google Vertex AI         | Google         | gemini-3-pro-image             | 65.536K / 32.768K | $2.00 / $12.00     | E       |
+| Google Vertex AI         | Google         | gemini-pro-image-latest        | 65.536K / 32.768K | $2.00 / $12.00     | E       |
 
 ### Vector Embedding Models
 
-| Model Endpoint Location  | Model Creator      | Model Name       | Max Tokens | Embedding Dimensions | Cost**  | 
-| ---------------          | :------------:     | :--------:       | :-----:    | :---:                | :---: | 
-| LBNL IT Division         | Nomic.AI           | nomic-embed-text | 8192       | 768                  | Free  |
+| Provider                 | Creator            | Name                     | Max Tokens | Cost    |
+| ------------------------ | :----------------: | :----------------------: | :--------: | :-----: |
+| OpenAI                   | Unknown            | bge-m3                   | 8.192K     | Free    |
+| LBL IT Division          | Unknown            | lbl/bge-m3               | 8.192K     | Free    |
+| LBL IT Division          | Nomic.AI           | lbl/nomic-embed-text     | 8.192K     | Free    |
+| LBL IT Division          | Nomic.AI           | lbl/nomic-embed-vision   | 8.192K     | Free    |
+| OpenAI                   | Nomic.AI           | nomic-embed-text         | 8.192K     | Free    |
+| OpenAI                   | Nomic.AI           | nomic-embed-text:latest  | 8.192K     | Free    |
+| OpenAI                   | Nomic.AI           | nomic-embed-vision       | 8.192K     | Free    |
+| OpenAI                   | Nomic.AI           | nomic-embed-vision:latest | 8.192K     | Free    |
+| OpenAI                   | Unknown            | text-embedding-ada-002   | 8.191K     | $0.10   |
 
 ### Code Completion Models
 
-| Model Endpoint Location  | Model Creator           | Model Name           | Max Context | Cost**  | 
-| ---------------          | :------------:          | :--------:           | :-----:     | :---:   | 
-| LBNL IT Division         | Qwen 2.5 Coder Base     | lbl/cborg-coder-base | 32768       | N/C     |
+| Provider                 | Creator                 | Name                     | Max Context | Cost    |
+| ------------------------ | :---------------------: | :----------------------: | :---------: | :-----: |
+| LBL IT Division          | Google                  | codegemma                | 8.192K      | N/C     |
+| LBL IT Division          | Google                  | lbl/codegemma:2b         | 8.192K      | N/C     |
 
 ### LBL-Hosted Customized Models
 
@@ -93,408 +208,2028 @@ LBL-Hosted Customized Models use a customized system prompt on top of a base mod
 
 Note: API users can bypass the system prompt by accessing underlying models directly, if desired.
 
-| Model Endpoint Location  | Base Model         | Model Name         | Context Length* | Vision  | Cost**  | 
-| ---------------          | :---------------:  | :--------:         | :-----:         | :---:   | :---:   | 
-| LBL IT Division          | Llama 4 Scout FP8  | CBorg Chat         | 256K            | Y       | N/C    |
-| LBL IT Division          | GPT OSS 120b       | CBorg Coder        | 128K            | N       | N/C    |
-| LBL IT Division          | Granite 3.2 Vision | CBorg Vision       | 8K              | Y       | N/C    |
-| LBL IT Division          | GPT OSS 120b       | CBorg Deepthought  | 128K            | N       | N/C    |
+| Provider                 | Name                     | Underlying Model                        | Input/Output   | Vision  | Cost    |
+| ------------------------ | :----------------------: | :-------------------------------------: | :------------: | :-----: | :-----: |
+| LBL IT Division          | lbl/cborg-chat           | hosted_vllm/Llama-4-Scout-17B-16E-Instruct | 131.072K / 8.192K | N       | N/C     |
+| LBL IT Division          | lbl/cborg-chat:chat      | hosted_vllm/Llama-4-Scout-17B-16E-Instruct | 131.072K / 8.192K | N       | N/C     |
+| LBL IT Division          | lbl/cborg-chat:latest    | hosted_vllm/Llama-4-Scout-17B-16E-Instruct | 131.072K / 8.192K | N       | N/C     |
+| LBL IT Division          | lbl/cborg-coder          | hosted_vllm/gpt-oss-120b                | 131.072K / 131.072K | N       | N/C     |
+| LBL IT Division          | lbl/cborg-coder-base     | ollama/codegemma:2b                     | 8.192K / N/A   | N       | N/C     |
+| LBL IT Division          | lbl/cborg-coder-base:latest | ollama/codegemma:2b                     | 8.192K / N/A   | N       | N/C     |
+| LBL IT Division          | lbl/cborg-coder:chat     | hosted_vllm/gpt-oss-120b                | 131.072K / 131.072K | N       | N/C     |
+| LBL IT Division          | lbl/cborg-coder:latest   | hosted_vllm/gpt-oss-120b                | 131.072K / 131.072K | N       | N/C     |
+| LBL IT Division          | lbl/cborg-deepthought    | hosted_vllm/gpt-oss-120b                | 131.072K / 131.072K | N       | N/C     |
+| LBL IT Division          | lbl/cborg-deepthought:latest | hosted_vllm/gpt-oss-120b                | 131.072K / 131.072K | N       | N/C     |
+| LBL IT Division          | lbl/cborg-mini           | hosted_vllm/gpt-oss-20b                 | N/A / N/A      | N       | N/C     |
+| LBL IT Division          | lbl/cborg-mini:latest    | hosted_vllm/gpt-oss-20b                 | N/A / N/A      | N       | N/C     |
+| LBL IT Division          | lbl/cborg-ocr            | openai/Nanonets-OCR                     | N/A / N/A      | N       | N/C     |
+| LBL IT Division          | lbl/cborg-vision         | hosted_vllm/Llama-4-Scout-17B-16E-Instruct | 131.072K / 8.192K | N       | N/C     |
+| LBL IT Division          | lbl/cborg-vision:latest  | hosted_vllm/Llama-4-Scout-17B-16E-Instruct | 131.072K / 8.192K | N       | N/C     |
+
+{{< notice "note" >}}
+**Cost Explanation**: The Cost column provides a rough order-of-magnitude estimate of costs associated with the model. Detailed cost data is provided in the model details below. Cost for using commercial models are paid for by the IT Division. There is no cost to individual users at this time and no PID is required.
+{{< /notice >}}
 
 ## Understanding the Context Window Length
 
-The context length is a measure of the approximate number of words that a model can process as inputs. Some models support extremely long context lengths, such as Command R+ and ChatGPT 4-Omni (128K tokens), the Anthropic Claude models (200K) and Google Gemini 1.5 (1.0M Tokens). For a typical book with 300 words per page, the correspondence between pages and tokens is approximately as follows:
+The context length is a measure of the approximate number of words that a model can process as inputs. Some models support extremely long context lengths. For a typical book with 300 words per page, the correspondence between pages and tokens is approximately as follows:
 
-| Context Length | Pages of Text  | Model Support*       | 
-| :------------: | :------------: | :-----------:        |
-| 1.0M           | 2000           | Google Gemini 1.5    |
-| 200K           | 400            | Anthropic Claude     |
-| 128K           | 250            | ChatGPT 4, Mistral Large, Phi 3.5 |
-| 64K            | 128            |                      |
-| 32K            | 64             |                      |
-| 16K            | 32             | ChatGPT 3.5          |
-| 8K             | 16             | Llama 3 70B          |
-| 4K             | 8              |                      |
+| Context Length | Pages of Text  |
+| :------------: | :------------: |
+| 1.0M           | 2000           |
+| 200K           | 400            |
+| 128K           | 250            |
+| 64K            | 128            |
+| 32K            | 64             |
+| 16K            | 32             |
+| 8K             | 16             |
+| 4K             | 8              |
 
 When chatting with a model, your entire chat history of the session is fed into the context window with every message sent. Therefore, as you send more messages the context length will increase. Over time this can cause the cost of each message exchange to increase until the model's maximum token limit is reached.
 
-{{< notice "note" >}}
-* Context window sizes for commercially-hosted Generative AI models are reduced in CBORG Chat to limit excessive usage. To make use of the full-length of context windows please request an API key or engage with Science IT Consulting to discuss using cloud services with a PID recharge.
-{{< /notice >}}
-
 ## Model Information Details
 
-### LBL-Hosted Models
+### Amazon Bedrock
+
+Models hosted on Amazon Bedrock are provided under enterprise agreements. Your data will not be used for training.
+
+#### amazon/claude-haiku-3-5
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/claude-haiku-3-5`
+- **Underlying Model**: `bedrock/us.anthropic.claude-3-5-haiku-20241022-v1:0`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Tool Use, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $0.80
+- **Cost per 1M Tokens (Output)**: $4.00
+
+#### amazon/claude-haiku-4-5
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/claude-haiku-4-5`
+- **Underlying Model**: `bedrock/us.anthropic.claude-haiku-4-5-20251001-v1:0`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 64,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Cost per 1M Tokens (Input)**: $1.00
+- **Cost per 1M Tokens (Output)**: $5.00
+
+#### amazon/claude-haiku-4-5-high
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/claude-haiku-4-5-high`
+- **Underlying Model**: `bedrock/us.anthropic.claude-haiku-4-5-20251001-v1:0`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 64,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $1.00
+- **Cost per 1M Tokens (Output)**: $5.00
+
+#### amazon/claude-opus-4
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/claude-opus-4`
+- **Underlying Model**: `bedrock/us.anthropic.claude-opus-4-20250514-v1:0`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Cost per 1M Tokens (Input)**: $15.00
+- **Cost per 1M Tokens (Output)**: $75.00
+
+#### amazon/claude-opus-4-1
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/claude-opus-4-1`
+- **Underlying Model**: `bedrock/us.anthropic.claude-opus-4-1-20250805-v1:0`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Cost per 1M Tokens (Input)**: $15.00
+- **Cost per 1M Tokens (Output)**: $75.00
+
+#### amazon/claude-opus-4-1-high
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/claude-opus-4-1-high`
+- **Underlying Model**: `bedrock/us.anthropic.claude-opus-4-1-20250805-v1:0`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $15.00
+- **Cost per 1M Tokens (Output)**: $75.00
+
+#### amazon/claude-opus-4-5
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/claude-opus-4-5`
+- **Underlying Model**: `bedrock/us.anthropic.claude-opus-4-5-20251101-v1:0`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
+
+#### amazon/claude-opus-4-5-high
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/claude-opus-4-5-high`
+- **Underlying Model**: `bedrock/us.anthropic.claude-opus-4-5-20251101-v1:0`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
+
+#### amazon/claude-opus-4-6
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/claude-opus-4-6`
+- **Underlying Model**: `bedrock/us.anthropic.claude-opus-4-6-20260205-v1:0`
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
+
+#### amazon/claude-opus-4-6-high
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/claude-opus-4-6-high`
+- **Underlying Model**: `bedrock/us.anthropic.claude-opus-4-6-20260205-v1:0`
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
+
+#### amazon/claude-opus-4-high
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/claude-opus-4-high`
+- **Underlying Model**: `bedrock/us.anthropic.claude-opus-4-20250514-v1:0`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $15.00
+- **Cost per 1M Tokens (Output)**: $75.00
+
+#### amazon/claude-sonnet-4
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/claude-sonnet-4`
+- **Underlying Model**: `bedrock/us.anthropic.claude-sonnet-4-20250514-v1:0`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 16,384
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Cost per 1M Tokens (Input)**: $3.00
+- **Cost per 1M Tokens (Output)**: $15.00
+
+#### amazon/claude-sonnet-4-5
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/claude-sonnet-4-5`
+- **Underlying Model**: `bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 16,384
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Cost per 1M Tokens (Input)**: $3.00
+- **Cost per 1M Tokens (Output)**: $15.00
+
+#### amazon/claude-sonnet-4-5-high
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/claude-sonnet-4-5-high`
+- **Underlying Model**: `bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 16,384
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $3.00
+- **Cost per 1M Tokens (Output)**: $15.00
+
+#### amazon/claude-sonnet-4-high
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/claude-sonnet-4-high`
+- **Underlying Model**: `bedrock/us.anthropic.claude-sonnet-4-20250514-v1:0`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 16,384
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $3.00
+- **Cost per 1M Tokens (Output)**: $15.00
+
+#### amazon/llama-4-maverick
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/llama-4-maverick`
+- **Underlying Model**: `bedrock/us.meta.llama4-maverick-17b-instruct-v1:0`
+- **Mode**: Chat
+- **Max Input Tokens**: 128,000
+- **Max Output Tokens**: 4,096
+- **Capabilities**: Tool Use
+- **Cost per 1M Tokens (Input)**: $0.24
+- **Cost per 1M Tokens (Output)**: $0.97
+
+#### amazon/llama-4-scout
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/llama-4-scout`
+- **Underlying Model**: `bedrock/us.meta.llama4-scout-17b-instruct-v1:0`
+- **Mode**: Chat
+- **Max Input Tokens**: 128,000
+- **Max Output Tokens**: 4,096
+- **Capabilities**: Tool Use
+- **Cost per 1M Tokens (Input)**: $0.17
+- **Cost per 1M Tokens (Output)**: $0.66
+
+#### amazon/gpt-oss-120b
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/gpt-oss-120b`
+- **Underlying Model**: `bedrock/openai.gpt-oss-120b-1:0`
+- **Mode**: Chat
+- **Max Input Tokens**: 128,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Tool Use, Reasoning, Structured Output
+- **Cost per 1M Tokens (Input)**: $0.15
+- **Cost per 1M Tokens (Output)**: $0.60
+
+#### amazon/gpt-oss-20b
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/gpt-oss-20b`
+- **Underlying Model**: `bedrock/openai.gpt-oss-20b-1:0`
+- **Mode**: Chat
+- **Max Input Tokens**: 128,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Tool Use, Reasoning, Structured Output
+- **Cost per 1M Tokens (Input)**: $0.07
+- **Cost per 1M Tokens (Output)**: $0.30
+
+### Google Vertex AI
+
+Models hosted on Google Vertex AI are provided under enterprise agreements. Your data will not be used for training.
+
+#### anthropic/claude-haiku
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `anthropic/claude-haiku`
+- **Underlying Model**: `vertex_ai/claude-haiku-4-5@20251001`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $1.00
+- **Cost per 1M Tokens (Output)**: $5.00
+
+#### anthropic/claude-haiku-high
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `anthropic/claude-haiku-high`
+- **Underlying Model**: `vertex_ai/claude-haiku-4-5@20251001`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $1.00
+- **Cost per 1M Tokens (Output)**: $5.00
+
+#### anthropic/claude-opus
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `anthropic/claude-opus`
+- **Underlying Model**: `vertex_ai/claude-opus-4-6@default`
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
+
+#### anthropic/claude-opus-high
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `anthropic/claude-opus-high`
+- **Underlying Model**: `vertex_ai/claude-opus-4-6@default`
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
+
+#### anthropic/claude-sonnet
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `anthropic/claude-sonnet`
+- **Underlying Model**: `vertex_ai/claude-sonnet-4-5@20250929`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 16,384
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Cost per 1M Tokens (Input)**: $3.00
+- **Cost per 1M Tokens (Output)**: $15.00
+
+#### anthropic/claude-sonnet-high
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `anthropic/claude-sonnet-high`
+- **Underlying Model**: `vertex_ai/claude-sonnet-4-5@20250929`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 16,384
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $3.00
+- **Cost per 1M Tokens (Output)**: $15.00
+
+#### claude-3-5-haiku
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `claude-3-5-haiku`
+- **Underlying Model**: `vertex_ai/claude-3-5-haiku@20241022`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Tool Use, PDF Input
+- **Cost per 1M Tokens (Input)**: $1.00
+- **Cost per 1M Tokens (Output)**: $5.00
+
+#### claude-haiku-4-5
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `claude-haiku-4-5`
+- **Underlying Model**: `vertex_ai/claude-haiku-4-5@20251001`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $1.00
+- **Cost per 1M Tokens (Output)**: $5.00
+
+#### claude-haiku-high-latest
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `claude-haiku-high-latest`
+- **Underlying Model**: `vertex_ai/claude-haiku-4-5@20251001`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $1.00
+- **Cost per 1M Tokens (Output)**: $5.00
+
+#### claude-haiku-latest
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `claude-haiku-latest`
+- **Underlying Model**: `vertex_ai/claude-haiku-4-5@20251001`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $1.00
+- **Cost per 1M Tokens (Output)**: $5.00
+
+#### claude-opus-4-0
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `claude-opus-4-0`
+- **Underlying Model**: `vertex_ai/claude-opus-4@20250514`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Cost per 1M Tokens (Input)**: $15.00
+- **Cost per 1M Tokens (Output)**: $75.00
+
+#### claude-opus-4-1
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `claude-opus-4-1`
+- **Underlying Model**: `vertex_ai/claude-opus-4-1@20250805`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use
+- **Cost per 1M Tokens (Input)**: $15.00
+- **Cost per 1M Tokens (Output)**: $75.00
+
+#### claude-opus-4-5
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `claude-opus-4-5`
+- **Underlying Model**: `vertex_ai/claude-opus-4-5@20251101`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
+
+#### claude-opus-4-6
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `claude-opus-4-6`
+- **Underlying Model**: `vertex_ai/claude-opus-4-6@default`
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
+
+#### claude-opus-high-latest
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `claude-opus-high-latest`
+- **Underlying Model**: `vertex_ai/claude-opus-4-6@default`
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
+
+#### claude-opus-latest
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `claude-opus-latest`
+- **Underlying Model**: `vertex_ai/claude-opus-4-6@default`
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
+
+#### claude-sonnet-4-5
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `claude-sonnet-4-5`
+- **Underlying Model**: `vertex_ai/claude-sonnet-4-5@20250929`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 16,384
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Cost per 1M Tokens (Input)**: $3.00
+- **Cost per 1M Tokens (Output)**: $15.00
+
+#### claude-sonnet-high-latest
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `claude-sonnet-high-latest`
+- **Underlying Model**: `vertex_ai/claude-sonnet-4-5@20250929`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 16,384
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $3.00
+- **Cost per 1M Tokens (Output)**: $15.00
+
+#### claude-sonnet-latest
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `claude-sonnet-latest`
+- **Underlying Model**: `vertex_ai/claude-sonnet-4-5@20250929`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 16,384
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Cost per 1M Tokens (Input)**: $3.00
+- **Cost per 1M Tokens (Output)**: $15.00
+
+#### google/claude-haiku-3-5
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/claude-haiku-3-5`
+- **Underlying Model**: `vertex_ai/claude-3-5-haiku@20241022`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Tool Use, PDF Input
+- **Cost per 1M Tokens (Input)**: $1.00
+- **Cost per 1M Tokens (Output)**: $5.00
+
+#### google/claude-haiku-4-5
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/claude-haiku-4-5`
+- **Underlying Model**: `vertex_ai/claude-haiku-4-5@20251001`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $1.00
+- **Cost per 1M Tokens (Output)**: $5.00
+
+#### google/claude-haiku-4-5-high
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/claude-haiku-4-5-high`
+- **Underlying Model**: `vertex_ai/claude-haiku-4-5@20251001`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $1.00
+- **Cost per 1M Tokens (Output)**: $5.00
+
+#### google/claude-opus-4
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/claude-opus-4`
+- **Underlying Model**: `vertex_ai/claude-opus-4@20250514`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Cost per 1M Tokens (Input)**: $15.00
+- **Cost per 1M Tokens (Output)**: $75.00
+
+#### google/claude-opus-4-1
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/claude-opus-4-1`
+- **Underlying Model**: `vertex_ai/claude-opus-4-1@20250805`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use
+- **Cost per 1M Tokens (Input)**: $15.00
+- **Cost per 1M Tokens (Output)**: $75.00
+
+#### google/claude-opus-4-1-high
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/claude-opus-4-1-high`
+- **Underlying Model**: `vertex_ai/claude-opus-4-1@20250805`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $15.00
+- **Cost per 1M Tokens (Output)**: $75.00
+
+#### google/claude-opus-4-5
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/claude-opus-4-5`
+- **Underlying Model**: `vertex_ai/claude-opus-4-5@20251101`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
+
+#### google/claude-opus-4-5-high
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/claude-opus-4-5-high`
+- **Underlying Model**: `vertex_ai/claude-opus-4-5@20251101`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
+
+#### google/claude-opus-4-6
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/claude-opus-4-6`
+- **Underlying Model**: `vertex_ai/claude-opus-4-6@default`
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
+
+#### google/claude-opus-4-6-high
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/claude-opus-4-6-high`
+- **Underlying Model**: `vertex_ai/claude-opus-4-6@default`
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
+
+#### google/claude-opus-4-high
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/claude-opus-4-high`
+- **Underlying Model**: `vertex_ai/claude-opus-4@20250514`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $15.00
+- **Cost per 1M Tokens (Output)**: $75.00
+
+#### google/claude-sonnet-4
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/claude-sonnet-4`
+- **Underlying Model**: `vertex_ai/claude-sonnet-4@20250514`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 16,384
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Cost per 1M Tokens (Input)**: $3.00
+- **Cost per 1M Tokens (Output)**: $15.00
+
+#### google/claude-sonnet-4-5
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/claude-sonnet-4-5`
+- **Underlying Model**: `vertex_ai/claude-sonnet-4-5@20250929`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 16,384
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Cost per 1M Tokens (Input)**: $3.00
+- **Cost per 1M Tokens (Output)**: $15.00
+
+#### google/claude-sonnet-4-5-high
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/claude-sonnet-4-5-high`
+- **Underlying Model**: `vertex_ai/claude-sonnet-4-5@20250929`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 16,384
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $3.00
+- **Cost per 1M Tokens (Output)**: $15.00
+
+#### google/claude-sonnet-4-high
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/claude-sonnet-4-high`
+- **Underlying Model**: `vertex_ai/claude-sonnet-4@20250514`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 16,384
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $3.00
+- **Cost per 1M Tokens (Output)**: $15.00
+
+#### google/deepseek-3.2
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/deepseek-3.2`
+- **Underlying Model**: `vertex_ai/deepseek-ai/deepseek-v3.2-maas`
+- **Mode**: Chat
+- **Max Input Tokens**: 163,840
+- **Max Output Tokens**: 32,768
+- **Capabilities**: Tool Use, Reasoning, Prompt Caching
+- **Cost per 1M Tokens (Input)**: $0.56
+- **Cost per 1M Tokens (Output)**: $1.68
+
+#### google/deepseek-r1
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/deepseek-r1`
+- **Underlying Model**: `vertex_ai/deepseek-ai/deepseek-r1-0528-maas`
+- **Mode**: Chat
+- **Max Input Tokens**: 65,336
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Tool Use, Reasoning, Prompt Caching
+- **Cost per 1M Tokens (Input)**: $1.35
+- **Cost per 1M Tokens (Output)**: $5.40
+
+#### gemini-1.5-flash
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-1.5-flash`
+- **Underlying Model**: `vertex_ai/gemini-1.5-flash`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,000,000
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Structured Output
+- **Cost per 1M Tokens (Input)**: $0.07
+- **Cost per 1M Tokens (Output)**: $0.30
+
+#### gemini-1.5-pro
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-1.5-pro`
+- **Underlying Model**: `vertex_ai/gemini-1.5-pro`
+- **Mode**: Chat
+- **Max Input Tokens**: 2,097,152
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $1.25
+- **Cost per 1M Tokens (Output)**: $5.00
+
+#### gemini-2.0-flash
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-2.0-flash`
+- **Underlying Model**: `vertex_ai/gemini-2.0-flash`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Prompt Caching, Structured Output
+- **Cost per 1M Tokens (Input)**: $0.10
+- **Cost per 1M Tokens (Output)**: $0.40
+
+#### gemini-2.0-flash-lite
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-2.0-flash-lite`
+- **Underlying Model**: `vertex_ai/gemini-2.0-flash-lite`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use, Prompt Caching, Structured Output
+- **Cost per 1M Tokens (Input)**: $0.07
+- **Cost per 1M Tokens (Output)**: $0.30
+
+#### gemini-2.5-flash
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-2.5-flash`
+- **Underlying Model**: `vertex_ai/gemini-2.5-flash`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,535
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $0.30
+- **Cost per 1M Tokens (Output)**: $2.50
+
+#### gemini-2.5-flash-high
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-2.5-flash-high`
+- **Underlying Model**: `vertex_ai/gemini-2.5-flash`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,535
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $0.30
+- **Cost per 1M Tokens (Output)**: $2.50
+
+#### gemini-2.5-flash-image
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-2.5-flash-image`
+- **Underlying Model**: `vertex_ai/google/gemini-2.5-flash-image`
+- **Cost**: No cost
+
+#### gemini-2.5-flash-lite
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-2.5-flash-lite`
+- **Underlying Model**: `vertex_ai/gemini-2.5-flash-lite-preview-06-17`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,535
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $0.10
+- **Cost per 1M Tokens (Output)**: $0.40
+
+#### gemini-2.5-pro
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-2.5-pro`
+- **Underlying Model**: `vertex_ai/gemini-3-pro-preview`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,535
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $2.00
+- **Cost per 1M Tokens (Output)**: $12.00
+
+#### gemini-2.5-pro-high
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-2.5-pro-high`
+- **Underlying Model**: `vertex_ai/gemini-3-pro-preview`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,535
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $2.00
+- **Cost per 1M Tokens (Output)**: $12.00
+
+#### gemini-3-flash
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-3-flash`
+- **Underlying Model**: `vertex_ai/gemini-3-flash-preview`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,535
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $0.50
+- **Cost per 1M Tokens (Output)**: $3.00
+
+#### gemini-3-flash-high
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-3-flash-high`
+- **Underlying Model**: `vertex_ai/gemini-3-flash-preview`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,535
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $0.50
+- **Cost per 1M Tokens (Output)**: $3.00
+
+#### gemini-3-pro
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-3-pro`
+- **Underlying Model**: `vertex_ai/gemini-3-pro-preview`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,535
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $2.00
+- **Cost per 1M Tokens (Output)**: $12.00
+
+#### gemini-3-pro-high
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-3-pro-high`
+- **Underlying Model**: `vertex_ai/gemini-3-pro-preview`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,535
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $2.00
+- **Cost per 1M Tokens (Output)**: $12.00
+
+#### gemini-flash-high-latest
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-flash-high-latest`
+- **Underlying Model**: `vertex_ai/gemini-3-flash-preview`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,535
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $0.50
+- **Cost per 1M Tokens (Output)**: $3.00
+
+#### gemini-flash-image-latest
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-flash-image-latest`
+- **Underlying Model**: `vertex_ai/google/gemini-2.5-flash-image`
+- **Cost**: No cost
+
+#### gemini-flash-latest
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-flash-latest`
+- **Underlying Model**: `vertex_ai/gemini-3-flash-preview`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,535
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $0.50
+- **Cost per 1M Tokens (Output)**: $3.00
+
+#### gemini-pro-high-latest
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-pro-high-latest`
+- **Underlying Model**: `vertex_ai/gemini-3-pro-preview`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,535
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $2.00
+- **Cost per 1M Tokens (Output)**: $12.00
+
+#### gemini-pro-latest
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-pro-latest`
+- **Underlying Model**: `vertex_ai/gemini-3-pro-preview`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,535
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $2.00
+- **Cost per 1M Tokens (Output)**: $12.00
+
+#### google/codestral
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/codestral`
+- **Underlying Model**: `vertex_ai/codestral-2501`
+- **Mode**: Chat
+- **Max Input Tokens**: 128,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Tool Use
+- **Cost per 1M Tokens (Input)**: $0.20
+- **Cost per 1M Tokens (Output)**: $0.60
+
+#### google/gpt-oss-120b
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/gpt-oss-120b`
+- **Underlying Model**: `vertex_ai/openai/gpt-oss-120b-maas`
+- **Mode**: Chat
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 32,768
+- **Capabilities**: Reasoning
+- **Cost**: No cost
+
+#### google/gpt-oss-120b-high
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/gpt-oss-120b-high`
+- **Underlying Model**: `vertex_ai/openai/gpt-oss-120b-maas`
+- **Mode**: Chat
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 32,768
+- **Capabilities**: Reasoning
+- **Reasoning Effort**: high
+- **Cost**: No cost
+
+#### google/gpt-oss-20b
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/gpt-oss-20b`
+- **Underlying Model**: `vertex_ai/openai/gpt-oss-20b-maas`
+- **Mode**: Chat
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 32,768
+- **Capabilities**: Reasoning
+- **Cost per 1M Tokens (Input)**: $0.07
+- **Cost per 1M Tokens (Output)**: $0.30
+
+#### google/gpt-oss-20b-high
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/gpt-oss-20b-high`
+- **Underlying Model**: `vertex_ai/openai/gpt-oss-20b-maas`
+- **Mode**: Chat
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 32,768
+- **Capabilities**: Reasoning
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $0.07
+- **Cost per 1M Tokens (Output)**: $0.30
+
+#### google/qwen-3
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/qwen-3`
+- **Underlying Model**: `vertex_ai/qwen/qwen3-235b-a22b-instruct-2507-maas`
+- **Mode**: Chat
+- **Max Input Tokens**: 262,144
+- **Max Output Tokens**: 16,384
+- **Capabilities**: Tool Use
+- **Cost per 1M Tokens (Input)**: $0.25
+- **Cost per 1M Tokens (Output)**: $1.00
+
+#### google/qwen-3-coder
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/qwen-3-coder`
+- **Underlying Model**: `vertex_ai/qwen/qwen3-coder-480b-a35b-instruct-maas`
+- **Mode**: Chat
+- **Max Input Tokens**: 262,144
+- **Max Output Tokens**: 32,768
+- **Capabilities**: Tool Use
+- **Cost per 1M Tokens (Input)**: $1.00
+- **Cost per 1M Tokens (Output)**: $4.00
+
+#### google/glm-4.7
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/glm-4.7`
+- **Underlying Model**: `vertex_ai/zai-org/glm-4.7-maas`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Tool Use, Reasoning
+- **Cost per 1M Tokens (Input)**: $0.60
+- **Cost per 1M Tokens (Output)**: $2.20
+
+#### google/kimi-k2-thinking
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/kimi-k2-thinking`
+- **Underlying Model**: `vertex_ai/moonshotai/kimi-k2-thinking-maas`
+- **Mode**: Chat
+- **Max Input Tokens**: 256,000
+- **Max Output Tokens**: 256,000
+- **Capabilities**: Tool Use
+- **Cost per 1M Tokens (Input)**: $0.60
+- **Cost per 1M Tokens (Output)**: $2.50
+
+#### google/minimax-m2
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/minimax-m2`
+- **Underlying Model**: `vertex_ai/minimaxai/minimax-m2`
+- **Cost**: No cost
+
+#### gemini-3-pro-image
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-3-pro-image`
+- **Underlying Model**: `vertex_ai/gemini-3-pro-image-preview`
+- **Mode**: Image Generation
+- **Max Input Tokens**: 65,536
+- **Max Output Tokens**: 32,768
+- **Cost per 1M Tokens (Input)**: $2.00
+- **Cost per 1M Tokens (Output)**: $12.00
+
+#### gemini-pro-image-latest
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-pro-image-latest`
+- **Underlying Model**: `vertex_ai/gemini-3-pro-image-preview`
+- **Mode**: Image Generation
+- **Max Input Tokens**: 65,536
+- **Max Output Tokens**: 32,768
+- **Cost per 1M Tokens (Input)**: $2.00
+- **Cost per 1M Tokens (Output)**: $12.00
+
+### LBL IT Division
 
 The IT Division's Science IT group provides access to open-weight models running on Berkeley Lab-owned networks and hardware, located in the Building 50 data center. LBL-Hosted models are free-to-use.
 
-These models are licensed for non-commercial research use.
+#### lbl/granite-docling
 
-#### CBorg Chat
-
-- **Endpoint Location**: LBNL IT Division Data Center
-- **Model Name**: `lbl/cborg-chat:latest`
-- **Underlying Model**: Meta Llama 4 Scout Instruct with Custom System Prompt
-
-#### CBorg Coder
-
-- **Endpoint Location**: LBNL IT Division Data Center
-- **Model Name**: `lbl/cborg-coder`
-- **Underlying Model**: OpenAI gpt-oss-120b with Reasoning: high, Temperature = 1.0, Top-P = 1.0
-
-#### CBorg Vision
-
-- **Endpoint Location**: LBNL IT Division Data Center
-- **Model Name**: `lbl/cborg-vision`
-- **Underlying Model**: IBM Granite 3.2 Vision 
-
-#### CBorg Deepthought
-
-- **Endpoint Location**: LBNL IT Division Data Center
-- **Model Name**: `lbl/cborg-deepthought`
-- **Underlying Model**: OpenAI gpt-oss-120b with Reasoning: high, Temperature = 1.0, Top-P = 1.0 
-
-#### CBorg Mini
-
-- **Endpoint Location**: LBNL IT Division Data Center
-- **Model Name**: `lbl/cborg-mini`
-- **Underlying Model**: OpenAI gpt-oss-20b with Reasoning: high, Temperature = 1.0, Top-P = 1.0 
-
-#### Meta Llama 4 Scout
-
-Underlying model is Llama 4 Scout. Context length is limited to 128K tokens.
-
-- **Endpoint Location**: LBNL IT Division Data Center
-- **Use Cases**: Chat, Summarization, Coding Assistant, Tool Use
-- **Vision Support**: No
-- **Tool Support**: Yes
-- **Context Window**: 128K Tokens
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/granite-docling`
+- **Underlying Model**: `hosted_vllm/granite-docling`
+- **Mode**: Chat
+- **Max Input Tokens**: 8,192
 - **Cost**: No cost
-- **Model Name**: `Llama-4-Scout-17B-16E-Instruct`
-- **Terms of Service**: [Meta Llama Use Policy](https://www.llama.com/llama4/use-policy/)
 
-#### Nomic AI nomic-embed-text
+#### Llama-4-Scout-17B-16E-Instruct
 
-A high-performing open embedding model with a large token context window. nomic-embed-text is popular for use with self-hosted ollama installations. This provides a hosted endpoint with the same model.
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `Llama-4-Scout-17B-16E-Instruct`
+- **Underlying Model**: `hosted_vllm/Llama-4-Scout-17B-16E-Instruct`
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 8,192
+- **Cost**: No cost
 
-- **Endpoint Location**: LBNL IT Division Data Center
-- **Use Cases**: Query and Passage Encoding
-- **Max Tokens**: 8192
-- **Embedding Dimensions**: 768
-- **Cost**: Free to use
+#### lbl/Llama-4-Scout-17B-16E-Instruct
+
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/Llama-4-Scout-17B-16E-Instruct`
+- **Underlying Model**: `hosted_vllm/Llama-4-Scout-17B-16E-Instruct`
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 8,192
+- **Cost**: No cost
+
+#### lbl/llama
+
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/llama`
+- **Underlying Model**: `hosted_vllm/Llama-4-Scout-17B-16E-Instruct`
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 8,192
+- **Cost**: No cost
+
+#### lbl/llama-4-scout
+
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/llama-4-scout`
+- **Underlying Model**: `hosted_vllm/Llama-4-Scout-17B-16E-Instruct`
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 8,192
+- **Cost**: No cost
+
+#### meta/llama-4-scout
+
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `meta/llama-4-scout`
+- **Underlying Model**: `hosted_vllm/Llama-4-Scout-17B-16E-Instruct`
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 8,192
+- **Cost**: No cost
+
+#### gpt-oss-120b
+
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `gpt-oss-120b`
+- **Underlying Model**: `hosted_vllm/gpt-oss-120b`
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 131,072
+- **Cost**: No cost
+
+#### gpt-oss-120b-high
+
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `gpt-oss-120b-high`
+- **Underlying Model**: `hosted_vllm/gpt-oss-120b`
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 131,072
+- **Reasoning Effort**: high
+- **Cost**: No cost
+
+#### gpt-oss-20b
+
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `gpt-oss-20b`
+- **Underlying Model**: `hosted_vllm/gpt-oss-20b`
+- **Reasoning Effort**: high
+- **Cost**: No cost
+
+#### gpt-oss-20b-high
+
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `gpt-oss-20b-high`
+- **Underlying Model**: `hosted_vllm/gpt-oss-20b`
+- **Reasoning Effort**: high
+- **Cost**: No cost
+
+#### lbl/gpt-oss-120b
+
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/gpt-oss-120b`
+- **Underlying Model**: `hosted_vllm/gpt-oss-120b`
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 131,072
+- **Cost**: No cost
+
+#### lbl/gpt-oss-120b-high
+
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/gpt-oss-120b-high`
+- **Underlying Model**: `hosted_vllm/gpt-oss-120b`
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 131,072
+- **Reasoning Effort**: high
+- **Cost**: No cost
+
+#### lbl/gpt-oss-120b-medium
+
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/gpt-oss-120b-medium`
+- **Underlying Model**: `hosted_vllm/gpt-oss-120b`
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 131,072
+- **Reasoning Effort**: medium
+- **Cost**: No cost
+
+#### lbl/gpt-oss-20b
+
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/gpt-oss-20b`
+- **Underlying Model**: `hosted_vllm/gpt-oss-20b`
+- **Reasoning Effort**: high
+- **Cost**: No cost
+
+#### lbl/gpt-oss-20b-high
+
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/gpt-oss-20b-high`
+- **Underlying Model**: `hosted_vllm/gpt-oss-20b`
+- **Reasoning Effort**: high
+- **Cost**: No cost
+
+#### lbl/Nanonets-OCR
+
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/Nanonets-OCR`
+- **Underlying Model**: `openai/Nanonets-OCR`
+- **Mode**: Chat
+- **Cost**: No cost
+
+#### lbl/jbei-publications-chat
+
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/jbei-publications-chat`
+- **Underlying Model**: `openai/lbl/jbei-publications-chat`
+- **Mode**: Chat
+- **Cost**: No cost
+
+#### lbl/bge-m3
+
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/bge-m3`
+- **Underlying Model**: `openai/nomic-embed-text`
+- **Mode**: Embedding
+- **Max Input Tokens**: 8,192
+- **Cost**: No cost
+
+#### lbl/nomic-embed-text
+
+- **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/nomic-embed-text`
-- **Model Information**: [Nomic.AI](https://www.nomic.ai/blog/posts/nomic-embed-text-v1)
+- **Underlying Model**: `openai/nomic-embed-text`
+- **Mode**: Embedding
+- **Max Input Tokens**: 8,192
+- **Cost**: No cost
 
-### Cloud-Hosted Models
+#### lbl/nomic-embed-vision
 
-Cloud-hosted models are provided using on-demand services from commercial cloud providers. Costs for using these models are paid for by the IT Division. Please select the appropriate model for your application, keeping in mind the cost burdens associated with each. Using these models will cause your data to be shared with cloud providers in accordance with their terms of service. For detailed terms of service of each provider, see the model details below.
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/nomic-embed-vision`
+- **Underlying Model**: `openai/nomic-embed-vision`
+- **Mode**: Embedding
+- **Max Input Tokens**: 8,192
+- **Cost**: No cost
 
-**Model Aliases**
+#### codegemma
 
-To simplify application development, alias model names are provided that point to the recommended
-version of each model provider, as follows:
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `codegemma`
+- **Underlying Model**: `ollama/codegemma:2b`
+- **Mode**: Code Completion
+- **Max Input Tokens**: 8,192
+- **Cost**: No cost
 
+#### lbl/codegemma:2b
 
-| Alias Name                   | Base Model                 |
-| ---------------------------  | :---------:                |
-| `/openai/chatgpt:latest`     | `openai/gpt-5`             | 
-| `/anthropic/claude:latest`   | `anthropic/claude-sonnet`  | 
-| `/google/gemini:latest`      | `google/gemini-pro`        | 
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/codegemma:2b`
+- **Underlying Model**: `ollama/codegemma:2b`
+- **Mode**: Code Completion
+- **Max Input Tokens**: 8,192
+- **Cost**: No cost
 
-#### OpenAI ChatGPT 5/5.1
+#### lbl/cborg-chat
 
-Latest edition of ChatGPT from OpenAI. Mini and Nano variants are also available (-mini and -nano model names)
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/cborg-chat`
+- **Underlying Model**: `hosted_vllm/Llama-4-Scout-17B-16E-Instruct`
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 8,192
+- **Cost**: No cost
 
-- **Endpoint Location**: Microsoft Azure Cloud (East US 2)
-- **Use Cases**: Chat, Text Summarization, Image Description, Tool Use
-- **Vision Support**: Yes
-- **Tool Support**: Yes
-- **Context Window**: 1M Tokens
-- **Cost per 1M Tokens (Input)**: $1.50 
-- **Cost per 1M Tokens (Output)**: $10
-- **API Model Name**: `gpt-5`, `gpt-5-mini`, `gpt-5-nano`
-- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
-- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
+#### lbl/cborg-chat:chat
 
-#### OpenAI ChatGPT 4.1
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/cborg-chat:chat`
+- **Underlying Model**: `hosted_vllm/Llama-4-Scout-17B-16E-Instruct`
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 8,192
+- **Cost**: No cost
 
-Prior edition of ChatGPT from OpenAI. Mini and Nano variants are also available (-mini and -nano model names)
+#### lbl/cborg-chat:latest
 
-- **Endpoint Location**: Microsoft Azure Cloud (East US)
-- **Use Cases**: Chat, Text Summarization, Image Description, Tool Use
-- **Vision Support**: Yes
-- **Tool Support**: Yes
-- **Context Window**: 1M Tokens
-- **Cost per 1M Tokens (Input)**: $2.00 
-- **Cost per 1M Tokens (Output)**: $8.00
-- **API Model Name**: `openai/gpt-4.1`
-- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
-- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/cborg-chat:latest`
+- **Underlying Model**: `hosted_vllm/Llama-4-Scout-17B-16E-Instruct`
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 8,192
+- **Cost**: No cost
 
-#### OpenAI o3
+#### lbl/cborg-coder
 
-OpenAI o3 is a multi-modal deep reasoning model.
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/cborg-coder`
+- **Underlying Model**: `hosted_vllm/gpt-oss-120b`
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 131,072
+- **Reasoning Effort**: high
+- **Cost**: No cost
 
-**Cost**: o* models also count "reasoning tokens" as output tokens, resulting in approximately 10x more output tokens compared to GPT 4-series models. 
-- **Endpoint Location**: Microsoft Azure Cloud (East US 2)
-- **Use Cases**: Chat, Advanced Reasoning, Text Analysis
-- **Vision Support**: No
-- **Tool Support**: No
-- **Context Window**: 128K Tokens (Note: Limited to 8K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $10.00 
-- **Cost per 1M Tokens (Output)**: $40.00
-- **API Model Name**: `openai/o3`
-- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
-- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
+#### lbl/cborg-coder-base
 
-#### OpenAI o3-Mini / OpenAI o3-Mini High
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/cborg-coder-base`
+- **Underlying Model**: `ollama/codegemma:2b`
+- **Mode**: Code Completion
+- **Max Input Tokens**: 8,192
+- **Cost**: No cost
 
-OpenAI o3 Mini is the latest lightweight text-only model with advanced reasoning capabilities. o3 Mini High variant has the reasoning effort set to "High".
+#### lbl/cborg-coder-base:latest
 
-**Cost**: o1 models also count "reasoning tokens" as output tokens, resulting in approximately 2-10x more output tokens compared to GPT 4-series models. 
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/cborg-coder-base:latest`
+- **Underlying Model**: `ollama/codegemma:2b`
+- **Mode**: Code Completion
+- **Max Input Tokens**: 8,192
+- **Cost**: No cost
 
-- **Endpoint Location**: Microsoft Azure Cloud (East US 2)
-- **Use Cases**: Chat, Advanced Reasoning, Text Analysis
-- **Vision Support**: No
-- **Tool Support**: No
-- **Context Window**: 128K Tokens (Note: Limited to 32K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $0.55 
-- **Cost per 1M Tokens (Output)**: $4.40
-- **API Model Name**: `openai/o3-mini`
-- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
-- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
+#### lbl/cborg-coder:chat
 
-#### OpenAI o4-Mini / OpenAI o4-Mini High
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/cborg-coder:chat`
+- **Underlying Model**: `hosted_vllm/gpt-oss-120b`
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 131,072
+- **Reasoning Effort**: high
+- **Cost**: No cost
 
-OpenAI o4 Mini is the latest lightweight multi-modal model with advanced reasoning capabilities. o4 Mini High variant has the reasoning effort set to "High".
+#### lbl/cborg-coder:latest
 
-- **Endpoint Location**: Microsoft Azure Cloud (East US 2)
-- **Use Cases**: Chat, Advanced Reasoning, Text Analysis
-- **Vision Support**: No
-- **Tool Support**: No
-- **Context Window**: 128K Tokens (Note: Limited to 32K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $1.1 
-- **Cost per 1M Tokens (Output)**: $4.40
-- **API Model Name**: `openai/o4-mini`
-- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
-- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/cborg-coder:latest`
+- **Underlying Model**: `hosted_vllm/gpt-oss-120b`
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 131,072
+- **Reasoning Effort**: high
+- **Cost**: No cost
 
-#### OpenAI o1 (Deprecated)
+#### lbl/cborg-deepthought
 
-OpenAI o1 is a deep reasoning text-only model with advanced reasoning capabilities.
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/cborg-deepthought`
+- **Underlying Model**: `hosted_vllm/gpt-oss-120b`
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 131,072
+- **Reasoning Effort**: high
+- **Cost**: No cost
 
-**Cost**: o1 models also count "reasoning tokens" as output tokens, resulting in approximately 10x more output tokens compared to GPT 4-series models. 
-- **Endpoint Location**: Microsoft Azure Cloud (East US 2)
-- **Use Cases**: Chat, Advanced Reasoning, Text Analysis
-- **Vision Support**: No
-- **Tool Support**: No
-- **Context Window**: 128K Tokens (Note: Limited to 8K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $15.50 
-- **Cost per 1M Tokens (Output)**: $60.00
-- **API Model Name**: `openai/o1`
-- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
-- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
+#### lbl/cborg-deepthought:latest
 
-#### OpenAI o1 Mini (Deprecated)
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/cborg-deepthought:latest`
+- **Underlying Model**: `hosted_vllm/gpt-oss-120b`
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 131,072
+- **Reasoning Effort**: high
+- **Cost**: No cost
 
-OpenAI o1 Mini is a lightweight text-only model with advanced reasoning capabilities.
+#### lbl/cborg-mini
 
-**NOTE**: o3 Mini is newer and has lower cost compared to o1 Mini.
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/cborg-mini`
+- **Underlying Model**: `hosted_vllm/gpt-oss-20b`
+- **Reasoning Effort**: high
+- **Cost**: No cost
 
-- **Endpoint Location**: Microsoft Azure Cloud (East US 2)
-- **Use Cases**: Chat, Advanced Reasoning, Text Analysis
-- **Vision Support**: No
-- **Tool Support**: No
-- **Context Window**: 128K Tokens (Note: Limited to 32K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $3.30 
-- **Cost per 1M Tokens (Output)**: $13.20
-- **API Model Name**: `openai/o1-mini`
-- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
-- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
+#### lbl/cborg-mini:latest
 
-#### OpenAI ChatGPT 4o (Deprecated)
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/cborg-mini:latest`
+- **Underlying Model**: `hosted_vllm/gpt-oss-20b`
+- **Reasoning Effort**: high
+- **Cost**: No cost
 
-ChatGPT-4o is the previous version of ChatGPT from OpenAI.
+#### lbl/cborg-ocr
 
-- **Endpoint Location**: Microsoft Azure Cloud (East US)
-- **Use Cases**: Chat, Text Summarization, Image Description, Tool Use
-- **Vision Support**: Yes
-- **Tool Support**: Yes
-- **Context Window**: 128K Tokens (Note: Limited to 8K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $5.00 
-- **Cost per 1M Tokens (Output)**: $15.00
-- **API Model Name**: `openai/gpt-4o`
-- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
-- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/cborg-ocr`
+- **Underlying Model**: `openai/Nanonets-OCR`
+- **Mode**: Chat
+- **Cost**: No cost
 
-#### OpenAI ChatGPT 4o Mini (Deprecated)
+#### lbl/cborg-vision
 
-ChatGPT-4o-Mini is a lightweight version ChatGPT 4o from OpenAI. It is faster and lower cost compared to the GPT-4o model, and less than half the cost of ChatGPT 3.5.
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/cborg-vision`
+- **Underlying Model**: `hosted_vllm/Llama-4-Scout-17B-16E-Instruct`
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 8,192
+- **Cost**: No cost
 
-- **Endpoint Location**: Microsoft Azure Cloud (East US)
-- **Use Cases**: Chat, Text Summarization, Image Description, Tool Use
-- **Vision Support**: Yes
-- **Tool Support**: Yes
-- **Context Window**: 128K Tokens (Note: Limited to 32K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $0.165
-- **Cost per 1M Tokens (Output)**: $0.66
-- **API Model Name**: `openai/gpt-4o-mini`
-- **Pricing Details**: [Azure OpenAI Service Pricing](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
-- **Terms of Service**: [Code of conduct for Azure OpenAI Service](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/code-of-conduct)
+#### lbl/cborg-vision:latest
 
-##### Google Gemini 2.5 Flash
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/cborg-vision:latest`
+- **Underlying Model**: `hosted_vllm/Llama-4-Scout-17B-16E-Instruct`
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 8,192
+- **Cost**: No cost
 
-Our service connects to the enterprise version of Google Gemini. Inputs are not used by Google for training of future AI models.
+### Microsoft Azure
 
-- **Endpoint Location**: Google Cloud
-- **Use Cases**: Chat, Text Summarization, Image Description
-- **Vision Support**: Yes
-- **Tool Support**: Yes 
-- **Context Window**: 1.0M Tokens (Note: Limited to 32K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $0.35
-- **Cost per 1M Tokens (Output)**: $0.70
-- **API Model Name**: `google/gemini-flash`
-- **Pricing Details**: [Gemini API Pricing](https://ai.google.dev/pricing)
-- **Terms of Service**: [Gemini API Additional Terms of Use](https://ai.google.dev/gemini-api/terms)
+Models hosted on Microsoft Azure are provided under enterprise agreements. Your data will not be used for training.
 
-##### Google Gemini 3.0 Pro
+#### azure/gpt-oss-120b
 
-Our service connects to the enterprise version of Google Gemini. Inputs are not used by Google for training of future AI models.
+- **Endpoint Location**: Microsoft Azure
+- **API Model Name**: `azure/gpt-oss-120b`
+- **Underlying Model**: `azure/gpt-oss-120b`
+- **Max Output Tokens**: 131,072
+- **Cost per 1M Tokens (Input)**: $0.15
+- **Cost per 1M Tokens (Output)**: $0.60
 
-- **Endpoint Location**: Google Cloud
-- **Use Cases**: Chat, Text Summarization, Image Description
-- **Vision Support**: Yes
-- **Tool Support**: Yes 
-- **Context Window**: 2.0M Tokens (Note: Limited to 16K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $3.50
-- **Cost per 1M Tokens (Output)**: $7.00
-- **API Model Name**: `google/gemini-pro`
-- **Pricing Details**: [Gemini API Pricing](https://ai.google.dev/pricing)
-- **Terms of Service**: [Gemini API Additional Terms of Use](https://ai.google.dev/gemini-api/terms)
+#### azure/grok-3
 
-##### Google Gemini 2.5 Pro
-
-Our service connects to the enterprise version of Google Gemini. Inputs are not used by Google for training of future AI models.
-
-- **Endpoint Location**: Google Cloud
-- **Use Cases**: Chat, Text Summarization, Image Description
-- **Vision Support**: Yes
-- **Tool Support**: Yes 
-- **Context Window**: 2.0M Tokens (Note: Limited to 16K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $3.50
-- **Cost per 1M Tokens (Output)**: $7.00
-- **API Model Name**: `google/gemini-pro`
-- **Pricing Details**: [Gemini API Pricing](https://ai.google.dev/pricing)
-- **Terms of Service**: [Gemini API Additional Terms of Use](https://ai.google.dev/gemini-api/terms)
-
-#### Anthropic Claude 4.5 Haiku
-
-Claude has excellent reasoning and code analysis capabilities compared to other leading models, but can be expensive in the largest variants. The 200K token context window is large compared to competitors. The Haiku version is suitable for short text summarization.
-
-- **Endpoint Location**: AWS Bedrock and GCP Vertex AI
-- **Use Cases**: Chat, Text Summarization, Image Description
-- **Vision Support**: Yes
-- **Tool Support**: Yes
-- **Context Window**: 200k Tokens (Note: Limited to 64K in CBORG Chat)
-- **Cost per 1M Tokens (Input)**: $1.00
-- **Cost per 1M Tokens (Output)**: $5.00
-- **API Model Name**: `anthropic/claude-haiku`
-- **Pricing Details**: [Anthropic API Pricing](https://aws.amazon.com/bedrock/pricing/)
-- **Terms of Service**: [Anthropic Commercial Terms of Service](https://www-cdn.anthropic.com/6b68a6508f0210c5fe08f0199caa05c4ee6fb4dc/Anthropic-on-Bedrock-Commercial-Terms-of-Service_Dec_2023.pdf)
-
-#### Anthropic Claude 4.5 Sonnet
-
-Claude has superior reasoning and code analysis capabilities compared to other leading models, but can be expensive in the largest variants. The 200K token context window is large compared to competitors. Sonnet 4.0 is the latest version with extended thinking (reasoning) available. Prompt caching is also supported.
-
-- **Endpoint Location**: AWS Bedrock and GCP Vertex AI
-- **Use Cases**: Chat, Text Summarization, Image Description
-- **Vision Support**: Yes
-- **Tool Support**: Yes
-- **Context Window**: 200k Tokens
+- **Endpoint Location**: Microsoft Azure
+- **API Model Name**: `azure/grok-3`
+- **Underlying Model**: `azure/grok-3`
 - **Cost per 1M Tokens (Input)**: $3.00
 - **Cost per 1M Tokens (Output)**: $15.00
-- **API Model Name**: `anthropic/claude-sonnet`
-- **Pricing Details**: [Anthropic API Pricing](https://aws.amazon.com/bedrock/pricing/)
-- **Terms of Service**: [Anthropic Commercial Terms of Service](https://www-cdn.anthropic.com/6b68a6508f0210c5fe08f0199caa05c4ee6fb4dc/Anthropic-on-Bedrock-Commercial-Terms-of-Service_Dec_2023.pdf)
 
-#### Anthropic Claude 4.5 Opus
+#### azure/grok-3-mini
 
-Claude 4.5 Opus is the newest version of Anthropic's flagship model.
+- **Endpoint Location**: Microsoft Azure
+- **API Model Name**: `azure/grok-3-mini`
+- **Underlying Model**: `azure/grok-3-mini`
+- **Cost per 1M Tokens (Input)**: $0.25
+- **Cost per 1M Tokens (Output)**: $1.27
 
-- **Endpoint Location**: Amazon Web Services (US West 2)
-- **Use Cases**: Chat, Text Summarization, Image Description
-- **Vision Support**: Yes
-- **Tool Support**: Yes
-- **Context Window**: 200k Tokens
-- **Cost per 1M Tokens (Input)**: $5.00
-- **Cost per 1M Tokens (Output)**: $25.00
-- **API Model Name**: `anthropic/claude-opus`
-- **Pricing Details**: [Anthropic API Pricing](https://aws.amazon.com/bedrock/pricing/)
-- **Terms of Service**: [Anthropic Commercial Terms of Service](https://www-cdn.anthropic.com/6b68a6508f0210c5fe08f0199caa05c4ee6fb4dc/Anthropic-on-Bedrock-Commercial-Terms-of-Service_Dec_2023.pdf)
+### OpenAI
 
-#### AWS Bedrock Meta Llama 3.1 405B
+Models hosted on OpenAI are provided under enterprise agreements. Your data will not be used for training.
 
-**Note:** This version of Llama 3.1 runs in the AWS cloud. The 405B model here uses full-precision BF16-format
-which may result in slightly different outputs compared to the LBL-hosted FP8-quantized model.
-Smaller model formats are also available.
+#### gemini-embedding-001
 
-Llama 3.1 is the latest version of the open source LLM from Meta. Llama is friendly and conversational, with capabilities approximately equivalent to ChatGPT 4 in the 405B-parameter version.
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gemini-embedding-001`
+- **Underlying Model**: `openai/gemini-embedding-001`
+- **Cost**: No cost
 
-- **Endpoint Location**: Amazon Web Services (US West)
-- **Use Cases**: Chat, Text Summarization, Coding Assistant
-- **Vision Support**: No
-- **Tool Support**: No
-- **Context Window**: 128K Tokens
-- **Cost per 1M Tokens (Input)**: $5.32
-- **Cost per 1M Tokens (Output)**: $16.00
-- **API Model Name**: `aws/llama-3.1-405b` (also available at lower costs: -70b and -8b)
-- **Terms of Service**: [Meta Llama Model Card](https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md)
+#### google/llama-4-maverick
 
-#### AWS Bedrock Cohere Command R+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `google/llama-4-maverick`
+- **Underlying Model**: `openai/meta/llama-4-maverick-17b-128e-instruct-maas`
+- **Cost**: No cost
 
-Cohere Command R and R+ are intended to support enterprise applications with tool use and RAG capabilities.
+#### gpt-4.1
 
-- **Endpoint Location**: Amazon Web Services (US West)
-- **Use Cases**: Chat, Text Summarization, RAG, Tool Use
-- **Vision Support**: No
-- **Tool Support**: Yes
-- **Context Window**: 128K Tokens
-- **Cost per 1M Tokens (Input)**: $1.50
-- **Cost per 1M Tokens (Output)**: $3.00
-- **API Model Name**: `aws/command-r-plus`, `aws/command-r` (lower cost version)
-- **Terms of Service**: [Cohere For AI Acceptable Use Policy](https://docs.cohere.com/docs/c4ai-acceptable-use-policy)
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-4.1`
+- **Underlying Model**: `openai/gpt-4.1`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,047,576
+- **Max Output Tokens**: 32,768
+- **Capabilities**: Vision, Tool Use, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $2.00
+- **Cost per 1M Tokens (Output)**: $8.00
 
-#### xAI Grok 3 and Grok 4
+#### gpt-4.1-mini
 
-- **Endpoint Location**: xAI Cloud
-- **Vision Support**: Yes
-- **Tool Support**: Yes
-- **Cost per 1M Tokens (Input)**: $3.00 ($0.30 for mini)
-- **Cost per 1M Tokens (Output)**: $15.00 ($0.50 for mini)
-- **Input Length**: 128K Tokens
-- **API Model Name**: `xai/grok`, `xai/grok-mini`, `xai/grok-3`, `xai/grok-3-mini`, `xai/grok-4`, `xai/grok-4-0709`
-- **Terms of Service**: [xAI Terms of Service - Enterprise](https://x.ai/legal/terms-of-service-enterprise)
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-4.1-mini`
+- **Underlying Model**: `openai/gpt-4.1-mini`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,047,576
+- **Max Output Tokens**: 32,768
+- **Capabilities**: Vision, Tool Use, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $0.40
+- **Cost per 1M Tokens (Output)**: $1.60
 
-#### xAI Grok Code Fast 1
+#### gpt-4.1-nano
 
-- **Endpoint Location**: xAI Cloud
-- **Vision Support**: No
-- **Tool Support**: Yes
-- **Cost per 1M Tokens (Input)**: $0.20 ($0.02 for cached content)
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-4.1-nano`
+- **Underlying Model**: `openai/gpt-4.1-nano`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,047,576
+- **Max Output Tokens**: 32,768
+- **Capabilities**: Vision, Tool Use, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $0.10
+- **Cost per 1M Tokens (Output)**: $0.40
+
+#### gpt-4o
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-4o`
+- **Underlying Model**: `openai/gpt-4o`
+- **Mode**: Chat
+- **Max Input Tokens**: 128,000
+- **Max Output Tokens**: 16,384
+- **Capabilities**: Vision, Tool Use, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $2.50
+- **Cost per 1M Tokens (Output)**: $10.00
+
+#### gpt-4o-mini
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-4o-mini`
+- **Underlying Model**: `openai/gpt-4o-mini`
+- **Mode**: Chat
+- **Max Input Tokens**: 128,000
+- **Max Output Tokens**: 16,384
+- **Capabilities**: Vision, Tool Use, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $0.15
+- **Cost per 1M Tokens (Output)**: $0.60
+
+#### gpt-5
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5`
+- **Underlying Model**: `openai/gpt-5`
+- **Mode**: Chat
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $1.25
+- **Cost per 1M Tokens (Output)**: $10.00
+
+#### gpt-5-chat
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5-chat`
+- **Underlying Model**: `openai/gpt-5-chat-latest`
+- **Mode**: Chat
+- **Max Input Tokens**: 128,000
+- **Max Output Tokens**: 16,384
+- **Capabilities**: Vision, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $1.25
+- **Cost per 1M Tokens (Output)**: $10.00
+
+#### gpt-5-codex
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5-codex`
+- **Underlying Model**: `openai/gpt-5-codex`
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $1.25
+- **Cost per 1M Tokens (Output)**: $10.00
+
+#### gpt-5-high
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5-high`
+- **Underlying Model**: `openai/gpt-5`
+- **Mode**: Chat
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $1.25
+- **Cost per 1M Tokens (Output)**: $10.00
+
+#### gpt-5-mini
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5-mini`
+- **Underlying Model**: `openai/gpt-5-mini`
+- **Mode**: Chat
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $0.25
+- **Cost per 1M Tokens (Output)**: $2.00
+
+#### gpt-5-mini-high
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5-mini-high`
+- **Underlying Model**: `openai/gpt-5-mini`
+- **Mode**: Chat
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $0.25
+- **Cost per 1M Tokens (Output)**: $2.00
+
+#### gpt-5-nano
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5-nano`
+- **Underlying Model**: `openai/gpt-5-nano`
+- **Mode**: Chat
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $0.05
+- **Cost per 1M Tokens (Output)**: $0.40
+
+#### gpt-5-nano-high
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5-nano-high`
+- **Underlying Model**: `openai/gpt-5-nano`
+- **Mode**: Chat
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $0.05
+- **Cost per 1M Tokens (Output)**: $0.40
+
+#### gpt-5.1
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5.1`
+- **Underlying Model**: `openai/gpt-5.1`
+- **Mode**: Chat
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $1.25
+- **Cost per 1M Tokens (Output)**: $10.00
+
+#### gpt-5.1-chat
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5.1-chat`
+- **Underlying Model**: `openai/gpt-5.1-chat-latest`
+- **Mode**: Chat
+- **Max Input Tokens**: 128,000
+- **Max Output Tokens**: 16,384
+- **Capabilities**: Vision, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $1.25
+- **Cost per 1M Tokens (Output)**: $10.00
+
+#### gpt-5.1-codex
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5.1-codex`
+- **Underlying Model**: `openai/gpt-5.1-codex`
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $1.25
+- **Cost per 1M Tokens (Output)**: $10.00
+
+#### gpt-5.1-codex-max
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5.1-codex-max`
+- **Underlying Model**: `openai/gpt-5.1-codex-max`
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $1.25
+- **Cost per 1M Tokens (Output)**: $10.00
+
+#### gpt-5.1-codex-mini
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5.1-codex-mini`
+- **Underlying Model**: `openai/gpt-5.1-codex-mini`
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $0.25
+- **Cost per 1M Tokens (Output)**: $2.00
+
+#### gpt-5.1-high
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5.1-high`
+- **Underlying Model**: `openai/gpt-5.1`
+- **Mode**: Chat
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $1.25
+- **Cost per 1M Tokens (Output)**: $10.00
+
+#### gpt-5.2
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5.2`
+- **Underlying Model**: `openai/gpt-5.2`
+- **Mode**: Chat
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $1.75
+- **Cost per 1M Tokens (Output)**: $14.00
+
+#### gpt-5.2-chat
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5.2-chat`
+- **Underlying Model**: `openai/gpt-5.2-chat-latest`
+- **Mode**: Chat
+- **Max Input Tokens**: 128,000
+- **Max Output Tokens**: 16,384
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $1.75
+- **Cost per 1M Tokens (Output)**: $14.00
+
+#### gpt-5.2-codex
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5.2-codex`
+- **Underlying Model**: `openai/gpt-5.2-codex`
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $1.75
+- **Cost per 1M Tokens (Output)**: $14.00
+
+#### gpt-5.2-high
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5.2-high`
+- **Underlying Model**: `openai/gpt-5.1`
+- **Mode**: Chat
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $1.25
+- **Cost per 1M Tokens (Output)**: $10.00
+
+#### gpt-5.2-pro
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5.2-pro`
+- **Underlying Model**: `openai/gpt-5.2`
+- **Mode**: Chat
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $1.75
+- **Cost per 1M Tokens (Output)**: $14.00
+
+#### gpt-5.2-xhigh
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5.2-xhigh`
+- **Underlying Model**: `openai/gpt-5.2`
+- **Mode**: Chat
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: xhigh
+- **Cost per 1M Tokens (Input)**: $1.75
+- **Cost per 1M Tokens (Output)**: $14.00
+
+#### o1
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `o1`
+- **Underlying Model**: `openai/o1`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 100,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $15.00
+- **Cost per 1M Tokens (Output)**: $60.00
+
+#### o3
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `o3`
+- **Underlying Model**: `openai/o3`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 100,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $2.00
+- **Cost per 1M Tokens (Output)**: $8.00
+
+#### o3-high
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `o3-high`
+- **Underlying Model**: `openai/o3`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 100,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $2.00
+- **Cost per 1M Tokens (Output)**: $8.00
+
+#### o3-mini
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `o3-mini`
+- **Underlying Model**: `openai/o3-mini`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 100,000
+- **Capabilities**: Tool Use, Reasoning, Prompt Caching, Structured Output
+- **Cost per 1M Tokens (Input)**: $1.10
+- **Cost per 1M Tokens (Output)**: $4.40
+
+#### o3-mini-high
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `o3-mini-high`
+- **Underlying Model**: `openai/o3-mini`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 100,000
+- **Capabilities**: Tool Use, Reasoning, Prompt Caching, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $1.10
+- **Cost per 1M Tokens (Output)**: $4.40
+
+#### o4-mini
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `o4-mini`
+- **Underlying Model**: `openai/o4-mini`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 100,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $1.10
+- **Cost per 1M Tokens (Output)**: $4.40
+
+#### o4-mini-high
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `o4-mini-high`
+- **Underlying Model**: `openai/o4-mini`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 100,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $1.10
+- **Cost per 1M Tokens (Output)**: $4.40
+
+#### Nanonets-OCR
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `Nanonets-OCR`
+- **Underlying Model**: `openai/Nanonets-OCR`
+- **Mode**: Chat
+- **Cost**: No cost
+
+#### o1-high
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `o1-high`
+- **Underlying Model**: `openai/o1`
+- **Mode**: Chat
+- **Max Input Tokens**: 200,000
+- **Max Output Tokens**: 100,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $15.00
+- **Cost per 1M Tokens (Output)**: $60.00
+
+#### o1-mini
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `o1-mini`
+- **Underlying Model**: `openai/o1-mini`
+- **Mode**: Chat
+- **Max Input Tokens**: 128,000
+- **Max Output Tokens**: 65,536
+- **Capabilities**: Vision, Prompt Caching, PDF Input
+- **Cost per 1M Tokens (Input)**: $1.10
+- **Cost per 1M Tokens (Output)**: $4.40
+
+#### o1-mini-high
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `o1-mini-high`
+- **Underlying Model**: `openai/o1-mini`
+- **Mode**: Chat
+- **Max Input Tokens**: 128,000
+- **Max Output Tokens**: 65,536
+- **Capabilities**: Vision, Prompt Caching, PDF Input
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $1.10
+- **Cost per 1M Tokens (Output)**: $4.40
+
+#### text-embedding-004
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `text-embedding-004`
+- **Underlying Model**: `openai/text-embedding-004`
+- **Cost**: No cost
+
+#### bge-m3
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `bge-m3`
+- **Underlying Model**: `openai/nomic-embed-text`
+- **Mode**: Embedding
+- **Max Input Tokens**: 8,192
+- **Cost**: No cost
+
+#### nomic-embed-text
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `nomic-embed-text`
+- **Underlying Model**: `openai/nomic-embed-text`
+- **Mode**: Embedding
+- **Max Input Tokens**: 8,192
+- **Cost**: No cost
+
+#### nomic-embed-text:latest
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `nomic-embed-text:latest`
+- **Underlying Model**: `openai/nomic-embed-text`
+- **Mode**: Embedding
+- **Max Input Tokens**: 8,192
+- **Cost**: No cost
+
+#### nomic-embed-vision
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `nomic-embed-vision`
+- **Underlying Model**: `openai/nomic-embed-vision`
+- **Mode**: Embedding
+- **Max Input Tokens**: 8,192
+- **Cost**: No cost
+
+#### nomic-embed-vision:latest
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `nomic-embed-vision:latest`
+- **Underlying Model**: `openai/nomic-embed-vision`
+- **Mode**: Embedding
+- **Max Input Tokens**: 8,192
+- **Cost**: No cost
+
+#### text-embedding-ada-002
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `text-embedding-ada-002`
+- **Underlying Model**: `openai/text-embedding-ada-002`
+- **Mode**: Embedding
+- **Max Input Tokens**: 8,191
+- **Cost per 1M Tokens (Input)**: $0.10
+
+### xAI
+
+#### xai/grok-3
+
+- **Endpoint Location**: xAI
+- **API Model Name**: `xai/grok-3`
+- **Underlying Model**: `xai/grok-3`
+- **Mode**: Chat
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 131,072
+- **Capabilities**: Tool Use
+- **Cost per 1M Tokens (Input)**: $3.00
+- **Cost per 1M Tokens (Output)**: $15.00
+
+#### xai/grok-3-mini
+
+- **Endpoint Location**: xAI
+- **API Model Name**: `xai/grok-3-mini`
+- **Underlying Model**: `xai/grok-3-mini`
+- **Mode**: Chat
+- **Max Input Tokens**: 131,072
+- **Max Output Tokens**: 131,072
+- **Capabilities**: Tool Use, Reasoning
+- **Cost per 1M Tokens (Input)**: $0.30
+- **Cost per 1M Tokens (Output)**: $0.50
+
+#### xai/grok-4-0709
+
+- **Endpoint Location**: xAI
+- **API Model Name**: `xai/grok-4-0709`
+- **Underlying Model**: `xai/grok-4-0709`
+- **Mode**: Chat
+- **Max Input Tokens**: 256,000
+- **Max Output Tokens**: 256,000
+- **Capabilities**: Tool Use
+- **Cost per 1M Tokens (Input)**: $3.00
+- **Cost per 1M Tokens (Output)**: $15.00
+
+#### xai/grok-4-1-fast
+
+- **Endpoint Location**: xAI
+- **API Model Name**: `xai/grok-4-1-fast`
+- **Underlying Model**: `xai/grok-4-1-fast-non-reasoning`
+- **Mode**: Chat
+- **Max Input Tokens**: 2,000,000.0
+- **Max Output Tokens**: 2,000,000.0
+- **Capabilities**: Vision, Tool Use, Structured Output
+- **Cost per 1M Tokens (Input)**: $0.20
+- **Cost per 1M Tokens (Output)**: $0.50
+
+#### xai/grok-4-1-fast-reasoning
+
+- **Endpoint Location**: xAI
+- **API Model Name**: `xai/grok-4-1-fast-reasoning`
+- **Underlying Model**: `xai/grok-4-1-fast-reasoning`
+- **Mode**: Chat
+- **Max Input Tokens**: 2,000,000.0
+- **Max Output Tokens**: 2,000,000.0
+- **Capabilities**: Vision, Tool Use, Reasoning, Structured Output
+- **Cost per 1M Tokens (Input)**: $0.20
+- **Cost per 1M Tokens (Output)**: $0.50
+
+#### xai/grok-code-fast-1
+
+- **Endpoint Location**: xAI
+- **API Model Name**: `xai/grok-code-fast-1`
+- **Underlying Model**: `xai/grok-code-fast-1`
+- **Mode**: Chat
+- **Max Input Tokens**: 256,000
+- **Max Output Tokens**: 256,000
+- **Capabilities**: Tool Use, Reasoning
+- **Cost per 1M Tokens (Input)**: $0.20
 - **Cost per 1M Tokens (Output)**: $1.50
-- **Input Length**: 256K Tokens
-- **API Model Name**: `xai/grok-code`, `xai/grok-code-fast-1`
-- **Terms of Service**: [xAI Terms of Service - Enterprise](https://x.ai/legal/terms-of-service-enterprise)
-
-#### Wolfram|Alpha
-
-Wolfram|Alpha can lookup information, consult databases and perform mathematical calculations.
-The CBorg endpoint accepts queries as OpenAI-compatible user messages and returns results
-in Markdown-formatted text.
-
-- **Endpoint Location**: Wolfram Cloud
-- **Use Cases**: Calculator, Database Lookup
-- **Vision Support**: No
-- **Tool Support**: No
-- **Input Length**: 1024 Characters
-- **API Model Name**: `wolfram/alpha`
-- **Terms of Service**: [Wolfram|Alpha Terms of Use](https://www.wolframalpha.com/termsofuse)
