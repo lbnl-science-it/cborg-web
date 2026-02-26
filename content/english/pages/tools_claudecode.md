@@ -8,61 +8,94 @@ meta_title: ""
 draft: false
 ---
 
-#### 1. Set the following variables in your environment:
+## 1. Set Environment Variables
 
-Note that using the "official" model names as per below is recommended so that Claude Code calculates costs correctly.  Use of aliases e.g. anthropic/claude-sonnet will work but the tools' cost estimates may be incorrect.
+Set the following variables in your environment:
 
-{{< highlight bash >}} 
-# set authorization and base URL
+```bash
+# Set authorization and base URL
 export ANTHROPIC_AUTH_TOKEN=$CBORG_API_KEY
 export ANTHROPIC_BASE_URL=https://api.cborg.lbl.gov
 
-# set fast model - this is only used for minor tasks like documentation
-export ANTHROPIC_SMALL_FAST_MODEL=claude-haiku-4-5
+# Model selection -- using aliases to latest version of each model
+export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku
+export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet
+export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus
 
-# set main model - sonnet is recommended
-# you can also try opus but its more expensive
-export ANTHROPIC_MODEL=claude-sonnet-4-5
+# Default conversation model
+export ANTHROPIC_MODEL=claude-sonnet
 
-# alternative configuration (free to use with LBL-hosted model)
-export ANTHROPIC_MODEL=lbl/cborg-coder
+# Default subagent model
+export CLAUDE_CODE_SUBAGENT_MODEL=claude-haiku
 
-# recommended setting
+# Recommended setting
 export DISABLE_NON_ESSENTIAL_MODEL_CALLS=1
 
-# recommended setting
+# Recommended setting
 export DISABLE_TELEMETRY=1
 
-# recommended setting for compatibility
+# Recommended setting for compatibility
 export CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1
 
-# recommended setting to reduce model throttling
-# higher limits can be used but may cause prompts to be rejected
+# Recommended setting to reduce model throttling
+# Higher max output tokens can be used but may cause prompts to be rejected with "too many tokens" error
 export CLAUDE_CODE_MAX_OUTPUT_TOKENS=8192
-{{< /highlight >}}
 
-#### 2. Restart your shell and verify that the environment variables are now present.
+```
 
-{{< highlight bash >}}
+## 2. Verify Environment Variables
+
+Restart your shell and verify that the environment variables are now present:
+
+```bash
 env | grep ANTHROPIC
-{{< /highlight >}}
+```
 
-#### 3. Now start Claude Code in your project directory.
+## 3. Start Claude Code
 
-{{< highlight bash >}}
+Now start Claude Code in your project directory:
+
+```bash
 cd my-project
 claude
-{{< /highlight >}}
+```
 
-#### 4. Optional: Install VS Code Extension
+## 4. Optional: Install VS Code Extension
 
-If you are a VS Code user, install "Claude Code for VSCode" extension. When claude is run through the VS Code terminal, it will use VS Code to display highlighted diffs for approval.
+If you are a VS Code user, install the "Claude Code for VSCode" extension. When `claude` is run through the VS Code terminal, it will use VS Code to display highlighted diffs for approval.
 
-#### Additional Notes
+## 5. Optional: Run Claude Code with Gemini Flash
 
-**Note:** It is strongly recommended to use version control (e.g. Git) with Claude Code projects.
+Set the following variables in your environment:
 
-**Note:** It is recommended to use Claude Code with the official Anthropic models as shown in the above configuration. However, Claude Code may also work with non-Anthropic models via CBorg API.
+```bash
+# Set authorization and base URL
+export ANTHROPIC_AUTH_TOKEN=$CBORG_API_KEY
+export ANTHROPIC_BASE_URL=https://api.cborg.lbl.gov
 
-**Budget Issues:** Heavy use of Claude Code may quickly exhaust your API usage credits. Direct access to Claude models can be configured via a GCP or AWS cloud project. To get started, please contact [Science IT Consulting](scienceit@lbl.gov) with a PID to use for recharges and we will help you get setup with a cloud project.
+# Model selection -- using aliases to latest version of each model
+export ANTHROPIC_DEFAULT_HAIKU_MODEL=gemini-flash-lite
+export ANTHROPIC_DEFAULT_SONNET_MODEL=gemini-flash
+export ANTHROPIC_DEFAULT_OPUS_MODEL=gemini-flash-high
+
+# Default conversation model
+export ANTHROPIC_MODEL=gemini-flash
+
+# Default subagent model
+export CLAUDE_CODE_SUBAGENT_MODEL=gemini-flash-lite
+
+# Recommended setting
+export DISABLE_NON_ESSENTIAL_MODEL_CALLS=1
+
+# Recommended setting
+export DISABLE_TELEMETRY=1
+
+# Recommended setting for compatibility
+export CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS=1
+
+# Recommended setting to reduce model throttling
+# Higher max output tokens can be used but may cause prompts to be rejected with "too many tokens" error
+export CLAUDE_CODE_MAX_OUTPUT_TOKENS=8192
+
+```
 

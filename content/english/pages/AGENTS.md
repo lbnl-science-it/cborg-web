@@ -38,7 +38,7 @@ Then generate a model table like so:
 
 ## Providers:
 
-LBL IT Division (prefix 'lbl/' or provider=lbl)
+LBL IT Division (prefix 'lbl/' or provider=lbl - many with openai/ and a model name that is not in the OpenAI family are "openai-compatible" self hosted by LBL IT)
 OpenAI (no prefix, provider=openai, all common OpenAI model aliases)
 Google Vertex AI (prefix google/ or provider=google)
 Amazon Bedrock (prefix amazon/ or provider=amazon)

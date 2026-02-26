@@ -14,6 +14,21 @@ All systems are operational.
 
 ## Recent Updates
 
+_Feb 25nd, 2025_
+
+- Codex 5.3 available
+
+_Feb 22nd, 2025_
+
+- Gemini 3.1 Pro available
+- SciCode benchmarks updated with Gemini 3.1 Pro
+
+_Feb 10th, 2025_
+
+- Updated Claude Opus to 4.6
+- OpenAI now available from OpenAI endpoint
+- New model info page
+
 _Nov 30th, 2025_
 
 - Updated Claude Opus to 4.5

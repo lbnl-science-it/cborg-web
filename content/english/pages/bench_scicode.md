@@ -18,18 +18,23 @@ We run this benchmark with "background" enabled, meaning the model is given a de
 
 *Note: These findings are based on internal research and do not constitute an endorsement of any model for any specific purpose. This list will be updated frequently - please check back here for updates.*
 
-![SciCode Benchmark](/images/scicode_bench_20260123.png) 
+![SciCode Benchmark](/images/scicode_bench_20260222.jpg) 
 
 | Model                              | % Correct              | Cost        | Note  | Config                                       | Date       |
 | ------------------------           | ---------------------- | ----------- | ----  | -----------------------------------------    | ---------- |
+| gemini-3.1-pro-high                | 26.2%                  | $25.90      | ✅    | Gemini 3.1 Pro Preview reasoning_effort="high"       | 2026-02-22 |
 | gemini-3-flash-high                | 24.6%                  | $9.77       | ✅    | Gemini 3 Flash reasoning_effort="high"       | 2026-01-23 |
 | claude-opus-4-5-high               | 24.6%                  | $26.37      |       | Opus 4.5 reasoning_effort="high"             | 2025-12-02 |
-| gemini-3.0-pro-preview             | 21.5%                  | $27.63      |       | Gemini 3.0 Pro Preview                      | 2025-12-02 |
+| claude-opus-4-5-high               | 24.6%                  | $26.37      |       | Opus 4.5 reasoning_effort="high"             | 2025-12-02 |
+| gemini-3.1-pro                     | 23.1%                  | $5.80       |       | Gemini 3.1 Pro Preview                      | 2025-02-22 |
+| gemini-3.0-pro                     | 21.5%                  | $27.63      |       | Gemini 3.0 Pro Preview                      | 2025-12-02 |
+| opus-4-6                           | 18.5%                  | $9.84       |       | Opus 4.5                                    | 2026-02-22 |
 | gemini-3-flash                     | 18.5%                  | $0.28       | ✅    | Gemini 3 Flash                               | 2026-01-23 |
-| gpt-5-1-codex-max                  | 18.5%                  | $7.72       |       | OpenAI gpt-5-1-codex                         | 2026-01-23 |
+| gpt-5-1-codex-max                  | 18.5%                  | $7.72       |       | OpenAI gpt-5-1-codex-max                     | 2026-01-23 |
 | claude-opus-4-5                    | 18.5%                  | $10.78      |       | Opus 4.5                                     | 2025-12-02 |
 | gemini-2.5-pro-high                | 16.9%                  | $12.60      |       | Gemini 2.5 Pro reasoning_effort="high"       | 2025-08-22 |
-| gpt-5-high                         | 16.9%                  | $16.80      |       | OpenAI gpt-5 reasoning_effort="high"       | 2025-09-26 |
+| opus-4-6-high                      | 16.9%                  | $25.53      |       | Opus 4.6 reasoning_effort="high"             | 2025-02-22 |
+| gpt-5-high                         | 16.9%                  | $16.80      |       | OpenAI gpt-5 reasoning_effort="high"          | 2025-09-26 |
 | gpt-5.2                            | 15.4%                  | $3.87       |       | OpenAI GPT 5.2                                | 2026-01-23 |
 | glm-4.7                            | 15.4%                  | $7.97       | ⚠️     | GLM 4.7 on GCP Vertex AI                     | 2026-01-23 |
 | claude-sonnet-4-5-high             | 15.4%                  | $11.25      |       | Sonnet 4.5 reasoning_budget=8192             | 2025-09-30 |
@@ -47,6 +52,7 @@ We run this benchmark with "background" enabled, meaning the model is given a de
 | claude-opus-4-1-high               | 12.3%                  | $45.00      | ⛔    | Opus 4.1 reasoning_budget=8192               | 2025-08-22 |
 | deepseek-3.2                       | 10.8%                  | $0.76       | ⚠️    | Deepseek 3.2 on GCP Vertex AI                | 2026-01-23 |
 | gpt-oss-120b-high                  | 10.8%                  | $0.36       |      | gpt-oss-120b reasoning_effort="high"         | 2025-08-24 |
+| mistral-large-3                    | 10.8%                  | $0.56       |      | MistralAI Large 3                            | 2026-02-23 |
 | grok-3-mini                        | 10.8%                  | $0.94       |       | xAI Grok 3 Mini                             | 2025-08-29 |
 | grok-code-fast-1                   | 10.8%                  | $2.09       |       | xAI Code Fast 1                             | 2025-08-29 |
 | gpt-5-mini-high                    | 10.8%                  | $3.49       |      | OpenAI gpt-5-mini reasoning_effort="high"      | 2025-09-26 |
