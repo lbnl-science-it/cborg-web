@@ -22,39 +22,7 @@ Using NPM
 npm install -g @google/gemini-cli
 {{< /highlight >}} 
 
-#### 2A. Authentication via LBL-identity:
-
-Authentication via the LBL identity enables direct usage of Gemini models without incurring API charges on CBorg.
-
-{{< highlight bash >}}
-gemini
-/auth
-{{< /highlight >}}
-
-Then select "Login with Google". A browser will open - login using your LBL identity for authentication.
-
-Verify the Auth method is "OAuth" using the `/about` command:
-
-{{< highlight bash >}}
-╭────────────╮
-│  > /about  │
-╰────────────╯
-╭──────────────────────────────────────────────────────────────────────╮
-│                                                                      │
-│ About Gemini CLI                                                     │
-│                                                                      │
-│ CLI Version             0.1.9                                        │
-│ Git Commit              34935d6                                      │
-│ Model                   gemini-2.5-pro                               │
-│ Sandbox                 no sandbox                                   │
-│ OS                      darwin                                       │
-│ Auth Method             OAuth                                        │
-│                                                                      │
-╰──────────────────────────────────────────────────────────────────────╯
-{{< /highlight >}}
-
-
-#### 2B. Authentication via CBorg: Set the following variables in your environment:
+#### 2. Authentication via CBorg: Set the following variables in your environment:
 
 **If you previously authenticated using another method, switch authentication back to "Gemini API Key" using the `/auth` command.
 
