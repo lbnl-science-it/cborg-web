@@ -23,33 +23,25 @@ Install the [Roo Code Extension](https://docs.roocode.com/) for VS Code.
 7. Click **Refresh Models**
 8. Select the desired model
 
-**Note:** With the LiteLLM provider, Roo Code will display accurate calculations of the cost of each operation and supports prompt caching for Anthropic models. You can also use "OpenAI Compatible" as the provider, but this will not display the per-API costs when using the extension.
-
 For more information please consult the RooCode documentation: [Using LiteLLM with RooCode](https://docs.roocode.com/providers/litellm)
 
-#### Advanced / Experimental Options
+## Troubleshooting Tips
 
-Advanced users may wish to configure multiple profiles for different tasks.
+### Gemini Models
 
-Enable "Power Steering" under Experimental options in the menu - this will use slightly more tokens but helps keep the model on-task (recommended for use with CBorg Coder)
+- The cache setting in RooCode is not supported. These models automatically apply caching discounts.
 
-#### Recommended Models
+### Preventing Common Errors
 
-`lbl/cborg-coder`: Best free-to-use model (unlimited usage) - keeps your data on CBorg self-hosted model server. Fast speed.
+If you have issues with API errors, add the following to your global rules: `~/.roo/rules/rules.md`.
 
-`xai/grok-3-mini`: Very low cost model, with strong scientific coding capability.
+```bash
+## Chat compatibility
 
-`openai/o4-mini-high`: Good performance at a reasonable cost.
+Make sure to always return an assistant message in your responses.
 
-`google/gemini-pro-high`: Expensive model to use - reserve for maximum difficulty tasks (e.g. scientific coding)
+## Diff-based Editing
 
-`anthropic/claude-sonnet-high`: Expensive model to use - reserve for maximum difficulty tasks (e.g. scientific coding). Makes nice user interfaces and supports automated testing in RooCode via "computer use". Keep an eye on your costs!
-
-#### Not Recommended Models
-
-`anthropic/claude-opus`: Ultra-expensive, with almost no additional improvement in code quality
-
-`anthropic/claude-haiku`: Significantly underperforms relative to other lightweight models
-
-`openai/gpt-5`: Use of a reasoning model will improve performance
+When targeting text for a diff, copy the exact lines from the source file. The diff tool requires a 100% string match to apply the edit. Do not strip out newlines (\n) or combine multiple lines into a single continuous string."
+```
 
