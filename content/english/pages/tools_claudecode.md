@@ -8,6 +8,19 @@ meta_title: ""
 draft: false
 ---
 
+### API Cost Optimization
+
+Claude models can be very expensive to operate, however, many optimizations exist that can substantially reduce the cost of using these models.
+
+According to Anthropic, the average cost of using ClaudeCode is $6 per day. However, incorrect usage patterns can cause token utilization to be higher. Common issues include:
+
+- Having too many MCP servers
+- Over-use of CLAUDE.md instead of skills
+- Not using language-aware code intelligence plugins
+- Not clearing context between tasks
+
+A comprehensive overview is available here: https://code.claude.com/docs/en/costs
+
 ## 1. Set Environment Variables
 
 Set the following variables in your environment:
@@ -17,16 +30,18 @@ Set the following variables in your environment:
 export ANTHROPIC_AUTH_TOKEN=$CBORG_API_KEY
 export ANTHROPIC_BASE_URL=https://api.cborg.lbl.gov
 
-# Model selection -- using aliases to latest version of each model
-export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku
-export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet
-export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus
+# Model selection -- set to latest version of each model
+# NOTE: You will need to update these each time a new model is released
+# NOTE: Other models can be used, but ClaudeCode will incorrectly calculate API costs
+export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-haiku-4-5
+export ANTHROPIC_DEFAULT_SONNET_MODEL=claude-sonnet-4-6
+export ANTHROPIC_DEFAULT_OPUS_MODEL=claude-opus-4-6
 
 # Default conversation model
-export ANTHROPIC_MODEL=claude-sonnet
+export ANTHROPIC_MODEL=claude-sonnet-4-6
 
 # Default subagent model
-export CLAUDE_CODE_SUBAGENT_MODEL=claude-haiku
+export CLAUDE_CODE_SUBAGENT_MODEL=claude-haiku-4-5
 
 # Recommended setting
 export DISABLE_NON_ESSENTIAL_MODEL_CALLS=1
