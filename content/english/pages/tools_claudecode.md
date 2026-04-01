@@ -18,6 +18,7 @@ According to Anthropic, the average cost of using ClaudeCode is $6 per day. Howe
 - Over-use of CLAUDE.md instead of skills
 - Not using language-aware code intelligence plugins
 - Not clearing context between tasks
+- Using a overpowered model for the task
 
 A comprehensive overview is available here: https://code.claude.com/docs/en/costs
 

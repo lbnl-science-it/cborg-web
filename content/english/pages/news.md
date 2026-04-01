@@ -14,8 +14,14 @@ All systems are operational.
 
 ## Recent Updates
 
+_Mar 25th, 2025_
+
+- GPT 5.4 Mini and GPT 5.4 Nano available
+- Corrected for missing user-assistant alternation sequence in AWS Bedrock Claude models
+
 _Feb 25nd, 2025_
 
+- GPT 5.4 available
 - Codex 5.3 available
 
 _Feb 22nd, 2025_

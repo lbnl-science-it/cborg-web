@@ -25,11 +25,40 @@ Install the [Roo Code Extension](https://docs.roocode.com/) for VS Code.
 
 For more information please consult the RooCode documentation: [Using LiteLLM with RooCode](https://docs.roocode.com/providers/litellm)
 
+## Recommended Settings
+
+To improve context caching and reduce cost, the following settings are recommended:
+
+### Context Menu
+
+- Open Tabs Context Limit: 1
+- Workspace Files Context Limit: 10
+- Git Status Max Files: 1
+- Maximum diagnostic messages: 10
+- Include current time in context: DISABLE
+- Include current cost in context: DISABLE
+- Context condensing: 50% or around 100K tokens
+- Enable subfolder rules: ON
+
+### Terminal Menu
+
+- Command output preview size: Small
+
+### MCP Servers
+
+- MCP servers consume significant amount of context. Only enable MCP servers you are actively using.
+
+### Models for Low Budget
+
+- Gemini Flash High (gemini-flash-high)
+- Claude Haiku High (claude-haiku-high)
+- GPT 5.4 Nano (gpt-5.4-nano)
+
 ## Troubleshooting Tips
 
 ### Gemini Models
 
-- The cache setting in RooCode is not supported. These models automatically apply caching discounts.
+- The cache setting in RooCode is not supported for Gemini models. These models automatically apply caching discounts, therefore you can leave "Enable prompt caching" disabled.
 
 ### Preventing Common Errors
 

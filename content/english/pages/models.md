@@ -10,7 +10,7 @@ draft: false
 
 ## Available Models
 
-*Last updated: 2026-02-26*
+*Last updated: 2026-03-26*
 
 **Model Licensing Terms**
 
@@ -49,6 +49,7 @@ draft: false
 | Amazon Bedrock           | Unknown        | devstral-2                     | 256K / 256K    | N       | Y     | $0.40 / $2.00      | E       |
 | Amazon Bedrock           | Unknown        | nemotron-nano-3                | 262.144K / 8.192K | N       | Y     | $0.06 / $0.24      | E       |
 | Amazon Bedrock           | Unknown        | nemotron-nano-vl               | 128K / 8.192K  | Y       | N     | $0.20 / $0.60      | E       |
+| Amazon Bedrock           | Unknown        | nemotron-super-3               | N/A / N/A      | N       | N     | $0 / $0            | E       |
 | Amazon Bedrock           | Unknown        | nova-micro                     | N/A / N/A      | N       | N     | $0 / $0            | E       |
 | Amazon Bedrock           | Unknown        | nova-micro-1                   | 128K / 10K     | N       | Y     | $0.04 / $0.14      | E       |
 | Amazon Bedrock           | Unknown        | nova-premier                   | N/A / N/A      | N       | N     | $0 / $0            | E       |
@@ -94,8 +95,8 @@ draft: false
 | Google Vertex AI         | Anthropic      | google/claude-sonnet-4-high    | 1M / 16.384K   | Y       | Y     | $3.00 / $15.00     | E       |
 | Google Vertex AI         | DeepSeek       | google/deepseek-3.2            | 163.84K / 32.768K | N       | Y     | $0.56 / $1.68      | E       |
 | Google Vertex AI         | DeepSeek       | google/deepseek-r1             | 65.336K / 8.192K | N       | Y     | $1.35 / $5.40      | E       |
-| Google Vertex AI         | Google         | gemini-1.5-flash               | 1M / 8.192K    | Y       | Y     | $0.07 / $0.30      | E       |
-| Google Vertex AI         | Google         | gemini-1.5-pro                 | 2.09715M / 8.192K | Y       | Y     | $1.25 / $5.00      | E       |
+| Google Vertex AI         | Google         | gemini-1.5-flash               | N/A / N/A      | N       | N     | $0 / $0            | E       |
+| Google Vertex AI         | Google         | gemini-1.5-pro                 | N/A / N/A      | N       | N     | $0 / $0            | E       |
 | Google Vertex AI         | Google         | gemini-2.0-flash               | 1.04858M / 8.192K | Y       | Y     | $0.10 / $0.40      | E       |
 | Google Vertex AI         | Google         | gemini-2.0-flash-lite          | 1.04858M / 8.192K | Y       | Y     | $0.07 / $0.30      | E       |
 | Google Vertex AI         | Google         | gemini-2.5-flash               | 1.04858M / 65.535K | Y       | Y     | $0.30 / $2.50      | E       |
@@ -106,16 +107,24 @@ draft: false
 | Google Vertex AI         | Google         | gemini-2.5-pro-high            | 1.04858M / 65.535K | Y       | Y     | $2.00 / $12.00     | E       |
 | Google Vertex AI         | Google         | gemini-3-flash                 | 1.04858M / 65.535K | Y       | Y     | $0.50 / $3.00      | E       |
 | Google Vertex AI         | Google         | gemini-3-flash-high            | 1.04858M / 65.535K | Y       | Y     | $0.50 / $3.00      | E       |
+| Google Vertex AI         | Google         | gemini-3-flash-high-priority   | 1.04858M / 65.535K | Y       | Y     | $0.50 / $3.00      | E       |
+| Google Vertex AI         | Google         | gemini-3-flash-priority        | 1.04858M / 65.535K | Y       | Y     | $0.50 / $3.00      | E       |
 | Google Vertex AI         | Google         | gemini-3-pro                   | 1.04858M / 65.535K | Y       | Y     | $2.00 / $12.00     | E       |
 | Google Vertex AI         | Google         | gemini-3-pro-high              | 1.04858M / 65.535K | Y       | Y     | $2.00 / $12.00     | E       |
 | Google Vertex AI         | Google         | gemini-3.1-pro                 | 1.04858M / 65.536K | Y       | Y     | $2.00 / $12.00     | E       |
 | Google Vertex AI         | Google         | gemini-3.1-pro-high            | 1.04858M / 65.536K | Y       | Y     | $2.00 / $12.00     | E       |
+| Google Vertex AI         | Google         | gemini-3.1-pro-high-priority   | 1.04858M / 65.536K | Y       | Y     | $2.00 / $12.00     | E       |
+| Google Vertex AI         | Google         | gemini-3.1-pro-priority        | 1.04858M / 65.536K | Y       | Y     | $2.00 / $12.00     | E       |
 | Google Vertex AI         | Google         | gemini-embedding-001           | N/A / N/A      | N       | N     | $0 / $0            | E       |
 | Google Vertex AI         | Google         | gemini-flash                   | 1.04858M / 65.535K | Y       | Y     | $0.50 / $3.00      | E       |
 | Google Vertex AI         | Google         | gemini-flash-high              | 1.04858M / 65.535K | Y       | Y     | $0.50 / $3.00      | E       |
+| Google Vertex AI         | Google         | gemini-flash-high-priority     | 1.04858M / 65.535K | Y       | Y     | $0.50 / $3.00      | E       |
 | Google Vertex AI         | Google         | gemini-flash-image             | N/A / N/A      | N       | N     | $0 / $0            | E       |
+| Google Vertex AI         | Google         | gemini-flash-priority          | 1.04858M / 65.535K | Y       | Y     | $0.50 / $3.00      | E       |
 | Google Vertex AI         | Google         | gemini-pro                     | 1.04858M / 65.536K | Y       | Y     | $2.00 / $12.00     | E       |
 | Google Vertex AI         | Google         | gemini-pro-high                | 1.04858M / 65.536K | Y       | Y     | $2.00 / $12.00     | E       |
+| Google Vertex AI         | Google         | gemini-pro-high-priority       | 1.04858M / 65.536K | Y       | Y     | $2.00 / $12.00     | E       |
+| Google Vertex AI         | Google         | gemini-pro-priority            | 1.04858M / 65.536K | Y       | Y     | $2.00 / $12.00     | E       |
 | Google Vertex AI         | Meta           | google/llama-4-maverick        | 1M / 1M        | N       | Y     | $0.35 / $1.15      | E       |
 | Google Vertex AI         | Mistral AI     | google/codestral               | 128K / 128K    | N       | Y     | $0.20 / $0.60      | E       |
 | Google Vertex AI         | OpenAI         | google/gpt-oss-120b            | 131.072K / 32.768K | N       | N     | $0.15 / $0.60      | E       |
@@ -173,10 +182,17 @@ draft: false
 | OpenAI                   | OpenAI         | gpt-5.2                        | 272K / 128K    | Y       | Y     | $1.75 / $14.00     | E       |
 | OpenAI                   | OpenAI         | gpt-5.2-chat                   | 128K / 16.384K | Y       | Y     | $1.75 / $14.00     | E       |
 | OpenAI                   | OpenAI         | gpt-5.2-codex                  | 272K / 128K    | Y       | Y     | $1.75 / $14.00     | E       |
-| OpenAI                   | OpenAI         | gpt-5.2-high                   | 272K / 128K    | Y       | Y     | $1.25 / $10.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5.2-high                   | 272K / 128K    | Y       | Y     | $1.75 / $14.00     | E       |
 | OpenAI                   | OpenAI         | gpt-5.2-pro                    | 272K / 128K    | Y       | Y     | $1.75 / $14.00     | E       |
-| OpenAI                   | OpenAI         | gpt-5.2-xhigh                  | 272K / 128K    | Y       | Y     | $1.75 / $14.00     | E       |
 | OpenAI                   | OpenAI         | gpt-5.3-codex                  | 272K / 128K    | Y       | Y     | $1.75 / $14.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5.3-codex-high             | 272K / 128K    | Y       | Y     | $1.75 / $14.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5.3-codex-xhigh            | 272K / 128K    | Y       | Y     | $1.75 / $14.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5.4                        | 1.05M / 128K   | Y       | Y     | $2.50 / $15.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5.4-high                   | 1.05M / 128K   | Y       | Y     | $2.50 / $15.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5.4-mini                   | 272K / 128K    | Y       | Y     | $0.75 / $4.50      | E       |
+| OpenAI                   | OpenAI         | gpt-5.4-nano                   | 272K / 128K    | Y       | Y     | $0.20 / $1.25      | E       |
+| OpenAI                   | OpenAI         | gpt-5.4-pro                    | 1.05M / 128K   | Y       | Y     | $2.50 / $15.00     | E       |
+| OpenAI                   | OpenAI         | gpt-5.4-xhigh                  | 1.05M / 128K   | Y       | Y     | $2.50 / $15.00     | E       |
 | OpenAI                   | OpenAI         | gpt-chat                       | 128K / 16.384K | Y       | Y     | $1.75 / $14.00     | E       |
 | OpenAI                   | OpenAI         | gpt-codex                      | 272K / 128K    | Y       | Y     | $1.75 / $14.00     | E       |
 | OpenAI                   | OpenAI         | gpt-mini                       | 272K / 128K    | Y       | Y     | $0.25 / $2.00      | E       |
@@ -189,8 +205,8 @@ draft: false
 | OpenAI                   | OpenAI         | o4-mini                        | 200K / 100K    | Y       | Y     | $1.10 / $4.40      | E       |
 | OpenAI                   | OpenAI         | o4-mini-high                   | 200K / 100K    | Y       | Y     | $1.10 / $4.40      | E       |
 | OpenAI                   | Unknown        | o1-high                        | 200K / 100K    | Y       | Y     | $15.00 / $60.00    | E       |
-| OpenAI                   | Unknown        | o1-mini                        | 128K / 65.536K | Y       | N     | $1.10 / $4.40      | E       |
-| OpenAI                   | Unknown        | o1-mini-high                   | 128K / 65.536K | Y       | N     | $1.10 / $4.40      | E       |
+| OpenAI                   | Unknown        | o1-mini                        | N/A / N/A      | N       | N     | $0 / $0            | E       |
+| OpenAI                   | Unknown        | o1-mini-high                   | N/A / N/A      | N       | N     | $0 / $0            | E       |
 | xAI                      | xAI            | xai/grok-3                     | 131.072K / 131.072K | N       | Y     | $3.00 / $15.00     | C       |
 | xAI                      | xAI            | xai/grok-3-mini                | 131.072K / 131.072K | N       | Y     | $0.30 / $0.50      | C       |
 | xAI                      | xAI            | xai/grok-4-0709                | 256K / 256K    | N       | Y     | $3.00 / $15.00     | C       |
@@ -214,8 +230,10 @@ draft: false
 | Amazon Bedrock           | Cohere             | cohere-embed-multilingual-v3 | 512        | $0.10   |
 | Amazon Bedrock           | Cohere             | cohere-embed-v4          | 128K       | $0.12   |
 | LBL IT Division          | Unknown            | lbl/bge-m3               | 8.192K     | Free    |
+| LBL IT Division          | Nomic.AI           | lbl/nomic-embed-code     | 8.192K     | Free    |
 | LBL IT Division          | Nomic.AI           | lbl/nomic-embed-text     | 8.192K     | Free    |
 | LBL IT Division          | Nomic.AI           | lbl/nomic-embed-vision   | 8.192K     | Free    |
+| LBL IT Division          | Nomic.AI           | nomic-embed-code         | 8.192K     | Free    |
 | LBL IT Division          | Nomic.AI           | nomic-embed-text         | 8.192K     | Free    |
 | LBL IT Division          | Nomic.AI           | nomic-embed-vision       | 8.192K     | Free    |
 | Amazon Bedrock           | Unknown            | nova-2-embed-multimodal  | 8.172K     | $0.14   |
@@ -605,6 +623,13 @@ Models hosted on Amazon Bedrock are provided under enterprise agreements. Your d
 - **Capabilities**: Vision
 - **Cost per 1M Tokens (Input)**: $0.20
 - **Cost per 1M Tokens (Output)**: $0.60
+
+#### nemotron-super-3
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `nemotron-super-3`
+- **Underlying Model**: `bedrock/nvidia.nemotron-super-3-120b`
+- **Cost**: No cost
 
 #### nova-micro
 
@@ -1212,24 +1237,14 @@ Models hosted on Google Vertex AI are provided under enterprise agreements. Your
 - **Endpoint Location**: Google Vertex AI
 - **API Model Name**: `gemini-1.5-flash`
 - **Underlying Model**: `vertex_ai/gemini-1.5-flash`
-- **Mode**: Chat
-- **Max Input Tokens**: 1,000,000
-- **Max Output Tokens**: 8,192
-- **Capabilities**: Vision, Tool Use, Structured Output
-- **Cost per 1M Tokens (Input)**: $0.07
-- **Cost per 1M Tokens (Output)**: $0.30
+- **Cost**: No cost
 
 #### gemini-1.5-pro
 
 - **Endpoint Location**: Google Vertex AI
 - **API Model Name**: `gemini-1.5-pro`
 - **Underlying Model**: `vertex_ai/gemini-1.5-pro`
-- **Mode**: Chat
-- **Max Input Tokens**: 2,097,152
-- **Max Output Tokens**: 8,192
-- **Capabilities**: Vision, Tool Use, PDF Input, Structured Output
-- **Cost per 1M Tokens (Input)**: $1.25
-- **Cost per 1M Tokens (Output)**: $5.00
+- **Cost**: No cost
 
 #### gemini-2.0-flash
 
@@ -1345,6 +1360,32 @@ Models hosted on Google Vertex AI are provided under enterprise agreements. Your
 - **Cost per 1M Tokens (Input)**: $0.50
 - **Cost per 1M Tokens (Output)**: $3.00
 
+#### gemini-3-flash-high-priority
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-3-flash-high-priority`
+- **Underlying Model**: `vertex_ai/gemini-3-flash-preview`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,535
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $0.50
+- **Cost per 1M Tokens (Output)**: $3.00
+
+#### gemini-3-flash-priority
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-3-flash-priority`
+- **Underlying Model**: `vertex_ai/gemini-3-flash-preview`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,535
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $0.50
+- **Cost per 1M Tokens (Output)**: $3.00
+
 #### gemini-3-pro
 
 - **Endpoint Location**: Google Vertex AI
@@ -1395,6 +1436,31 @@ Models hosted on Google Vertex AI are provided under enterprise agreements. Your
 - **Cost per 1M Tokens (Input)**: $2.00
 - **Cost per 1M Tokens (Output)**: $12.00
 
+#### gemini-3.1-pro-high-priority
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-3.1-pro-high-priority`
+- **Underlying Model**: `vertex_ai/gemini-3.1-pro-preview`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,536
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $2.00
+- **Cost per 1M Tokens (Output)**: $12.00
+
+#### gemini-3.1-pro-priority
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-3.1-pro-priority`
+- **Underlying Model**: `vertex_ai/gemini-3.1-pro-preview`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,536
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $2.00
+- **Cost per 1M Tokens (Output)**: $12.00
+
 #### gemini-embedding-001
 
 - **Endpoint Location**: Google Vertex AI
@@ -1428,12 +1494,38 @@ Models hosted on Google Vertex AI are provided under enterprise agreements. Your
 - **Cost per 1M Tokens (Input)**: $0.50
 - **Cost per 1M Tokens (Output)**: $3.00
 
+#### gemini-flash-high-priority
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-flash-high-priority`
+- **Underlying Model**: `vertex_ai/gemini-3-flash-preview`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,535
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $0.50
+- **Cost per 1M Tokens (Output)**: $3.00
+
 #### gemini-flash-image
 
 - **Endpoint Location**: Google Vertex AI
 - **API Model Name**: `gemini-flash-image`
 - **Underlying Model**: `vertex_ai/google/gemini-2.5-flash-image`
 - **Cost**: No cost
+
+#### gemini-flash-priority
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-flash-priority`
+- **Underlying Model**: `vertex_ai/gemini-3-flash-preview`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,535
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $0.50
+- **Cost per 1M Tokens (Output)**: $3.00
 
 #### gemini-pro
 
@@ -1457,6 +1549,31 @@ Models hosted on Google Vertex AI are provided under enterprise agreements. Your
 - **Max Output Tokens**: 65,536
 - **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
 - **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $2.00
+- **Cost per 1M Tokens (Output)**: $12.00
+
+#### gemini-pro-high-priority
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-pro-high-priority`
+- **Underlying Model**: `vertex_ai/gemini-3.1-pro-preview`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,536
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $2.00
+- **Cost per 1M Tokens (Output)**: $12.00
+
+#### gemini-pro-priority
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `gemini-pro-priority`
+- **Underlying Model**: `vertex_ai/gemini-3.1-pro-preview`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,048,576
+- **Max Output Tokens**: 65,536
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
 - **Cost per 1M Tokens (Input)**: $2.00
 - **Cost per 1M Tokens (Output)**: $12.00
 
@@ -1714,7 +1831,6 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `gpt-oss-120b`
 - **Underlying Model**: `hosted_vllm/gpt-oss-120b`
-- **Mode**: Chat
 - **Max Input Tokens**: 131,072
 - **Max Output Tokens**: 131,072
 - **Cost**: No cost
@@ -1724,7 +1840,6 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `gpt-oss-120b-high`
 - **Underlying Model**: `hosted_vllm/gpt-oss-120b`
-- **Mode**: Chat
 - **Max Input Tokens**: 131,072
 - **Max Output Tokens**: 131,072
 - **Reasoning Effort**: high
@@ -1753,7 +1868,6 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/gpt-oss-120b`
 - **Underlying Model**: `hosted_vllm/gpt-oss-120b`
-- **Mode**: Chat
 - **Max Input Tokens**: 131,072
 - **Max Output Tokens**: 131,072
 - **Cost**: No cost
@@ -1763,7 +1877,6 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/gpt-oss-120b-high`
 - **Underlying Model**: `hosted_vllm/gpt-oss-120b`
-- **Mode**: Chat
 - **Max Input Tokens**: 131,072
 - **Max Output Tokens**: 131,072
 - **Reasoning Effort**: high
@@ -1774,7 +1887,6 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/gpt-oss-120b-medium`
 - **Underlying Model**: `hosted_vllm/gpt-oss-120b`
-- **Mode**: Chat
 - **Max Input Tokens**: 131,072
 - **Max Output Tokens**: 131,072
 - **Reasoning Effort**: medium
@@ -1803,6 +1915,7 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `Nanonets-OCR`
 - **Underlying Model**: `openai/Nanonets-OCR`
+- **Mode**: Chat
 - **Cost**: No cost
 
 #### lbl/Nanonets-OCR
@@ -1810,6 +1923,7 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/Nanonets-OCR`
 - **Underlying Model**: `openai/Nanonets-OCR`
+- **Mode**: Chat
 - **Cost**: No cost
 
 #### lbl/jbei-publications-chat
@@ -1838,6 +1952,15 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Max Input Tokens**: 8,192
 - **Cost**: No cost
 
+#### lbl/nomic-embed-code
+
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/nomic-embed-code`
+- **Underlying Model**: `openai/nomic-embed-code`
+- **Mode**: Embedding
+- **Max Input Tokens**: 8,192
+- **Cost**: No cost
+
 #### lbl/nomic-embed-text
 
 - **Endpoint Location**: LBL IT Division
@@ -1852,6 +1975,15 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/nomic-embed-vision`
 - **Underlying Model**: `openai/nomic-embed-vision`
+- **Mode**: Embedding
+- **Max Input Tokens**: 8,192
+- **Cost**: No cost
+
+#### nomic-embed-code
+
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `nomic-embed-code`
+- **Underlying Model**: `openai/nomic-embed-code`
 - **Mode**: Embedding
 - **Max Input Tokens**: 8,192
 - **Cost**: No cost
@@ -1916,7 +2048,6 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/cborg-coder`
 - **Underlying Model**: `hosted_vllm/gpt-oss-120b`
-- **Mode**: Chat
 - **Max Input Tokens**: 131,072
 - **Max Output Tokens**: 131,072
 - **Reasoning Effort**: high
@@ -1936,7 +2067,6 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/cborg-deepthought`
 - **Underlying Model**: `hosted_vllm/gpt-oss-120b`
-- **Mode**: Chat
 - **Max Input Tokens**: 131,072
 - **Max Output Tokens**: 131,072
 - **Reasoning Effort**: high
@@ -1956,6 +2086,7 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/cborg-ocr`
 - **Underlying Model**: `openai/Nanonets-OCR`
+- **Mode**: Chat
 - **Cost**: No cost
 
 #### lbl/cborg-vision
@@ -2268,14 +2399,14 @@ Models hosted on OpenAI are provided under enterprise agreements. Your data will
 
 - **Endpoint Location**: OpenAI
 - **API Model Name**: `gpt-5.2-high`
-- **Underlying Model**: `openai/gpt-5.1`
+- **Underlying Model**: `openai/gpt-5.2`
 - **Mode**: Chat
 - **Max Input Tokens**: 272,000
 - **Max Output Tokens**: 128,000
 - **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
 - **Reasoning Effort**: high
-- **Cost per 1M Tokens (Input)**: $1.25
-- **Cost per 1M Tokens (Output)**: $10.00
+- **Cost per 1M Tokens (Input)**: $1.75
+- **Cost per 1M Tokens (Output)**: $14.00
 
 #### gpt-5.2-pro
 
@@ -2289,19 +2420,6 @@ Models hosted on OpenAI are provided under enterprise agreements. Your data will
 - **Cost per 1M Tokens (Input)**: $1.75
 - **Cost per 1M Tokens (Output)**: $14.00
 
-#### gpt-5.2-xhigh
-
-- **Endpoint Location**: OpenAI
-- **API Model Name**: `gpt-5.2-xhigh`
-- **Underlying Model**: `openai/gpt-5.2`
-- **Mode**: Chat
-- **Max Input Tokens**: 272,000
-- **Max Output Tokens**: 128,000
-- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
-- **Reasoning Effort**: xhigh
-- **Cost per 1M Tokens (Input)**: $1.75
-- **Cost per 1M Tokens (Output)**: $14.00
-
 #### gpt-5.3-codex
 
 - **Endpoint Location**: OpenAI
@@ -2312,6 +2430,104 @@ Models hosted on OpenAI are provided under enterprise agreements. Your data will
 - **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
 - **Cost per 1M Tokens (Input)**: $1.75
 - **Cost per 1M Tokens (Output)**: $14.00
+
+#### gpt-5.3-codex-high
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5.3-codex-high`
+- **Underlying Model**: `openai/gpt-5.3-codex`
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $1.75
+- **Cost per 1M Tokens (Output)**: $14.00
+
+#### gpt-5.3-codex-xhigh
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5.3-codex-xhigh`
+- **Underlying Model**: `openai/gpt-5.3-codex`
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: xhigh
+- **Cost per 1M Tokens (Input)**: $1.75
+- **Cost per 1M Tokens (Output)**: $14.00
+
+#### gpt-5.4
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5.4`
+- **Underlying Model**: `openai/gpt-5.4`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,050,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $2.50
+- **Cost per 1M Tokens (Output)**: $15.00
+
+#### gpt-5.4-high
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5.4-high`
+- **Underlying Model**: `openai/gpt-5.4`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,050,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $2.50
+- **Cost per 1M Tokens (Output)**: $15.00
+
+#### gpt-5.4-mini
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5.4-mini`
+- **Underlying Model**: `openai/gpt-5.4-mini`
+- **Mode**: Chat
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $0.75
+- **Cost per 1M Tokens (Output)**: $4.50
+
+#### gpt-5.4-nano
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5.4-nano`
+- **Underlying Model**: `openai/gpt-5.4-nano`
+- **Mode**: Chat
+- **Max Input Tokens**: 272,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $0.20
+- **Cost per 1M Tokens (Output)**: $1.25
+
+#### gpt-5.4-pro
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5.4-pro`
+- **Underlying Model**: `openai/gpt-5.4`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,050,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Cost per 1M Tokens (Input)**: $2.50
+- **Cost per 1M Tokens (Output)**: $15.00
+
+#### gpt-5.4-xhigh
+
+- **Endpoint Location**: OpenAI
+- **API Model Name**: `gpt-5.4-xhigh`
+- **Underlying Model**: `openai/gpt-5.4`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,050,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output
+- **Reasoning Effort**: xhigh
+- **Cost per 1M Tokens (Input)**: $2.50
+- **Cost per 1M Tokens (Output)**: $15.00
 
 #### gpt-chat
 
@@ -2465,25 +2681,15 @@ Models hosted on OpenAI are provided under enterprise agreements. Your data will
 - **Endpoint Location**: OpenAI
 - **API Model Name**: `o1-mini`
 - **Underlying Model**: `openai/o1-mini`
-- **Mode**: Chat
-- **Max Input Tokens**: 128,000
-- **Max Output Tokens**: 65,536
-- **Capabilities**: Vision, Prompt Caching, PDF Input
-- **Cost per 1M Tokens (Input)**: $1.10
-- **Cost per 1M Tokens (Output)**: $4.40
+- **Cost**: No cost
 
 #### o1-mini-high
 
 - **Endpoint Location**: OpenAI
 - **API Model Name**: `o1-mini-high`
 - **Underlying Model**: `openai/o1-mini`
-- **Mode**: Chat
-- **Max Input Tokens**: 128,000
-- **Max Output Tokens**: 65,536
-- **Capabilities**: Vision, Prompt Caching, PDF Input
 - **Reasoning Effort**: high
-- **Cost per 1M Tokens (Input)**: $1.10
-- **Cost per 1M Tokens (Output)**: $4.40
+- **Cost**: No cost
 
 ### xAI
 
