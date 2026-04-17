@@ -50,19 +50,17 @@
 {{ end }}
 
 {{/* main style */}}
-{{ $styles = $styles | append (resources.Get "scss/main.scss" | toCSS) }}
+{{ $scss := resources.Get "scss/main.scss" }}
+{{ $css := $scss | css.Sass }}
+{{ $css = $css | css.PostCSS }}
+{{ $styles = $styles | append $css }}
 {{ $styles = $styles | resources.Concat "css/style.css" }}
-{{ $styles = $styles | resources.PostCSS }}
 
 {{ $stylesLazy = $stylesLazy | resources.Concat "css/style-lazy.css" }}
-{{ $stylesLazy = $stylesLazy | resources.PostCSS }}
 
 {{ if hugo.IsProduction }}
-  {{ $styles = $styles | resources.ExecuteAsTemplate "css/style.css" . | minify | fingerprint | resources.PostProcess }}
-  {{ $stylesLazy = $stylesLazy | resources.ExecuteAsTemplate "css/style-lazy.css" . | minify | fingerprint | resources.PostProcess }}
-{{ else }}
-  {{ $styles = $styles | resources.ExecuteAsTemplate "css/style.css" . }}
-  {{ $stylesLazy = $stylesLazy | resources.ExecuteAsTemplate "css/style-lazy.css" . }}
+  {{ $styles = $styles | minify | fingerprint }}
+  {{ $stylesLazy = $stylesLazy | minify | fingerprint }}
 {{ end }}
 
 {{/* styles */}}

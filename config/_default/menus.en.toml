@@ -1,4 +1,7 @@
 ############# English navigation ##############
+# pageRef must be Hugo's logical path (under content/<lang>/), not the published URL.
+# Pages in content/english/pages/*.md use pageRef = "/pages/<basename>" even though
+# [permalinks.page] maps them to "/<basename>/".
 
 # main menu
 [[main]]
@@ -19,112 +22,113 @@ weight = 2
 
 [[main]]
 name = "FAQ"
-pageRef = "/faq"
+pageRef = "/pages/faq"
 parent = "About"
 weight = 6
 
 [[main]]
 name = "News"
-pageRef = "/news"
+pageRef = "/pages/news"
 weight = 3
 
 [[main]]
 name = "Models"
-pageRef = "/models"
+pageRef = "/pages/models"
 weight = 4
 
+# No content/english/pages/benchmarks.md — link to SciCode until a hub page exists.
 [[main]]
 name = "Benchmarks"
-pageRef = "/benchmarks"
+url = "/bench_scicode/"
 weight = 5
 
 [[main]]
 name = "SciCode"
-pageRef = "/bench_scicode"
+pageRef = "/pages/bench_scicode"
 parent = "Benchmarks"
 weight = -1
 
 [[main]]
 name = "Coding"
-pageRef = "/tools"
+pageRef = "/pages/tools"
 weight = 6
 
 [[main]]
 name = "Getting Started"
-pageRef = "/tools_ai_101"
+pageRef = "/pages/tools_ai_101"
 parent = "Coding"
 weight = -10
 
 [[main]]
 name = "Continue (VS Code)"
 parent = "Coding"
-pageRef = "/tools_continue"
+pageRef = "/pages/tools_continue"
 weight = -8
 
 [[main]]
 name = "Cline (VS Code)"
 parent = "Coding"
-pageRef = "/tools_cline"
+pageRef = "/pages/tools_cline"
 weight = -6
 
 [[main]]
 name = "Roo Code (VS Code)"
 parent = "Coding"
-pageRef = "/tools_roo"
+pageRef = "/pages/tools_roo"
 weight = -9
 
 [[main]]
 name = "Aider"
 parent = "Coding"
-pageRef = "/tools_aider"
+pageRef = "/pages/tools_aider"
 weight = -6
 
 [[main]]
 name = "RStudio (gptstudio)"
 parent = "Coding"
-pageRef = "/tools_rstudio"
+pageRef = "/pages/tools_rstudio"
 weight = 2
 
 [[main]]
 name = "Gemini CLI"
 parent = "Coding"
-pageRef = "/tools_geminicli"
+pageRef = "/pages/tools_geminicli"
 weight = -6
 
 [[main]]
 name = "Codex CLI"
 parent = "Coding"
-pageRef = "/tools_codex"
+pageRef = "/pages/tools_codex"
 weight = -6
 
 [[main]]
 name = "Opencode CLI"
 parent = "Coding"
-pageRef = "/tools_opencode"
+pageRef = "/pages/tools_opencode"
 weight = -6
 
 [[main]]
 name = "ClaudeCode"
 parent = "Coding"
-pageRef = "/tools_claudecode"
+pageRef = "/pages/tools_claudecode"
 weight = -7
 
 [[main]]
 name = "JupyterLab"
 parent = "Coding"
-pageRef = "/tools_jupyter"
+pageRef = "/pages/tools_jupyter"
 weight = 1
 
 [[main]]
 name = "Cursor"
 parent = "Coding"
-pageRef = "/tools_cursor"
-weight = -4 
+pageRef = "/pages/tools_cursor"
+weight = -4
 
 [[main]]
 name = "CBorg Client Proxy"
 parent = "Coding"
-pageRef = "/tools_cborgproxy"
+pageRef = "/pages/tools_cborgproxy"
 weight = 10
 
 [[main]]
@@ -135,31 +139,31 @@ name = "API"
 parent = "API"
 weight = 1
 name = "API Examples"
-pageRef = "/api_examples"
+pageRef = "/pages/api_examples"
 
 [[main]]
 parent = "API"
 weight = 1
 name = "API FAQ"
-pageRef = "/api_faq"
+pageRef = "/pages/api_faq"
 
 [[main]]
 parent = "API"
 weight = 2
 name = "Request API Key"
-pageRef = "/api_request"
+pageRef = "/pages/api_request"
 
 [[main]]
 parent = "API"
 weight = 3
 name = "Check API Key Spend"
-pageRef = "/api_spendcheck"
+pageRef = "/pages/api_spendcheck"
 
 [[main]]
 parent = "API"
 weight = 4
 name = "Request API Budget Allocation"
-pageRef = "/api_projectkey"
+pageRef = "/pages/api_projectkey"
 
 # footer menu
 [[footer]]
@@ -169,5 +173,5 @@ weight = 1
 
 [[footer]]
 name = "Privacy Policy"
-pageRef = "/privacy-policy"
+pageRef = "/pages/privacy-policy"
 weight = 3
