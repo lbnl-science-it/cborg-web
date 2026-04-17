@@ -30,7 +30,8 @@ Using AI coding assistants is encouraged, but the security bar does not change.
 - **Review generated code like teammate code.** Pay extra attention to auth, crypto, SQL, shell commands, regex, and file-path handling.
 - **Never paste secrets, PII, or CUI into prompts.** See [AI Tools 101](/tools_ai_101) for sensitivity/model guidance.
 - **Run the same scanners on generated code** (secret scanning, SAST, SCA &mdash; see the [checklist](/security_practical)).
-- **Verify suggested dependencies before installation.** Models hallucinate package names; attackers pre-register those names ("slopsquatting"). Confirm the package exists, matches the intended project, and has plausible downloads, maintainers, and source repository before `pip install` or `npm install`.
+- **Verify suggested dependencies before installation.** Models hallucinate package names, and attackers pre-register those names ("slopsquatting").
+- Before `pip install` or `npm install`, confirm the package exists, matches the intended project, and has plausible maintainers, repository metadata, and download history.
 - **Read diffs before accepting them.** An agent that edits files faster than you read is a net security loss.
 - **Keep lock files authoritative.** If an agent updates `uv.lock`, `package-lock.json`, or `conda-lock.yml`, diff it like any other code.
 
@@ -41,10 +42,10 @@ Any content an agent reads &mdash; a web page, a GitHub issue, a log file, a PDF
 Mitigations:
 
 - **Do not give agents ambient credentials.** No long-lived cloud keys or production tokens in the environment the agent can reach.
-- **Review every tool call and every diff** when the agent has just read untrusted content (a web page, an email, scraped data).
+- **Review every tool call and diff** after the agent reads untrusted content (a web page, an email, or scraped data).
 - **Prefer read-only tools** for untrusted data sources; require confirmation for writes, network calls, and shell execution.
 - **Pin tool scopes.** If the agent only needs to read one repository, do not hand it an org-wide token.
-- **Sanitize what you paste.** Pasting an entire issue or log into a prompt imports its instructions too.
+- **Sanitize what you paste.** Pasting an entire issue or log into a prompt imports malicious instructions too.
 
 ## MCP servers and tool trust
 

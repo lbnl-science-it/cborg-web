@@ -16,18 +16,19 @@ Adopt these controls in order. The first three &mdash; locked dependencies, secr
 - [Scan for secrets early](#2-scan-for-secrets-early)
 - [Scan dependencies (SCA)](#3-scan-dependencies-sca)
 - [Scan code for vulnerabilities (SAST)](#4-scan-code-for-vulnerabilities-sast)
-- [Harden CI/CD and build environments](#5-harden-cicd-and-build-environments)
-- [Account hygiene](#6-account-hygiene)
-- [Notebook and data-file hygiene](#7-notebook-and-data-file-hygiene)
-- [Containers, SBOM, and artifact signing](#8-containers-sbom-and-artifact-signing)
-- [Monitor and respond](#9-monitor-and-respond)
-- [Know the OWASP Top 10](#10-know-the-owasp-top-10)
+- [Handle scanner false positives and triage](#5-handle-scanner-false-positives-and-triage)
+- [Harden CI/CD and build environments](#6-harden-cicd-and-build-environments)
+- [Account hygiene](#7-account-hygiene)
+- [Notebook and data-file hygiene](#8-notebook-and-data-file-hygiene)
+- [Containers, SBOM, and artifact signing](#9-containers-sbom-and-artifact-signing)
+- [Monitor and respond](#10-monitor-and-respond)
+- [Know the OWASP Top 10](#11-know-the-owasp-top-10)
 
 ---------------
 
 ## 1) Lock dependency versions
 
-You want reproducible installs: same versions on every machine and CI run. Each tool has two phases: one for installing dependencies and generate a lock file describing those dependencies, and one for building and running the code using the lock file.
+You want reproducible installs: same versions on every machine and CI run. Each tool has two phases: one for installing dependencies and generating a lock file, and one for building and running code using that lock file.
 
 **Python** (commit lock output):
 
@@ -60,7 +61,7 @@ Use clean-install commands in CI:
 
 Catch secrets before push and in CI:
 
-- **GitHub secret scanning** for public and private repos.
+- **GitHub secret scanning** for public repos and private repos where enabled in your org/plan.
 - **`gitleaks`** or **`trufflehog`** locally and in CI.
 - **`pre-commit`** to run secret checks at commit time.
 
@@ -77,7 +78,7 @@ SCA (Software Composition Analysis) compares your dependency graph against known
 - **`osv-scanner`** (multi-ecosystem: Python, npm, Go, Rust, Maven, Cargo, &hellip;). One tool covers most scientific stacks.
 - Python: `pip-audit`
 - Node: `npm audit --audit-level=high`
-- GitHub **Dependabot**: enable automated upgrade PRs and Dependabot alerts.
+- GitHub **Dependabot**: enable automated upgrade PRs and alerts where available in your repository settings.
 
 Run SCA in CI and fail builds on policy-defined severe findings.
 
@@ -87,11 +88,20 @@ SAST (Static Application Security Testing) flags suspicious code patterns.
 
 - Python: `bandit -r src/`
 - JavaScript/TypeScript: `eslint` + `eslint-plugin-security`
-- Multi-language: `semgrep --config=auto`, CodeQL on GitHub
+- Multi-language: `semgrep --config=auto`; CodeQL on GitHub where available in your org/plan
 
 Start with high-confidence findings and tune rules to reduce noise.
 
-## 5) Harden CI/CD and build environments
+## 5) Handle scanner false positives and triage
+
+Scanners are useful, but they are noisy at first. Use a short, consistent triage flow:
+
+- Validate that the finding is real and reachable in your code path.
+- Prioritize by severity and exploitability (internet-facing path, auth bypass, secret exposure, RCE).
+- If you suppress a false positive, record a reason, owner, and expiration date.
+- If you defer a true positive, file a tracked issue with a remediation target date.
+
+## 6) Harden CI/CD and build environments
 
 Supply-chain attacks increasingly target CI and build systems. Use this baseline:
 
@@ -102,7 +112,7 @@ Supply-chain attacks increasingly target CI and build systems. Use this baseline
 - Do not expose privileged secrets to untrusted pull requests (especially forks).
 - Treat lifecycle scripts (`preinstall`, `install`, `postinstall`) as executable code and monitor new script changes in dependency updates.
 
-## 6) Account hygiene
+## 7) Account hygiene
 
 The Shai-Hulud campaign succeeded because maintainer accounts were compromised. Protect yours.
 
@@ -111,26 +121,28 @@ The Shai-Hulud campaign succeeded because maintainer accounts were compromised. 
 - Use **personal access tokens with the narrowest scope** that works, and set expirations. Prefer **fine-grained PATs** on GitHub, and OIDC federation from CI when you can avoid a static token entirely.
 - Review authorized OAuth apps and SSH keys on your GitHub account at least yearly.
 
-## 7) Notebook and data-file hygiene
+## 8) Notebook and data-file hygiene
 
 Scientific workflows run on notebooks and shared data. Both leak secrets and execute code.
 
 - **Strip notebook outputs before commit**: add `nbstripout` as a `pre-commit` hook. Output cells often contain API responses, tokens, printed `os.environ`, and PII.
 - **Treat "Run All" on a downloaded notebook** the same as running an unreviewed script: read it first.
 - Keep credentials out of notebooks. Load them from environment variables or a secret manager, not from a cell.
-- Do not unpickle (`pickle`, `joblib`) or `torch.load` files from untrusted sources. Use `weights_only=True` on PyTorch &ge; 2.6, or prefer `safetensors`.
+- Do not unpickle (`pickle`, `joblib`) or `torch.load` files from untrusted sources. Use `weights_only=True` whenever your installed PyTorch supports it, or prefer `safetensors`.
 - On shared HPC / multi-user systems, check permissions: `~/.ssh` should be `700`, key files `600`. Do not write secrets to world-readable scratch directories.
 
-## 8) Containers, SBOM, and artifact signing
+## 9) Containers, SBOM, and artifact signing
 
 If you ship containers or build reusable artifacts:
 
 - **Scan images**: `trivy image your/image:tag` (or `grype`) in CI, on the same schedule as SCA.
 - **Pin base images by digest** (`FROM python@sha256:&hellip;`), not just by tag.
-- **Generate an SBOM** for each release: `syft your/image:tag -o cyclonedx-json`, or `pip-audit --format=cyclonedx-json` for pure-Python projects. Several DOE and federal guidelines increasingly expect one.
+- **Generate an SBOM** for each release.
+  Example commands: `syft your/image:tag -o cyclonedx-json`, or `pip-audit --format=cyclonedx-json` for pure-Python projects.
+  Several DOE and federal guidelines increasingly expect one.
 - **Sign releases and images** with [sigstore / cosign](https://www.sigstore.dev/) or GitHub [artifact attestations](https://docs.github.com/en/actions/security-for-github-actions/using-artifact-attestations). Consumers can then verify provenance.
 
-## 9) Monitor and respond
+## 10) Monitor and respond
 
 Scanning only helps if findings are triaged and owned.
 
@@ -148,7 +160,7 @@ Example response policy using [CVSS](https://www.first.org/cvss/):
 | 4.0&ndash;6.9    | Medium   | Planned remediation     |
 | &lt;= 3.9    | Low      | Backlog / opportunistic |
 
-## 10) Know the OWASP Top 10
+## 11) Know the OWASP Top 10
 
 The [OWASP Top 10](https://owasp.org/Top10/) is the shared language for common web-app risk classes:
 

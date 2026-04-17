@@ -109,7 +109,7 @@ Several "data" formats common in scientific workflows are actually code:
 
 - **Jupyter notebooks (`.ipynb`)**: opening a notebook is safe, but "Run All" on a notebook you downloaded is equivalent to running an unreviewed script. Notebook output cells also regularly contain leaked API responses, tokens, and PII &mdash; strip outputs before committing (see `nbstripout` on the checklist page).
 - **Pickle and joblib (`.pkl`, `.joblib`)**: `pickle.load` executes arbitrary Python. Never unpickle data from an untrusted source.
-- **PyTorch checkpoints (`.pt`, `.pth`)**: historically used pickle under the hood. Use `torch.load(..., weights_only=True)` on PyTorch &ge; 2.6 or prefer safer formats such as `safetensors`.
+- **PyTorch checkpoints (`.pt`, `.pth`)**: historically used pickle under the hood. Use `torch.load(..., weights_only=True)` whenever your installed PyTorch version supports it, and prefer safer formats such as `safetensors`. If `weights_only` is unavailable, treat checkpoint loading as executing untrusted code.
 - **YAML**: `yaml.load` without a safe loader can instantiate arbitrary Python objects. Use `yaml.safe_load`.
 - **HDF5, NetCDF, Parquet, NumPy `.npy`**: safer by design, but still large blobs from collaborators deserve a quick check of source and size.
 
