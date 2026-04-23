@@ -72,16 +72,22 @@ pageRef = "/pages/tools_cli"
 weight = 3
 
 [[main]]
+name = "Claude Code"
+parent = "Coding"
+pageRef = "/pages/tools_claudecode"
+weight = 4
+
+[[main]]
 name = "Other Tools"
 parent = "Coding"
 pageRef = "/pages/tools_other"
-weight = 4
+weight = 5
 
 [[main]]
 name = "Security Best Practices"
 parent = "Coding"
 pageRef = "/pages/security"
-weight = 5
+weight = 6
 
 [[main]]
 weight = 7

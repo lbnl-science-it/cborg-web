@@ -7,12 +7,6 @@ draft: false
 
 These extensions bring AI coding assistance directly into your editor, using CBorg as the backend.
 
-## Continue (VS Code)
-
-[Continue](https://www.continue.dev/) is an open-source AI coding assistant for VS Code that supports chat, autocomplete, and inline edits.
-
-→ [Using Continue with CBorg](/tools_continue)
-
 ## Cline (VS Code)
 
 [Cline](https://github.com/cline/cline) is an autonomous coding agent for VS Code that can read/write files, run commands, and use a browser.
@@ -25,11 +19,11 @@ These extensions bring AI coding assistance directly into your editor, using CBo
 
 → [Using Roo Code with CBorg](/tools_roo)
 
-## Cursor
+## Continue (VS Code)
 
-[Cursor](https://www.cursor.com/) is an AI-first code editor (fork of VS Code) with deep model integration for chat, edits, and code generation.
+[Continue](https://www.continue.dev/) is an open-source AI coding assistant for VS Code that supports chat, autocomplete, and inline edits.
 
-→ [Cursor AI Editor with CBorg](/tools_cursor)
+→ [Using Continue with CBorg](/tools_continue)
 
 ---------------
 

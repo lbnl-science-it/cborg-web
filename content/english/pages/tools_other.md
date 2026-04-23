@@ -7,6 +7,12 @@ draft: false
 
 Additional tools and integrations for working with CBorg outside of traditional code editors and CLI agents.
 
+## Cursor
+
+[Cursor](https://www.cursor.com/) is an AI-first code editor (fork of VS Code) with deep model integration for chat, edits, and code generation.
+
+→ [Cursor AI Editor with CBorg](/tools_cursor)
+
 ## JupyterAI
 
 [Jupyter AI](https://jupyter-ai.readthedocs.io/) brings a chat interface and magic commands directly into JupyterLab notebooks, powered by CBorg.
