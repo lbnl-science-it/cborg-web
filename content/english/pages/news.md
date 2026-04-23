@@ -14,22 +14,28 @@ All systems are operational.
 
 ## Recent Updates
 
-_Mar 25th, 2025_
+_Apr 5th, 2026_
+
+- Self-hosted Llama 4 Scout replaced with Gemma 4
+- CBorg Chat now aliased to Gemma 4
+- Use model names `lbl/gemma-4` and `lbl/gemma-4-thinking`
+
+_Mar 25th, 2026_
 
 - GPT 5.4 Mini and GPT 5.4 Nano available
 - Corrected for missing user-assistant alternation sequence in AWS Bedrock Claude models
 
-_Feb 25nd, 2025_
+_Feb 25nd, 2026_
 
 - GPT 5.4 available
 - Codex 5.3 available
 
-_Feb 22nd, 2025_
+_Feb 22nd, 2026_
 
 - Gemini 3.1 Pro available
 - SciCode benchmarks updated with Gemini 3.1 Pro
 
-_Feb 10th, 2025_
+_Feb 10th, 2026_
 
 - Updated Claude Opus to 4.6
 - OpenAI now available from OpenAI endpoint

@@ -149,6 +149,12 @@ pageRef = "/pages/api_faq"
 
 [[main]]
 parent = "API"
+weight = 1
+name = "CBorg vs Cloud"
+pageRef = "/pages/api_cborgvscloud"
+
+[[main]]
+parent = "API"
 weight = 2
 name = "Request API Key"
 pageRef = "/pages/api_request"

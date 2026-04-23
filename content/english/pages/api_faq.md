@@ -14,6 +14,8 @@ Got a question? Email us at [scienceit@lbl.gov](scienceit@lbl.gov) or join the [
 
 **Note:** The full API interface is documented here: [CBorg API Documentation](https://api.cborg.lbl.gov/)
 
+**New:** Wondering whether to use the CBorg API or get your own cloud project? Read [CBorg API vs Cloud Project](/api_cborgvscloud).
+
 #### How should I securely store the API key?
 
 API keys must be stored securely. Do not put raw API keys into your source code! Use environment variables.
