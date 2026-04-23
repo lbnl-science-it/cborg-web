@@ -57,79 +57,31 @@ weight = 6
 name = "Getting Started"
 pageRef = "/pages/tools_ai_101"
 parent = "Coding"
-weight = -10
-
-[[main]]
-name = "Continue (VS Code)"
-parent = "Coding"
-pageRef = "/pages/tools_continue"
-weight = -8
-
-[[main]]
-name = "Cline (VS Code)"
-parent = "Coding"
-pageRef = "/pages/tools_cline"
-weight = -6
-
-[[main]]
-name = "Roo Code (VS Code)"
-parent = "Coding"
-pageRef = "/pages/tools_roo"
-weight = -9
-
-[[main]]
-name = "Aider"
-parent = "Coding"
-pageRef = "/pages/tools_aider"
-weight = -6
-
-[[main]]
-name = "RStudio (gptstudio)"
-parent = "Coding"
-pageRef = "/pages/tools_rstudio"
-weight = 2
-
-[[main]]
-name = "Gemini CLI"
-parent = "Coding"
-pageRef = "/pages/tools_geminicli"
-weight = -6
-
-[[main]]
-name = "Codex CLI"
-parent = "Coding"
-pageRef = "/pages/tools_codex"
-weight = -6
-
-[[main]]
-name = "Opencode CLI"
-parent = "Coding"
-pageRef = "/pages/tools_opencode"
-weight = -6
-
-[[main]]
-name = "ClaudeCode"
-parent = "Coding"
-pageRef = "/pages/tools_claudecode"
-weight = -7
-
-[[main]]
-name = "JupyterLab"
-parent = "Coding"
-pageRef = "/pages/tools_jupyter"
 weight = 1
 
 [[main]]
-name = "Cursor"
+name = "Editor Extensions"
 parent = "Coding"
-pageRef = "/pages/tools_cursor"
-weight = -4
+pageRef = "/pages/tools_editors"
+weight = 2
 
 [[main]]
-name = "CBorg Client Proxy"
+name = "CLI Agents"
 parent = "Coding"
-pageRef = "/pages/tools_cborgproxy"
-weight = 10
+pageRef = "/pages/tools_cli"
+weight = 3
+
+[[main]]
+name = "Other Tools"
+parent = "Coding"
+pageRef = "/pages/tools_other"
+weight = 4
+
+[[main]]
+name = "Security Best Practices"
+parent = "Coding"
+pageRef = "/pages/security"
+weight = 5
 
 [[main]]
 weight = 7
