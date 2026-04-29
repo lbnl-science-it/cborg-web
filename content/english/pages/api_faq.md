@@ -9,12 +9,36 @@ draft: false
 ---
 
 {{< notice "note" >}}
-Got a question? Email us at [scienceit@lbl.gov](scienceit@lbl.gov) or join the [CBorg Users Chatroom](https://chat.google.com/room/AAQAqGsqgfQ?cls=7)
+Got a question? Email us at [scienceit@lbl.gov](mailto:scienceit@lbl.gov) or join the [CBorg Users Chat](https://chat.google.com/room/AAQAqGsqgfQ?cls=7) group on Google Workspace.
 {{< / notice >}}
 
 **Note:** The full API interface is documented here: [CBorg API Documentation](https://api.cborg.lbl.gov/)
 
 **New:** Wondering whether to use the CBorg API or get your own cloud project? Read [CBorg API vs Cloud Project](/api_cborgvscloud).
+
+---
+
+## Network Access & Connectivity
+
+#### What network do I need to be on to use the CBorg API?
+
+The CBorg API is accessible from **LBLnet**, **VPN**, and other trusted partner networks. If you are already on one of these networks, no additional steps are required.
+
+#### I'm not on LBLnet or VPN — can I still use the API?
+
+Yes. You can authorize your IP address by logging in to [https://api.cborg.lbl.gov/key/manage](https://api.cborg.lbl.gov/key/manage) and adding your current IP address.
+
+{{< notice "warning" >}}
+**Note:** IP-based authorization may not work correctly for some legacy applications that only communicate using IPv4.
+{{< / notice >}}
+
+#### I'm using Windows Subsystem for Linux (WSL) with Cisco VPN and my Python script can't reach the API
+
+See the dedicated [Using CBorg with WSL](/tools_wsl2) page for full instructions, including how to enable mirrored network mode and how to force IPv4 or IPv6 connections.
+
+---
+
+## API Keys & Usage
 
 #### How should I securely store the API key?
 

@@ -84,10 +84,16 @@ pageRef = "/pages/tools_other"
 weight = 5
 
 [[main]]
+name = "WSL 2"
+parent = "Coding"
+pageRef = "/pages/tools_wsl2"
+weight = 6
+
+[[main]]
 name = "Security Best Practices"
 parent = "Coding"
 pageRef = "/pages/security"
-weight = 6
+weight = 7
 
 [[main]]
 weight = 7

@@ -10,7 +10,7 @@ draft: false
 
 ## Available Models
 
-*Last updated: 2026-04-19*
+*Last updated: 2026-04-24*
 
 **Model Licensing Terms**
 
@@ -138,15 +138,15 @@ draft: false
 | Google Vertex AI         | Google         | gemini-pro-priority            | 1.04858M / 65.536K | Y       | Y     | $2.00 / $12.00     | E       |
 | Google Vertex AI         | Meta           | google/llama-4-maverick        | 1M / 1M        | N       | Y     | $0.35 / $1.15      | E       |
 | Google Vertex AI         | Mistral AI     | google/codestral               | 128K / 128K    | N       | Y     | $0.20 / $0.60      | E       |
-| Google Vertex AI         | OpenAI         | google/gpt-oss-120b            | 131.072K / 32.768K | N       | Y     | $0.15 / $0.60      | E       |
+| Google Vertex AI         | OpenAI         | google/gpt-oss-120b            | 131.072K / 32.768K | N       | Y     | $0 / $0            | E       |
 | Google Vertex AI         | OpenAI         | google/gpt-oss-120b-high       | 131.072K / 32.768K | N       | Y     | $0 / $0            | E       |
 | Google Vertex AI         | OpenAI         | google/gpt-oss-20b             | 131.072K / 32.768K | N       | N     | $0.07 / $0.30      | E       |
 | Google Vertex AI         | OpenAI         | google/gpt-oss-20b-high        | 131.072K / 32.768K | N       | N     | $0.07 / $0.30      | E       |
-| Google Vertex AI         | OpenAI         | gpt-oss-120b                   | 131.072K / 32.768K | N       | Y     | $0.15 / $0.60      | E       |
+| Google Vertex AI         | OpenAI         | gpt-oss-120b                   | 131.072K / 32.768K | N       | Y     | $0 / $0            | E       |
 | Google Vertex AI         | OpenAI         | gpt-oss-120b-high              | 131.072K / 32.768K | N       | Y     | $0 / $0            | E       |
 | Google Vertex AI         | OpenAI         | gpt-oss-20b                    | 131.072K / 32.768K | N       | N     | $0.07 / $0.30      | E       |
 | Google Vertex AI         | OpenAI         | gpt-oss-20b-high               | 131.072K / 32.768K | N       | N     | $0.07 / $0.30      | E       |
-| Google Vertex AI         | OpenAI         | lbl/gpt-oss-120b               | 131.072K / 32.768K | N       | Y     | $0.15 / $0.60      | E       |
+| Google Vertex AI         | OpenAI         | lbl/gpt-oss-120b               | 131.072K / 32.768K | N       | Y     | $0 / $0            | E       |
 | Google Vertex AI         | OpenAI         | lbl/gpt-oss-120b-high          | 131.072K / 32.768K | N       | Y     | $0 / $0            | E       |
 | Google Vertex AI         | OpenAI         | lbl/gpt-oss-20b                | 131.072K / 32.768K | N       | N     | $0.07 / $0.30      | E       |
 | Google Vertex AI         | OpenAI         | lbl/gpt-oss-20b-high           | 131.072K / 32.768K | N       | N     | $0.07 / $0.30      | E       |
@@ -1712,8 +1712,7 @@ Models hosted on Google Vertex AI are provided under enterprise agreements. Your
 - **Max Input Tokens**: 131,072
 - **Max Output Tokens**: 32,768
 - **Capabilities**: Tool Use, Reasoning
-- **Cost per 1M Tokens (Input)**: $0.15
-- **Cost per 1M Tokens (Output)**: $0.60
+- **Cost**: No cost
 
 #### google/gpt-oss-120b-high
 
@@ -1761,8 +1760,7 @@ Models hosted on Google Vertex AI are provided under enterprise agreements. Your
 - **Max Input Tokens**: 131,072
 - **Max Output Tokens**: 32,768
 - **Capabilities**: Tool Use, Reasoning
-- **Cost per 1M Tokens (Input)**: $0.15
-- **Cost per 1M Tokens (Output)**: $0.60
+- **Cost**: No cost
 
 #### gpt-oss-120b-high
 
@@ -1810,8 +1808,7 @@ Models hosted on Google Vertex AI are provided under enterprise agreements. Your
 - **Max Input Tokens**: 131,072
 - **Max Output Tokens**: 32,768
 - **Capabilities**: Tool Use, Reasoning
-- **Cost per 1M Tokens (Input)**: $0.15
-- **Cost per 1M Tokens (Output)**: $0.60
+- **Cost**: No cost
 
 #### lbl/gpt-oss-120b-high
 
@@ -1995,7 +1992,6 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `gemma`
 - **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Mode**: Chat
 - **Max Input Tokens**: 98,304
 - **Max Output Tokens**: 32,768
 - **Capabilities**: Vision, Tool Use
@@ -2006,7 +2002,6 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `gemma-4`
 - **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Mode**: Chat
 - **Max Input Tokens**: 98,304
 - **Max Output Tokens**: 32,768
 - **Capabilities**: Vision, Tool Use
@@ -2017,7 +2012,6 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `gemma-4-thinking`
 - **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Mode**: Chat
 - **Max Input Tokens**: 98,304
 - **Max Output Tokens**: 32,768
 - **Capabilities**: Vision, Tool Use
@@ -2028,7 +2022,6 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `gemma-thinking`
 - **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Mode**: Chat
 - **Max Input Tokens**: 98,304
 - **Max Output Tokens**: 32,768
 - **Capabilities**: Vision, Tool Use
@@ -2039,7 +2032,6 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/gemma-4`
 - **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Mode**: Chat
 - **Max Input Tokens**: 98,304
 - **Max Output Tokens**: 32,768
 - **Capabilities**: Vision, Tool Use
@@ -2050,7 +2042,6 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/gemma-4-thinking`
 - **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Mode**: Chat
 - **Max Input Tokens**: 98,304
 - **Max Output Tokens**: 32,768
 - **Capabilities**: Vision, Tool Use
@@ -2109,7 +2100,6 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/cborg-chat`
 - **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Mode**: Chat
 - **Max Input Tokens**: 98,304
 - **Max Output Tokens**: 32,768
 - **Capabilities**: Vision, Tool Use
@@ -2120,7 +2110,6 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/cborg-coder`
 - **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Mode**: Chat
 - **Max Input Tokens**: 98,304
 - **Max Output Tokens**: 32,768
 - **Capabilities**: Vision, Tool Use
@@ -2131,7 +2120,6 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/cborg-deepthought`
 - **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Mode**: Chat
 - **Max Input Tokens**: 98,304
 - **Max Output Tokens**: 32,768
 - **Capabilities**: Vision, Tool Use
@@ -2142,7 +2130,6 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/cborg-mini`
 - **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Mode**: Chat
 - **Max Input Tokens**: 98,304
 - **Max Output Tokens**: 32,768
 - **Capabilities**: Vision, Tool Use
@@ -2153,7 +2140,6 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/cborg-ocr`
 - **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Mode**: Chat
 - **Max Input Tokens**: 98,304
 - **Max Output Tokens**: 32,768
 - **Capabilities**: Vision, Tool Use
@@ -2164,7 +2150,6 @@ The IT Division's Science IT group provides access to open-weight models running
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/cborg-vision`
 - **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Mode**: Chat
 - **Max Input Tokens**: 98,304
 - **Max Output Tokens**: 32,768
 - **Capabilities**: Vision, Tool Use
