@@ -14,6 +14,10 @@ All systems are operational.
 
 ## Recent Updates
 
+_May 21st, 2026_
+
+- Gemini 3.5 Flash is available
+
 _Apr 5th, 2026_
 
 - Self-hosted Llama 4 Scout replaced with Gemma 4
