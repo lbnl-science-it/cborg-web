@@ -60,9 +60,9 @@ parent = "Coding"
 weight = 1
 
 [[main]]
-name = "Editor Extensions"
+name = "ZooCode (formerly RooCode)"
 parent = "Coding"
-pageRef = "/pages/tools_editors"
+pageRef = "/pages/tools_zoo"
 weight = 2
 
 [[main]]
@@ -84,12 +84,6 @@ pageRef = "/pages/tools_codex"
 weight = 5
 
 [[main]]
-name = "Other Tools"
-parent = "Coding"
-pageRef = "/pages/tools_other"
-weight = 6
-
-[[main]]
 name = "WSL 2"
 parent = "Coding"
 pageRef = "/pages/tools_wsl2"
@@ -106,6 +100,12 @@ name = "Handling PII with LLMs"
 parent = "Coding"
 pageRef = "/pages/security_pii"
 weight = 9
+
+[[main]]
+name = "Legacy Tools"
+parent = "Coding"
+pageRef = "/pages/tools_editors"
+weight = 10
 
 [[main]]
 weight = 7
