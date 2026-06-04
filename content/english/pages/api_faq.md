@@ -176,10 +176,6 @@ Finally, if you have a PID for recharges the funding to support your budget, ple
 curl --location 'https://api.cborg.lbl.gov/model/info' --header "Authorization: Bearer $CBORG_API_KEY" | jq | less
 {{< /highlight >}}
 
-#### How do I avoid models with a default system promt? I need full control.
-
-The "CBorg" models "lbl/cborg-chat" and "lbl/cborg-coder" have default system messages. For full control you should directly access the underlying model, e.g. "lbl/llama" and "lbl/qwen-coder".
-
 #### What models support prompt caching?
 
 Check the model property `supports_prompt_caching = true` in the JSON structure returned from `https://api.cborg.lbl.gov/model/info`.
