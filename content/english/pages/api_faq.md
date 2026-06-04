@@ -180,6 +180,8 @@ curl --location 'https://api.cborg.lbl.gov/model/info' --header "Authorization: 
 
 Check the model property `supports_prompt_caching = true` in the JSON structure returned from `https://api.cborg.lbl.gov/model/info`.
 
+Gemini and OpenAI models use implicit prompt caching -- no cache-control pragmas are required. The request payload must be at least 1024 tokens to trigger caching.
+
 #### How do I get the actual cost of an API call?
 
 Before making the call, you can estimate the cost using `/cost/calculate`.
