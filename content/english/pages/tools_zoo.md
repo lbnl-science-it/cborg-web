@@ -52,7 +52,39 @@ export CBORG_API_KEY=<your-key>
 make
 ```
 
-Then import the generated file via **Zoo Code > Settings > About Zoo Code > Manage Settings > Import**.
+The Makefile generates two files:
+
+- **`zoo-code-settings.json`** -- provider profiles and global settings; import via **Zoo Code > Settings > About Zoo Code > Manage Settings > Reset** (then restart Zoo Code), then **Import**.
+- **`mcp_settings.json`** -- MCP server configuration with your API key pre-filled; copy its contents into your Zoo Code global MCP settings file via **Zoo Code > Settings > MCP Servers > (edit icon)**.
+
+> **Security note:** Both generated files contain your CBorg API key. Do not share or commit them -- they are excluded from git automatically.
+
+The `mcp_settings.json` file will look like this (MCP servers are **disabled by default** -- enable individual servers in the Zoo Code MCP settings panel when you want to use them):
+
+```json
+{
+  "mcpServers": {
+    "context7": {
+      "type": "streamable-http",
+      "url": "https://api.cborg.lbl.gov/mcp/context7",
+      "headers": {
+        "Authorization": "Bearer <your-key>"
+      },
+      "alwaysAllow": ["*"],
+      "disabled": true
+    },
+    "valency": {
+      "type": "streamable-http",
+      "url": "https://api.cborg.lbl.gov/mcp/valency",
+      "headers": {
+        "Authorization": "Bearer <your-key>"
+      },
+      "alwaysAllow": ["*"],
+      "disabled": true
+    }
+  }
+}
+```
 
 Optional providers are included automatically when credentials are detected:
 
