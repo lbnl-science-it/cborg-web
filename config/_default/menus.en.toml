@@ -49,7 +49,7 @@ parent = "Models"
 weight = 2
 
 [[main]]
-name = "On-Prem Models (Free)"
+name = "CBorg Free Models"
 pageRef = "/pages/api_onprem"
 parent = "Models"
 weight = 3
