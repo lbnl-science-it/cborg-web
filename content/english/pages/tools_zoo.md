@@ -1,5 +1,5 @@
 ---
-title: "Using Roo Code with CBorg"
+title: "Using Zoo Code with CBorg"
 # meta title
 # meta_title: ""
 # meta description
@@ -7,9 +7,25 @@ title: "Using Roo Code with CBorg"
 draft: false
 ---
 
-#### 1. Install Roo Code
+Zoo Code (formerly RooCode) is a 100% open-source AI coding assistant for VS Code.
 
-Install the [Roo Code Extension](https://docs.roocode.com/) for VS Code.
+## Migrating from RooCode
+
+If you were previously using RooCode, follow these steps to migrate your settings:
+
+1. Open VS Code with RooCode installed
+2. Go to **Settings**
+3. Go to **About RooCode**
+4. Click **Export Settings** and save to a file
+5. Install **ZooCode** via the VS Code Extensions Marketplace
+6. Open Zoo Code settings and **Import** the saved settings file
+7. Uninstall RooCode
+
+---
+
+#### 1. Install Zoo Code
+
+Install the [Zoo Code Extension](https://marketplace.visualstudio.com/items?itemName=ZooCode.zoo-code) from the VS Code Extensions Marketplace.
 
 #### 2. Configure Provider
 
@@ -22,8 +38,6 @@ Install the [Roo Code Extension](https://docs.roocode.com/) for VS Code.
 6. Add your CBORG_API_KEY to LiteLLM API Key
 7. Click **Refresh Models**
 8. Select the desired model
-
-For more information please consult the RooCode documentation: [Using LiteLLM with RooCode](https://docs.roocode.com/providers/litellm)
 
 ## Recommended Settings
 
@@ -58,11 +72,11 @@ To improve context caching and reduce cost, the following settings are recommend
 
 ### Gemini Models
 
-- The cache setting in RooCode is not supported for Gemini models. These models automatically apply caching discounts, therefore you can leave "Enable prompt caching" disabled.
+- The cache setting in Zoo Code is not supported for Gemini models. These models automatically apply caching discounts, therefore you can leave "Enable prompt caching" disabled.
 
 ### Preventing Common Errors
 
-If you have issues with API errors, add the following to your global rules: `~/.roo/rules/rules.md`.
+If you have issues with API errors, add the following to your global rules: `~/.zoo/rules/rules.md`.
 
 ```bash
 ## Chat compatibility
