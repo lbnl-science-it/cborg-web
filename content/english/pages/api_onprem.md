@@ -50,7 +50,7 @@ The following embedding models are available on-premises:
 | --- | :---: | --- |
 | `nomic-embed-text` | 768 | Good general-purpose text embedding for small-to-medium context |
 | `nomic-embed-vision` | 768 | Image embedding model; shares the same embedding space as `nomic-embed-text`, enabling cross-modal retrieval |
-| `nomic-embed-code` | ~3100 | Large embedding model optimized for source code |
+| `nomic-embed-code` | 3584 | Large embedding model optimized for source code |
 
 Because `nomic-embed-text` and `nomic-embed-vision` share the same embedding space, you can embed both text and images and compare them directly — useful for multimodal search and retrieval applications.
 
