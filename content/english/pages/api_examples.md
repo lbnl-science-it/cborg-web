@@ -8,7 +8,7 @@ description: "Quick start guide and code examples for the CBorg API"
 draft: false
 ---
 
-The CBORG API server is an proxy server that provides token-authenticated access to provided models. The proxy server is _OpenAI-compatible_, which means that in most cases it can be used as a drop-in replacement for any program that is built to work with OpenAI's ChatGPT.
+The CBorg API server is a token-authenticated proxy built on [LiteLLM](https://www.litellm.ai/), which acts as a translation layer across multiple AI provider protocols. It supports OpenAI Chat Completions, OpenAI Responses, Anthropic (including Claude Code), and Gemini -- allowing you to access a wide range of models through a single, unified endpoint.
 
 ## Key Management
 
