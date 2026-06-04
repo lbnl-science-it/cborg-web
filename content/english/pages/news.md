@@ -14,6 +14,10 @@ All systems are operational.
 
 ## Recent Updates
 
+_May 29th, 2026_
+
+- Claude Opus 4.8 is available
+
 _May 21st, 2026_
 
 - Gemini 3.5 Flash is available

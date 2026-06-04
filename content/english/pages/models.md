@@ -10,7 +10,7 @@ draft: false
 
 ## Available Models
 
-*Last updated: 2026-05-20*
+*Last updated: 2026-05-29*
 
 **Model Licensing Terms**
 
@@ -31,8 +31,10 @@ draft: false
 | Amazon Bedrock           | Anthropic      | amazon/claude-opus-4-5-high    | 200K / 64K     | Y       | Y     | $5.00 / $25.00     | E       |
 | Amazon Bedrock           | Anthropic      | amazon/claude-opus-4-6         | 1M / 128K      | Y       | Y     | $5.00 / $25.00     | E       |
 | Amazon Bedrock           | Anthropic      | amazon/claude-opus-4-6-high    | 1M / 128K      | Y       | Y     | $5.00 / $25.00     | E       |
-| Amazon Bedrock           | Anthropic      | amazon/claude-opus-4-7         | N/A / N/A      | N       | N     | $0 / $0            | E       |
-| Amazon Bedrock           | Anthropic      | amazon/claude-opus-4-7-high    | N/A / N/A      | N       | N     | $0 / $0            | E       |
+| Amazon Bedrock           | Anthropic      | amazon/claude-opus-4-7         | 1M / 128K      | Y       | Y     | $5.00 / $25.00     | E       |
+| Amazon Bedrock           | Anthropic      | amazon/claude-opus-4-7-high    | 1M / 128K      | Y       | Y     | $5.00 / $25.00     | E       |
+| Amazon Bedrock           | Anthropic      | amazon/claude-opus-4-8         | 1M / 128K      | Y       | Y     | $5.00 / $25.00     | E       |
+| Amazon Bedrock           | Anthropic      | amazon/claude-opus-4-8-high    | 1M / 128K      | Y       | Y     | $5.00 / $25.00     | E       |
 | Amazon Bedrock           | Anthropic      | amazon/claude-sonnet-4         | 1M / 64K       | Y       | Y     | $3.00 / $15.00     | E       |
 | Amazon Bedrock           | Anthropic      | amazon/claude-sonnet-4-5       | 200K / 64K     | Y       | Y     | $3.00 / $15.00     | E       |
 | Amazon Bedrock           | Anthropic      | amazon/claude-sonnet-4-5-high  | 200K / 64K     | Y       | Y     | $3.00 / $15.00     | E       |
@@ -75,6 +77,7 @@ draft: false
 | Google Vertex AI         | Anthropic      | claude-opus-4-5                | 200K / 64K     | Y       | Y     | $5.00 / $25.00     | E       |
 | Google Vertex AI         | Anthropic      | claude-opus-4-6                | 1M / 128K      | Y       | Y     | $5.00 / $25.00     | E       |
 | Google Vertex AI         | Anthropic      | claude-opus-4-7                | 1M / 128K      | Y       | Y     | $5.00 / $25.00     | E       |
+| Google Vertex AI         | Anthropic      | claude-opus-4-8                | 1M / 128K      | Y       | Y     | $5.00 / $25.00     | E       |
 | Google Vertex AI         | Anthropic      | claude-opus-high               | 1M / 128K      | Y       | Y     | $5.00 / $25.00     | E       |
 | Google Vertex AI         | Anthropic      | claude-sonnet                  | 1M / 64K       | Y       | Y     | $3.00 / $15.00     | E       |
 | Google Vertex AI         | Anthropic      | claude-sonnet-4-5              | 200K / 64K     | Y       | Y     | $3.00 / $15.00     | E       |
@@ -91,6 +94,8 @@ draft: false
 | Google Vertex AI         | Anthropic      | google/claude-opus-4-6-high    | 1M / 128K      | Y       | Y     | $5.00 / $25.00     | E       |
 | Google Vertex AI         | Anthropic      | google/claude-opus-4-7         | 1M / 128K      | Y       | Y     | $5.00 / $25.00     | E       |
 | Google Vertex AI         | Anthropic      | google/claude-opus-4-7-high    | 1M / 128K      | Y       | Y     | $5.00 / $25.00     | E       |
+| Google Vertex AI         | Anthropic      | google/claude-opus-4-8         | 1M / 128K      | Y       | Y     | $5.00 / $25.00     | E       |
+| Google Vertex AI         | Anthropic      | google/claude-opus-4-8-high    | 1M / 128K      | Y       | Y     | $5.00 / $25.00     | E       |
 | Google Vertex AI         | Anthropic      | google/claude-opus-4-high      | 200K / 32K     | Y       | Y     | $15.00 / $75.00    | E       |
 | Google Vertex AI         | Anthropic      | google/claude-sonnet-4         | 1M / 64K       | Y       | Y     | $3.00 / $15.00     | E       |
 | Google Vertex AI         | Anthropic      | google/claude-sonnet-4-5       | 200K / 64K     | Y       | Y     | $3.00 / $15.00     | E       |
@@ -135,6 +140,7 @@ draft: false
 | Google Vertex AI         | Google         | gemini-pro-high                | 1.04858M / 65.536K | Y       | Y     | $2.00 / $12.00     | E       |
 | Google Vertex AI         | Google         | gemini-pro-high-priority       | 1.04858M / 65.536K | Y       | Y     | $2.00 / $12.00     | E       |
 | Google Vertex AI         | Google         | gemini-pro-priority            | 1.04858M / 65.536K | Y       | Y     | $2.00 / $12.00     | E       |
+| Google Vertex AI         | Google         | google/gemma-4                 | N/A / N/A      | N       | N     | $0 / $0            | E       |
 | Google Vertex AI         | Meta           | google/llama-4-maverick        | 1M / 1M        | N       | Y     | $0.35 / $1.15      | E       |
 | Google Vertex AI         | Mistral AI     | google/codestral               | 128K / 128K    | N       | Y     | $0.20 / $0.60      | E       |
 | Google Vertex AI         | OpenAI         | google/gpt-oss-120b            | 131.072K / 32.768K | N       | Y     | $0.15 / $0.60      | E       |
@@ -158,14 +164,19 @@ draft: false
 | Google Vertex AI         | xAI            | google/grok-4.1-non-reasoning  | 2M / 2M        | Y       | Y     | $0.20 / $0.50      | E       |
 | Google Vertex AI         | xAI            | google/grok-4.1-reasoning      | 2M / 2M        | Y       | Y     | $0.20 / $0.50      | E       |
 | Google Vertex AI         | xAI            | google/grok-4.20-reasoning     | 2M / 2M        | Y       | Y     | $2.00 / $6.00      | E       |
+| Google Vertex AI         | xAI            | google/grok-4.3                | N/A / N/A      | N       | N     | $0 / $0            | E       |
+| Google Vertex AI         | xAI            | xai/grok                       | N/A / N/A      | N       | N     | $0 / $0            | E       |
 | Google Vertex AI         | xAI            | xai/grok-4.20-reasoning        | 2M / 2M        | Y       | Y     | $2.00 / $6.00      | E       |
+| Google Vertex AI         | xAI            | xai/grok-4.3                   | N/A / N/A      | N       | N     | $0 / $0            | E       |
 | Google Vertex AI         | xAI            | xai/grok-reasoning             | 2M / 2M        | Y       | Y     | $2.00 / $6.00      | E       |
-| LBL IT Division          | Google         | gemma                          | 98.304K / 32.768K | Y       | Y     | $0 / $0            | E       |
-| LBL IT Division          | Google         | gemma-4                        | 98.304K / 32.768K | Y       | Y     | $0 / $0            | E       |
-| LBL IT Division          | Google         | gemma-4-thinking               | 200K / 62.144K | Y       | Y     | $0 / $0            | E       |
-| LBL IT Division          | Google         | gemma-thinking                 | 200K / 62.144K | Y       | Y     | $0 / $0            | E       |
-| LBL IT Division          | Google         | lbl/gemma-4                    | 98.304K / 32.768K | Y       | Y     | $0 / $0            | E       |
-| LBL IT Division          | Google         | lbl/gemma-4-thinking           | 200K / 62.144K | Y       | Y     | $0 / $0            | E       |
+| LBL IT Division          | Google         | gemma                          | 245.76K / 16.384K | Y       | Y     | $0 / $0            | E       |
+| LBL IT Division          | Google         | gemma-4                        | 245.76K / 16.384K | Y       | Y     | $0 / $0            | E       |
+| LBL IT Division          | Google         | gemma-4-thinking               | 229.376K / 32.768K | Y       | Y     | $0 / $0            | E       |
+| LBL IT Division          | Google         | gemma-thinking                 | 229.376K / 32.768K | Y       | Y     | $0 / $0            | E       |
+| LBL IT Division          | Google         | lbl/gemma-4                    | 245.76K / 16.384K | Y       | Y     | $0 / $0            | E       |
+| LBL IT Division          | Google         | lbl/gemma-4-mini               | 122.88K / 8.192K | Y       | Y     | $0 / $0            | E       |
+| LBL IT Division          | Google         | lbl/gemma-4-mini-thinking      | 114.688K / 16.384K | Y       | Y     | $0 / $0            | E       |
+| LBL IT Division          | Google         | lbl/gemma-4-thinking           | 229.376K / 32.768K | Y       | Y     | $0 / $0            | E       |
 | LBL IT Division          | OpenAI         | gpt                            | 1.05M / 128K   | Y       | Y     | $5.00 / $30.00     | E       |
 | OpenAI                   | OpenAI         | gpt-4.1                        | 1.04758M / 32.768K | Y       | Y     | $2.00 / $8.00      | E       |
 | OpenAI                   | OpenAI         | gpt-4.1-mini                   | 1.04758M / 32.768K | Y       | Y     | $0.40 / $1.60      | E       |
@@ -246,12 +257,12 @@ Note: API users can bypass the system prompt by accessing underlying models dire
 
 | Provider                 | Model ID                 | Underlying Model                        | Input/Output   | Vision  | Cost    |
 | ------------------------ | ------------------------ | :-------------------------------------: | :------------: | :-----: | :-----: |
-| LBL IT Division          | lbl/cborg-chat           | hosted_vllm/gemma-4-31b-it              | 98.304K / 32.768K | Y       | N/C     |
-| LBL IT Division          | lbl/cborg-coder          | hosted_vllm/gemma-4-31b-it              | 200K / 62.144K | Y       | N/C     |
-| LBL IT Division          | lbl/cborg-deepthought    | hosted_vllm/gemma-4-31b-it              | 200K / 62.144K | Y       | N/C     |
-| LBL IT Division          | lbl/cborg-mini           | hosted_vllm/gemma-4-31b-it              | 98.304K / 32.768K | Y       | N/C     |
-| LBL IT Division          | lbl/cborg-ocr            | hosted_vllm/gemma-4-31b-it              | 200K / 62.144K | Y       | N/C     |
-| LBL IT Division          | lbl/cborg-vision         | hosted_vllm/gemma-4-31b-it              | 200K / 62.144K | Y       | N/C     |
+| LBL IT Division          | lbl/cborg-chat           | hosted_vllm/gemma-4-mini                | 122.88K / 8.192K | Y       | N/C     |
+| LBL IT Division          | lbl/cborg-coder          | hosted_vllm/gemma-4-thinking            | 245.76K / 16.384K | Y       | N/C     |
+| LBL IT Division          | lbl/cborg-deepthought    | hosted_vllm/gemma-4-thinking            | 229.376K / 32.768K | Y       | N/C     |
+| LBL IT Division          | lbl/cborg-mini           | hosted_vllm/gemma-4-mini                | 122.88K / 8.192K | Y       | N/C     |
+| LBL IT Division          | lbl/cborg-ocr            | hosted_vllm/gemma-4-mini                | 122.88K / 8.192K | Y       | N/C     |
+| LBL IT Division          | lbl/cborg-vision         | hosted_vllm/gemma-4-thinking            | 229.376K / 32.768K | Y       | N/C     |
 
 {{< notice "note" >}}
 **Cost Explanation**: The Cost column provides a rough order-of-magnitude estimate of costs associated with the model. Detailed cost data is provided in the model details below. Cost for using commercial models are paid for by the IT Division. There is no cost to individual users at this time and no PID is required.
@@ -396,16 +407,51 @@ Models hosted on Amazon Bedrock are provided under enterprise agreements. Your d
 
 - **Endpoint Location**: Amazon Bedrock
 - **API Model Name**: `amazon/claude-opus-4-7`
-- **Underlying Model**: `bedrock/us.anthropic.claude-opus-4-7-v1`
-- **Cost**: No cost
+- **Underlying Model**: `bedrock/us.anthropic.claude-opus-4-7`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,000,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
 
 #### amazon/claude-opus-4-7-high
 
 - **Endpoint Location**: Amazon Bedrock
 - **API Model Name**: `amazon/claude-opus-4-7-high`
-- **Underlying Model**: `bedrock/us.anthropic.claude-opus-4-7-v1`
+- **Underlying Model**: `bedrock/us.anthropic.claude-opus-4-7`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,000,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
 - **Reasoning Effort**: high
-- **Cost**: No cost
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
+
+#### amazon/claude-opus-4-8
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/claude-opus-4-8`
+- **Underlying Model**: `bedrock/us.anthropic.claude-opus-4-8`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,000,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
+
+#### amazon/claude-opus-4-8-high
+
+- **Endpoint Location**: Amazon Bedrock
+- **API Model Name**: `amazon/claude-opus-4-8-high`
+- **Underlying Model**: `bedrock/us.anthropic.claude-opus-4-8`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,000,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Reasoning Effort**: high
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
 
 #### amazon/claude-sonnet-4
 
@@ -810,7 +856,7 @@ Models hosted on Google Vertex AI are provided under enterprise agreements. Your
 
 - **Endpoint Location**: Google Vertex AI
 - **API Model Name**: `anthropic/claude-opus`
-- **Underlying Model**: `vertex_ai/claude-opus-4-7@default`
+- **Underlying Model**: `vertex_ai/claude-opus-4-8@default`
 - **Mode**: Chat
 - **Max Input Tokens**: 1,000,000
 - **Max Output Tokens**: 128,000
@@ -822,7 +868,7 @@ Models hosted on Google Vertex AI are provided under enterprise agreements. Your
 
 - **Endpoint Location**: Google Vertex AI
 - **API Model Name**: `anthropic/claude-opus-high`
-- **Underlying Model**: `vertex_ai/claude-opus-4-6@default`
+- **Underlying Model**: `vertex_ai/claude-opus-4-8@default`
 - **Mode**: Chat
 - **Max Input Tokens**: 1,000,000
 - **Max Output Tokens**: 128,000
@@ -897,7 +943,7 @@ Models hosted on Google Vertex AI are provided under enterprise agreements. Your
 
 - **Endpoint Location**: Google Vertex AI
 - **API Model Name**: `claude-opus`
-- **Underlying Model**: `vertex_ai/claude-opus-4-7@default`
+- **Underlying Model**: `vertex_ai/claude-opus-4-8@default`
 - **Mode**: Chat
 - **Max Input Tokens**: 1,000,000
 - **Max Output Tokens**: 128,000
@@ -965,11 +1011,23 @@ Models hosted on Google Vertex AI are provided under enterprise agreements. Your
 - **Cost per 1M Tokens (Input)**: $5.00
 - **Cost per 1M Tokens (Output)**: $25.00
 
+#### claude-opus-4-8
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `claude-opus-4-8`
+- **Underlying Model**: `vertex_ai/claude-opus-4-8@default`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,000,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
+
 #### claude-opus-high
 
 - **Endpoint Location**: Google Vertex AI
 - **API Model Name**: `claude-opus-high`
-- **Underlying Model**: `vertex_ai/claude-opus-4-6@default`
+- **Underlying Model**: `vertex_ai/claude-opus-4-8@default`
 - **Mode**: Chat
 - **Max Input Tokens**: 1,000,000
 - **Max Output Tokens**: 128,000
@@ -1160,6 +1218,31 @@ Models hosted on Google Vertex AI are provided under enterprise agreements. Your
 - **Max Input Tokens**: 1,000,000
 - **Max Output Tokens**: 128,000
 - **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
+
+#### google/claude-opus-4-8
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/claude-opus-4-8`
+- **Underlying Model**: `vertex_ai/claude-opus-4-8@default`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,000,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Cost per 1M Tokens (Input)**: $5.00
+- **Cost per 1M Tokens (Output)**: $25.00
+
+#### google/claude-opus-4-8-high
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/claude-opus-4-8-high`
+- **Underlying Model**: `vertex_ai/claude-opus-4-8@default`
+- **Mode**: Chat
+- **Max Input Tokens**: 1,000,000
+- **Max Output Tokens**: 128,000
+- **Capabilities**: Vision, Tool Use, Reasoning, Prompt Caching, PDF Input, Structured Output, Computer Use
+- **Reasoning Effort**: high
 - **Cost per 1M Tokens (Input)**: $5.00
 - **Cost per 1M Tokens (Output)**: $25.00
 
@@ -1713,6 +1796,13 @@ Models hosted on Google Vertex AI are provided under enterprise agreements. Your
 - **Cost per 1M Tokens (Input)**: $2.00
 - **Cost per 1M Tokens (Output)**: $12.00
 
+#### google/gemma-4
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/gemma-4`
+- **Underlying Model**: `vertex_ai/google/gemma-4-26b-a4b-it-maas`
+- **Cost**: No cost
+
 #### google/llama-4-maverick
 
 - **Endpoint Location**: Google Vertex AI
@@ -1995,6 +2085,20 @@ Models hosted on Google Vertex AI are provided under enterprise agreements. Your
 - **Cost per 1M Tokens (Input)**: $2.00
 - **Cost per 1M Tokens (Output)**: $6.00
 
+#### google/grok-4.3
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `google/grok-4.3`
+- **Underlying Model**: `vertex_ai/xai/grok-4.3`
+- **Cost**: No cost
+
+#### xai/grok
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `xai/grok`
+- **Underlying Model**: `vertex_ai/xai/grok-4.3`
+- **Cost**: No cost
+
 #### xai/grok-4.20-reasoning
 
 - **Endpoint Location**: Google Vertex AI
@@ -2006,6 +2110,13 @@ Models hosted on Google Vertex AI are provided under enterprise agreements. Your
 - **Capabilities**: Vision, Tool Use, Reasoning, Structured Output
 - **Cost per 1M Tokens (Input)**: $2.00
 - **Cost per 1M Tokens (Output)**: $6.00
+
+#### xai/grok-4.3
+
+- **Endpoint Location**: Google Vertex AI
+- **API Model Name**: `xai/grok-4.3`
+- **Underlying Model**: `vertex_ai/xai/grok-4.3`
+- **Cost**: No cost
 
 #### xai/grok-reasoning
 
@@ -2045,9 +2156,9 @@ The IT Division's Science IT group provides access to open-weight models running
 
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `gemma`
-- **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Max Input Tokens**: 98,304
-- **Max Output Tokens**: 32,768
+- **Underlying Model**: `hosted_vllm/gemma-4`
+- **Max Input Tokens**: 245,760
+- **Max Output Tokens**: 16,384
 - **Capabilities**: Vision, Tool Use
 - **Cost**: No cost
 
@@ -2055,9 +2166,9 @@ The IT Division's Science IT group provides access to open-weight models running
 
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `gemma-4`
-- **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Max Input Tokens**: 98,304
-- **Max Output Tokens**: 32,768
+- **Underlying Model**: `hosted_vllm/gemma-4`
+- **Max Input Tokens**: 245,760
+- **Max Output Tokens**: 16,384
 - **Capabilities**: Vision, Tool Use
 - **Cost**: No cost
 
@@ -2065,9 +2176,9 @@ The IT Division's Science IT group provides access to open-weight models running
 
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `gemma-4-thinking`
-- **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Max Input Tokens**: 200,000
-- **Max Output Tokens**: 62,144
+- **Underlying Model**: `hosted_vllm/gemma-4`
+- **Max Input Tokens**: 229,376
+- **Max Output Tokens**: 32,768
 - **Capabilities**: Vision, Tool Use
 - **Cost**: No cost
 
@@ -2075,9 +2186,9 @@ The IT Division's Science IT group provides access to open-weight models running
 
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `gemma-thinking`
-- **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Max Input Tokens**: 200,000
-- **Max Output Tokens**: 62,144
+- **Underlying Model**: `hosted_vllm/gemma-4`
+- **Max Input Tokens**: 229,376
+- **Max Output Tokens**: 32,768
 - **Capabilities**: Vision, Tool Use
 - **Cost**: No cost
 
@@ -2085,9 +2196,30 @@ The IT Division's Science IT group provides access to open-weight models running
 
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/gemma-4`
-- **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Max Input Tokens**: 98,304
-- **Max Output Tokens**: 32,768
+- **Underlying Model**: `hosted_vllm/gemma-4`
+- **Max Input Tokens**: 245,760
+- **Max Output Tokens**: 16,384
+- **Capabilities**: Vision, Tool Use
+- **Cost**: No cost
+
+#### lbl/gemma-4-mini
+
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/gemma-4-mini`
+- **Underlying Model**: `hosted_vllm/gemma-4-mini`
+- **Max Input Tokens**: 122,880
+- **Max Output Tokens**: 8,192
+- **Capabilities**: Vision, Tool Use
+- **Cost**: No cost
+
+#### lbl/gemma-4-mini-thinking
+
+- **Endpoint Location**: LBL IT Division
+- **API Model Name**: `lbl/gemma-4-mini-thinking`
+- **Underlying Model**: `hosted_vllm/gemma-4-mini-thinking`
+- **Mode**: Chat
+- **Max Input Tokens**: 114,688
+- **Max Output Tokens**: 16,384
 - **Capabilities**: Vision, Tool Use
 - **Cost**: No cost
 
@@ -2095,9 +2227,9 @@ The IT Division's Science IT group provides access to open-weight models running
 
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/gemma-4-thinking`
-- **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Max Input Tokens**: 200,000
-- **Max Output Tokens**: 62,144
+- **Underlying Model**: `hosted_vllm/gemma-4`
+- **Max Input Tokens**: 229,376
+- **Max Output Tokens**: 32,768
 - **Capabilities**: Vision, Tool Use
 - **Cost**: No cost
 
@@ -2153,9 +2285,9 @@ The IT Division's Science IT group provides access to open-weight models running
 
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/cborg-chat`
-- **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Max Input Tokens**: 98,304
-- **Max Output Tokens**: 32,768
+- **Underlying Model**: `hosted_vllm/gemma-4-mini`
+- **Max Input Tokens**: 122,880
+- **Max Output Tokens**: 8,192
 - **Capabilities**: Vision, Tool Use
 - **Cost**: No cost
 
@@ -2163,9 +2295,9 @@ The IT Division's Science IT group provides access to open-weight models running
 
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/cborg-coder`
-- **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Max Input Tokens**: 200,000
-- **Max Output Tokens**: 62,144
+- **Underlying Model**: `hosted_vllm/gemma-4-thinking`
+- **Max Input Tokens**: 245,760
+- **Max Output Tokens**: 16,384
 - **Capabilities**: Vision, Tool Use
 - **Cost**: No cost
 
@@ -2173,9 +2305,9 @@ The IT Division's Science IT group provides access to open-weight models running
 
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/cborg-deepthought`
-- **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Max Input Tokens**: 200,000
-- **Max Output Tokens**: 62,144
+- **Underlying Model**: `hosted_vllm/gemma-4-thinking`
+- **Max Input Tokens**: 229,376
+- **Max Output Tokens**: 32,768
 - **Capabilities**: Vision, Tool Use
 - **Cost**: No cost
 
@@ -2183,9 +2315,9 @@ The IT Division's Science IT group provides access to open-weight models running
 
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/cborg-mini`
-- **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Max Input Tokens**: 98,304
-- **Max Output Tokens**: 32,768
+- **Underlying Model**: `hosted_vllm/gemma-4-mini`
+- **Max Input Tokens**: 122,880
+- **Max Output Tokens**: 8,192
 - **Capabilities**: Vision, Tool Use
 - **Cost**: No cost
 
@@ -2193,9 +2325,9 @@ The IT Division's Science IT group provides access to open-weight models running
 
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/cborg-ocr`
-- **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Max Input Tokens**: 200,000
-- **Max Output Tokens**: 62,144
+- **Underlying Model**: `hosted_vllm/gemma-4-mini`
+- **Max Input Tokens**: 122,880
+- **Max Output Tokens**: 8,192
 - **Capabilities**: Vision, Tool Use
 - **Cost**: No cost
 
@@ -2203,9 +2335,9 @@ The IT Division's Science IT group provides access to open-weight models running
 
 - **Endpoint Location**: LBL IT Division
 - **API Model Name**: `lbl/cborg-vision`
-- **Underlying Model**: `hosted_vllm/gemma-4-31b-it`
-- **Max Input Tokens**: 200,000
-- **Max Output Tokens**: 62,144
+- **Underlying Model**: `hosted_vllm/gemma-4-thinking`
+- **Max Input Tokens**: 229,376
+- **Max Output Tokens**: 32,768
 - **Capabilities**: Vision, Tool Use
 - **Cost**: No cost
 

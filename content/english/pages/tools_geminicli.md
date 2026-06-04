@@ -8,6 +8,8 @@ meta_title: ""
 draft: false
 ---
 
+> ⚠️ **Gemini CLI is no longer supported.** It has been replaced by **Antigravity CLI**. The instructions below are retained for reference only and may not work correctly. 
+
 #### 1. Install Gemini CLI
 
 For Mac users with Homebrew
