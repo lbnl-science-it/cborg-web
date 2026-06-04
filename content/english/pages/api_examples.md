@@ -75,78 +75,62 @@ Please also see the examples on the [API FAQ](/api_faq) page for more examples.
 
 ## Example Code - Call All Models
 
+This script dynamically fetches the current model list from the API, then sends a test prompt to every chat/completion model and a test input to every embedding model. No hardcoded model names -- it always reflects what is actually available.
+
 {{< highlight python >}}
-import openai
 import os
+import requests
+import openai
 
-client = openai.OpenAI(
-    api_key=os.environ.get('CBORG_API_KEY'), # Please do not store your API key in the code
-    base_url="https://api.cborg.lbl.gov" # Local clients can also use https://api-local.cborg.lbl.gov
-)
+API_BASE = "https://api.cborg.lbl.gov"
+API_KEY = os.environ["CBORG_API_KEY"]
 
-# Note this list of models is frequently updated and may be out-of-date
-models = [
-    "lbl/cborg-chat:latest",       # LBL-hosted Llama with custom system prompt
-    "lbl/cborg-coder:latest",      # LBL-hosted Llama with custom system prompt
-    "lbl/cborg-vision:latest",     # LBL-hosted Llama with custom system prompt
-    "lbl/llama",                   # LBL-hosted Chat model
-    "lbl/qwen-coder",              # LBL-hosted Coding model
-    "lbl/qwen-vision",             # LBL-hosted Vision model
-    "openai/gpt-4o",
-    "openai/gpt-4o-mini",
-    "openai/o1",
-    "openai/o1-mini",
-    "openai/o3-mini",
-    "anthropic/claude-haiku",
-    "anthropic/claude-sonnet",
-    "anthropic/claude-opus",
-    "google/gemini-pro",
-    "google/gemini-flash",
-    "google/gemini-flash-lite",
-    "xai/grok",
-    "xai/grok-mini",
-    "aws/llama-3.1-405b",
-    "aws/llama-3.1-70b",
-    "aws/llama-3.1-8b",
-    "aws/command-r-plus-v1",
-    "aws/command-r-v1"
-]
+client = openai.OpenAI(api_key=API_KEY, base_url=API_BASE)
 
-for m in models:
+# Fetch the live model list and split into chat and embedding models
+model_info = requests.get(
+    f"{API_BASE}/model/info",
+    headers={"Authorization": f"Bearer {API_KEY}"},
+).json()
+
+chat_models = []
+embedding_models = []
+
+for entry in model_info.get("data", []):
+    name = entry["model_name"]
+    mode = (entry.get("model_info") or {}).get("mode")
+    if mode == "embedding" or (mode is None and "embedding" in name):
+        embedding_models.append(name)
+    elif mode in ("chat", "completion", "responses") or mode is None:
+        chat_models.append(name)
+
+print(f"Found {len(chat_models)} chat models, {len(embedding_models)} embedding models\n")
+
+# Test each chat/completion model
+for model in chat_models:
     try:
         response = client.chat.completions.create(
-            model=m, 
-            messages = [
-                {
-                    "role": "user",
-                    "content": "What letter comes after A?"
-                }
-            ],
-            temperature=0.0   # Optional: set model temperature to control amount of variance in response
+            model=model,
+            messages=[{"role": "user", "content": "Reply with 'OK'. No other commentary."}],
         )
-        
-        print(f"Model: {m}\nResponse: {response.choices[-1].message.content}")
-    except:
-        print(f"Error calling model {m}")
+        answer = response.choices[0].message.content.strip()
+        usage = response.usage
+        print(f"[chat] {model}: {answer!r}  "
+              f"(prompt={usage.prompt_tokens} completion={usage.completion_tokens})")
+    except Exception as e:
+        print(f"[chat] {model}: ERROR -- {e}")
 
-{{< /highlight >}}
-
-Now let's run the demo from the command line:
-
-{{< highlight shell >}}
-$ python ./test.py 
-Model: lbl/cborg-chat:latest
-Response:  The letter that comes after A in the English alphabet is B.
-...
-Model: openai/gpt-4o
-Response: The letter that comes after A is B.
-Model: openai/gpt-4o-mini
-Response: The letter that comes after A is B.
-Model: anthropic/claude-haiku
-Response: The letter that comes after A is B.
-Model: anthropic/claude-sonnet
-Response: The letter that comes after A in the English alphabet is B.
-...
+# Test each embedding model
+for model in embedding_models:
+    try:
+        response = client.embeddings.create(
+            model=model,
+            input="The quick brown fox jumps over the lazy dog",
+        )
+        vec = response.data[0].embedding
+        print(f"[embed] {model}: vector length={len(vec)}, first values={vec[:3]}")
+    except Exception as e:
+        print(f"[embed] {model}: ERROR -- {e}")
 {{< /highlight >}}
 
 ## RAG Embedding Example
