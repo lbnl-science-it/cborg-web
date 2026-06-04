@@ -28,6 +28,35 @@ To use an MCP server, declare it in the `tools` parameter of a `/v1/responses` A
 
 ---
 
+## Using MCP Servers via the API
+
+MCP tools are exposed through the standard OpenAI-compatible `/v1/responses` endpoint. Pass the server name in the `tools` parameter to enable its tools:
+
+```python
+import openai
+
+client = openai.OpenAI(
+    base_url="https://api.cborg.lbl.gov/v1",
+    api_key="<your-cborg-api-key>",
+)
+
+response = client.responses.create(
+    model="cborg-coder",
+    tools=[{
+        "type": "mcp",
+        "server_label": "context7",
+        "server_url": "https://api.cborg.lbl.gov/mcp/",
+        "require_approval": "never",
+    }],
+    input="What are the main features of the httpx library?",
+)
+print(response.output_text)
+```
+
+You can also access the raw MCP endpoint directly at `https://api.cborg.lbl.gov/mcp/` using the standard JSON-RPC 2.0 protocol.
+
+---
+
 ## Server Details
 
 ### Context7
@@ -537,32 +566,3 @@ Parameters:
   - `nps_score` (integer, optional) -- Net Promoter Score: how likely to recommend (1=not at all, 10=extremely likely)
   - `num_valency_calls_this_session` (integer, optional) -- Number of Valency tool calls made in the current session
   - `context` (object, optional) -- Optional context about the session (e.g. tool names used, high-level keywords). Do not include raw user queries, identifiers, or sensitive data. Max 10KB
-
----
-
-## Using MCP Servers via the API
-
-MCP tools are exposed through the standard OpenAI-compatible `/v1/responses` endpoint. Pass the server name in the `tools` parameter to enable its tools:
-
-```python
-import openai
-
-client = openai.OpenAI(
-    base_url="https://api.cborg.lbl.gov/v1",
-    api_key="<your-cborg-api-key>",
-)
-
-response = client.responses.create(
-    model="cborg-coder",
-    tools=[{
-        "type": "mcp",
-        "server_label": "context7",
-        "server_url": "https://api.cborg.lbl.gov/mcp/",
-        "require_approval": "never",
-    }],
-    input="What are the main features of the httpx library?",
-)
-print(response.output_text)
-```
-
-You can also access the raw MCP endpoint directly at `https://api.cborg.lbl.gov/mcp/` using the standard JSON-RPC 2.0 protocol.
