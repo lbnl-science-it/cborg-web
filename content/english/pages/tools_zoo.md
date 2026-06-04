@@ -39,6 +39,38 @@ Install the [Zoo Code Extension](https://marketplace.visualstudio.com/items?item
 7. Click **Refresh Models**
 8. Select the desired model
 
+## Automated Setup via Makefile
+
+For a faster setup, use the [`cborg-client`](https://github.com/lbnl-science-it/cborg-client) repository on GitHub. It includes a `Makefile` in the `zoocode/` directory that generates a ready-to-import `zoo-code-settings.json` file pre-configured with CBorg models.
+
+**Requirements:** `CBORG_API_KEY` environment variable set, plus `jq` and `envsubst` installed.
+
+```bash
+git clone https://github.com/lbnl-science-it/cborg-client.git
+cd cborg-client/zoocode
+export CBORG_API_KEY=<your-key>
+make
+```
+
+Then import the generated file via **Zoo Code > Settings > About Zoo Code > Manage Settings > Import**.
+
+Optional providers are included automatically when credentials are detected:
+
+- **AmSC** -- set `AMSC_I2_API_KEY` for American Science Cloud models
+- **GCP/Vertex AI** -- detected from `~/.zoo/application_default_credentials.json` or `GOOGLE_APPLICATION_CREDENTIALS`
+
+### Codebase Indexing with Qdrant
+
+When `podman` or `docker` is detected during `make`, you will be prompted to enable codebase indexing. If enabled, Zoo Code uses a local [Qdrant](https://qdrant.tech/) vector database to index your codebase for context-aware completions.
+
+> **Advanced users only.** Codebase indexing is not needed for standard functionality. Code indexing enables faster code search in large code bases.
+
+Before indexing, start Qdrant and the local embeddings proxy:
+
+```bash
+CBORG_API_KEY=<your-key> ./start-qdrant.sh
+```
+
 ## Recommended Settings
 
 To improve context caching and reduce cost, the following settings are recommended:
