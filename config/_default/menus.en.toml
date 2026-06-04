@@ -78,7 +78,7 @@ parent = "Coding"
 weight = 1
 
 [[main]]
-name = "ZooCode (formerly RooCode)"
+name = "ZooCode (RooCode)"
 parent = "Coding"
 pageRef = "/pages/tools_zoo"
 weight = 2
@@ -102,7 +102,7 @@ pageRef = "/pages/tools_opencode"
 weight = 5
 
 [[main]]
-name = "WSL 2"
+name = "Windows WSL"
 parent = "Coding"
 pageRef = "/pages/tools_wsl2"
 weight = 6
