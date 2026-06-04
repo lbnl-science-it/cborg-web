@@ -176,7 +176,9 @@ print('Similarity of query "Orange" to "Apple" versus "Bread" (higher is more si
 
 # Prompt Caching Example
 
-Automatic (implicit) prompt caching is supported by OpenAI models (GPT and o1...o4). Anthropic prompt caching is supported using an explicit cache-write via the cache_control flag (there is a cost for cache writes). Currently, other models such as Gemini do not support prompt caching via CBorg API, but can be available via direct access (requires your own cloud account).
+**OpenAI** (GPT, o1...o4) and **Gemini** models use implicit (automatic) prompt caching -- no special flags required. **Anthropic** models require an explicit cache-write via the `cache_control` flag (note: there is a cost for cache writes).
+
+You can verify whether caching was applied by inspecting the usage metadata in the response -- look for `cached_tokens` in `prompt_tokens_details`.
 
 {{< highlight python >}}
 
