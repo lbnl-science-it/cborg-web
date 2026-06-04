@@ -41,11 +41,38 @@ Redaction is the safest option: once data is sanitized you can use it with any m
 
 ## Option 1: Privacy filter models
 
-Small, locally-runnable language models can detect and mask PII with high accuracy. Because they run on your own hardware, the original data never leaves your machine.
+Small language models fine-tuned for PII detection can detect and mask entities with high accuracy. They replace detected entities with tokens such as `[PRIVATE PERSON]`, `[PRIVATE LOCATION]`, and `[PRIVATE EMAIL]`.
 
-**OpenAI Privacy Filter** ([huggingface.co/openai/privacy-filter](https://huggingface.co/openai/privacy-filter)) is one example. It replaces detected entities with tokens such as `[PRIVATE PERSON]`, `[PRIVATE LOCATION]`, and `[PRIVATE EMAIL]`.
+The **OpenAI Privacy Filter** ([huggingface.co/openai/privacy-filter](https://huggingface.co/openai/privacy-filter)) is available in two ways:
 
-Example workflow using the Hugging Face `transformers` library:
+### Via the CBorg API (recommended)
+
+The privacy filter model is hosted on CBorg and accessible via the API as `lbl/cborg-privacy-filter`. This requires no local GPU or model download.
+
+```python
+import os
+import openai
+
+client = openai.OpenAI(
+    api_key=os.environ["CBORG_API_KEY"],
+    base_url="https://api.cborg.lbl.gov",
+)
+
+raw_text = "Please contact Jane Smith at jane.smith@example.com or 123 Main St, Berkeley, CA."
+
+response = client.chat.completions.create(
+    model="lbl/cborg-privacy-filter",
+    messages=[{"role": "user", "content": raw_text}],
+)
+
+redacted = response.choices[0].message.content
+print(redacted)
+# e.g. "Please contact [PRIVATE PERSON] at [PRIVATE EMAIL] or [PRIVATE LOCATION]."
+```
+
+### Via local inference (HuggingFace transformers)
+
+If you prefer to keep data entirely on your own hardware, you can run the model locally using the Hugging Face `transformers` library:
 
 ```python
 from transformers import pipeline
@@ -67,7 +94,7 @@ print(redacted)
 
 The redacted string is then safe to pass to your LLM prompt.
 
-> **Note:** Privacy filter models require a compatible Python environment and sufficient local compute. A GPU is not strictly required for inference on short documents, but will significantly improve throughput for large batches.
+> **Note:** Local inference requires a compatible Python environment. A GPU is not strictly required for short documents but will significantly improve throughput for large batches.
 
 ## Option 2: NLP-based Python libraries
 
@@ -130,7 +157,8 @@ Keep the mapping table in memory only (or in a secure local store) and never tra
 
 | Situation | Recommended approach |
 |---|---|
-| High-sensitivity data, GPU available | Privacy filter model (e.g., `openai/privacy-filter`) |
+| High-sensitivity data, no local GPU | CBorg-hosted privacy filter (`lbl/cborg-privacy-filter`) |
+| High-sensitivity data, GPU available | Local privacy filter model (`openai/privacy-filter` via HuggingFace) |
 | High-sensitivity data, CPU only | Presidio with spaCy NER + regex recognizers |
 | Low-sensitivity data, quick prototype | `scrubadub` or simple regex for known patterns |
 | Need to re-identify after LLM response | Any of the above + placeholder mapping table |
