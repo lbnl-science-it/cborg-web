@@ -8,6 +8,8 @@ meta_title: ""
 draft: false
 ---
 
+{{< button "Download the setup files from the CBorg Client GitHub Project" "https://github.com/lbnl-science-it/cborg-client/tree/main/codex" >}}
+
 #### 1. Configure Codex
 
 Codex CLI now uses two separate configuration layers:
