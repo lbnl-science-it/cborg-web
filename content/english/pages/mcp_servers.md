@@ -11,7 +11,7 @@ draft: false
 
 CBORG provides [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) servers that extend AI models with real-time tool capabilities. MCP servers are accessible via the CBORG API at `https://api.cborg.lbl.gov/mcp/` and are compatible with any MCP-aware client (e.g. Claude Code, ZooCode, Cursor).
 
-MCP tools are invoked automatically by the model when relevant to your request. Each tool call is currently billed at **$0.01 per query** against your API budget. Users who require high-volume MCP usage should contact [IT Support](mailto:ithelp@lbl.gov) to discuss budget options.
+To use an MCP server, declare it in the `tools` parameter of a `/v1/responses` API request. Each tool call is billed at **$0.01 per query** against your API budget. Users who require high-volume MCP usage should contact [IT Support](mailto:ithelp@lbl.gov) to discuss budget options.
 
 **Licensing Terms**
 
@@ -553,8 +553,13 @@ client = openai.OpenAI(
 )
 
 response = client.responses.create(
-    model="lbl/cborg-coder:latest",
-    tools=[{"type": "mcp", "server_label": "context7"}],
+    model="cborg-coder",
+    tools=[{
+        "type": "mcp",
+        "server_label": "context7",
+        "server_url": "https://api.cborg.lbl.gov/mcp/",
+        "require_approval": "never",
+    }],
     input="What are the main features of the httpx library?",
 )
 print(response.output_text)
