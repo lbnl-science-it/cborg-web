@@ -60,6 +60,12 @@ pageRef = "/pages/api_cborgvscloud"
 parent = "Models"
 weight = 4
 
+[[main]]
+name = "Model Status"
+pageRef = "/pages/model_status"
+parent = "Models"
+weight = 5
+
 # No content/english/pages/benchmarks.md -- link to SciCode until a hub page exists.
 [[main]]
 name = "Benchmarks"
