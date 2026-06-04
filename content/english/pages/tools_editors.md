@@ -7,6 +7,12 @@ draft: false
 
 These tools are no longer actively supported for use with CBorg. They may still work but are not recommended for new users.
 
+## Aider
+
+[Aider](https://aider.chat/) is a terminal-based AI pair programmer that works with your local git repository to make code changes.
+
+→ [Using Aider with CBorg](/tools_aider)
+
 ## Cline (VS Code)
 
 [Cline](https://github.com/cline/cline) is an autonomous coding agent for VS Code.

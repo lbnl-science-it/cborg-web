@@ -51,6 +51,12 @@ footer_logo_height = "150px"
 enable = false
 preloader = "" # use jpg, png, svg or gif format.
 
+# Secondary navigation button (rendered left of the primary button)
+[navigation_button_secondary]
+enable = true
+label = "API Docs"
+link = "https://api.cborg.lbl.gov"
+
 # Navigation button
 [navigation_button]
 enable = true

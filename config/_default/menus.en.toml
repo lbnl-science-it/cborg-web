@@ -18,13 +18,13 @@ weight = 2
 name = "About CBorg"
 pageRef = "/about"
 parent = "About"
-weight = 2
+weight = 1
 
 [[main]]
 name = "FAQ"
 pageRef = "/pages/faq"
 parent = "About"
-weight = 6
+weight = 2
 
 [[main]]
 name = "News"
@@ -36,7 +36,25 @@ name = "Models"
 pageRef = "/pages/models"
 weight = 4
 
-# No content/english/pages/benchmarks.md — link to SciCode until a hub page exists.
+[[main]]
+name = "All Models"
+pageRef = "/pages/models"
+parent = "Models"
+weight = 1
+
+[[main]]
+name = "On-Prem Models (Free)"
+pageRef = "/pages/api_onprem"
+parent = "Models"
+weight = 2
+
+[[main]]
+name = "CBorg vs Cloud"
+pageRef = "/pages/api_cborgvscloud"
+parent = "Models"
+weight = 3
+
+# No content/english/pages/benchmarks.md -- link to SciCode until a hub page exists.
 [[main]]
 name = "Benchmarks"
 url = "/bench_scicode/"
@@ -49,9 +67,9 @@ parent = "Benchmarks"
 weight = -1
 
 [[main]]
+weight = 6
 name = "Coding"
 pageRef = "/pages/tools"
-weight = 6
 
 [[main]]
 name = "Getting Started"
@@ -66,46 +84,46 @@ pageRef = "/pages/tools_zoo"
 weight = 2
 
 [[main]]
-name = "CLI Agents"
-parent = "Coding"
-pageRef = "/pages/tools_cli"
-weight = 3
-
-[[main]]
 name = "Claude Code"
 parent = "Coding"
 pageRef = "/pages/tools_claudecode"
-weight = 4
+weight = 3
 
 [[main]]
 name = "OpenAI Codex"
 parent = "Coding"
 pageRef = "/pages/tools_codex"
+weight = 4
+
+[[main]]
+name = "Opencode"
+parent = "Coding"
+pageRef = "/pages/tools_opencode"
 weight = 5
 
 [[main]]
 name = "WSL 2"
 parent = "Coding"
 pageRef = "/pages/tools_wsl2"
-weight = 7
+weight = 6
 
 [[main]]
 name = "Security Best Practices"
 parent = "Coding"
 pageRef = "/pages/security"
-weight = 8
+weight = 7
 
 [[main]]
 name = "Handling PII with LLMs"
 parent = "Coding"
 pageRef = "/pages/security_pii"
-weight = 9
+weight = 8
 
 [[main]]
-name = "Legacy Tools"
+name = "Legacy / Unsupported Tools"
 parent = "Coding"
 pageRef = "/pages/tools_editors"
-weight = 10
+weight = 99
 
 [[main]]
 weight = 7
@@ -114,43 +132,31 @@ name = "API"
 [[main]]
 parent = "API"
 weight = 1
-name = "API Examples"
+name = "Getting Started"
 pageRef = "/pages/api_examples"
 
 [[main]]
 parent = "API"
-weight = 1
-name = "API FAQ"
+weight = 2
+name = "Usage Guide"
 pageRef = "/pages/api_faq"
 
 [[main]]
 parent = "API"
-weight = 1
-name = "CBorg vs Cloud"
-pageRef = "/pages/api_cborgvscloud"
-
-[[main]]
-parent = "API"
-weight = 1
-name = "CBorg On-Prem Models"
-pageRef = "/pages/api_onprem"
-
-[[main]]
-parent = "API"
-weight = 2
-name = "Request CBorg API Key"
+weight = 3
+name = "Request API Key"
 pageRef = "/pages/api_request"
 
 [[main]]
 parent = "API"
-weight = 3
+weight = 4
 name = "Check API Key Spend"
 pageRef = "/pages/api_spendcheck"
 
 [[main]]
 parent = "API"
-weight = 4
-name = "Request API Budget Allocation"
+weight = 5
+name = "Request Budget Allocation"
 pageRef = "/pages/api_projectkey"
 
 # footer menu

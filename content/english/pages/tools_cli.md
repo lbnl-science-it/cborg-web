@@ -2,16 +2,10 @@
 title: "CLI Agents"
 meta_title: ""
 description: "AI coding agents that run from the command line, powered by CBorg."
-draft: false
+draft: true
 ---
 
 These tools run from the terminal and can autonomously write code, run commands, and manage files — all using CBorg as the AI backend.
-
-## Aider
-
-[Aider](https://aider.chat/) is a terminal-based AI pair programmer that works with your local git repository to make code changes.
-
-→ [Using Aider with CBorg](/tools_aider)
 
 ## Claude Code
 

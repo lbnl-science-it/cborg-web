@@ -1,9 +1,9 @@
 ---
-title: "API Examples"
+title: "Getting Started with the API"
 # meta title
 meta_title: ""
 # meta description
-description: ""
+description: "Quick start guide and code examples for the CBorg API"
 # save as draft
 draft: false
 ---

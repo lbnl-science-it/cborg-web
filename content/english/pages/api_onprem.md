@@ -1,5 +1,5 @@
 ---
-title: "LBL On-Premises Models"
+title: "On-Prem Models (Free)"
 # meta title
 meta_title: ""
 # meta description
