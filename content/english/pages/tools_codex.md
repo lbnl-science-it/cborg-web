@@ -10,10 +10,17 @@ draft: false
 
 #### 1. Configure Codex
 
-Add the following to `~/.codex/config.toml`:
+Codex CLI now uses two separate configuration layers:
+
+- **`~/.codex/config.toml`** -- global settings: provider definitions, default profile, and feature flags
+- **`~/.codex/<profile-name>.config.toml`** -- one file per profile, containing model and personality settings
+
+**Step 1a: Add the CBorg provider to `~/.codex/config.toml`**
 
 {{< highlight toml >}}
-profile="cborg-gpt-mini"
+# Set the default profile
+# Note: Required for the Codex App and VSCode Extension which don't support --profile on launch.
+profile = "cborg-gpt-mini"
 
 [model_providers.cborg]
 name = "CBorg API"
@@ -22,38 +29,7 @@ env_key = "CBORG_API_KEY"
 supports_websockets = false
 wire_api = "responses"
 
-[profiles.cborg-gpt-large]
-model = "gpt-5.5"
-model_reasoning_effort = "high"
-model_provider = "cborg"
-personality = "pragmatic"
-
-[profiles.cborg-gpt-mini]
-model = "gpt-5.4-mini"
-model_reasoning_effort = "medium"
-model_provider = "cborg"
-personality = "pragmatic"
-
-[profiles.cborg-gemini-pro]
-model = "gemini-pro-high"
-model_provider = "cborg"
-personality = "pragmatic"
-
-[profiles.cborg-gemini-flash]
-model = "gemini-flash-high"
-model_provider = "cborg"
-personality = "pragmatic"
-
-[profiles.openai-gpt-large]
-model = "gpt-5.5"
-model_reasoning_effort = "high"
-personality = "pragmatic"
-
-[profiles.openai-gpt-mini]
-model = "gpt-5.4-mini"
-model_reasoning_effort = "medium"
-personality = "pragmatic"
-
+# Recommended setting - Fast mode costs 2.5x more for 50% speedup
 [features]
 fast_mode = false
 
@@ -61,7 +37,58 @@ fast_mode = false
 fast_default_opt_out = true
 {{< /highlight >}}
 
-The `cborg-*` profiles route through the CBorg API using your `CBORG_API_KEY`. The `openai-*` profiles use OpenAI directly via ChatGPT Enterprise sign-on.
+**Step 1b: Create profile files in `~/.codex/`**
+
+Each profile is a separate `.config.toml` file. Create the ones you want to use:
+
+`~/.codex/cborg-gpt-mini.config.toml` (recommended default):
+{{< highlight toml >}}
+model = "gpt-5.4-mini"
+model_reasoning_effort = "medium"
+model_provider = "cborg"
+personality = "pragmatic"
+{{< /highlight >}}
+
+`~/.codex/cborg-gpt-large.config.toml`:
+{{< highlight toml >}}
+model = "gpt-5.5"
+model_reasoning_effort = "high"
+model_provider = "cborg"
+personality = "pragmatic"
+plan_mode_reasoning_effort = "high"
+{{< /highlight >}}
+
+`~/.codex/cborg-gemini-pro.config.toml`:
+{{< highlight toml >}}
+model = "gemini-pro-high"
+model_provider = "cborg"
+personality = "pragmatic"
+{{< /highlight >}}
+
+`~/.codex/cborg-gemini-flash.config.toml`:
+{{< highlight toml >}}
+model = "gemini-flash-high"
+model_provider = "cborg"
+personality = "pragmatic"
+{{< /highlight >}}
+
+The `openai-*` profiles below use OpenAI directly via ChatGPT Enterprise sign-on (no `CBORG_API_KEY` needed):
+
+`~/.codex/openai-gpt-large.config.toml`:
+{{< highlight toml >}}
+model = "gpt-5.5"
+model_reasoning_effort = "high"
+personality = "pragmatic"
+{{< /highlight >}}
+
+`~/.codex/openai-gpt-mini.config.toml`:
+{{< highlight toml >}}
+model = "gpt-5.4-mini"
+model_reasoning_effort = "medium"
+personality = "pragmatic"
+{{< /highlight >}}
+
+Ready-to-use copies of all these files are available in the [cborg-client/codex](https://github.com/lbnl-science-it/cborg-client/tree/main/codex) directory.
 
 #### 2. Start Codex
 
@@ -89,7 +116,7 @@ Fast mode costs 2.5x more than standard processing, and is only about 50% faster
 
 Only switch to a large model when necessary:
 
-- `gpt-5.4-mini` with "medium" reasoning is around 1/10th the cost of `gpt-5.5` and is very performant — try to use the smaller model for most situations and switch to the large model only for the most challenging coding or debugging tasks.
+- `gpt-5.4-mini` with "medium" reasoning is around 1/10th the cost of `gpt-5.5` and is very performant -- try to use the smaller model for most situations and switch to the large model only for the most challenging coding or debugging tasks.
 - `gpt-5.3-codex` has nearly the same performance as `gpt-5.5` and is around 1/2 of the cost
 - Use `/new` for each new task rather than allowing excessive context to accumulate
 - Disable any unnecessary MCP servers and Skills
