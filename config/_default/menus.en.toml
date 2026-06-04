@@ -43,16 +43,22 @@ parent = "Models"
 weight = 1
 
 [[main]]
+name = "MCP Servers"
+pageRef = "/pages/mcp_servers"
+parent = "Models"
+weight = 2
+
+[[main]]
 name = "On-Prem Models (Free)"
 pageRef = "/pages/api_onprem"
 parent = "Models"
-weight = 2
+weight = 3
 
 [[main]]
 name = "CBorg vs Cloud"
 pageRef = "/pages/api_cborgvscloud"
 parent = "Models"
-weight = 3
+weight = 4
 
 # No content/english/pages/benchmarks.md -- link to SciCode until a hub page exists.
 [[main]]
