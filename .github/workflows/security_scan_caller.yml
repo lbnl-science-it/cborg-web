@@ -16,7 +16,7 @@ on:
         type: string
 
 env:
-  WORKFLOW_VERSION: "2.0.0"
+  WORKFLOW_VERSION: "2.0.1"
 
 jobs:
   security_scan:
